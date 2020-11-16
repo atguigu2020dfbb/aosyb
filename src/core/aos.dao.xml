@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:tx="http://www.springframework.org/schema/tx"
+	 xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+	     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd"
+	default-lazy-init="true">
+	<description>DAO组件</description>
+	<import resource="classpath:ureport-console-context.xml" />
+	<!-- 加载属性配置文件 -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+				<value>classpath:misc/redis.properties</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 平台缺省 JDBC 数据源 -->
+	<bean id="dataSource.sys" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<!--initialSize: 初始连接数 -->
+		<property name="initialSize" value="5" />
+		<!--minIdle: 池中最小空闲连接数 -->
+		<property name="minIdle" value="5" />
+		<!--maxIdle: 池中最大空闲连接数 -->
+		<property name="maxIdle" value="10" />
+		<!--maxActive: 最大活动链接 -->
+		<property name="maxActive" value="20" />
+		<!--removeAbandoned: 是否自动回收超时连接 -->
+		<property name="removeAbandoned" value="true" />
+		<!--removeAbandonedTimeout: 超时时间(以秒数为单位) -->
+		<property name="removeAbandonedTimeout" value="180" />
+		<!--maxWait: 当没有可用连接时，连接池等待连接释放的最大时间，超过该时间限制会抛出异常，如果设置-1表示无限等待。以毫秒为单位。 -->
+		<property name="maxWait" value="120000" />
+		<property name="logAbandoned" value="true" />
+		<!-- 让空闲链接回收器(如果有)进行有效性检测 -->
+		<property name="testWhileIdle" value="true" />
+		<!-- 从连接池之取出时进行有效性检测 -->
+		<property name="testOnBorrow" value="true" />
+		<property name="validationQuery" value="${jdbc.vsql}" />
+		<!-- 归还连接池之前进行有效性检测 -->
+		<property name="testOnReturn" value="true" />
+	</bean>
+
+	<!-- 平台缺省数据源 JDBC事务管理器 -->
+	<bean id="transactionManager.sys" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource.sys" />
+	</bean>
+
+	<!-- 注解驱动的声明式事务管理 -->
+	<tx:annotation-driven transaction-manager="transactionManager.sys" />
+
+	<!-- 平台缺省数据源 SqlSessionFactory配置 -->
+	<bean id="sqlSessionFactory.sys" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource.sys" />
+		<!-- 请将com.mycorp.mysystem.**改为你的项目扫描路径 -->
+		<property name="typeAliasesPackage" value="cn.osworks.aos;" />
+		<property name="mapperLocations" value="classpath*:**/*Mapper.xml" />
+		<property name="configLocation" value="classpath:core/aos.dao.cfg.xml" />
+	</bean>
+
+	<!-- 扫描实体数据访问对象Mapper。!待解决。这会导致Mybatis的SQLMapper文件校验出错信息打印输出的问题 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- 请将com.mycorp.mysystem.**改为你的项目扫描路径 -->
+		<property name="basePackage" value="cn.osworks.aos.system.dao;cn.osworks.aos.demo.dao" />
+		<!--  <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory.sys" />
+		<property name="annotationClass" value="cn.osworks.aos.core.annotation.Mapper" />-->
+
+	</bean>
+	<!-- 平台缺省数据源的SQL通用访问接口 -->
+	<bean id="sysDao" class="cn.osworks.aos.core.dao.SqlDao">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory.sys" />
+	</bean>
+	
+	 <!-- jdbc注入 -->  
+    <bean id="jdbcTemplate"  class="org.springframework.jdbc.core.JdbcTemplate">  
+        <property name="dataSource">  
+            <ref bean="dataSource.sys" />  
+        </property>  
+    </bean>  
+    
+    <!-- DbtableService注入 -->
+	<bean id="DbtableService" class="cn.osworks.aos.system.modules.service.dbtable.DbtableService">
+	    <property name="jdbcTemplate">
+			<ref bean="jdbcTemplate"/>
+		</property>
+	</bean>	
+	
+	 <bean id="BuildinDatasource" class="cn.osworks.aos.ureport.LoadBuildinDatasource">
+	<property name="dataSource" ref="dataSource.sys"/>
+</bean>
+
+
+	<!--<bean name="task" class="cn.osworks.aos.system.modules.controller.Task" />-->
+	<!--一下配置的是quartz定时器-->
+	<!-- job1的定义 备份数据库 -->
+	<bean name="myJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="cn.osworks.aos.system.modules.controller.Task.StockTask" />
+		<property name="durability" value="true" />
+		<!-- 回调参数的定义 -->
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="name" value="zhangsan" />
+			</map>
+		</property>
+	</bean>
+	<!-- job1的定义 出入库 -->
+	<bean name="myJob1" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="cn.osworks.aos.system.modules.controller.Task.CrkTask" />
+		<property name="durability" value="true" />
+		<!-- 回调参数的定义 -->
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="name" value="lisi" />
+			</map>
+		</property>
+	</bean>
+	<!-- job2的定义 出入库 -->
+	<bean name="myJob2" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="cn.osworks.aos.system.modules.controller.Task.WsdTask" />
+		<property name="durability" value="true" />
+		<!-- 回调参数的定义 -->
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="name" value="wangwu" />
+			</map>
+		</property>
+	</bean>
+	<!-- SimpleTrigger 触发器 默认走简单触发器 -->
+	<!--<bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="jobDetail" ref="myJob" />
+		<property name="startDelay" value="0" /> 调度工厂实例化后，经过0秒开始执行调度 -->
+	<!--<property name="repeatInterval" value="0 0 0 */1 * ？" /> 每60秒调度一次 -->
+	<!--</bean>-->
+
+	<!-- CronTriggerBean 触发器 -->
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="myJob" />
+		<property name="startDelay" value="0" />
+		<!-- 每1分钟执行一次 -->
+		<!--<property name="cronExpression" value="0 0/1 * * * ?" />-->
+		<!--每天凌晨12点执行一次-->
+	<property name="cronExpression" value="0 0 0 * * ?" />
+</bean>
+<!-- CronTriggerBean 触发器2 -->
+	<bean id="cronTrigger2" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="myJob1" />
+		<property name="startDelay" value="0" />
+		<!-- 早上9点到5点，每1小时执行一次 -->
+		<property name="cronExpression" value="0 0 8-17 * * ?" />
+		<!--<property name="cronExpression" value="0 */1 * * * ?" />-->
+	<!--<property name="cronExpression" value="0 0 0 * * ?" />-->
+</bean>
+<!-- CronTriggerBean 触发器3 -->
+	<bean id="cronTrigger3" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="myJob2" />
+		<property name="startDelay" value="0" />
+		<!-- 早上9点到5点，每1小时执行一次 -->
+		<property name="cronExpression" value="0 0 8-17 * * ?" />
+		<!-- 每1分钟执行一次 0 0/1 * * * ?-->
+		<!--<property name="cronExpression" value="0 */1 * * * ?" />-->
+		<!-- 早上9点到5点，每1小时执行一次 -->
+		<!--<property name="cronExpression" value="0 0 8-17 * * ?" />-->
+	</bean>
+	<!-- 配置调度工厂 -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!--<ref bean="simpleTrigger" />-->
+				<ref bean="cronTrigger" />
+				<ref bean="cronTrigger2" />
+				<ref bean="cronTrigger3" />
+			</list>
+		</property>
+	</bean>
+
+	<!--整合redis-->
+	<!-- 配置JedisPoolConfig实例 -->
+	<!-- 配置JedisConnectionFactory -->
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">
+		<property name="connectionFactory"   ref="connectionFactory" />
+	</bean>
+	<bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+		  >
+		<property name="hostName" value="${redis.host}" />
+		<property name="port" value="${redis.port}" />
+		<property name="database" value="${redis.dbIndex}" />
+		<property name="poolConfig" ref="poolConfig" />
+
+	</bean>
+	<bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxIdle" value="${redis.maxIdle}" />
+		<property name="testOnBorrow" value="${redis.testOnBorrow}" />
+	</bean>
+
+</beans>

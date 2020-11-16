@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- leave[leave]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2018-12-14 09:34:19 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.LeaveMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="LeavePO">
+		INSERT INTO leave (
+		
+		<if test="title != null and title != ''">
+	         title, <!-- title -->
+		</if>
+		<if test="start_time != null and start_time != ''">
+	         start_time, <!-- start_time -->
+		</if>
+		<if test="end_time != null and end_time != ''">
+	         end_time, <!-- end_time -->
+		</if>
+		<if test="day != null and day != ''">
+	         day, <!-- day -->
+		</if>
+		<if test="reason != null and reason != ''">
+	         reason, <!-- reason -->
+		</if>
+		<if test="state != null">
+	         state, <!-- state -->
+		</if>
+		<if test="userid != null and userid != ''">
+	         userid, <!-- userid -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	         id_ <!-- id_ -->
+		</if>
+		)VALUES(
+		
+		<if test="title != null and title != ''">
+	          #{title, jdbcType=VARCHAR}, <!-- title -->
+	    </if>
+		<if test="start_time != null and start_time != ''">
+	          #{start_time, jdbcType=VARCHAR}, <!-- start_time -->
+	    </if>
+		<if test="end_time != null and end_time != ''">
+	          #{end_time, jdbcType=VARCHAR}, <!-- end_time -->
+	    </if>
+		<if test="day != null and day != ''">
+	          #{day, jdbcType=VARCHAR}, <!-- day -->
+	    </if>
+		<if test="reason != null and reason != ''">
+	          #{reason, jdbcType=VARCHAR}, <!-- reason -->
+	    </if>
+		<if test="state != null">
+	          #{state, jdbcType=INTEGER}, <!-- state -->
+	    </if>
+		<if test="userid != null and userid != ''">
+	          #{userid, jdbcType=VARCHAR}, <!-- userid -->
+	    </if>
+	    <if test="id_ != null and id_ != ''">
+	          #{id_, jdbcType=VARCHAR} <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="LeavePO">
+		INSERT INTO leave (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{title, jdbcType=VARCHAR},  <!-- title -->
+		    #{start_time, jdbcType=VARCHAR},  <!-- start_time -->
+		    #{end_time, jdbcType=VARCHAR},  <!-- end_time -->
+		    #{day, jdbcType=VARCHAR},  <!-- day -->
+		    #{reason, jdbcType=VARCHAR},  <!-- reason -->
+		    #{state, jdbcType=INTEGER},  <!-- state -->
+		    #{userid, jdbcType=VARCHAR}  <!-- userid -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="LeavePO">
+		UPDATE leave
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="title != null">
+		          title = #{title, jdbcType=VARCHAR},  <!-- title -->
+			</if>
+			<if test="start_time != null">
+		          start_time = #{start_time, jdbcType=VARCHAR},  <!-- start_time -->
+			</if>
+			<if test="end_time != null">
+		          end_time = #{end_time, jdbcType=VARCHAR},  <!-- end_time -->
+			</if>
+			<if test="day != null">
+		          day = #{day, jdbcType=VARCHAR},  <!-- day -->
+			</if>
+			<if test="reason != null">
+		          reason = #{reason, jdbcType=VARCHAR},  <!-- reason -->
+			</if>
+			<if test="state != null">
+		          state = #{state, jdbcType=INTEGER},  <!-- state -->
+			</if>
+			<if test="userid != null">
+		          userid = #{userid, jdbcType=VARCHAR},  <!-- userid -->
+			</if>
+		</set>
+		WHERE id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM leave WHERE 
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="LeavePO">
+		SELECT
+		<include refid="column" />
+		FROM leave WHERE id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="LeavePO">
+		SELECT
+		    <include refid="column" />
+		FROM leave
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="LeavePO">
+		SELECT
+			<include refid="column" />	
+		FROM leave
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="LeavePO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM leave
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="LeavePO">
+		SELECT
+			<include refid="column" />	
+		FROM leave
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="LeavePO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM leave
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM leave
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM leave
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  title,  <!-- title -->
+		  start_time,  <!-- start_time -->
+		  end_time,  <!-- end_time -->
+		  day,  <!-- day -->
+		  reason,  <!-- reason -->
+		  state,  <!-- state -->
+		  userid  <!-- userid -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  leave.id_,  <!-- id_ -->
+		  leave.title,  <!-- title -->
+		  leave.start_time,  <!-- start_time -->
+		  leave.end_time,  <!-- end_time -->
+		  leave.day,  <!-- day -->
+		  leave.reason,  <!-- reason -->
+		  leave.state,  <!-- state -->
+		  leave.userid  <!-- userid -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="title != null and title != ''">
+		      AND title = #{title}  <!-- title -->
+		</if>
+	    <if test="start_time != null and start_time != ''">
+		      AND start_time = #{start_time}  <!-- start_time -->
+		</if>
+	    <if test="end_time != null and end_time != ''">
+		      AND end_time = #{end_time}  <!-- end_time -->
+		</if>
+	    <if test="day != null and day != ''">
+		      AND day = #{day}  <!-- day -->
+		</if>
+	    <if test="reason != null and reason != ''">
+		      AND reason = #{reason}  <!-- reason -->
+		</if>
+	   <if test="state != null ">
+		      AND state = #{state}  <!-- state -->
+		</if>
+	    <if test="userid != null and userid != ''">
+		      AND userid = #{userid}  <!-- userid -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="title != null and title != ''">
+		      AND title like '%${title}%'  <!-- title -->
+		</if>
+	    <if test="start_time != null and start_time != ''">
+		      AND start_time like '%${start_time}%'  <!-- start_time -->
+		</if>
+	    <if test="end_time != null and end_time != ''">
+		      AND end_time like '%${end_time}%'  <!-- end_time -->
+		</if>
+	    <if test="day != null and day != ''">
+		      AND day like '%${day}%'  <!-- day -->
+		</if>
+	    <if test="reason != null and reason != ''">
+		      AND reason like '%${reason}%'  <!-- reason -->
+		</if>
+	    <if test="userid != null and userid != ''">
+		      AND userid like '%${userid}%'  <!-- userid -->
+		</if>
+	</sql>
+	
+</mapper>

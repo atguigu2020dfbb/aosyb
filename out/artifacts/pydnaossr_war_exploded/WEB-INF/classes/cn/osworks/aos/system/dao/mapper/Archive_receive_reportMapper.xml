@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_receive_report[archive_receive_report]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-04-22 14:41:48 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_receive_reportMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_receive_reportPO">
+		INSERT INTO archive_receive_report (
+		<if test="pch != null and pch != ''">
+	         pch, <!-- pch -->
+		</if>
+		<if test="qzh_number != null and qzh_number != ''">
+	         qzh_number, <!-- qzh_number -->
+		</if>
+		<if test="qzh_name != null and qzh_name != ''">
+	         qzh_name, <!-- qzh_name -->
+		</if>
+		<if test="nd != null and nd != ''">
+	         nd, <!-- nd -->
+		</if>
+		<if test="total_number != null and total_number != ''">
+	         total_number, <!-- total_number -->
+		</if>
+		<if test="file_number != null and file_number != ''">
+	         file_number, <!-- file_number -->
+		</if>
+		<if test="jsrq != null and jsrq != ''">
+	         jsrq, <!-- jsrq -->
+		</if>
+		<if test="index_ != null">
+	         index_, <!-- index_ -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="pch != null and pch != ''">
+	          #{pch, jdbcType=VARCHAR}, <!-- pch -->
+	    </if>
+		<if test="qzh_number != null and qzh_number != ''">
+	          #{qzh_number, jdbcType=VARCHAR}, <!-- qzh_number -->
+	    </if>
+		<if test="qzh_name != null and qzh_name != ''">
+	          #{qzh_name, jdbcType=VARCHAR}, <!-- qzh_name -->
+	    </if>
+		<if test="nd != null and nd != ''">
+	          #{nd, jdbcType=VARCHAR}, <!-- nd -->
+	    </if>
+		<if test="total_number != null and total_number != ''">
+	          #{total_number, jdbcType=VARCHAR}, <!-- total_number -->
+	    </if>
+		<if test="file_number != null and file_number != ''">
+	          #{file_number, jdbcType=VARCHAR}, <!-- file_number -->
+	    </if>
+		<if test="jsrq != null and jsrq != ''">
+	          #{jsrq, jdbcType=VARCHAR}, <!-- jsrq -->
+	    </if>
+		<if test="index_ != null">
+	          #{index_, jdbcType=INTEGER}, <!-- index_ -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_receive_reportPO">
+		INSERT INTO archive_receive_report (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{pch, jdbcType=VARCHAR},  <!-- pch -->
+		    #{qzh_number, jdbcType=VARCHAR},  <!-- qzh_number -->
+		    #{qzh_name, jdbcType=VARCHAR},  <!-- qzh_name -->
+		    #{nd, jdbcType=VARCHAR},  <!-- nd -->
+		    #{total_number, jdbcType=VARCHAR},  <!-- total_number -->
+		    #{file_number, jdbcType=VARCHAR},  <!-- file_number -->
+		    #{jsrq, jdbcType=VARCHAR},  <!-- jsrq -->
+		    #{index_, jdbcType=INTEGER}  <!-- index_ -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_receive_reportPO">
+		UPDATE archive_receive_report
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="pch != null">
+		          pch = #{pch, jdbcType=VARCHAR},  <!-- pch -->
+			</if>
+			<if test="qzh_number != null">
+		          qzh_number = #{qzh_number, jdbcType=VARCHAR},  <!-- qzh_number -->
+			</if>
+			<if test="qzh_name != null">
+		          qzh_name = #{qzh_name, jdbcType=VARCHAR},  <!-- qzh_name -->
+			</if>
+			<if test="nd != null">
+		          nd = #{nd, jdbcType=VARCHAR},  <!-- nd -->
+			</if>
+			<if test="total_number != null">
+		          total_number = #{total_number, jdbcType=VARCHAR},  <!-- total_number -->
+			</if>
+			<if test="file_number != null">
+		          file_number = #{file_number, jdbcType=VARCHAR},  <!-- file_number -->
+			</if>
+			<if test="jsrq != null">
+		          jsrq = #{jsrq, jdbcType=VARCHAR},  <!-- jsrq -->
+			</if>
+			<if test="index_ != null">
+		          index_ = #{index_, jdbcType=INTEGER},  <!-- index_ -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_receive_report WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_receive_reportPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_receive_report WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_receive_reportPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_receive_report
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_receive_reportPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_receive_report
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_receive_reportPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_receive_report
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_receive_reportPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_receive_report
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_receive_reportPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_receive_report
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_receive_report
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_receive_report
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  pch,  <!-- pch -->
+		  qzh_number,  <!-- qzh_number -->
+		  qzh_name,  <!-- qzh_name -->
+		  nd,  <!-- nd -->
+		  total_number,  <!-- total_number -->
+		  file_number,  <!-- file_number -->
+		  jsrq,  <!-- jsrq -->
+		  index_  <!-- index_ -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_receive_report.id_,  <!-- id_ -->
+		  archive_receive_report.pch,  <!-- pch -->
+		  archive_receive_report.qzh_number,  <!-- qzh_number -->
+		  archive_receive_report.qzh_name,  <!-- qzh_name -->
+		  archive_receive_report.nd,  <!-- nd -->
+		  archive_receive_report.total_number,  <!-- total_number -->
+		  archive_receive_report.file_number,  <!-- file_number -->
+		  archive_receive_report.jsrq,  <!-- jsrq -->
+		  archive_receive_report.index_  <!-- index_ -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="pch != null and pch != ''">
+		      AND pch = #{pch}  <!-- pch -->
+		</if>
+	    <if test="qzh_number != null and qzh_number != ''">
+		      AND qzh_number = #{qzh_number}  <!-- qzh_number -->
+		</if>
+	    <if test="qzh_name != null and qzh_name != ''">
+		      AND qzh_name = #{qzh_name}  <!-- qzh_name -->
+		</if>
+	    <if test="nd != null and nd != ''">
+		      AND nd = #{nd}  <!-- nd -->
+		</if>
+	    <if test="total_number != null and total_number != ''">
+		      AND total_number = #{total_number}  <!-- total_number -->
+		</if>
+	    <if test="file_number != null and file_number != ''">
+		      AND file_number = #{file_number}  <!-- file_number -->
+		</if>
+	    <if test="jsrq != null and jsrq != ''">
+		      AND jsrq = #{jsrq}  <!-- jsrq -->
+		</if>
+	   <if test="index_ != null ">
+		      AND index_ = #{index_}  <!-- index_ -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="pch != null and pch != ''">
+		      AND pch like '%${pch}%'  <!-- pch -->
+		</if>
+	    <if test="qzh_number != null and qzh_number != ''">
+		      AND qzh_number like '%${qzh_number}%'  <!-- qzh_number -->
+		</if>
+	    <if test="qzh_name != null and qzh_name != ''">
+		      AND qzh_name like '%${qzh_name}%'  <!-- qzh_name -->
+		</if>
+	    <if test="nd != null and nd != ''">
+		      AND nd like '%${nd}%'  <!-- nd -->
+		</if>
+	    <if test="total_number != null and total_number != ''">
+		      AND total_number like '%${total_number}%'  <!-- total_number -->
+		</if>
+	    <if test="file_number != null and file_number != ''">
+		      AND file_number like '%${file_number}%'  <!-- file_number -->
+		</if>
+	    <if test="jsrq != null and jsrq != ''">
+		      AND jsrq like '%${jsrq}%'  <!-- jsrq -->
+		</if>
+	</sql>
+	
+</mapper>

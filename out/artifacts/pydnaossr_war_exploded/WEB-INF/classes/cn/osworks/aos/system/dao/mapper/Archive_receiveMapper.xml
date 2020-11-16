@@ -1,0 +1,1605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_receive[archive_receive]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-11-04 09:58:01 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_receiveMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_receivePO">
+		INSERT INTO archive_receive (
+		<if test="pch != null and pch != ''">
+	         pch, <!-- pch -->
+		</if>
+		<if test="sjygs != null and sjygs != ''">
+	         sjygs, <!-- sjygs -->
+		</if>
+		<if test="jsms != null and jsms != ''">
+	         jsms, <!-- jsms -->
+		</if>
+		<if test="bmmc != null and bmmc != ''">
+	         bmmc, <!-- bmmc -->
+		</if>
+		<if test="bmbh != null and bmbh != ''">
+	         bmbh, <!-- bmbh -->
+		</if>
+		<if test="cjsj != null and cjsj != ''">
+	         cjsj, <!-- cjsj -->
+		</if>
+		<if test="cjr != null and cjr != ''">
+	         cjr, <!-- cjr -->
+		</if>
+		<if test="boolean_examine != null and boolean_examine != ''">
+	         boolean_examine, <!-- boolean_examine -->
+		</if>
+		<if test="treename != null and treename != ''">
+	         treename, <!-- treename -->
+		</if>
+		<if test="jsr != null and jsr != ''">
+	         jsr, <!-- jsr -->
+		</if>
+		<if test="jssj != null and jssj != ''">
+	         jssj, <!-- jssj -->
+		</if>
+		<if test="jszt != null and jszt != ''">
+	         jszt, <!-- jszt -->
+		</if>
+		<if test="shenhr != null and shenhr != ''">
+	         shenhr, <!-- shenhr -->
+		</if>
+		<if test="shsj != null and shsj != ''">
+	         shsj, <!-- shsj -->
+		</if>
+		<if test="shyj != null and shyj != ''">
+	         shyj, <!-- shyj -->
+		</if>
+		<if test="flag_submit != null and flag_submit != ''">
+	         flag_submit, <!-- flag_submit -->
+		</if>
+		<if test="flag_examine != null and flag_examine != ''">
+	         flag_examine, <!-- flag_examine -->
+		</if>
+		<if test="import_sum != null and import_sum != ''">
+	         import_sum, <!-- import_sum -->
+		</if>
+		<if test="boolean_check != null and boolean_check != ''">
+	         boolean_check, <!-- boolean_check -->
+		</if>
+		<if test="manage_shr != null and manage_shr != ''">
+	         manage_shr, <!-- manage_shr -->
+		</if>
+		<if test="manage_shsj != null and manage_shsj != ''">
+	         manage_shsj, <!-- manage_shsj -->
+		</if>
+		<if test="manage_shyj != null and manage_shyj != ''">
+	         manage_shyj, <!-- manage_shyj -->
+		</if>
+		<if test="flag_manage_submit != null and flag_manage_submit != ''">
+	         flag_manage_submit, <!-- flag_manage_submit -->
+		</if>
+		<if test="flag_manage_examine != null and flag_manage_examine != ''">
+	         flag_manage_examine, <!-- flag_manage_examine -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+	         tablename, <!-- tablename -->
+		</if>
+		<if test="rkzt != null and rkzt != ''">
+	         rkzt, <!-- rkzt -->
+		</if>
+		<if test="nd != null and nd != ''">
+	         nd, <!-- nd -->
+		</if>
+		<if test="flag != null and flag != ''">
+	         flag, <!-- flag -->
+		</if>
+		<if test="jsbm != null and jsbm != ''">
+	         jsbm, <!-- jsbm -->
+		</if>
+		<if test="yjbm != null and yjbm != ''">
+	         yjbm, <!-- yjbm -->
+		</if>
+		<if test="yjr != null and yjr != ''">
+	         yjr, <!-- yjr -->
+		</if>
+		<if test="qzh != null and qzh != ''">
+	         qzh, <!-- qzh -->
+		</if>
+		<if test="qzdw != null and qzdw != ''">
+	         qzdw, <!-- qzdw -->
+		</if>
+		<if test="daml != null and daml != ''">
+	         daml, <!-- daml -->
+		</if>
+		<if test="qzsj != null and qzsj != ''">
+	         qzsj, <!-- qzsj -->
+		</if>
+		<if test="dzmls != null and dzmls != ''">
+	         dzmls, <!-- dzmls -->
+		</if>
+		<if test="mlsjygs != null and mlsjygs != ''">
+	         mlsjygs, <!-- mlsjygs -->
+		</if>
+		<if test="dzqws != null and dzqws != ''">
+	         dzqws, <!-- dzqws -->
+		</if>
+		<if test="dzqwgs != null and dzqwgs != ''">
+	         dzqwgs, <!-- dzqwgs -->
+		</if>
+		<if test="dzqwrl != null and dzqwrl != ''">
+	         dzqwrl, <!-- dzqwrl -->
+		</if>
+		<if test="boolean_receive != null and boolean_receive != ''">
+	         boolean_receive, <!-- boolean_receive -->
+		</if>
+		<if test="yjssc != null and yjssc != ''">
+	         yjssc, <!-- yjssc -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="user_cn != null and user_cn != ''">
+	         user_cn, <!-- user_cn -->
+		</if>
+		<if test="rwmc != null and rwmc != ''">
+	         rwmc, <!-- rwmc -->
+		</if>
+		<if test="sc != null and sc != ''">
+	         sc, <!-- sc -->
+		</if>
+		<if test="jsnd != null and jsnd != ''">
+	         jsnd, <!-- jsnd -->
+		</if>
+		<if test="jjsj != null and jjsj != ''">
+	         jjsj, <!-- jjsj -->
+		</if>
+		<if test="qznd != null and qznd != ''">
+	         qznd, <!-- qznd -->
+		</if>
+		<if test="yjjs != null and yjjs != ''">
+	         yjjs, <!-- yjjs -->
+		</if>
+		<if test="cqjs != null and cqjs != ''">
+	         cqjs, <!-- cqjs -->
+		</if>
+		<if test="zjs != null and zjs != ''">
+	         zjs, <!-- zjs -->
+		</if>
+		<if test="jzys != null and jzys != ''">
+	         jzys, <!-- jzys -->
+		</if>
+		<if test="jszhys != null and jszhys != ''">
+	         jszhys, <!-- jszhys -->
+		</if>
+		<if test="yjjis != null and yjjis != ''">
+	         yjjis, <!-- yjjis -->
+		</if>
+		<if test="dqjs != null and dqjs != ''">
+	         dqjs, <!-- dqjs -->
+		</if>
+		<if test="zjis != null and zjis != ''">
+	         zjis, <!-- zjis -->
+		</if>
+		<if test="jazys != null and jazys != ''">
+	         jazys, <!-- jazys -->
+		</if>
+		<if test="jaszhys != null and jaszhys != ''">
+	         jaszhys, <!-- jaszhys -->
+		</if>
+		<if test="dzmlgs != null and dzmlgs != ''">
+	         dzmlgs, <!-- dzmlgs -->
+		</if>
+		<if test="jnyjjs != null and jnyjjs != ''">
+	         jnyjjs, <!-- jnyjjs -->
+		</if>
+		<if test="jncqjs != null and jncqjs != ''">
+	         jncqjs, <!-- jncqjs -->
+		</if>
+		<if test="jnzjs != null and jnzjs != ''">
+	         jnzjs, <!-- jnzjs -->
+		</if>
+		<if test="jnszhjs != null and jnszhjs != ''">
+	         jnszhjs, <!-- jnszhjs -->
+		</if>
+		<if test="ajzys != null and ajzys != ''">
+	         ajzys, <!-- ajzys -->
+		</if>
+		<if test="sjszhys != null and sjszhys != ''">
+	         sjszhys, <!-- sjszhys -->
+		</if>
+		<if test="gdyjjs != null and gdyjjs != ''">
+	         gdyjjs, <!-- gdyjjs -->
+		</if>
+		<if test="gddqjs != null and gddqjs != ''">
+	         gddqjs, <!-- gddqjs -->
+		</if>
+		<if test="gdzjs != null and gdzjs != ''">
+	         gdzjs, <!-- gdzjs -->
+		</if>
+		<if test="gdszhjs != null and gdszhjs != ''">
+	         gdszhjs, <!-- gdszhjs -->
+		</if>
+		<if test="gdzys != null and gdzys != ''">
+	         gdzys, <!-- gdzys -->
+		</if>
+		<if test="gdszhys != null and gdszhys != ''">
+	         gdszhys, <!-- gdszhys -->
+		</if>
+		<if test="yjzs != null and yjzs != ''">
+	         yjzs, <!-- yjzs -->
+		</if>
+		<if test="cqzs != null and cqzs != ''">
+	         cqzs, <!-- cqzs -->
+		</if>
+		<if test="zzs != null and zzs != ''">
+	         zzs, <!-- zzs -->
+		</if>
+		<if test="szhzs != null and szhzs != ''">
+	         szhzs, <!-- szhzs -->
+		</if>
+		<if test="z_szhjs != null and z_szhjs != ''">
+	         z_szhjs, <!-- z_szhjs -->
+		</if>
+		<if test="z_szhzs != null and z_szhzs != ''">
+	         z_szhzs, <!-- z_szhzs -->
+		</if>
+		<if test="j_szhjs != null and j_szhjs != ''">
+	         j_szhjs, <!-- j_szhjs -->
+		</if>
+		<if test="j_szhzs != null and j_szhzs != ''">
+	         j_szhzs, <!-- j_szhzs -->
+		</if>
+		<if test="ajszhys != null and ajszhys != ''">
+	         ajszhys, <!-- ajszhys -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="pch != null and pch != ''">
+	          #{pch, jdbcType=VARCHAR}, <!-- pch -->
+	    </if>
+		<if test="sjygs != null and sjygs != ''">
+	          #{sjygs, jdbcType=VARCHAR}, <!-- sjygs -->
+	    </if>
+		<if test="jsms != null and jsms != ''">
+	          #{jsms, jdbcType=VARCHAR}, <!-- jsms -->
+	    </if>
+		<if test="bmmc != null and bmmc != ''">
+	          #{bmmc, jdbcType=VARCHAR}, <!-- bmmc -->
+	    </if>
+		<if test="bmbh != null and bmbh != ''">
+	          #{bmbh, jdbcType=VARCHAR}, <!-- bmbh -->
+	    </if>
+		<if test="cjsj != null and cjsj != ''">
+	          #{cjsj, jdbcType=VARCHAR}, <!-- cjsj -->
+	    </if>
+		<if test="cjr != null and cjr != ''">
+	          #{cjr, jdbcType=VARCHAR}, <!-- cjr -->
+	    </if>
+		<if test="boolean_examine != null and boolean_examine != ''">
+	          #{boolean_examine, jdbcType=VARCHAR}, <!-- boolean_examine -->
+	    </if>
+		<if test="treename != null and treename != ''">
+	          #{treename, jdbcType=VARCHAR}, <!-- treename -->
+	    </if>
+		<if test="jsr != null and jsr != ''">
+	          #{jsr, jdbcType=VARCHAR}, <!-- jsr -->
+	    </if>
+		<if test="jssj != null and jssj != ''">
+	          #{jssj, jdbcType=VARCHAR}, <!-- jssj -->
+	    </if>
+		<if test="jszt != null and jszt != ''">
+	          #{jszt, jdbcType=VARCHAR}, <!-- jszt -->
+	    </if>
+		<if test="shenhr != null and shenhr != ''">
+	          #{shenhr, jdbcType=VARCHAR}, <!-- shenhr -->
+	    </if>
+		<if test="shsj != null and shsj != ''">
+	          #{shsj, jdbcType=VARCHAR}, <!-- shsj -->
+	    </if>
+		<if test="shyj != null and shyj != ''">
+	          #{shyj, jdbcType=VARCHAR}, <!-- shyj -->
+	    </if>
+		<if test="flag_submit != null and flag_submit != ''">
+	          #{flag_submit, jdbcType=VARCHAR}, <!-- flag_submit -->
+	    </if>
+		<if test="flag_examine != null and flag_examine != ''">
+	          #{flag_examine, jdbcType=VARCHAR}, <!-- flag_examine -->
+	    </if>
+		<if test="import_sum != null and import_sum != ''">
+	          #{import_sum, jdbcType=VARCHAR}, <!-- import_sum -->
+	    </if>
+		<if test="boolean_check != null and boolean_check != ''">
+	          #{boolean_check, jdbcType=VARCHAR}, <!-- boolean_check -->
+	    </if>
+		<if test="manage_shr != null and manage_shr != ''">
+	          #{manage_shr, jdbcType=VARCHAR}, <!-- manage_shr -->
+	    </if>
+		<if test="manage_shsj != null and manage_shsj != ''">
+	          #{manage_shsj, jdbcType=VARCHAR}, <!-- manage_shsj -->
+	    </if>
+		<if test="manage_shyj != null and manage_shyj != ''">
+	          #{manage_shyj, jdbcType=VARCHAR}, <!-- manage_shyj -->
+	    </if>
+		<if test="flag_manage_submit != null and flag_manage_submit != ''">
+	          #{flag_manage_submit, jdbcType=VARCHAR}, <!-- flag_manage_submit -->
+	    </if>
+		<if test="flag_manage_examine != null and flag_manage_examine != ''">
+	          #{flag_manage_examine, jdbcType=VARCHAR}, <!-- flag_manage_examine -->
+	    </if>
+		<if test="tablename != null and tablename != ''">
+	          #{tablename, jdbcType=VARCHAR}, <!-- tablename -->
+	    </if>
+		<if test="rkzt != null and rkzt != ''">
+	          #{rkzt, jdbcType=VARCHAR}, <!-- rkzt -->
+	    </if>
+		<if test="nd != null and nd != ''">
+	          #{nd, jdbcType=VARCHAR}, <!-- nd -->
+	    </if>
+		<if test="flag != null and flag != ''">
+	          #{flag, jdbcType=VARCHAR}, <!-- flag -->
+	    </if>
+		<if test="jsbm != null and jsbm != ''">
+	          #{jsbm, jdbcType=VARCHAR}, <!-- jsbm -->
+	    </if>
+		<if test="yjbm != null and yjbm != ''">
+	          #{yjbm, jdbcType=VARCHAR}, <!-- yjbm -->
+	    </if>
+		<if test="yjr != null and yjr != ''">
+	          #{yjr, jdbcType=VARCHAR}, <!-- yjr -->
+	    </if>
+		<if test="qzh != null and qzh != ''">
+	          #{qzh, jdbcType=VARCHAR}, <!-- qzh -->
+	    </if>
+		<if test="qzdw != null and qzdw != ''">
+	          #{qzdw, jdbcType=VARCHAR}, <!-- qzdw -->
+	    </if>
+		<if test="daml != null and daml != ''">
+	          #{daml, jdbcType=VARCHAR}, <!-- daml -->
+	    </if>
+		<if test="qzsj != null and qzsj != ''">
+	          #{qzsj, jdbcType=VARCHAR}, <!-- qzsj -->
+	    </if>
+		<if test="dzmls != null and dzmls != ''">
+	          #{dzmls, jdbcType=VARCHAR}, <!-- dzmls -->
+	    </if>
+		<if test="mlsjygs != null and mlsjygs != ''">
+	          #{mlsjygs, jdbcType=VARCHAR}, <!-- mlsjygs -->
+	    </if>
+		<if test="dzqws != null and dzqws != ''">
+	          #{dzqws, jdbcType=VARCHAR}, <!-- dzqws -->
+	    </if>
+		<if test="dzqwgs != null and dzqwgs != ''">
+	          #{dzqwgs, jdbcType=VARCHAR}, <!-- dzqwgs -->
+	    </if>
+		<if test="dzqwrl != null and dzqwrl != ''">
+	          #{dzqwrl, jdbcType=VARCHAR}, <!-- dzqwrl -->
+	    </if>
+		<if test="boolean_receive != null and boolean_receive != ''">
+	          #{boolean_receive, jdbcType=VARCHAR}, <!-- boolean_receive -->
+	    </if>
+		<if test="yjssc != null and yjssc != ''">
+	          #{yjssc, jdbcType=VARCHAR}, <!-- yjssc -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="user_cn != null and user_cn != ''">
+	          #{user_cn, jdbcType=VARCHAR}, <!-- user_cn -->
+	    </if>
+		<if test="rwmc != null and rwmc != ''">
+	          #{rwmc, jdbcType=VARCHAR}, <!-- rwmc -->
+	    </if>
+		<if test="sc != null and sc != ''">
+	          #{sc, jdbcType=VARCHAR}, <!-- sc -->
+	    </if>
+		<if test="jsnd != null and jsnd != ''">
+	          #{jsnd, jdbcType=VARCHAR}, <!-- jsnd -->
+	    </if>
+		<if test="jjsj != null and jjsj != ''">
+	          #{jjsj, jdbcType=VARCHAR}, <!-- jjsj -->
+	    </if>
+		<if test="qznd != null and qznd != ''">
+	          #{qznd, jdbcType=VARCHAR}, <!-- qznd -->
+	    </if>
+		<if test="yjjs != null and yjjs != ''">
+	          #{yjjs, jdbcType=VARCHAR}, <!-- yjjs -->
+	    </if>
+		<if test="cqjs != null and cqjs != ''">
+	          #{cqjs, jdbcType=VARCHAR}, <!-- cqjs -->
+	    </if>
+		<if test="zjs != null and zjs != ''">
+	          #{zjs, jdbcType=VARCHAR}, <!-- zjs -->
+	    </if>
+		<if test="jzys != null and jzys != ''">
+	          #{jzys, jdbcType=VARCHAR}, <!-- jzys -->
+	    </if>
+		<if test="jszhys != null and jszhys != ''">
+	          #{jszhys, jdbcType=VARCHAR}, <!-- jszhys -->
+	    </if>
+		<if test="yjjis != null and yjjis != ''">
+	          #{yjjis, jdbcType=VARCHAR}, <!-- yjjis -->
+	    </if>
+		<if test="dqjs != null and dqjs != ''">
+	          #{dqjs, jdbcType=VARCHAR}, <!-- dqjs -->
+	    </if>
+		<if test="zjis != null and zjis != ''">
+	          #{zjis, jdbcType=VARCHAR}, <!-- zjis -->
+	    </if>
+		<if test="jazys != null and jazys != ''">
+	          #{jazys, jdbcType=VARCHAR}, <!-- jazys -->
+	    </if>
+		<if test="jaszhys != null and jaszhys != ''">
+	          #{jaszhys, jdbcType=VARCHAR}, <!-- jaszhys -->
+	    </if>
+		<if test="dzmlgs != null and dzmlgs != ''">
+	          #{dzmlgs, jdbcType=VARCHAR}, <!-- dzmlgs -->
+	    </if>
+		<if test="jnyjjs != null and jnyjjs != ''">
+	          #{jnyjjs, jdbcType=VARCHAR}, <!-- jnyjjs -->
+	    </if>
+		<if test="jncqjs != null and jncqjs != ''">
+	          #{jncqjs, jdbcType=VARCHAR}, <!-- jncqjs -->
+	    </if>
+		<if test="jnzjs != null and jnzjs != ''">
+	          #{jnzjs, jdbcType=VARCHAR}, <!-- jnzjs -->
+	    </if>
+		<if test="jnszhjs != null and jnszhjs != ''">
+	          #{jnszhjs, jdbcType=VARCHAR}, <!-- jnszhjs -->
+	    </if>
+		<if test="ajzys != null and ajzys != ''">
+	          #{ajzys, jdbcType=VARCHAR}, <!-- ajzys -->
+	    </if>
+		<if test="sjszhys != null and sjszhys != ''">
+	          #{sjszhys, jdbcType=VARCHAR}, <!-- sjszhys -->
+	    </if>
+		<if test="gdyjjs != null and gdyjjs != ''">
+	          #{gdyjjs, jdbcType=VARCHAR}, <!-- gdyjjs -->
+	    </if>
+		<if test="gddqjs != null and gddqjs != ''">
+	          #{gddqjs, jdbcType=VARCHAR}, <!-- gddqjs -->
+	    </if>
+		<if test="gdzjs != null and gdzjs != ''">
+	          #{gdzjs, jdbcType=VARCHAR}, <!-- gdzjs -->
+	    </if>
+		<if test="gdszhjs != null and gdszhjs != ''">
+	          #{gdszhjs, jdbcType=VARCHAR}, <!-- gdszhjs -->
+	    </if>
+		<if test="gdzys != null and gdzys != ''">
+	          #{gdzys, jdbcType=VARCHAR}, <!-- gdzys -->
+	    </if>
+		<if test="gdszhys != null and gdszhys != ''">
+	          #{gdszhys, jdbcType=VARCHAR}, <!-- gdszhys -->
+	    </if>
+		<if test="yjzs != null and yjzs != ''">
+	          #{yjzs, jdbcType=VARCHAR}, <!-- yjzs -->
+	    </if>
+		<if test="cqzs != null and cqzs != ''">
+	          #{cqzs, jdbcType=VARCHAR}, <!-- cqzs -->
+	    </if>
+		<if test="zzs != null and zzs != ''">
+	          #{zzs, jdbcType=VARCHAR}, <!-- zzs -->
+	    </if>
+		<if test="szhzs != null and szhzs != ''">
+	          #{szhzs, jdbcType=VARCHAR}, <!-- szhzs -->
+	    </if>
+		<if test="z_szhjs != null and z_szhjs != ''">
+	          #{z_szhjs, jdbcType=VARCHAR}, <!-- z_szhjs -->
+	    </if>
+		<if test="z_szhzs != null and z_szhzs != ''">
+	          #{z_szhzs, jdbcType=VARCHAR}, <!-- z_szhzs -->
+	    </if>
+		<if test="j_szhjs != null and j_szhjs != ''">
+	          #{j_szhjs, jdbcType=VARCHAR}, <!-- j_szhjs -->
+	    </if>
+		<if test="j_szhzs != null and j_szhzs != ''">
+	          #{j_szhzs, jdbcType=VARCHAR}, <!-- j_szhzs -->
+	    </if>
+		<if test="ajszhys != null and ajszhys != ''">
+	          #{ajszhys, jdbcType=VARCHAR}, <!-- ajszhys -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_receivePO">
+		INSERT INTO archive_receive (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{pch, jdbcType=VARCHAR},  <!-- pch -->
+		    #{sjygs, jdbcType=VARCHAR},  <!-- sjygs -->
+		    #{jsms, jdbcType=VARCHAR},  <!-- jsms -->
+		    #{bmmc, jdbcType=VARCHAR},  <!-- bmmc -->
+		    #{bmbh, jdbcType=VARCHAR},  <!-- bmbh -->
+		    #{cjsj, jdbcType=VARCHAR},  <!-- cjsj -->
+		    #{cjr, jdbcType=VARCHAR},  <!-- cjr -->
+		    #{boolean_examine, jdbcType=VARCHAR},  <!-- boolean_examine -->
+		    #{treename, jdbcType=VARCHAR},  <!-- treename -->
+		    #{jsr, jdbcType=VARCHAR},  <!-- jsr -->
+		    #{jssj, jdbcType=VARCHAR},  <!-- jssj -->
+		    #{jszt, jdbcType=VARCHAR},  <!-- jszt -->
+		    #{shenhr, jdbcType=VARCHAR},  <!-- shenhr -->
+		    #{shsj, jdbcType=VARCHAR},  <!-- shsj -->
+		    #{shyj, jdbcType=VARCHAR},  <!-- shyj -->
+		    #{flag_submit, jdbcType=VARCHAR},  <!-- flag_submit -->
+		    #{flag_examine, jdbcType=VARCHAR},  <!-- flag_examine -->
+		    #{import_sum, jdbcType=VARCHAR},  <!-- import_sum -->
+		    #{boolean_check, jdbcType=VARCHAR},  <!-- boolean_check -->
+		    #{manage_shr, jdbcType=VARCHAR},  <!-- manage_shr -->
+		    #{manage_shsj, jdbcType=VARCHAR},  <!-- manage_shsj -->
+		    #{manage_shyj, jdbcType=VARCHAR},  <!-- manage_shyj -->
+		    #{flag_manage_submit, jdbcType=VARCHAR},  <!-- flag_manage_submit -->
+		    #{flag_manage_examine, jdbcType=VARCHAR},  <!-- flag_manage_examine -->
+		    #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+		    #{rkzt, jdbcType=VARCHAR},  <!-- rkzt -->
+		    #{nd, jdbcType=VARCHAR},  <!-- nd -->
+		    #{flag, jdbcType=VARCHAR},  <!-- flag -->
+		    #{jsbm, jdbcType=VARCHAR},  <!-- jsbm -->
+		    #{yjbm, jdbcType=VARCHAR},  <!-- yjbm -->
+		    #{yjr, jdbcType=VARCHAR},  <!-- yjr -->
+		    #{qzh, jdbcType=VARCHAR},  <!-- qzh -->
+		    #{qzdw, jdbcType=VARCHAR},  <!-- qzdw -->
+		    #{daml, jdbcType=VARCHAR},  <!-- daml -->
+		    #{qzsj, jdbcType=VARCHAR},  <!-- qzsj -->
+		    #{dzmls, jdbcType=VARCHAR},  <!-- dzmls -->
+		    #{mlsjygs, jdbcType=VARCHAR},  <!-- mlsjygs -->
+		    #{dzqws, jdbcType=VARCHAR},  <!-- dzqws -->
+		    #{dzqwgs, jdbcType=VARCHAR},  <!-- dzqwgs -->
+		    #{dzqwrl, jdbcType=VARCHAR},  <!-- dzqwrl -->
+		    #{boolean_receive, jdbcType=VARCHAR},  <!-- boolean_receive -->
+		    #{yjssc, jdbcType=VARCHAR},  <!-- yjssc -->
+		    #{bz, jdbcType=VARCHAR},  <!-- bz -->
+		    #{user_cn, jdbcType=VARCHAR},  <!-- user_cn -->
+		    #{rwmc, jdbcType=VARCHAR},  <!-- rwmc -->
+		    #{sc, jdbcType=VARCHAR},  <!-- sc -->
+		    #{jsnd, jdbcType=VARCHAR},  <!-- jsnd -->
+		    #{jjsj, jdbcType=VARCHAR},  <!-- jjsj -->
+		    #{qznd, jdbcType=VARCHAR},  <!-- qznd -->
+		    #{yjjs, jdbcType=VARCHAR},  <!-- yjjs -->
+		    #{cqjs, jdbcType=VARCHAR},  <!-- cqjs -->
+		    #{zjs, jdbcType=VARCHAR},  <!-- zjs -->
+		    #{jzys, jdbcType=VARCHAR},  <!-- jzys -->
+		    #{jszhys, jdbcType=VARCHAR},  <!-- jszhys -->
+		    #{yjjis, jdbcType=VARCHAR},  <!-- yjjis -->
+		    #{dqjs, jdbcType=VARCHAR},  <!-- dqjs -->
+		    #{zjis, jdbcType=VARCHAR},  <!-- zjis -->
+		    #{jazys, jdbcType=VARCHAR},  <!-- jazys -->
+		    #{jaszhys, jdbcType=VARCHAR},  <!-- jaszhys -->
+		    #{dzmlgs, jdbcType=VARCHAR},  <!-- dzmlgs -->
+		    #{jnyjjs, jdbcType=VARCHAR},  <!-- jnyjjs -->
+		    #{jncqjs, jdbcType=VARCHAR},  <!-- jncqjs -->
+		    #{jnzjs, jdbcType=VARCHAR},  <!-- jnzjs -->
+		    #{jnszhjs, jdbcType=VARCHAR},  <!-- jnszhjs -->
+		    #{ajzys, jdbcType=VARCHAR},  <!-- ajzys -->
+		    #{sjszhys, jdbcType=VARCHAR},  <!-- sjszhys -->
+		    #{gdyjjs, jdbcType=VARCHAR},  <!-- gdyjjs -->
+		    #{gddqjs, jdbcType=VARCHAR},  <!-- gddqjs -->
+		    #{gdzjs, jdbcType=VARCHAR},  <!-- gdzjs -->
+		    #{gdszhjs, jdbcType=VARCHAR},  <!-- gdszhjs -->
+		    #{gdzys, jdbcType=VARCHAR},  <!-- gdzys -->
+		    #{gdszhys, jdbcType=VARCHAR},  <!-- gdszhys -->
+		    #{yjzs, jdbcType=VARCHAR},  <!-- yjzs -->
+		    #{cqzs, jdbcType=VARCHAR},  <!-- cqzs -->
+		    #{zzs, jdbcType=VARCHAR},  <!-- zzs -->
+		    #{szhzs, jdbcType=VARCHAR},  <!-- szhzs -->
+		    #{z_szhjs, jdbcType=VARCHAR},  <!-- z_szhjs -->
+		    #{z_szhzs, jdbcType=VARCHAR},  <!-- z_szhzs -->
+		    #{j_szhjs, jdbcType=VARCHAR},  <!-- j_szhjs -->
+		    #{j_szhzs, jdbcType=VARCHAR},  <!-- j_szhzs -->
+		    #{ajszhys, jdbcType=VARCHAR}  <!-- ajszhys -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_receivePO">
+		UPDATE archive_receive
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="pch != null">
+		          pch = #{pch, jdbcType=VARCHAR},  <!-- pch -->
+			</if>
+			<if test="sjygs != null">
+		          sjygs = #{sjygs, jdbcType=VARCHAR},  <!-- sjygs -->
+			</if>
+			<if test="jsms != null">
+		          jsms = #{jsms, jdbcType=VARCHAR},  <!-- jsms -->
+			</if>
+			<if test="bmmc != null">
+		          bmmc = #{bmmc, jdbcType=VARCHAR},  <!-- bmmc -->
+			</if>
+			<if test="bmbh != null">
+		          bmbh = #{bmbh, jdbcType=VARCHAR},  <!-- bmbh -->
+			</if>
+			<if test="cjsj != null">
+		          cjsj = #{cjsj, jdbcType=VARCHAR},  <!-- cjsj -->
+			</if>
+			<if test="cjr != null">
+		          cjr = #{cjr, jdbcType=VARCHAR},  <!-- cjr -->
+			</if>
+			<if test="boolean_examine != null">
+		          boolean_examine = #{boolean_examine, jdbcType=VARCHAR},  <!-- boolean_examine -->
+			</if>
+			<if test="treename != null">
+		          treename = #{treename, jdbcType=VARCHAR},  <!-- treename -->
+			</if>
+			<if test="jsr != null">
+		          jsr = #{jsr, jdbcType=VARCHAR},  <!-- jsr -->
+			</if>
+			<if test="jssj != null">
+		          jssj = #{jssj, jdbcType=VARCHAR},  <!-- jssj -->
+			</if>
+			<if test="jszt != null">
+		          jszt = #{jszt, jdbcType=VARCHAR},  <!-- jszt -->
+			</if>
+			<if test="shenhr != null">
+		          shenhr = #{shenhr, jdbcType=VARCHAR},  <!-- shenhr -->
+			</if>
+			<if test="shsj != null">
+		          shsj = #{shsj, jdbcType=VARCHAR},  <!-- shsj -->
+			</if>
+			<if test="shyj != null">
+		          shyj = #{shyj, jdbcType=VARCHAR},  <!-- shyj -->
+			</if>
+			<if test="flag_submit != null">
+		          flag_submit = #{flag_submit, jdbcType=VARCHAR},  <!-- flag_submit -->
+			</if>
+			<if test="flag_examine != null">
+		          flag_examine = #{flag_examine, jdbcType=VARCHAR},  <!-- flag_examine -->
+			</if>
+			<if test="import_sum != null">
+		          import_sum = #{import_sum, jdbcType=VARCHAR},  <!-- import_sum -->
+			</if>
+			<if test="boolean_check != null">
+		          boolean_check = #{boolean_check, jdbcType=VARCHAR},  <!-- boolean_check -->
+			</if>
+			<if test="manage_shr != null">
+		          manage_shr = #{manage_shr, jdbcType=VARCHAR},  <!-- manage_shr -->
+			</if>
+			<if test="manage_shsj != null">
+		          manage_shsj = #{manage_shsj, jdbcType=VARCHAR},  <!-- manage_shsj -->
+			</if>
+			<if test="manage_shyj != null">
+		          manage_shyj = #{manage_shyj, jdbcType=VARCHAR},  <!-- manage_shyj -->
+			</if>
+			<if test="flag_manage_submit != null">
+		          flag_manage_submit = #{flag_manage_submit, jdbcType=VARCHAR},  <!-- flag_manage_submit -->
+			</if>
+			<if test="flag_manage_examine != null">
+		          flag_manage_examine = #{flag_manage_examine, jdbcType=VARCHAR},  <!-- flag_manage_examine -->
+			</if>
+			<if test="tablename != null">
+		          tablename = #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+			</if>
+			<if test="rkzt != null">
+		          rkzt = #{rkzt, jdbcType=VARCHAR},  <!-- rkzt -->
+			</if>
+			<if test="nd != null">
+		          nd = #{nd, jdbcType=VARCHAR},  <!-- nd -->
+			</if>
+			<if test="flag != null">
+		          flag = #{flag, jdbcType=VARCHAR},  <!-- flag -->
+			</if>
+			<if test="jsbm != null">
+		          jsbm = #{jsbm, jdbcType=VARCHAR},  <!-- jsbm -->
+			</if>
+			<if test="yjbm != null">
+		          yjbm = #{yjbm, jdbcType=VARCHAR},  <!-- yjbm -->
+			</if>
+			<if test="yjr != null">
+		          yjr = #{yjr, jdbcType=VARCHAR},  <!-- yjr -->
+			</if>
+			<if test="qzh != null">
+		          qzh = #{qzh, jdbcType=VARCHAR},  <!-- qzh -->
+			</if>
+			<if test="qzdw != null">
+		          qzdw = #{qzdw, jdbcType=VARCHAR},  <!-- qzdw -->
+			</if>
+			<if test="daml != null">
+		          daml = #{daml, jdbcType=VARCHAR},  <!-- daml -->
+			</if>
+			<if test="qzsj != null">
+		          qzsj = #{qzsj, jdbcType=VARCHAR},  <!-- qzsj -->
+			</if>
+			<if test="dzmls != null">
+		          dzmls = #{dzmls, jdbcType=VARCHAR},  <!-- dzmls -->
+			</if>
+			<if test="mlsjygs != null">
+		          mlsjygs = #{mlsjygs, jdbcType=VARCHAR},  <!-- mlsjygs -->
+			</if>
+			<if test="dzqws != null">
+		          dzqws = #{dzqws, jdbcType=VARCHAR},  <!-- dzqws -->
+			</if>
+			<if test="dzqwgs != null">
+		          dzqwgs = #{dzqwgs, jdbcType=VARCHAR},  <!-- dzqwgs -->
+			</if>
+			<if test="dzqwrl != null">
+		          dzqwrl = #{dzqwrl, jdbcType=VARCHAR},  <!-- dzqwrl -->
+			</if>
+			<if test="boolean_receive != null">
+		          boolean_receive = #{boolean_receive, jdbcType=VARCHAR},  <!-- boolean_receive -->
+			</if>
+			<if test="yjssc != null">
+		          yjssc = #{yjssc, jdbcType=VARCHAR},  <!-- yjssc -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+			<if test="user_cn != null">
+		          user_cn = #{user_cn, jdbcType=VARCHAR},  <!-- user_cn -->
+			</if>
+			<if test="rwmc != null">
+		          rwmc = #{rwmc, jdbcType=VARCHAR},  <!-- rwmc -->
+			</if>
+			<if test="sc != null">
+		          sc = #{sc, jdbcType=VARCHAR},  <!-- sc -->
+			</if>
+			<if test="jsnd != null">
+		          jsnd = #{jsnd, jdbcType=VARCHAR},  <!-- jsnd -->
+			</if>
+			<if test="jjsj != null">
+		          jjsj = #{jjsj, jdbcType=VARCHAR},  <!-- jjsj -->
+			</if>
+			<if test="qznd != null">
+		          qznd = #{qznd, jdbcType=VARCHAR},  <!-- qznd -->
+			</if>
+			<if test="yjjs != null">
+		          yjjs = #{yjjs, jdbcType=VARCHAR},  <!-- yjjs -->
+			</if>
+			<if test="cqjs != null">
+		          cqjs = #{cqjs, jdbcType=VARCHAR},  <!-- cqjs -->
+			</if>
+			<if test="zjs != null">
+		          zjs = #{zjs, jdbcType=VARCHAR},  <!-- zjs -->
+			</if>
+			<if test="jzys != null">
+		          jzys = #{jzys, jdbcType=VARCHAR},  <!-- jzys -->
+			</if>
+			<if test="jszhys != null">
+		          jszhys = #{jszhys, jdbcType=VARCHAR},  <!-- jszhys -->
+			</if>
+			<if test="yjjis != null">
+		          yjjis = #{yjjis, jdbcType=VARCHAR},  <!-- yjjis -->
+			</if>
+			<if test="dqjs != null">
+		          dqjs = #{dqjs, jdbcType=VARCHAR},  <!-- dqjs -->
+			</if>
+			<if test="zjis != null">
+		          zjis = #{zjis, jdbcType=VARCHAR},  <!-- zjis -->
+			</if>
+			<if test="jazys != null">
+		          jazys = #{jazys, jdbcType=VARCHAR},  <!-- jazys -->
+			</if>
+			<if test="jaszhys != null">
+		          jaszhys = #{jaszhys, jdbcType=VARCHAR},  <!-- jaszhys -->
+			</if>
+			<if test="dzmlgs != null">
+		          dzmlgs = #{dzmlgs, jdbcType=VARCHAR},  <!-- dzmlgs -->
+			</if>
+			<if test="jnyjjs != null">
+		          jnyjjs = #{jnyjjs, jdbcType=VARCHAR},  <!-- jnyjjs -->
+			</if>
+			<if test="jncqjs != null">
+		          jncqjs = #{jncqjs, jdbcType=VARCHAR},  <!-- jncqjs -->
+			</if>
+			<if test="jnzjs != null">
+		          jnzjs = #{jnzjs, jdbcType=VARCHAR},  <!-- jnzjs -->
+			</if>
+			<if test="jnszhjs != null">
+		          jnszhjs = #{jnszhjs, jdbcType=VARCHAR},  <!-- jnszhjs -->
+			</if>
+			<if test="ajzys != null">
+		          ajzys = #{ajzys, jdbcType=VARCHAR},  <!-- ajzys -->
+			</if>
+			<if test="sjszhys != null">
+		          sjszhys = #{sjszhys, jdbcType=VARCHAR},  <!-- sjszhys -->
+			</if>
+			<if test="gdyjjs != null">
+		          gdyjjs = #{gdyjjs, jdbcType=VARCHAR},  <!-- gdyjjs -->
+			</if>
+			<if test="gddqjs != null">
+		          gddqjs = #{gddqjs, jdbcType=VARCHAR},  <!-- gddqjs -->
+			</if>
+			<if test="gdzjs != null">
+		          gdzjs = #{gdzjs, jdbcType=VARCHAR},  <!-- gdzjs -->
+			</if>
+			<if test="gdszhjs != null">
+		          gdszhjs = #{gdszhjs, jdbcType=VARCHAR},  <!-- gdszhjs -->
+			</if>
+			<if test="gdzys != null">
+		          gdzys = #{gdzys, jdbcType=VARCHAR},  <!-- gdzys -->
+			</if>
+			<if test="gdszhys != null">
+		          gdszhys = #{gdszhys, jdbcType=VARCHAR},  <!-- gdszhys -->
+			</if>
+			<if test="yjzs != null">
+		          yjzs = #{yjzs, jdbcType=VARCHAR},  <!-- yjzs -->
+			</if>
+			<if test="cqzs != null">
+		          cqzs = #{cqzs, jdbcType=VARCHAR},  <!-- cqzs -->
+			</if>
+			<if test="zzs != null">
+		          zzs = #{zzs, jdbcType=VARCHAR},  <!-- zzs -->
+			</if>
+			<if test="szhzs != null">
+		          szhzs = #{szhzs, jdbcType=VARCHAR},  <!-- szhzs -->
+			</if>
+			<if test="z_szhjs != null">
+		          z_szhjs = #{z_szhjs, jdbcType=VARCHAR},  <!-- z_szhjs -->
+			</if>
+			<if test="z_szhzs != null">
+		          z_szhzs = #{z_szhzs, jdbcType=VARCHAR},  <!-- z_szhzs -->
+			</if>
+			<if test="j_szhjs != null">
+		          j_szhjs = #{j_szhjs, jdbcType=VARCHAR},  <!-- j_szhjs -->
+			</if>
+			<if test="j_szhzs != null">
+		          j_szhzs = #{j_szhzs, jdbcType=VARCHAR},  <!-- j_szhzs -->
+			</if>
+			<if test="ajszhys != null">
+		          ajszhys = #{ajszhys, jdbcType=VARCHAR},  <!-- ajszhys -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_receive WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_receivePO">
+		SELECT
+		<include refid="column" />
+		FROM archive_receive WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_receivePO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_receive
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_receivePO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_receive
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_receivePO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_receive
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_receivePO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_receive
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_receivePO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_receive
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_receive
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_receive
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  pch,  <!-- pch -->
+		  sjygs,  <!-- sjygs -->
+		  jsms,  <!-- jsms -->
+		  bmmc,  <!-- bmmc -->
+		  bmbh,  <!-- bmbh -->
+		  cjsj,  <!-- cjsj -->
+		  cjr,  <!-- cjr -->
+		  boolean_examine,  <!-- boolean_examine -->
+		  treename,  <!-- treename -->
+		  jsr,  <!-- jsr -->
+		  jssj,  <!-- jssj -->
+		  jszt,  <!-- jszt -->
+		  shenhr,  <!-- shenhr -->
+		  shsj,  <!-- shsj -->
+		  shyj,  <!-- shyj -->
+		  flag_submit,  <!-- flag_submit -->
+		  flag_examine,  <!-- flag_examine -->
+		  import_sum,  <!-- import_sum -->
+		  boolean_check,  <!-- boolean_check -->
+		  manage_shr,  <!-- manage_shr -->
+		  manage_shsj,  <!-- manage_shsj -->
+		  manage_shyj,  <!-- manage_shyj -->
+		  flag_manage_submit,  <!-- flag_manage_submit -->
+		  flag_manage_examine,  <!-- flag_manage_examine -->
+		  tablename,  <!-- tablename -->
+		  rkzt,  <!-- rkzt -->
+		  nd,  <!-- nd -->
+		  flag,  <!-- flag -->
+		  jsbm,  <!-- jsbm -->
+		  yjbm,  <!-- yjbm -->
+		  yjr,  <!-- yjr -->
+		  qzh,  <!-- qzh -->
+		  qzdw,  <!-- qzdw -->
+		  daml,  <!-- daml -->
+		  qzsj,  <!-- qzsj -->
+		  dzmls,  <!-- dzmls -->
+		  mlsjygs,  <!-- mlsjygs -->
+		  dzqws,  <!-- dzqws -->
+		  dzqwgs,  <!-- dzqwgs -->
+		  dzqwrl,  <!-- dzqwrl -->
+		  boolean_receive,  <!-- boolean_receive -->
+		  yjssc,  <!-- yjssc -->
+		  bz,  <!-- bz -->
+		  user_cn,  <!-- user_cn -->
+		  rwmc,  <!-- rwmc -->
+		  sc,  <!-- sc -->
+		  jsnd,  <!-- jsnd -->
+		  jjsj,  <!-- jjsj -->
+		  qznd,  <!-- qznd -->
+		  yjjs,  <!-- yjjs -->
+		  cqjs,  <!-- cqjs -->
+		  zjs,  <!-- zjs -->
+		  jzys,  <!-- jzys -->
+		  jszhys,  <!-- jszhys -->
+		  yjjis,  <!-- yjjis -->
+		  dqjs,  <!-- dqjs -->
+		  zjis,  <!-- zjis -->
+		  jazys,  <!-- jazys -->
+		  jaszhys,  <!-- jaszhys -->
+		  dzmlgs,  <!-- dzmlgs -->
+		  jnyjjs,  <!-- jnyjjs -->
+		  jncqjs,  <!-- jncqjs -->
+		  jnzjs,  <!-- jnzjs -->
+		  jnszhjs,  <!-- jnszhjs -->
+		  ajzys,  <!-- ajzys -->
+		  sjszhys,  <!-- sjszhys -->
+		  gdyjjs,  <!-- gdyjjs -->
+		  gddqjs,  <!-- gddqjs -->
+		  gdzjs,  <!-- gdzjs -->
+		  gdszhjs,  <!-- gdszhjs -->
+		  gdzys,  <!-- gdzys -->
+		  gdszhys,  <!-- gdszhys -->
+		  yjzs,  <!-- yjzs -->
+		  cqzs,  <!-- cqzs -->
+		  zzs,  <!-- zzs -->
+		  szhzs,  <!-- szhzs -->
+		  z_szhjs,  <!-- z_szhjs -->
+		  z_szhzs,  <!-- z_szhzs -->
+		  j_szhjs,  <!-- j_szhjs -->
+		  j_szhzs,  <!-- j_szhzs -->
+		  ajszhys  <!-- ajszhys -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_receive.id_,  <!-- id_ -->
+		  archive_receive.pch,  <!-- pch -->
+		  archive_receive.sjygs,  <!-- sjygs -->
+		  archive_receive.jsms,  <!-- jsms -->
+		  archive_receive.bmmc,  <!-- bmmc -->
+		  archive_receive.bmbh,  <!-- bmbh -->
+		  archive_receive.cjsj,  <!-- cjsj -->
+		  archive_receive.cjr,  <!-- cjr -->
+		  archive_receive.boolean_examine,  <!-- boolean_examine -->
+		  archive_receive.treename,  <!-- treename -->
+		  archive_receive.jsr,  <!-- jsr -->
+		  archive_receive.jssj,  <!-- jssj -->
+		  archive_receive.jszt,  <!-- jszt -->
+		  archive_receive.shenhr,  <!-- shenhr -->
+		  archive_receive.shsj,  <!-- shsj -->
+		  archive_receive.shyj,  <!-- shyj -->
+		  archive_receive.flag_submit,  <!-- flag_submit -->
+		  archive_receive.flag_examine,  <!-- flag_examine -->
+		  archive_receive.import_sum,  <!-- import_sum -->
+		  archive_receive.boolean_check,  <!-- boolean_check -->
+		  archive_receive.manage_shr,  <!-- manage_shr -->
+		  archive_receive.manage_shsj,  <!-- manage_shsj -->
+		  archive_receive.manage_shyj,  <!-- manage_shyj -->
+		  archive_receive.flag_manage_submit,  <!-- flag_manage_submit -->
+		  archive_receive.flag_manage_examine,  <!-- flag_manage_examine -->
+		  archive_receive.tablename,  <!-- tablename -->
+		  archive_receive.rkzt,  <!-- rkzt -->
+		  archive_receive.nd,  <!-- nd -->
+		  archive_receive.flag,  <!-- flag -->
+		  archive_receive.jsbm,  <!-- jsbm -->
+		  archive_receive.yjbm,  <!-- yjbm -->
+		  archive_receive.yjr,  <!-- yjr -->
+		  archive_receive.qzh,  <!-- qzh -->
+		  archive_receive.qzdw,  <!-- qzdw -->
+		  archive_receive.daml,  <!-- daml -->
+		  archive_receive.qzsj,  <!-- qzsj -->
+		  archive_receive.dzmls,  <!-- dzmls -->
+		  archive_receive.mlsjygs,  <!-- mlsjygs -->
+		  archive_receive.dzqws,  <!-- dzqws -->
+		  archive_receive.dzqwgs,  <!-- dzqwgs -->
+		  archive_receive.dzqwrl,  <!-- dzqwrl -->
+		  archive_receive.boolean_receive,  <!-- boolean_receive -->
+		  archive_receive.yjssc,  <!-- yjssc -->
+		  archive_receive.bz,  <!-- bz -->
+		  archive_receive.user_cn,  <!-- user_cn -->
+		  archive_receive.rwmc,  <!-- rwmc -->
+		  archive_receive.sc,  <!-- sc -->
+		  archive_receive.jsnd,  <!-- jsnd -->
+		  archive_receive.jjsj,  <!-- jjsj -->
+		  archive_receive.qznd,  <!-- qznd -->
+		  archive_receive.yjjs,  <!-- yjjs -->
+		  archive_receive.cqjs,  <!-- cqjs -->
+		  archive_receive.zjs,  <!-- zjs -->
+		  archive_receive.jzys,  <!-- jzys -->
+		  archive_receive.jszhys,  <!-- jszhys -->
+		  archive_receive.yjjis,  <!-- yjjis -->
+		  archive_receive.dqjs,  <!-- dqjs -->
+		  archive_receive.zjis,  <!-- zjis -->
+		  archive_receive.jazys,  <!-- jazys -->
+		  archive_receive.jaszhys,  <!-- jaszhys -->
+		  archive_receive.dzmlgs,  <!-- dzmlgs -->
+		  archive_receive.jnyjjs,  <!-- jnyjjs -->
+		  archive_receive.jncqjs,  <!-- jncqjs -->
+		  archive_receive.jnzjs,  <!-- jnzjs -->
+		  archive_receive.jnszhjs,  <!-- jnszhjs -->
+		  archive_receive.ajzys,  <!-- ajzys -->
+		  archive_receive.sjszhys,  <!-- sjszhys -->
+		  archive_receive.gdyjjs,  <!-- gdyjjs -->
+		  archive_receive.gddqjs,  <!-- gddqjs -->
+		  archive_receive.gdzjs,  <!-- gdzjs -->
+		  archive_receive.gdszhjs,  <!-- gdszhjs -->
+		  archive_receive.gdzys,  <!-- gdzys -->
+		  archive_receive.gdszhys,  <!-- gdszhys -->
+		  archive_receive.yjzs,  <!-- yjzs -->
+		  archive_receive.cqzs,  <!-- cqzs -->
+		  archive_receive.zzs,  <!-- zzs -->
+		  archive_receive.szhzs,  <!-- szhzs -->
+		  archive_receive.z_szhjs,  <!-- z_szhjs -->
+		  archive_receive.z_szhzs,  <!-- z_szhzs -->
+		  archive_receive.j_szhjs,  <!-- j_szhjs -->
+		  archive_receive.j_szhzs,  <!-- j_szhzs -->
+		  archive_receive.ajszhys  <!-- ajszhys -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="pch != null and pch != ''">
+		      AND pch = #{pch}  <!-- pch -->
+		</if>
+	    <if test="sjygs != null and sjygs != ''">
+		      AND sjygs = #{sjygs}  <!-- sjygs -->
+		</if>
+	    <if test="jsms != null and jsms != ''">
+		      AND jsms = #{jsms}  <!-- jsms -->
+		</if>
+	    <if test="bmmc != null and bmmc != ''">
+		      AND bmmc = #{bmmc}  <!-- bmmc -->
+		</if>
+	    <if test="bmbh != null and bmbh != ''">
+		      AND bmbh = #{bmbh}  <!-- bmbh -->
+		</if>
+	    <if test="cjsj != null and cjsj != ''">
+		      AND cjsj = #{cjsj}  <!-- cjsj -->
+		</if>
+	    <if test="cjr != null and cjr != ''">
+		      AND cjr = #{cjr}  <!-- cjr -->
+		</if>
+	    <if test="boolean_examine != null and boolean_examine != ''">
+		      AND boolean_examine = #{boolean_examine}  <!-- boolean_examine -->
+		</if>
+	    <if test="treename != null and treename != ''">
+		      AND treename = #{treename}  <!-- treename -->
+		</if>
+	    <if test="jsr != null and jsr != ''">
+		      AND jsr = #{jsr}  <!-- jsr -->
+		</if>
+	    <if test="jssj != null and jssj != ''">
+		      AND jssj = #{jssj}  <!-- jssj -->
+		</if>
+	    <if test="jszt != null and jszt != ''">
+		      AND jszt = #{jszt}  <!-- jszt -->
+		</if>
+	    <if test="shenhr != null and shenhr != ''">
+		      AND shenhr = #{shenhr}  <!-- shenhr -->
+		</if>
+	    <if test="shsj != null and shsj != ''">
+		      AND shsj = #{shsj}  <!-- shsj -->
+		</if>
+	    <if test="shyj != null and shyj != ''">
+		      AND shyj = #{shyj}  <!-- shyj -->
+		</if>
+	    <if test="flag_submit != null and flag_submit != ''">
+		      AND flag_submit = #{flag_submit}  <!-- flag_submit -->
+		</if>
+	    <if test="flag_examine != null and flag_examine != ''">
+		      AND flag_examine = #{flag_examine}  <!-- flag_examine -->
+		</if>
+	    <if test="import_sum != null and import_sum != ''">
+		      AND import_sum = #{import_sum}  <!-- import_sum -->
+		</if>
+	    <if test="boolean_check != null and boolean_check != ''">
+		      AND boolean_check = #{boolean_check}  <!-- boolean_check -->
+		</if>
+	    <if test="manage_shr != null and manage_shr != ''">
+		      AND manage_shr = #{manage_shr}  <!-- manage_shr -->
+		</if>
+	    <if test="manage_shsj != null and manage_shsj != ''">
+		      AND manage_shsj = #{manage_shsj}  <!-- manage_shsj -->
+		</if>
+	    <if test="manage_shyj != null and manage_shyj != ''">
+		      AND manage_shyj = #{manage_shyj}  <!-- manage_shyj -->
+		</if>
+	    <if test="flag_manage_submit != null and flag_manage_submit != ''">
+		      AND flag_manage_submit = #{flag_manage_submit}  <!-- flag_manage_submit -->
+		</if>
+	    <if test="flag_manage_examine != null and flag_manage_examine != ''">
+		      AND flag_manage_examine = #{flag_manage_examine}  <!-- flag_manage_examine -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename = #{tablename}  <!-- tablename -->
+		</if>
+	    <if test="rkzt != null and rkzt != ''">
+		      AND rkzt = #{rkzt}  <!-- rkzt -->
+		</if>
+	    <if test="nd != null and nd != ''">
+		      AND nd = #{nd}  <!-- nd -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag = #{flag}  <!-- flag -->
+		</if>
+	    <if test="jsbm != null and jsbm != ''">
+		      AND jsbm = #{jsbm}  <!-- jsbm -->
+		</if>
+	    <if test="yjbm != null and yjbm != ''">
+		      AND yjbm = #{yjbm}  <!-- yjbm -->
+		</if>
+	    <if test="yjr != null and yjr != ''">
+		      AND yjr = #{yjr}  <!-- yjr -->
+		</if>
+	    <if test="qzh != null and qzh != ''">
+		      AND qzh = #{qzh}  <!-- qzh -->
+		</if>
+	    <if test="qzdw != null and qzdw != ''">
+		      AND qzdw = #{qzdw}  <!-- qzdw -->
+		</if>
+	    <if test="daml != null and daml != ''">
+		      AND daml = #{daml}  <!-- daml -->
+		</if>
+	    <if test="qzsj != null and qzsj != ''">
+		      AND qzsj = #{qzsj}  <!-- qzsj -->
+		</if>
+	    <if test="dzmls != null and dzmls != ''">
+		      AND dzmls = #{dzmls}  <!-- dzmls -->
+		</if>
+	    <if test="mlsjygs != null and mlsjygs != ''">
+		      AND mlsjygs = #{mlsjygs}  <!-- mlsjygs -->
+		</if>
+	    <if test="dzqws != null and dzqws != ''">
+		      AND dzqws = #{dzqws}  <!-- dzqws -->
+		</if>
+	    <if test="dzqwgs != null and dzqwgs != ''">
+		      AND dzqwgs = #{dzqwgs}  <!-- dzqwgs -->
+		</if>
+	    <if test="dzqwrl != null and dzqwrl != ''">
+		      AND dzqwrl = #{dzqwrl}  <!-- dzqwrl -->
+		</if>
+	    <if test="boolean_receive != null and boolean_receive != ''">
+		      AND boolean_receive = #{boolean_receive}  <!-- boolean_receive -->
+		</if>
+	    <if test="yjssc != null and yjssc != ''">
+		      AND yjssc = #{yjssc}  <!-- yjssc -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	    <if test="user_cn != null and user_cn != ''">
+		      AND user_cn = #{user_cn}  <!-- user_cn -->
+		</if>
+	    <if test="rwmc != null and rwmc != ''">
+		      AND rwmc = #{rwmc}  <!-- rwmc -->
+		</if>
+	    <if test="sc != null and sc != ''">
+		      AND sc = #{sc}  <!-- sc -->
+		</if>
+	    <if test="jsnd != null and jsnd != ''">
+		      AND jsnd = #{jsnd}  <!-- jsnd -->
+		</if>
+	    <if test="jjsj != null and jjsj != ''">
+		      AND jjsj = #{jjsj}  <!-- jjsj -->
+		</if>
+	    <if test="qznd != null and qznd != ''">
+		      AND qznd = #{qznd}  <!-- qznd -->
+		</if>
+	    <if test="yjjs != null and yjjs != ''">
+		      AND yjjs = #{yjjs}  <!-- yjjs -->
+		</if>
+	    <if test="cqjs != null and cqjs != ''">
+		      AND cqjs = #{cqjs}  <!-- cqjs -->
+		</if>
+	    <if test="zjs != null and zjs != ''">
+		      AND zjs = #{zjs}  <!-- zjs -->
+		</if>
+	    <if test="jzys != null and jzys != ''">
+		      AND jzys = #{jzys}  <!-- jzys -->
+		</if>
+	    <if test="jszhys != null and jszhys != ''">
+		      AND jszhys = #{jszhys}  <!-- jszhys -->
+		</if>
+	    <if test="yjjis != null and yjjis != ''">
+		      AND yjjis = #{yjjis}  <!-- yjjis -->
+		</if>
+	    <if test="dqjs != null and dqjs != ''">
+		      AND dqjs = #{dqjs}  <!-- dqjs -->
+		</if>
+	    <if test="zjis != null and zjis != ''">
+		      AND zjis = #{zjis}  <!-- zjis -->
+		</if>
+	    <if test="jazys != null and jazys != ''">
+		      AND jazys = #{jazys}  <!-- jazys -->
+		</if>
+	    <if test="jaszhys != null and jaszhys != ''">
+		      AND jaszhys = #{jaszhys}  <!-- jaszhys -->
+		</if>
+	    <if test="dzmlgs != null and dzmlgs != ''">
+		      AND dzmlgs = #{dzmlgs}  <!-- dzmlgs -->
+		</if>
+	    <if test="jnyjjs != null and jnyjjs != ''">
+		      AND jnyjjs = #{jnyjjs}  <!-- jnyjjs -->
+		</if>
+	    <if test="jncqjs != null and jncqjs != ''">
+		      AND jncqjs = #{jncqjs}  <!-- jncqjs -->
+		</if>
+	    <if test="jnzjs != null and jnzjs != ''">
+		      AND jnzjs = #{jnzjs}  <!-- jnzjs -->
+		</if>
+	    <if test="jnszhjs != null and jnszhjs != ''">
+		      AND jnszhjs = #{jnszhjs}  <!-- jnszhjs -->
+		</if>
+	    <if test="ajzys != null and ajzys != ''">
+		      AND ajzys = #{ajzys}  <!-- ajzys -->
+		</if>
+	    <if test="sjszhys != null and sjszhys != ''">
+		      AND sjszhys = #{sjszhys}  <!-- sjszhys -->
+		</if>
+	    <if test="gdyjjs != null and gdyjjs != ''">
+		      AND gdyjjs = #{gdyjjs}  <!-- gdyjjs -->
+		</if>
+	    <if test="gddqjs != null and gddqjs != ''">
+		      AND gddqjs = #{gddqjs}  <!-- gddqjs -->
+		</if>
+	    <if test="gdzjs != null and gdzjs != ''">
+		      AND gdzjs = #{gdzjs}  <!-- gdzjs -->
+		</if>
+	    <if test="gdszhjs != null and gdszhjs != ''">
+		      AND gdszhjs = #{gdszhjs}  <!-- gdszhjs -->
+		</if>
+	    <if test="gdzys != null and gdzys != ''">
+		      AND gdzys = #{gdzys}  <!-- gdzys -->
+		</if>
+	    <if test="gdszhys != null and gdszhys != ''">
+		      AND gdszhys = #{gdszhys}  <!-- gdszhys -->
+		</if>
+	    <if test="yjzs != null and yjzs != ''">
+		      AND yjzs = #{yjzs}  <!-- yjzs -->
+		</if>
+	    <if test="cqzs != null and cqzs != ''">
+		      AND cqzs = #{cqzs}  <!-- cqzs -->
+		</if>
+	    <if test="zzs != null and zzs != ''">
+		      AND zzs = #{zzs}  <!-- zzs -->
+		</if>
+	    <if test="szhzs != null and szhzs != ''">
+		      AND szhzs = #{szhzs}  <!-- szhzs -->
+		</if>
+	    <if test="z_szhjs != null and z_szhjs != ''">
+		      AND z_szhjs = #{z_szhjs}  <!-- z_szhjs -->
+		</if>
+	    <if test="z_szhzs != null and z_szhzs != ''">
+		      AND z_szhzs = #{z_szhzs}  <!-- z_szhzs -->
+		</if>
+	    <if test="j_szhjs != null and j_szhjs != ''">
+		      AND j_szhjs = #{j_szhjs}  <!-- j_szhjs -->
+		</if>
+	    <if test="j_szhzs != null and j_szhzs != ''">
+		      AND j_szhzs = #{j_szhzs}  <!-- j_szhzs -->
+		</if>
+	    <if test="ajszhys != null and ajszhys != ''">
+		      AND ajszhys = #{ajszhys}  <!-- ajszhys -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="pch != null and pch != ''">
+		      AND pch like '%${pch}%'  <!-- pch -->
+		</if>
+	    <if test="sjygs != null and sjygs != ''">
+		      AND sjygs like '%${sjygs}%'  <!-- sjygs -->
+		</if>
+	    <if test="jsms != null and jsms != ''">
+		      AND jsms like '%${jsms}%'  <!-- jsms -->
+		</if>
+	    <if test="bmmc != null and bmmc != ''">
+		      AND bmmc like '%${bmmc}%'  <!-- bmmc -->
+		</if>
+	    <if test="bmbh != null and bmbh != ''">
+		      AND bmbh like '%${bmbh}%'  <!-- bmbh -->
+		</if>
+	    <if test="cjsj != null and cjsj != ''">
+		      AND cjsj like '%${cjsj}%'  <!-- cjsj -->
+		</if>
+	    <if test="cjr != null and cjr != ''">
+		      AND cjr like '%${cjr}%'  <!-- cjr -->
+		</if>
+	    <if test="boolean_examine != null and boolean_examine != ''">
+		      AND boolean_examine like '%${boolean_examine}%'  <!-- boolean_examine -->
+		</if>
+	    <if test="treename != null and treename != ''">
+		      AND treename like '%${treename}%'  <!-- treename -->
+		</if>
+	    <if test="jsr != null and jsr != ''">
+		      AND jsr like '%${jsr}%'  <!-- jsr -->
+		</if>
+	    <if test="jssj != null and jssj != ''">
+		      AND jssj like '%${jssj}%'  <!-- jssj -->
+		</if>
+	    <if test="jszt != null and jszt != ''">
+		      AND jszt like '%${jszt}%'  <!-- jszt -->
+		</if>
+	    <if test="shenhr != null and shenhr != ''">
+		      AND shenhr like '%${shenhr}%'  <!-- shenhr -->
+		</if>
+	    <if test="shsj != null and shsj != ''">
+		      AND shsj like '%${shsj}%'  <!-- shsj -->
+		</if>
+	    <if test="shyj != null and shyj != ''">
+		      AND shyj like '%${shyj}%'  <!-- shyj -->
+		</if>
+	    <if test="flag_submit != null and flag_submit != ''">
+		      AND flag_submit like '%${flag_submit}%'  <!-- flag_submit -->
+		</if>
+	    <if test="flag_examine != null and flag_examine != ''">
+		      AND flag_examine like '%${flag_examine}%'  <!-- flag_examine -->
+		</if>
+	    <if test="import_sum != null and import_sum != ''">
+		      AND import_sum like '%${import_sum}%'  <!-- import_sum -->
+		</if>
+	    <if test="boolean_check != null and boolean_check != ''">
+		      AND boolean_check like '%${boolean_check}%'  <!-- boolean_check -->
+		</if>
+	    <if test="manage_shr != null and manage_shr != ''">
+		      AND manage_shr like '%${manage_shr}%'  <!-- manage_shr -->
+		</if>
+	    <if test="manage_shsj != null and manage_shsj != ''">
+		      AND manage_shsj like '%${manage_shsj}%'  <!-- manage_shsj -->
+		</if>
+	    <if test="manage_shyj != null and manage_shyj != ''">
+		      AND manage_shyj like '%${manage_shyj}%'  <!-- manage_shyj -->
+		</if>
+	    <if test="flag_manage_submit != null and flag_manage_submit != ''">
+		      AND flag_manage_submit like '%${flag_manage_submit}%'  <!-- flag_manage_submit -->
+		</if>
+	    <if test="flag_manage_examine != null and flag_manage_examine != ''">
+		      AND flag_manage_examine like '%${flag_manage_examine}%'  <!-- flag_manage_examine -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename like '%${tablename}%'  <!-- tablename -->
+		</if>
+	    <if test="rkzt != null and rkzt != ''">
+		      AND rkzt like '%${rkzt}%'  <!-- rkzt -->
+		</if>
+	    <if test="nd != null and nd != ''">
+		      AND nd like '%${nd}%'  <!-- nd -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag like '%${flag}%'  <!-- flag -->
+		</if>
+	    <if test="jsbm != null and jsbm != ''">
+		      AND jsbm like '%${jsbm}%'  <!-- jsbm -->
+		</if>
+	    <if test="yjbm != null and yjbm != ''">
+		      AND yjbm like '%${yjbm}%'  <!-- yjbm -->
+		</if>
+	    <if test="yjr != null and yjr != ''">
+		      AND yjr like '%${yjr}%'  <!-- yjr -->
+		</if>
+	    <if test="qzh != null and qzh != ''">
+		      AND qzh like '%${qzh}%'  <!-- qzh -->
+		</if>
+	    <if test="qzdw != null and qzdw != ''">
+		      AND qzdw like '%${qzdw}%'  <!-- qzdw -->
+		</if>
+	    <if test="daml != null and daml != ''">
+		      AND daml like '%${daml}%'  <!-- daml -->
+		</if>
+	    <if test="qzsj != null and qzsj != ''">
+		      AND qzsj like '%${qzsj}%'  <!-- qzsj -->
+		</if>
+	    <if test="dzmls != null and dzmls != ''">
+		      AND dzmls like '%${dzmls}%'  <!-- dzmls -->
+		</if>
+	    <if test="mlsjygs != null and mlsjygs != ''">
+		      AND mlsjygs like '%${mlsjygs}%'  <!-- mlsjygs -->
+		</if>
+	    <if test="dzqws != null and dzqws != ''">
+		      AND dzqws like '%${dzqws}%'  <!-- dzqws -->
+		</if>
+	    <if test="dzqwgs != null and dzqwgs != ''">
+		      AND dzqwgs like '%${dzqwgs}%'  <!-- dzqwgs -->
+		</if>
+	    <if test="dzqwrl != null and dzqwrl != ''">
+		      AND dzqwrl like '%${dzqwrl}%'  <!-- dzqwrl -->
+		</if>
+	    <if test="boolean_receive != null and boolean_receive != ''">
+		      AND boolean_receive like '%${boolean_receive}%'  <!-- boolean_receive -->
+		</if>
+	    <if test="yjssc != null and yjssc != ''">
+		      AND yjssc like '%${yjssc}%'  <!-- yjssc -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	    <if test="user_cn != null and user_cn != ''">
+		      AND user_cn like '%${user_cn}%'  <!-- user_cn -->
+		</if>
+	    <if test="rwmc != null and rwmc != ''">
+		      AND rwmc like '%${rwmc}%'  <!-- rwmc -->
+		</if>
+	    <if test="sc != null and sc != ''">
+		      AND sc like '%${sc}%'  <!-- sc -->
+		</if>
+	    <if test="jsnd != null and jsnd != ''">
+		      AND jsnd like '%${jsnd}%'  <!-- jsnd -->
+		</if>
+	    <if test="jjsj != null and jjsj != ''">
+		      AND jjsj like '%${jjsj}%'  <!-- jjsj -->
+		</if>
+	    <if test="qznd != null and qznd != ''">
+		      AND qznd like '%${qznd}%'  <!-- qznd -->
+		</if>
+	    <if test="yjjs != null and yjjs != ''">
+		      AND yjjs like '%${yjjs}%'  <!-- yjjs -->
+		</if>
+	    <if test="cqjs != null and cqjs != ''">
+		      AND cqjs like '%${cqjs}%'  <!-- cqjs -->
+		</if>
+	    <if test="zjs != null and zjs != ''">
+		      AND zjs like '%${zjs}%'  <!-- zjs -->
+		</if>
+	    <if test="jzys != null and jzys != ''">
+		      AND jzys like '%${jzys}%'  <!-- jzys -->
+		</if>
+	    <if test="jszhys != null and jszhys != ''">
+		      AND jszhys like '%${jszhys}%'  <!-- jszhys -->
+		</if>
+	    <if test="yjjis != null and yjjis != ''">
+		      AND yjjis like '%${yjjis}%'  <!-- yjjis -->
+		</if>
+	    <if test="dqjs != null and dqjs != ''">
+		      AND dqjs like '%${dqjs}%'  <!-- dqjs -->
+		</if>
+	    <if test="zjis != null and zjis != ''">
+		      AND zjis like '%${zjis}%'  <!-- zjis -->
+		</if>
+	    <if test="jazys != null and jazys != ''">
+		      AND jazys like '%${jazys}%'  <!-- jazys -->
+		</if>
+	    <if test="jaszhys != null and jaszhys != ''">
+		      AND jaszhys like '%${jaszhys}%'  <!-- jaszhys -->
+		</if>
+	    <if test="dzmlgs != null and dzmlgs != ''">
+		      AND dzmlgs like '%${dzmlgs}%'  <!-- dzmlgs -->
+		</if>
+	    <if test="jnyjjs != null and jnyjjs != ''">
+		      AND jnyjjs like '%${jnyjjs}%'  <!-- jnyjjs -->
+		</if>
+	    <if test="jncqjs != null and jncqjs != ''">
+		      AND jncqjs like '%${jncqjs}%'  <!-- jncqjs -->
+		</if>
+	    <if test="jnzjs != null and jnzjs != ''">
+		      AND jnzjs like '%${jnzjs}%'  <!-- jnzjs -->
+		</if>
+	    <if test="jnszhjs != null and jnszhjs != ''">
+		      AND jnszhjs like '%${jnszhjs}%'  <!-- jnszhjs -->
+		</if>
+	    <if test="ajzys != null and ajzys != ''">
+		      AND ajzys like '%${ajzys}%'  <!-- ajzys -->
+		</if>
+	    <if test="sjszhys != null and sjszhys != ''">
+		      AND sjszhys like '%${sjszhys}%'  <!-- sjszhys -->
+		</if>
+	    <if test="gdyjjs != null and gdyjjs != ''">
+		      AND gdyjjs like '%${gdyjjs}%'  <!-- gdyjjs -->
+		</if>
+	    <if test="gddqjs != null and gddqjs != ''">
+		      AND gddqjs like '%${gddqjs}%'  <!-- gddqjs -->
+		</if>
+	    <if test="gdzjs != null and gdzjs != ''">
+		      AND gdzjs like '%${gdzjs}%'  <!-- gdzjs -->
+		</if>
+	    <if test="gdszhjs != null and gdszhjs != ''">
+		      AND gdszhjs like '%${gdszhjs}%'  <!-- gdszhjs -->
+		</if>
+	    <if test="gdzys != null and gdzys != ''">
+		      AND gdzys like '%${gdzys}%'  <!-- gdzys -->
+		</if>
+	    <if test="gdszhys != null and gdszhys != ''">
+		      AND gdszhys like '%${gdszhys}%'  <!-- gdszhys -->
+		</if>
+	    <if test="yjzs != null and yjzs != ''">
+		      AND yjzs like '%${yjzs}%'  <!-- yjzs -->
+		</if>
+	    <if test="cqzs != null and cqzs != ''">
+		      AND cqzs like '%${cqzs}%'  <!-- cqzs -->
+		</if>
+	    <if test="zzs != null and zzs != ''">
+		      AND zzs like '%${zzs}%'  <!-- zzs -->
+		</if>
+	    <if test="szhzs != null and szhzs != ''">
+		      AND szhzs like '%${szhzs}%'  <!-- szhzs -->
+		</if>
+	    <if test="z_szhjs != null and z_szhjs != ''">
+		      AND z_szhjs like '%${z_szhjs}%'  <!-- z_szhjs -->
+		</if>
+	    <if test="z_szhzs != null and z_szhzs != ''">
+		      AND z_szhzs like '%${z_szhzs}%'  <!-- z_szhzs -->
+		</if>
+	    <if test="j_szhjs != null and j_szhjs != ''">
+		      AND j_szhjs like '%${j_szhjs}%'  <!-- j_szhjs -->
+		</if>
+	    <if test="j_szhzs != null and j_szhzs != ''">
+		      AND j_szhzs like '%${j_szhzs}%'  <!-- j_szhzs -->
+		</if>
+	    <if test="ajszhys != null and ajszhys != ''">
+		      AND ajszhys like '%${ajszhys}%'  <!-- ajszhys -->
+		</if>
+	</sql>
+	
+</mapper>

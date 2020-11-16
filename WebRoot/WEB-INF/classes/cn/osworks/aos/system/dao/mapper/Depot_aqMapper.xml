@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- depot_aq[depot_aq]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-09-08 15:59:08 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Depot_aqMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Depot_aqPO">
+		INSERT INTO depot_aq (
+		<if test="lsh != null and lsh != ''">
+	         lsh, <!-- lsh -->
+		</if>
+		<if test="jcsj != null and jcsj != ''">
+	         jcsj, <!-- jcsj -->
+		</if>
+		<if test="jcbm != null and jcbm != ''">
+	         jcbm, <!-- jcbm -->
+		</if>
+		<if test="jcr != null and jcr != ''">
+	         jcr, <!-- jcr -->
+		</if>
+		<if test="jclx != null and jclx != ''">
+	         jclx, <!-- jclx -->
+		</if>
+		<if test="dysfgb != null and dysfgb != ''">
+	         dysfgb, <!-- dysfgb -->
+		</if>
+		<if test="kcsfgb != null and kcsfgb != ''">
+	         kcsfgb, <!-- kcsfgb -->
+		</if>
+		<if test="nqsfls != null and nqsfls != ''">
+	         nqsfls, <!-- nqsfls -->
+		</if>
+		<if test="sbsfzcsy != null and sbsfzcsy != ''">
+	         sbsfzcsy, <!-- sbsfzcsy -->
+		</if>
+		<if test="ktsfzc != null and ktsfzc != ''">
+	         ktsfzc, <!-- ktsfzc -->
+		</if>
+		<if test="ytjsfzc != null and ytjsfzc != ''">
+	         ytjsfzc, <!-- ytjsfzc -->
+		</if>
+		<if test="mjsfzc != null and mjsfzc != ''">
+	         mjsfzc, <!-- mjsfzc -->
+		</if>
+		<if test="jksfzc != null and jksfzc != ''">
+	         jksfzc, <!-- jksfzc -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="lx != null and lx != ''">
+	         lx, <!-- lx -->
+		</if>
+		<if test="wtms != null and wtms != ''">
+	         wtms, <!-- wtms -->
+		</if>
+		<if test="sfych != null and sfych != ''">
+	         sfych, <!-- sfych -->
+		</if>
+		<if test="chcljg != null and chcljg != ''">
+	         chcljg, <!-- chcljg -->
+		</if>
+		<if test="sfymb != null and sfymb != ''">
+	         sfymb, <!-- sfymb -->
+		</if>
+		<if test="mbcljg != null and mbcljg != ''">
+	         mbcljg, <!-- mbcljg -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="lsh != null and lsh != ''">
+	          #{lsh, jdbcType=VARCHAR}, <!-- lsh -->
+	    </if>
+		<if test="jcsj != null and jcsj != ''">
+	          #{jcsj, jdbcType=VARCHAR}, <!-- jcsj -->
+	    </if>
+		<if test="jcbm != null and jcbm != ''">
+	          #{jcbm, jdbcType=VARCHAR}, <!-- jcbm -->
+	    </if>
+		<if test="jcr != null and jcr != ''">
+	          #{jcr, jdbcType=VARCHAR}, <!-- jcr -->
+	    </if>
+		<if test="jclx != null and jclx != ''">
+	          #{jclx, jdbcType=VARCHAR}, <!-- jclx -->
+	    </if>
+		<if test="dysfgb != null and dysfgb != ''">
+	          #{dysfgb, jdbcType=VARCHAR}, <!-- dysfgb -->
+	    </if>
+		<if test="kcsfgb != null and kcsfgb != ''">
+	          #{kcsfgb, jdbcType=VARCHAR}, <!-- kcsfgb -->
+	    </if>
+		<if test="nqsfls != null and nqsfls != ''">
+	          #{nqsfls, jdbcType=VARCHAR}, <!-- nqsfls -->
+	    </if>
+		<if test="sbsfzcsy != null and sbsfzcsy != ''">
+	          #{sbsfzcsy, jdbcType=VARCHAR}, <!-- sbsfzcsy -->
+	    </if>
+		<if test="ktsfzc != null and ktsfzc != ''">
+	          #{ktsfzc, jdbcType=VARCHAR}, <!-- ktsfzc -->
+	    </if>
+		<if test="ytjsfzc != null and ytjsfzc != ''">
+	          #{ytjsfzc, jdbcType=VARCHAR}, <!-- ytjsfzc -->
+	    </if>
+		<if test="mjsfzc != null and mjsfzc != ''">
+	          #{mjsfzc, jdbcType=VARCHAR}, <!-- mjsfzc -->
+	    </if>
+		<if test="jksfzc != null and jksfzc != ''">
+	          #{jksfzc, jdbcType=VARCHAR}, <!-- jksfzc -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="lx != null and lx != ''">
+	          #{lx, jdbcType=VARCHAR}, <!-- lx -->
+	    </if>
+		<if test="wtms != null and wtms != ''">
+	          #{wtms, jdbcType=VARCHAR}, <!-- wtms -->
+	    </if>
+		<if test="sfych != null and sfych != ''">
+	          #{sfych, jdbcType=VARCHAR}, <!-- sfych -->
+	    </if>
+		<if test="chcljg != null and chcljg != ''">
+	          #{chcljg, jdbcType=VARCHAR}, <!-- chcljg -->
+	    </if>
+		<if test="sfymb != null and sfymb != ''">
+	          #{sfymb, jdbcType=VARCHAR}, <!-- sfymb -->
+	    </if>
+		<if test="mbcljg != null and mbcljg != ''">
+	          #{mbcljg, jdbcType=VARCHAR}, <!-- mbcljg -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Depot_aqPO">
+		INSERT INTO depot_aq (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{lsh, jdbcType=VARCHAR},  <!-- lsh -->
+		    #{jcsj, jdbcType=VARCHAR},  <!-- jcsj -->
+		    #{jcbm, jdbcType=VARCHAR},  <!-- jcbm -->
+		    #{jcr, jdbcType=VARCHAR},  <!-- jcr -->
+		    #{jclx, jdbcType=VARCHAR},  <!-- jclx -->
+		    #{dysfgb, jdbcType=VARCHAR},  <!-- dysfgb -->
+		    #{kcsfgb, jdbcType=VARCHAR},  <!-- kcsfgb -->
+		    #{nqsfls, jdbcType=VARCHAR},  <!-- nqsfls -->
+		    #{sbsfzcsy, jdbcType=VARCHAR},  <!-- sbsfzcsy -->
+		    #{ktsfzc, jdbcType=VARCHAR},  <!-- ktsfzc -->
+		    #{ytjsfzc, jdbcType=VARCHAR},  <!-- ytjsfzc -->
+		    #{mjsfzc, jdbcType=VARCHAR},  <!-- mjsfzc -->
+		    #{jksfzc, jdbcType=VARCHAR},  <!-- jksfzc -->
+		    #{bz, jdbcType=VARCHAR},  <!-- bz -->
+		    #{lx, jdbcType=VARCHAR},  <!-- lx -->
+		    #{wtms, jdbcType=VARCHAR},  <!-- wtms -->
+		    #{sfych, jdbcType=VARCHAR},  <!-- sfych -->
+		    #{chcljg, jdbcType=VARCHAR},  <!-- chcljg -->
+		    #{sfymb, jdbcType=VARCHAR},  <!-- sfymb -->
+		    #{mbcljg, jdbcType=VARCHAR}  <!-- mbcljg -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Depot_aqPO">
+		UPDATE depot_aq
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="lsh != null">
+		          lsh = #{lsh, jdbcType=VARCHAR},  <!-- lsh -->
+			</if>
+			<if test="jcsj != null">
+		          jcsj = #{jcsj, jdbcType=VARCHAR},  <!-- jcsj -->
+			</if>
+			<if test="jcbm != null">
+		          jcbm = #{jcbm, jdbcType=VARCHAR},  <!-- jcbm -->
+			</if>
+			<if test="jcr != null">
+		          jcr = #{jcr, jdbcType=VARCHAR},  <!-- jcr -->
+			</if>
+			<if test="jclx != null">
+		          jclx = #{jclx, jdbcType=VARCHAR},  <!-- jclx -->
+			</if>
+			<if test="dysfgb != null">
+		          dysfgb = #{dysfgb, jdbcType=VARCHAR},  <!-- dysfgb -->
+			</if>
+			<if test="kcsfgb != null">
+		          kcsfgb = #{kcsfgb, jdbcType=VARCHAR},  <!-- kcsfgb -->
+			</if>
+			<if test="nqsfls != null">
+		          nqsfls = #{nqsfls, jdbcType=VARCHAR},  <!-- nqsfls -->
+			</if>
+			<if test="sbsfzcsy != null">
+		          sbsfzcsy = #{sbsfzcsy, jdbcType=VARCHAR},  <!-- sbsfzcsy -->
+			</if>
+			<if test="ktsfzc != null">
+		          ktsfzc = #{ktsfzc, jdbcType=VARCHAR},  <!-- ktsfzc -->
+			</if>
+			<if test="ytjsfzc != null">
+		          ytjsfzc = #{ytjsfzc, jdbcType=VARCHAR},  <!-- ytjsfzc -->
+			</if>
+			<if test="mjsfzc != null">
+		          mjsfzc = #{mjsfzc, jdbcType=VARCHAR},  <!-- mjsfzc -->
+			</if>
+			<if test="jksfzc != null">
+		          jksfzc = #{jksfzc, jdbcType=VARCHAR},  <!-- jksfzc -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+			<if test="lx != null">
+		          lx = #{lx, jdbcType=VARCHAR},  <!-- lx -->
+			</if>
+			<if test="wtms != null">
+		          wtms = #{wtms, jdbcType=VARCHAR},  <!-- wtms -->
+			</if>
+			<if test="sfych != null">
+		          sfych = #{sfych, jdbcType=VARCHAR},  <!-- sfych -->
+			</if>
+			<if test="chcljg != null">
+		          chcljg = #{chcljg, jdbcType=VARCHAR},  <!-- chcljg -->
+			</if>
+			<if test="sfymb != null">
+		          sfymb = #{sfymb, jdbcType=VARCHAR},  <!-- sfymb -->
+			</if>
+			<if test="mbcljg != null">
+		          mbcljg = #{mbcljg, jdbcType=VARCHAR},  <!-- mbcljg -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM depot_aq WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Depot_aqPO">
+		SELECT
+		<include refid="column" />
+		FROM depot_aq WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Depot_aqPO">
+		SELECT
+		    <include refid="column" />
+		FROM depot_aq
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Depot_aqPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_aq
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Depot_aqPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_aq
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Depot_aqPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_aq
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Depot_aqPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_aq
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM depot_aq
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM depot_aq
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  lsh,  <!-- lsh -->
+		  jcsj,  <!-- jcsj -->
+		  jcbm,  <!-- jcbm -->
+		  jcr,  <!-- jcr -->
+		  jclx,  <!-- jclx -->
+		  dysfgb,  <!-- dysfgb -->
+		  kcsfgb,  <!-- kcsfgb -->
+		  nqsfls,  <!-- nqsfls -->
+		  sbsfzcsy,  <!-- sbsfzcsy -->
+		  ktsfzc,  <!-- ktsfzc -->
+		  ytjsfzc,  <!-- ytjsfzc -->
+		  mjsfzc,  <!-- mjsfzc -->
+		  jksfzc,  <!-- jksfzc -->
+		  bz,  <!-- bz -->
+		  lx,  <!-- lx -->
+		  wtms,  <!-- wtms -->
+		  sfych,  <!-- sfych -->
+		  chcljg,  <!-- chcljg -->
+		  sfymb,  <!-- sfymb -->
+		  mbcljg  <!-- mbcljg -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  depot_aq.id_,  <!-- id_ -->
+		  depot_aq.lsh,  <!-- lsh -->
+		  depot_aq.jcsj,  <!-- jcsj -->
+		  depot_aq.jcbm,  <!-- jcbm -->
+		  depot_aq.jcr,  <!-- jcr -->
+		  depot_aq.jclx,  <!-- jclx -->
+		  depot_aq.dysfgb,  <!-- dysfgb -->
+		  depot_aq.kcsfgb,  <!-- kcsfgb -->
+		  depot_aq.nqsfls,  <!-- nqsfls -->
+		  depot_aq.sbsfzcsy,  <!-- sbsfzcsy -->
+		  depot_aq.ktsfzc,  <!-- ktsfzc -->
+		  depot_aq.ytjsfzc,  <!-- ytjsfzc -->
+		  depot_aq.mjsfzc,  <!-- mjsfzc -->
+		  depot_aq.jksfzc,  <!-- jksfzc -->
+		  depot_aq.bz,  <!-- bz -->
+		  depot_aq.lx,  <!-- lx -->
+		  depot_aq.wtms,  <!-- wtms -->
+		  depot_aq.sfych,  <!-- sfych -->
+		  depot_aq.chcljg,  <!-- chcljg -->
+		  depot_aq.sfymb,  <!-- sfymb -->
+		  depot_aq.mbcljg  <!-- mbcljg -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="lsh != null and lsh != ''">
+		      AND lsh = #{lsh}  <!-- lsh -->
+		</if>
+	    <if test="jcsj != null and jcsj != ''">
+		      AND jcsj = #{jcsj}  <!-- jcsj -->
+		</if>
+	    <if test="jcbm != null and jcbm != ''">
+		      AND jcbm = #{jcbm}  <!-- jcbm -->
+		</if>
+	    <if test="jcr != null and jcr != ''">
+		      AND jcr = #{jcr}  <!-- jcr -->
+		</if>
+	    <if test="jclx != null and jclx != ''">
+		      AND jclx = #{jclx}  <!-- jclx -->
+		</if>
+	    <if test="dysfgb != null and dysfgb != ''">
+		      AND dysfgb = #{dysfgb}  <!-- dysfgb -->
+		</if>
+	    <if test="kcsfgb != null and kcsfgb != ''">
+		      AND kcsfgb = #{kcsfgb}  <!-- kcsfgb -->
+		</if>
+	    <if test="nqsfls != null and nqsfls != ''">
+		      AND nqsfls = #{nqsfls}  <!-- nqsfls -->
+		</if>
+	    <if test="sbsfzcsy != null and sbsfzcsy != ''">
+		      AND sbsfzcsy = #{sbsfzcsy}  <!-- sbsfzcsy -->
+		</if>
+	    <if test="ktsfzc != null and ktsfzc != ''">
+		      AND ktsfzc = #{ktsfzc}  <!-- ktsfzc -->
+		</if>
+	    <if test="ytjsfzc != null and ytjsfzc != ''">
+		      AND ytjsfzc = #{ytjsfzc}  <!-- ytjsfzc -->
+		</if>
+	    <if test="mjsfzc != null and mjsfzc != ''">
+		      AND mjsfzc = #{mjsfzc}  <!-- mjsfzc -->
+		</if>
+	    <if test="jksfzc != null and jksfzc != ''">
+		      AND jksfzc = #{jksfzc}  <!-- jksfzc -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx = #{lx}  <!-- lx -->
+		</if>
+	    <if test="wtms != null and wtms != ''">
+		      AND wtms = #{wtms}  <!-- wtms -->
+		</if>
+	    <if test="sfych != null and sfych != ''">
+		      AND sfych = #{sfych}  <!-- sfych -->
+		</if>
+	    <if test="chcljg != null and chcljg != ''">
+		      AND chcljg = #{chcljg}  <!-- chcljg -->
+		</if>
+	    <if test="sfymb != null and sfymb != ''">
+		      AND sfymb = #{sfymb}  <!-- sfymb -->
+		</if>
+	    <if test="mbcljg != null and mbcljg != ''">
+		      AND mbcljg = #{mbcljg}  <!-- mbcljg -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="lsh != null and lsh != ''">
+		      AND lsh like '%${lsh}%'  <!-- lsh -->
+		</if>
+	    <if test="jcsj != null and jcsj != ''">
+		      AND jcsj like '%${jcsj}%'  <!-- jcsj -->
+		</if>
+	    <if test="jcbm != null and jcbm != ''">
+		      AND jcbm like '%${jcbm}%'  <!-- jcbm -->
+		</if>
+	    <if test="jcr != null and jcr != ''">
+		      AND jcr like '%${jcr}%'  <!-- jcr -->
+		</if>
+	    <if test="jclx != null and jclx != ''">
+		      AND jclx like '%${jclx}%'  <!-- jclx -->
+		</if>
+	    <if test="dysfgb != null and dysfgb != ''">
+		      AND dysfgb like '%${dysfgb}%'  <!-- dysfgb -->
+		</if>
+	    <if test="kcsfgb != null and kcsfgb != ''">
+		      AND kcsfgb like '%${kcsfgb}%'  <!-- kcsfgb -->
+		</if>
+	    <if test="nqsfls != null and nqsfls != ''">
+		      AND nqsfls like '%${nqsfls}%'  <!-- nqsfls -->
+		</if>
+	    <if test="sbsfzcsy != null and sbsfzcsy != ''">
+		      AND sbsfzcsy like '%${sbsfzcsy}%'  <!-- sbsfzcsy -->
+		</if>
+	    <if test="ktsfzc != null and ktsfzc != ''">
+		      AND ktsfzc like '%${ktsfzc}%'  <!-- ktsfzc -->
+		</if>
+	    <if test="ytjsfzc != null and ytjsfzc != ''">
+		      AND ytjsfzc like '%${ytjsfzc}%'  <!-- ytjsfzc -->
+		</if>
+	    <if test="mjsfzc != null and mjsfzc != ''">
+		      AND mjsfzc like '%${mjsfzc}%'  <!-- mjsfzc -->
+		</if>
+	    <if test="jksfzc != null and jksfzc != ''">
+		      AND jksfzc like '%${jksfzc}%'  <!-- jksfzc -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx like '%${lx}%'  <!-- lx -->
+		</if>
+	    <if test="wtms != null and wtms != ''">
+		      AND wtms like '%${wtms}%'  <!-- wtms -->
+		</if>
+	    <if test="sfych != null and sfych != ''">
+		      AND sfych like '%${sfych}%'  <!-- sfych -->
+		</if>
+	    <if test="chcljg != null and chcljg != ''">
+		      AND chcljg like '%${chcljg}%'  <!-- chcljg -->
+		</if>
+	    <if test="sfymb != null and sfymb != ''">
+		      AND sfymb like '%${sfymb}%'  <!-- sfymb -->
+		</if>
+	    <if test="mbcljg != null and mbcljg != ''">
+		      AND mbcljg like '%${mbcljg}%'  <!-- mbcljg -->
+		</if>
+	</sql>
+	<select id="getDepotAqIndex" parameterType="String" resultType="String">
+		select top 1 lsh
+		from [dbo].[depot_aq]
+ 		where 1=1
+ 		and lsh like '${value}%'
+ 		order by lsh desc
+	</select>
+	
+</mapper>

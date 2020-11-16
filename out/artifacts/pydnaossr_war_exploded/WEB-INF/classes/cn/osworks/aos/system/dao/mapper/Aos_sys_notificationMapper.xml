@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- aos_sys_notification[aos_sys_notification]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-04-25 15:11:52 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Aos_sys_notificationMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Aos_sys_notificationPO">
+		INSERT INTO aos_sys_notification (
+		<if test="tjrcn != null and tjrcn != ''">
+	         tjrcn, <!-- tjrcn -->
+		</if>
+		<if test="tjren != null and tjren != ''">
+	         tjren, <!-- tjren -->
+		</if>
+		<if test="tjsj != null and tjsj != ''">
+	         tjsj, <!-- tjsj -->
+		</if>
+		<if test="shrcn != null and shrcn != ''">
+	         shrcn, <!-- shrcn -->
+		</if>
+		<if test="shren != null and shren != ''">
+	         shren, <!-- shren -->
+		</if>
+		<if test="shsj != null and shsj != ''">
+	         shsj, <!-- shsj -->
+		</if>
+		<if test="sfck != null and sfck != ''">
+	         sfck, <!-- sfck -->
+		</if>
+		<if test="rwmc != null and rwmc != ''">
+	         rwmc, <!-- rwmc -->
+		</if>
+		<if test="rwurl != null and rwurl != ''">
+	         rwurl, <!-- rwurl -->
+		</if>
+		<if test="assignment != null and assignment != ''">
+	         assignment, <!-- assignment -->
+		</if>
+		<if test="formid != null and formid != ''">
+	         formid, <!-- formid -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="tjrcn != null and tjrcn != ''">
+	          #{tjrcn, jdbcType=VARCHAR}, <!-- tjrcn -->
+	    </if>
+		<if test="tjren != null and tjren != ''">
+	          #{tjren, jdbcType=VARCHAR}, <!-- tjren -->
+	    </if>
+		<if test="tjsj != null and tjsj != ''">
+	          #{tjsj, jdbcType=VARCHAR}, <!-- tjsj -->
+	    </if>
+		<if test="shrcn != null and shrcn != ''">
+	          #{shrcn, jdbcType=VARCHAR}, <!-- shrcn -->
+	    </if>
+		<if test="shren != null and shren != ''">
+	          #{shren, jdbcType=VARCHAR}, <!-- shren -->
+	    </if>
+		<if test="shsj != null and shsj != ''">
+	          #{shsj, jdbcType=VARCHAR}, <!-- shsj -->
+	    </if>
+		<if test="sfck != null and sfck != ''">
+	          #{sfck, jdbcType=VARCHAR}, <!-- sfck -->
+	    </if>
+		<if test="rwmc != null and rwmc != ''">
+	          #{rwmc, jdbcType=VARCHAR}, <!-- rwmc -->
+	    </if>
+		<if test="rwurl != null and rwurl != ''">
+	          #{rwurl, jdbcType=VARCHAR}, <!-- rwurl -->
+	    </if>
+		<if test="assignment != null and assignment != ''">
+	          #{assignment, jdbcType=VARCHAR}, <!-- assignment -->
+	    </if>
+		<if test="formid != null and formid != ''">
+	          #{formid, jdbcType=VARCHAR}, <!-- formid -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Aos_sys_notificationPO">
+		INSERT INTO aos_sys_notification (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{tjrcn, jdbcType=VARCHAR},  <!-- tjrcn -->
+		    #{tjren, jdbcType=VARCHAR},  <!-- tjren -->
+		    #{tjsj, jdbcType=VARCHAR},  <!-- tjsj -->
+		    #{shrcn, jdbcType=VARCHAR},  <!-- shrcn -->
+		    #{shren, jdbcType=VARCHAR},  <!-- shren -->
+		    #{shsj, jdbcType=VARCHAR},  <!-- shsj -->
+		    #{sfck, jdbcType=VARCHAR},  <!-- sfck -->
+		    #{rwmc, jdbcType=VARCHAR},  <!-- rwmc -->
+		    #{rwurl, jdbcType=VARCHAR},  <!-- rwurl -->
+		    #{assignment, jdbcType=VARCHAR},  <!-- assignment -->
+		    #{formid, jdbcType=VARCHAR}  <!-- formid -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Aos_sys_notificationPO">
+		UPDATE aos_sys_notification
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="tjrcn != null">
+		          tjrcn = #{tjrcn, jdbcType=VARCHAR},  <!-- tjrcn -->
+			</if>
+			<if test="tjren != null">
+		          tjren = #{tjren, jdbcType=VARCHAR},  <!-- tjren -->
+			</if>
+			<if test="tjsj != null">
+		          tjsj = #{tjsj, jdbcType=VARCHAR},  <!-- tjsj -->
+			</if>
+			<if test="shrcn != null">
+		          shrcn = #{shrcn, jdbcType=VARCHAR},  <!-- shrcn -->
+			</if>
+			<if test="shren != null">
+		          shren = #{shren, jdbcType=VARCHAR},  <!-- shren -->
+			</if>
+			<if test="shsj != null">
+		          shsj = #{shsj, jdbcType=VARCHAR},  <!-- shsj -->
+			</if>
+			<if test="sfck != null">
+		          sfck = #{sfck, jdbcType=VARCHAR},  <!-- sfck -->
+			</if>
+			<if test="rwmc != null">
+		          rwmc = #{rwmc, jdbcType=VARCHAR},  <!-- rwmc -->
+			</if>
+			<if test="rwurl != null">
+		          rwurl = #{rwurl, jdbcType=VARCHAR},  <!-- rwurl -->
+			</if>
+			<if test="assignment != null">
+		          assignment = #{assignment, jdbcType=VARCHAR},  <!-- assignment -->
+			</if>
+			<if test="formid != null">
+		          formid = #{formid, jdbcType=VARCHAR},  <!-- formid -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByFormid" parameterType="Aos_sys_notificationPO">
+		UPDATE aos_sys_notification
+		<set>
+			<if test="id_ != null">
+				id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="tjrcn != null">
+				tjrcn = #{tjrcn, jdbcType=VARCHAR},  <!-- tjrcn -->
+			</if>
+			<if test="tjren != null">
+				tjren = #{tjren, jdbcType=VARCHAR},  <!-- tjren -->
+			</if>
+			<if test="tjsj != null">
+				tjsj = #{tjsj, jdbcType=VARCHAR},  <!-- tjsj -->
+			</if>
+			<if test="shrcn != null">
+				shrcn = #{shrcn, jdbcType=VARCHAR},  <!-- shrcn -->
+			</if>
+			<if test="shren != null">
+				shren = #{shren, jdbcType=VARCHAR},  <!-- shren -->
+			</if>
+			<if test="shsj != null">
+				shsj = #{shsj, jdbcType=VARCHAR},  <!-- shsj -->
+			</if>
+			<if test="sfck != null">
+				sfck = #{sfck, jdbcType=VARCHAR},  <!-- sfck -->
+			</if>
+			<if test="rwmc != null">
+				rwmc = #{rwmc, jdbcType=VARCHAR},  <!-- rwmc -->
+			</if>
+			<if test="rwurl != null">
+				rwurl = #{rwurl, jdbcType=VARCHAR},  <!-- rwurl -->
+			</if>
+			<if test="assignment != null">
+				assignment = #{assignment, jdbcType=VARCHAR},  <!-- assignment -->
+			</if>
+			<if test="formid != null">
+				formid = #{formid, jdbcType=VARCHAR},  <!-- formid -->
+			</if>
+		</set>
+		WHERE  formid= #{formid}
+	</update>
+
+
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM aos_sys_notification WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Aos_sys_notificationPO">
+		SELECT
+		<include refid="column" />
+		FROM aos_sys_notification WHERE  id_ = #{id_}
+	</select>
+
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectFinish" resultType="Aos_sys_notificationPO">
+		SELECT
+		<include refid="column" />
+		FROM aos_sys_notification WHERE  sfck&lt;&gt;1 and shren=#{username} ORDER BY tjsj DESC
+	</select>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectFinish2" resultType="Aos_sys_notificationPO">
+		SELECT
+		<include refid="column" />
+		FROM aos_sys_notification WHERE  sfck&lt;&gt;0  ORDER BY tjsj DESC
+	</select>
+
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Aos_sys_notificationPO">
+		SELECT
+		    <include refid="column" />
+		FROM aos_sys_notification
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Aos_sys_notificationPO">
+		SELECT
+			<include refid="column" />	
+		FROM aos_sys_notification
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Aos_sys_notificationPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM aos_sys_notification
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Aos_sys_notificationPO">
+		SELECT
+			<include refid="column" />	
+		FROM aos_sys_notification
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Aos_sys_notificationPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM aos_sys_notification
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM aos_sys_notification
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM aos_sys_notification
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  tjrcn,  <!-- tjrcn -->
+		  tjren,  <!-- tjren -->
+		  tjsj,  <!-- tjsj -->
+		  shrcn,  <!-- shrcn -->
+		  shren,  <!-- shren -->
+		  shsj,  <!-- shsj -->
+		  sfck,  <!-- sfck -->
+		  rwmc,  <!-- rwmc -->
+		  rwurl,  <!-- rwurl -->
+		  assignment,  <!-- assignment -->
+		  formid  <!-- formid -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  aos_sys_notification.id_,  <!-- id_ -->
+		  aos_sys_notification.tjrcn,  <!-- tjrcn -->
+		  aos_sys_notification.tjren,  <!-- tjren -->
+		  aos_sys_notification.tjsj,  <!-- tjsj -->
+		  aos_sys_notification.shrcn,  <!-- shrcn -->
+		  aos_sys_notification.shren,  <!-- shren -->
+		  aos_sys_notification.shsj,  <!-- shsj -->
+		  aos_sys_notification.sfck,  <!-- sfck -->
+		  aos_sys_notification.rwmc,  <!-- rwmc -->
+		  aos_sys_notification.rwurl,  <!-- rwurl -->
+		  aos_sys_notification.assignment,  <!-- assignment -->
+		  aos_sys_notification.formid  <!-- formid -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="tjrcn != null and tjrcn != ''">
+		      AND tjrcn = #{tjrcn}  <!-- tjrcn -->
+		</if>
+	    <if test="tjren != null and tjren != ''">
+		      AND tjren = #{tjren}  <!-- tjren -->
+		</if>
+	    <if test="tjsj != null and tjsj != ''">
+		      AND tjsj = #{tjsj}  <!-- tjsj -->
+		</if>
+	    <if test="shrcn != null and shrcn != ''">
+		      AND shrcn = #{shrcn}  <!-- shrcn -->
+		</if>
+	    <if test="shren != null and shren != ''">
+		      AND shren = #{shren}  <!-- shren -->
+		</if>
+	    <if test="shsj != null and shsj != ''">
+		      AND shsj = #{shsj}  <!-- shsj -->
+		</if>
+	    <if test="sfck != null and sfck != ''">
+		      AND sfck = #{sfck}  <!-- sfck -->
+		</if>
+	    <if test="rwmc != null and rwmc != ''">
+		      AND rwmc = #{rwmc}  <!-- rwmc -->
+		</if>
+	    <if test="rwurl != null and rwurl != ''">
+		      AND rwurl = #{rwurl}  <!-- rwurl -->
+		</if>
+	    <if test="assignment != null and assignment != ''">
+		      AND assignment = #{assignment}  <!-- assignment -->
+		</if>
+	    <if test="formid != null and formid != ''">
+		      AND formid = #{formid}  <!-- formid -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="tjrcn != null and tjrcn != ''">
+		      AND tjrcn like '%${tjrcn}%'  <!-- tjrcn -->
+		</if>
+	    <if test="tjren != null and tjren != ''">
+		      AND tjren like '%${tjren}%'  <!-- tjren -->
+		</if>
+	    <if test="tjsj != null and tjsj != ''">
+		      AND tjsj like '%${tjsj}%'  <!-- tjsj -->
+		</if>
+	    <if test="shrcn != null and shrcn != ''">
+		      AND shrcn like '%${shrcn}%'  <!-- shrcn -->
+		</if>
+	    <if test="shren != null and shren != ''">
+		      AND shren like '%${shren}%'  <!-- shren -->
+		</if>
+	    <if test="shsj != null and shsj != ''">
+		      AND shsj like '%${shsj}%'  <!-- shsj -->
+		</if>
+	    <if test="sfck != null and sfck != ''">
+		      AND sfck like '%${sfck}%'  <!-- sfck -->
+		</if>
+	    <if test="rwmc != null and rwmc != ''">
+		      AND rwmc like '%${rwmc}%'  <!-- rwmc -->
+		</if>
+	    <if test="rwurl != null and rwurl != ''">
+		      AND rwurl like '%${rwurl}%'  <!-- rwurl -->
+		</if>
+	    <if test="assignment != null and assignment != ''">
+		      AND assignment like '%${assignment}%'  <!-- assignment -->
+		</if>
+	    <if test="formid != null and formid != ''">
+		      AND formid like '%${formid}%'  <!-- formid -->
+		</if>
+	</sql>
+	
+</mapper>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_DengJi_check[archive_dengji_check]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-11-14 22:15:44 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_dengji_checkMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_dengji_checkPO">
+		INSERT INTO archive_dengji_check (
+		<if test="tid != null and tid != ''">
+	         tid, <!-- tid -->
+		</if>
+		<if test="ld_message != null and ld_message != ''">
+	         ld_message, <!-- ld_message -->
+		</if>
+		<if test="ld_time != null and ld_time != ''">
+	         ld_time, <!-- ld_time -->
+		</if>
+		<if test="index_ != null and index_ != ''">
+	         index_, <!-- index_ -->
+		</if>
+		<if test="flag != null and flag != ''">
+	         flag, <!-- flag -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="tid != null and tid != ''">
+	          #{tid, jdbcType=VARCHAR}, <!-- tid -->
+	    </if>
+		<if test="ld_message != null and ld_message != ''">
+	          #{ld_message, jdbcType=VARCHAR}, <!-- ld_message -->
+	    </if>
+		<if test="ld_time != null and ld_time != ''">
+	          #{ld_time, jdbcType=VARCHAR}, <!-- ld_time -->
+	    </if>
+		<if test="index_ != null and index_ != ''">
+	          #{index_, jdbcType=VARCHAR}, <!-- index_ -->
+	    </if>
+		<if test="flag != null and flag != ''">
+	          #{flag, jdbcType=VARCHAR}, <!-- flag -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_dengji_checkPO">
+		INSERT INTO archive_dengji_check (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{tid, jdbcType=VARCHAR},  <!-- tid -->
+		    #{ld_message, jdbcType=VARCHAR},  <!-- ld_message -->
+		    #{ld_time, jdbcType=VARCHAR},  <!-- ld_time -->
+		    #{index_, jdbcType=VARCHAR},  <!-- index_ -->
+		    #{flag, jdbcType=VARCHAR}  <!-- flag -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_dengji_checkPO">
+		UPDATE archive_dengji_check
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="tid != null">
+		          tid = #{tid, jdbcType=VARCHAR},  <!-- tid -->
+			</if>
+			<if test="ld_message != null">
+		          ld_message = #{ld_message, jdbcType=VARCHAR},  <!-- ld_message -->
+			</if>
+			<if test="ld_time != null">
+		          ld_time = #{ld_time, jdbcType=VARCHAR},  <!-- ld_time -->
+			</if>
+			<if test="index_ != null">
+		          index_ = #{index_, jdbcType=VARCHAR},  <!-- index_ -->
+			</if>
+			<if test="flag != null">
+		          flag = #{flag, jdbcType=VARCHAR},  <!-- flag -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_dengji_check WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_dengji_checkPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_dengji_check WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_dengji_checkPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_dengji_check
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_dengji_checkPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_dengji_check
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_dengji_checkPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_dengji_check
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_dengji_checkPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_dengji_check
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_dengji_checkPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_dengji_check
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_dengji_check
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_dengji_check
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  tid,  <!-- tid -->
+		  ld_message,  <!-- ld_message -->
+		  ld_time,  <!-- ld_time -->
+		  index_,  <!-- index_ -->
+		  flag  <!-- flag -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_dengji_check.id_,  <!-- id_ -->
+		  archive_dengji_check.tid,  <!-- tid -->
+		  archive_dengji_check.ld_message,  <!-- ld_message -->
+		  archive_dengji_check.ld_time,  <!-- ld_time -->
+		  archive_dengji_check.index_,  <!-- index_ -->
+		  archive_dengji_check.flag  <!-- flag -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid = #{tid}  <!-- tid -->
+		</if>
+	    <if test="ld_message != null and ld_message != ''">
+		      AND ld_message = #{ld_message}  <!-- ld_message -->
+		</if>
+	    <if test="ld_time != null and ld_time != ''">
+		      AND ld_time = #{ld_time}  <!-- ld_time -->
+		</if>
+	    <if test="index_ != null and index_ != ''">
+		      AND index_ = #{index_}  <!-- index_ -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag = #{flag}  <!-- flag -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid like '%${tid}%'  <!-- tid -->
+		</if>
+	    <if test="ld_message != null and ld_message != ''">
+		      AND ld_message like '%${ld_message}%'  <!-- ld_message -->
+		</if>
+	    <if test="ld_time != null and ld_time != ''">
+		      AND ld_time like '%${ld_time}%'  <!-- ld_time -->
+		</if>
+	    <if test="index_ != null and index_ != ''">
+		      AND index_ like '%${index_}%'  <!-- index_ -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag like '%${flag}%'  <!-- flag -->
+		</if>
+	</sql>
+	
+</mapper>

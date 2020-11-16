@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_sxjc_result[archive_sxjc_result]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-05-15 14:06:25 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_sxjc_resultMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_sxjc_resultPO">
+		INSERT INTO archive_sxjc_result (
+		<if test="pch != null and pch != ''">
+	         pch, <!-- pch -->
+		</if>
+		<if test="dh_equalssum != null">
+	         dh_equalssum, <!-- dh_equalssum -->
+		</if>
+		<if test="file_booleansum != null">
+	         file_booleansum, <!-- file_booleansum -->
+		</if>
+		<if test="qzh_sum != null">
+	         qzh_sum, <!-- qzh_sum -->
+		</if>
+		<if test="jh_sum != null">
+	         jh_sum, <!-- jh_sum -->
+		</if>
+		<if test="nd_sum != null">
+	         nd_sum, <!-- nd_sum -->
+		</if>
+		<if test="index_ != null">
+	         index_, <!-- index_ -->
+		</if>
+		<if test="post_sum != null">
+	         post_sum, <!-- post_sum -->
+		</if>
+		<if test="null_sum != null">
+	         null_sum, <!-- null_sum -->
+		</if>
+		<if test="mlh_sum != null">
+	         mlh_sum, <!-- mlh_sum -->
+		</if>
+		<if test="qzh_null != null">
+	         qzh_null, <!-- qzh_null -->
+		</if>
+		<if test="mlh_null != null">
+	         mlh_null, <!-- mlh_null -->
+		</if>
+		<if test="jh_null != null">
+	         jh_null, <!-- jh_null -->
+		</if>
+		<if test="nd_null != null">
+	         nd_null, <!-- nd_null -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="pch != null and pch != ''">
+	          #{pch, jdbcType=VARCHAR}, <!-- pch -->
+	    </if>
+		<if test="dh_equalssum != null">
+	          #{dh_equalssum, jdbcType=INTEGER}, <!-- dh_equalssum -->
+	    </if>
+		<if test="file_booleansum != null">
+	          #{file_booleansum, jdbcType=INTEGER}, <!-- file_booleansum -->
+	    </if>
+		<if test="qzh_sum != null">
+	          #{qzh_sum, jdbcType=INTEGER}, <!-- qzh_sum -->
+	    </if>
+		<if test="jh_sum != null">
+	          #{jh_sum, jdbcType=INTEGER}, <!-- jh_sum -->
+	    </if>
+		<if test="nd_sum != null">
+	          #{nd_sum, jdbcType=INTEGER}, <!-- nd_sum -->
+	    </if>
+		<if test="index_ != null">
+	          #{index_, jdbcType=INTEGER}, <!-- index_ -->
+	    </if>
+		<if test="post_sum != null">
+	          #{post_sum, jdbcType=INTEGER}, <!-- post_sum -->
+	    </if>
+		<if test="null_sum != null">
+	          #{null_sum, jdbcType=INTEGER}, <!-- null_sum -->
+	    </if>
+		<if test="mlh_sum != null">
+	          #{mlh_sum, jdbcType=INTEGER}, <!-- mlh_sum -->
+	    </if>
+		<if test="qzh_null != null">
+	          #{qzh_null, jdbcType=INTEGER}, <!-- qzh_null -->
+	    </if>
+		<if test="mlh_null != null">
+	          #{mlh_null, jdbcType=INTEGER}, <!-- mlh_null -->
+	    </if>
+		<if test="jh_null != null">
+	          #{jh_null, jdbcType=INTEGER}, <!-- jh_null -->
+	    </if>
+		<if test="nd_null != null">
+	          #{nd_null, jdbcType=INTEGER}, <!-- nd_null -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_sxjc_resultPO">
+		INSERT INTO archive_sxjc_result (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{pch, jdbcType=VARCHAR},  <!-- pch -->
+		    #{dh_equalssum, jdbcType=INTEGER},  <!-- dh_equalssum -->
+		    #{file_booleansum, jdbcType=INTEGER},  <!-- file_booleansum -->
+		    #{qzh_sum, jdbcType=INTEGER},  <!-- qzh_sum -->
+		    #{jh_sum, jdbcType=INTEGER},  <!-- jh_sum -->
+		    #{nd_sum, jdbcType=INTEGER},  <!-- nd_sum -->
+		    #{index_, jdbcType=INTEGER},  <!-- index_ -->
+		    #{post_sum, jdbcType=INTEGER},  <!-- post_sum -->
+		    #{null_sum, jdbcType=INTEGER},  <!-- null_sum -->
+		    #{mlh_sum, jdbcType=INTEGER},  <!-- mlh_sum -->
+		    #{qzh_null, jdbcType=INTEGER},  <!-- qzh_null -->
+		    #{mlh_null, jdbcType=INTEGER},  <!-- mlh_null -->
+		    #{jh_null, jdbcType=INTEGER},  <!-- jh_null -->
+		    #{nd_null, jdbcType=INTEGER}  <!-- nd_null -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_sxjc_resultPO">
+		UPDATE archive_sxjc_result
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="pch != null">
+		          pch = #{pch, jdbcType=VARCHAR},  <!-- pch -->
+			</if>
+			<if test="dh_equalssum != null">
+		          dh_equalssum = #{dh_equalssum, jdbcType=INTEGER},  <!-- dh_equalssum -->
+			</if>
+			<if test="file_booleansum != null">
+		          file_booleansum = #{file_booleansum, jdbcType=INTEGER},  <!-- file_booleansum -->
+			</if>
+			<if test="qzh_sum != null">
+		          qzh_sum = #{qzh_sum, jdbcType=INTEGER},  <!-- qzh_sum -->
+			</if>
+			<if test="jh_sum != null">
+		          jh_sum = #{jh_sum, jdbcType=INTEGER},  <!-- jh_sum -->
+			</if>
+			<if test="nd_sum != null">
+		          nd_sum = #{nd_sum, jdbcType=INTEGER},  <!-- nd_sum -->
+			</if>
+			<if test="index_ != null">
+		          index_ = #{index_, jdbcType=INTEGER},  <!-- index_ -->
+			</if>
+			<if test="post_sum != null">
+		          post_sum = #{post_sum, jdbcType=INTEGER},  <!-- post_sum -->
+			</if>
+			<if test="null_sum != null">
+		          null_sum = #{null_sum, jdbcType=INTEGER},  <!-- null_sum -->
+			</if>
+			<if test="mlh_sum != null">
+		          mlh_sum = #{mlh_sum, jdbcType=INTEGER},  <!-- mlh_sum -->
+			</if>
+			<if test="qzh_null != null">
+		          qzh_null = #{qzh_null, jdbcType=INTEGER},  <!-- qzh_null -->
+			</if>
+			<if test="mlh_null != null">
+		          mlh_null = #{mlh_null, jdbcType=INTEGER},  <!-- mlh_null -->
+			</if>
+			<if test="jh_null != null">
+		          jh_null = #{jh_null, jdbcType=INTEGER},  <!-- jh_null -->
+			</if>
+			<if test="nd_null != null">
+		          nd_null = #{nd_null, jdbcType=INTEGER},  <!-- nd_null -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_sxjc_result WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_sxjc_resultPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_sxjc_result WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_sxjc_resultPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_sxjc_result
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_sxjc_resultPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_sxjc_result
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_sxjc_resultPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_sxjc_result
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_sxjc_resultPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_sxjc_result
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_sxjc_resultPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_sxjc_result
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_sxjc_result
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_sxjc_result
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  pch,  <!-- pch -->
+		  dh_equalssum,  <!-- dh_equalssum -->
+		  file_booleansum,  <!-- file_booleansum -->
+		  qzh_sum,  <!-- qzh_sum -->
+		  jh_sum,  <!-- jh_sum -->
+		  nd_sum,  <!-- nd_sum -->
+		  index_,  <!-- index_ -->
+		  post_sum,  <!-- post_sum -->
+		  null_sum,  <!-- null_sum -->
+		  mlh_sum,  <!-- mlh_sum -->
+		  qzh_null,  <!-- qzh_null -->
+		  mlh_null,  <!-- mlh_null -->
+		  jh_null,  <!-- jh_null -->
+		  nd_null  <!-- nd_null -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_sxjc_result.id_,  <!-- id_ -->
+		  archive_sxjc_result.pch,  <!-- pch -->
+		  archive_sxjc_result.dh_equalssum,  <!-- dh_equalssum -->
+		  archive_sxjc_result.file_booleansum,  <!-- file_booleansum -->
+		  archive_sxjc_result.qzh_sum,  <!-- qzh_sum -->
+		  archive_sxjc_result.jh_sum,  <!-- jh_sum -->
+		  archive_sxjc_result.nd_sum,  <!-- nd_sum -->
+		  archive_sxjc_result.index_,  <!-- index_ -->
+		  archive_sxjc_result.post_sum,  <!-- post_sum -->
+		  archive_sxjc_result.null_sum,  <!-- null_sum -->
+		  archive_sxjc_result.mlh_sum,  <!-- mlh_sum -->
+		  archive_sxjc_result.qzh_null,  <!-- qzh_null -->
+		  archive_sxjc_result.mlh_null,  <!-- mlh_null -->
+		  archive_sxjc_result.jh_null,  <!-- jh_null -->
+		  archive_sxjc_result.nd_null  <!-- nd_null -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="pch != null and pch != ''">
+		      AND pch = #{pch}  <!-- pch -->
+		</if>
+	   <if test="dh_equalssum != null ">
+		      AND dh_equalssum = #{dh_equalssum}  <!-- dh_equalssum -->
+		</if>
+	   <if test="file_booleansum != null ">
+		      AND file_booleansum = #{file_booleansum}  <!-- file_booleansum -->
+		</if>
+	   <if test="qzh_sum != null ">
+		      AND qzh_sum = #{qzh_sum}  <!-- qzh_sum -->
+		</if>
+	   <if test="jh_sum != null ">
+		      AND jh_sum = #{jh_sum}  <!-- jh_sum -->
+		</if>
+	   <if test="nd_sum != null ">
+		      AND nd_sum = #{nd_sum}  <!-- nd_sum -->
+		</if>
+	   <if test="index_ != null ">
+		      AND index_ = #{index_}  <!-- index_ -->
+		</if>
+	   <if test="post_sum != null ">
+		      AND post_sum = #{post_sum}  <!-- post_sum -->
+		</if>
+	   <if test="null_sum != null ">
+		      AND null_sum = #{null_sum}  <!-- null_sum -->
+		</if>
+	   <if test="mlh_sum != null ">
+		      AND mlh_sum = #{mlh_sum}  <!-- mlh_sum -->
+		</if>
+	   <if test="qzh_null != null ">
+		      AND qzh_null = #{qzh_null}  <!-- qzh_null -->
+		</if>
+	   <if test="mlh_null != null ">
+		      AND mlh_null = #{mlh_null}  <!-- mlh_null -->
+		</if>
+	   <if test="jh_null != null ">
+		      AND jh_null = #{jh_null}  <!-- jh_null -->
+		</if>
+	   <if test="nd_null != null ">
+		      AND nd_null = #{nd_null}  <!-- nd_null -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="pch != null and pch != ''">
+		      AND pch like '%${pch}%'  <!-- pch -->
+		</if>
+	</sql>
+	
+</mapper>

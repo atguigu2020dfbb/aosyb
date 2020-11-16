@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- lysjfb_detail[lysjfb_detail]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-10-29 18:16:55 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Lysjfb_detailMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Lysjfb_detailPO">
+		INSERT INTO lysjfb_detail (
+		<if test="fbbh != null and fbbh != ''">
+	         fbbh, <!-- fbbh -->
+		</if>
+		<if test="fbwd != null and fbwd != ''">
+	         fbwd, <!-- fbwd -->
+		</if>
+		<if test="fbrw != null and fbrw != ''">
+	         fbrw, <!-- fbrw -->
+		</if>
+		<if test="fbnr != null and fbnr != ''">
+	         fbnr, <!-- fbnr -->
+		</if>
+		<if test="fblx != null and fblx != ''">
+	         fblx, <!-- fblx -->
+		</if>
+		<if test="fbsl != null and fbsl != ''">
+	         fbsl, <!-- fbsl -->
+		</if>
+		<if test="fbzt != null and fbzt != ''">
+	         fbzt, <!-- fbzt -->
+		</if>
+		<if test="fbr != null and fbr != ''">
+	         fbr, <!-- fbr -->
+		</if>
+		<if test="fbsq != null and fbsq != ''">
+	         fbsq, <!-- fbsq -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="zww != null and zww != ''">
+	         zww, <!-- zww -->
+		</if>
+		<if test="hlw != null and hlw != ''">
+	         hlw, <!-- hlw -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="fbbh != null and fbbh != ''">
+	          #{fbbh, jdbcType=VARCHAR}, <!-- fbbh -->
+	    </if>
+		<if test="fbwd != null and fbwd != ''">
+	          #{fbwd, jdbcType=VARCHAR}, <!-- fbwd -->
+	    </if>
+		<if test="fbrw != null and fbrw != ''">
+	          #{fbrw, jdbcType=VARCHAR}, <!-- fbrw -->
+	    </if>
+		<if test="fbnr != null and fbnr != ''">
+	          #{fbnr, jdbcType=VARCHAR}, <!-- fbnr -->
+	    </if>
+		<if test="fblx != null and fblx != ''">
+	          #{fblx, jdbcType=VARCHAR}, <!-- fblx -->
+	    </if>
+		<if test="fbsl != null and fbsl != ''">
+	          #{fbsl, jdbcType=VARCHAR}, <!-- fbsl -->
+	    </if>
+		<if test="fbzt != null and fbzt != ''">
+	          #{fbzt, jdbcType=VARCHAR}, <!-- fbzt -->
+	    </if>
+		<if test="fbr != null and fbr != ''">
+	          #{fbr, jdbcType=VARCHAR}, <!-- fbr -->
+	    </if>
+		<if test="fbsq != null and fbsq != ''">
+	          #{fbsq, jdbcType=VARCHAR}, <!-- fbsq -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="zww != null and zww != ''">
+	          #{zww, jdbcType=VARCHAR}, <!-- zww -->
+	    </if>
+		<if test="hlw != null and hlw != ''">
+	          #{hlw, jdbcType=VARCHAR}, <!-- hlw -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Lysjfb_detailPO">
+		INSERT INTO lysjfb_detail (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{fbbh, jdbcType=VARCHAR},  <!-- fbbh -->
+		    #{fbwd, jdbcType=VARCHAR},  <!-- fbwd -->
+		    #{fbrw, jdbcType=VARCHAR},  <!-- fbrw -->
+		    #{fbnr, jdbcType=VARCHAR},  <!-- fbnr -->
+		    #{fblx, jdbcType=VARCHAR},  <!-- fblx -->
+		    #{fbsl, jdbcType=VARCHAR},  <!-- fbsl -->
+		    #{fbzt, jdbcType=VARCHAR},  <!-- fbzt -->
+		    #{fbr, jdbcType=VARCHAR},  <!-- fbr -->
+		    #{fbsq, jdbcType=VARCHAR},  <!-- fbsq -->
+		    #{bz, jdbcType=VARCHAR},  <!-- bz -->
+		    #{zww, jdbcType=VARCHAR},  <!-- zww -->
+		    #{hlw, jdbcType=VARCHAR}  <!-- hlw -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Lysjfb_detailPO">
+		UPDATE lysjfb_detail
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="fbbh != null">
+		          fbbh = #{fbbh, jdbcType=VARCHAR},  <!-- fbbh -->
+			</if>
+			<if test="fbwd != null">
+		          fbwd = #{fbwd, jdbcType=VARCHAR},  <!-- fbwd -->
+			</if>
+			<if test="fbrw != null">
+		          fbrw = #{fbrw, jdbcType=VARCHAR},  <!-- fbrw -->
+			</if>
+			<if test="fbnr != null">
+		          fbnr = #{fbnr, jdbcType=VARCHAR},  <!-- fbnr -->
+			</if>
+			<if test="fblx != null">
+		          fblx = #{fblx, jdbcType=VARCHAR},  <!-- fblx -->
+			</if>
+			<if test="fbsl != null">
+		          fbsl = #{fbsl, jdbcType=VARCHAR},  <!-- fbsl -->
+			</if>
+			<if test="fbzt != null">
+		          fbzt = #{fbzt, jdbcType=VARCHAR},  <!-- fbzt -->
+			</if>
+			<if test="fbr != null">
+		          fbr = #{fbr, jdbcType=VARCHAR},  <!-- fbr -->
+			</if>
+			<if test="fbsq != null">
+		          fbsq = #{fbsq, jdbcType=VARCHAR},  <!-- fbsq -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+			<if test="zww != null">
+		          zww = #{zww, jdbcType=VARCHAR},  <!-- zww -->
+			</if>
+			<if test="hlw != null">
+		          hlw = #{hlw, jdbcType=VARCHAR},  <!-- hlw -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM lysjfb_detail WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Lysjfb_detailPO">
+		SELECT
+		<include refid="column" />
+		FROM lysjfb_detail WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Lysjfb_detailPO">
+		SELECT
+		    <include refid="column" />
+		FROM lysjfb_detail
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Lysjfb_detailPO">
+		SELECT
+			<include refid="column" />	
+		FROM lysjfb_detail
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Lysjfb_detailPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM lysjfb_detail
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Lysjfb_detailPO">
+		SELECT
+			<include refid="column" />	
+		FROM lysjfb_detail
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Lysjfb_detailPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM lysjfb_detail
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM lysjfb_detail
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM lysjfb_detail
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  fbbh,  <!-- fbbh -->
+		  fbwd,  <!-- fbwd -->
+		  fbrw,  <!-- fbrw -->
+		  fbnr,  <!-- fbnr -->
+		  fblx,  <!-- fblx -->
+		  fbsl,  <!-- fbsl -->
+		  fbzt,  <!-- fbzt -->
+		  fbr,  <!-- fbr -->
+		  fbsq,  <!-- fbsq -->
+		  bz,  <!-- bz -->
+		  zww,  <!-- zww -->
+		  hlw  <!-- hlw -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  lysjfb_detail.id_,  <!-- id_ -->
+		  lysjfb_detail.fbbh,  <!-- fbbh -->
+		  lysjfb_detail.fbwd,  <!-- fbwd -->
+		  lysjfb_detail.fbrw,  <!-- fbrw -->
+		  lysjfb_detail.fbnr,  <!-- fbnr -->
+		  lysjfb_detail.fblx,  <!-- fblx -->
+		  lysjfb_detail.fbsl,  <!-- fbsl -->
+		  lysjfb_detail.fbzt,  <!-- fbzt -->
+		  lysjfb_detail.fbr,  <!-- fbr -->
+		  lysjfb_detail.fbsq,  <!-- fbsq -->
+		  lysjfb_detail.bz,  <!-- bz -->
+		  lysjfb_detail.zww,  <!-- zww -->
+		  lysjfb_detail.hlw  <!-- hlw -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="fbbh != null and fbbh != ''">
+		      AND fbbh = #{fbbh}  <!-- fbbh -->
+		</if>
+	    <if test="fbwd != null and fbwd != ''">
+		      AND fbwd = #{fbwd}  <!-- fbwd -->
+		</if>
+	    <if test="fbrw != null and fbrw != ''">
+		      AND fbrw = #{fbrw}  <!-- fbrw -->
+		</if>
+	    <if test="fbnr != null and fbnr != ''">
+		      AND fbnr = #{fbnr}  <!-- fbnr -->
+		</if>
+	    <if test="fblx != null and fblx != ''">
+		      AND fblx = #{fblx}  <!-- fblx -->
+		</if>
+	    <if test="fbsl != null and fbsl != ''">
+		      AND fbsl = #{fbsl}  <!-- fbsl -->
+		</if>
+	    <if test="fbzt != null and fbzt != ''">
+		      AND fbzt = #{fbzt}  <!-- fbzt -->
+		</if>
+	    <if test="fbr != null and fbr != ''">
+		      AND fbr = #{fbr}  <!-- fbr -->
+		</if>
+	    <if test="fbsq != null and fbsq != ''">
+		      AND fbsq = #{fbsq}  <!-- fbsq -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	    <if test="zww != null and zww != ''">
+		      AND zww = #{zww}  <!-- zww -->
+		</if>
+	    <if test="hlw != null and hlw != ''">
+		      AND hlw = #{hlw}  <!-- hlw -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="fbbh != null and fbbh != ''">
+		      AND fbbh like '%${fbbh}%'  <!-- fbbh -->
+		</if>
+	    <if test="fbwd != null and fbwd != ''">
+		      AND fbwd like '%${fbwd}%'  <!-- fbwd -->
+		</if>
+	    <if test="fbrw != null and fbrw != ''">
+		      AND fbrw like '%${fbrw}%'  <!-- fbrw -->
+		</if>
+	    <if test="fbnr != null and fbnr != ''">
+		      AND fbnr like '%${fbnr}%'  <!-- fbnr -->
+		</if>
+	    <if test="fblx != null and fblx != ''">
+		      AND fblx like '%${fblx}%'  <!-- fblx -->
+		</if>
+	    <if test="fbsl != null and fbsl != ''">
+		      AND fbsl like '%${fbsl}%'  <!-- fbsl -->
+		</if>
+	    <if test="fbzt != null and fbzt != ''">
+		      AND fbzt like '%${fbzt}%'  <!-- fbzt -->
+		</if>
+	    <if test="fbr != null and fbr != ''">
+		      AND fbr like '%${fbr}%'  <!-- fbr -->
+		</if>
+	    <if test="fbsq != null and fbsq != ''">
+		      AND fbsq like '%${fbsq}%'  <!-- fbsq -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	    <if test="zww != null and zww != ''">
+		      AND zww like '%${zww}%'  <!-- zww -->
+		</if>
+	    <if test="hlw != null and hlw != ''">
+		      AND hlw like '%${hlw}%'  <!-- hlw -->
+		</if>
+	</sql>
+	
+</mapper>

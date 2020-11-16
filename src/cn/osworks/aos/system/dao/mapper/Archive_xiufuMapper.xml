@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_xiufu[archive_xiufu]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-11-14 17:01:56 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_xiufuMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_xiufuPO">
+		INSERT INTO archive_xiufu (
+		<if test="tid != null and tid != ''">
+	         tid, <!-- tid -->
+		</if>
+		<if test="xiufu_time != null and xiufu_time != ''">
+	         xiufu_time, <!-- xiufu_time -->
+		</if>
+		<if test="xiufu_method != null and xiufu_method != ''">
+	         xiufu_method, <!-- xiufu_method -->
+		</if>
+		<if test="xiufu_page_number != null and xiufu_page_number != ''">
+	         xiufu_page_number, <!-- xiufu_page_number -->
+		</if>
+		<if test="xiufu_page_sum != null and xiufu_page_sum != ''">
+	         xiufu_page_sum, <!-- xiufu_page_sum -->
+		</if>
+		<if test="xiufu_person != null and xiufu_person != ''">
+	         xiufu_person, <!-- xiufu_person -->
+		</if>
+		<if test="xiufu_person_cn != null and xiufu_person_cn != ''">
+	         xiufu_person_cn, <!-- xiufu_person_cn -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="tid != null and tid != ''">
+	          #{tid, jdbcType=VARCHAR}, <!-- tid -->
+	    </if>
+		<if test="xiufu_time != null and xiufu_time != ''">
+	          #{xiufu_time, jdbcType=VARCHAR}, <!-- xiufu_time -->
+	    </if>
+		<if test="xiufu_method != null and xiufu_method != ''">
+	          #{xiufu_method, jdbcType=VARCHAR}, <!-- xiufu_method -->
+	    </if>
+		<if test="xiufu_page_number != null and xiufu_page_number != ''">
+	          #{xiufu_page_number, jdbcType=VARCHAR}, <!-- xiufu_page_number -->
+	    </if>
+		<if test="xiufu_page_sum != null and xiufu_page_sum != ''">
+	          #{xiufu_page_sum, jdbcType=VARCHAR}, <!-- xiufu_page_sum -->
+	    </if>
+		<if test="xiufu_person != null and xiufu_person != ''">
+	          #{xiufu_person, jdbcType=VARCHAR}, <!-- xiufu_person -->
+	    </if>
+		<if test="xiufu_person_cn != null and xiufu_person_cn != ''">
+	          #{xiufu_person_cn, jdbcType=VARCHAR}, <!-- xiufu_person_cn -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_xiufuPO">
+		INSERT INTO archive_xiufu (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{tid, jdbcType=VARCHAR},  <!-- tid -->
+		    #{xiufu_time, jdbcType=VARCHAR},  <!-- xiufu_time -->
+		    #{xiufu_method, jdbcType=VARCHAR},  <!-- xiufu_method -->
+		    #{xiufu_page_number, jdbcType=VARCHAR},  <!-- xiufu_page_number -->
+		    #{xiufu_page_sum, jdbcType=VARCHAR},  <!-- xiufu_page_sum -->
+		    #{xiufu_person, jdbcType=VARCHAR},  <!-- xiufu_person -->
+		    #{xiufu_person_cn, jdbcType=VARCHAR}  <!-- xiufu_person_cn -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_xiufuPO">
+		UPDATE archive_xiufu
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="tid != null">
+		          tid = #{tid, jdbcType=VARCHAR},  <!-- tid -->
+			</if>
+			<if test="xiufu_time != null">
+		          xiufu_time = #{xiufu_time, jdbcType=VARCHAR},  <!-- xiufu_time -->
+			</if>
+			<if test="xiufu_method != null">
+		          xiufu_method = #{xiufu_method, jdbcType=VARCHAR},  <!-- xiufu_method -->
+			</if>
+			<if test="xiufu_page_number != null">
+		          xiufu_page_number = #{xiufu_page_number, jdbcType=VARCHAR},  <!-- xiufu_page_number -->
+			</if>
+			<if test="xiufu_page_sum != null">
+		          xiufu_page_sum = #{xiufu_page_sum, jdbcType=VARCHAR},  <!-- xiufu_page_sum -->
+			</if>
+			<if test="xiufu_person != null">
+		          xiufu_person = #{xiufu_person, jdbcType=VARCHAR},  <!-- xiufu_person -->
+			</if>
+			<if test="xiufu_person_cn != null">
+		          xiufu_person_cn = #{xiufu_person_cn, jdbcType=VARCHAR},  <!-- xiufu_person_cn -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_xiufu WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_xiufuPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_xiufu WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_xiufuPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_xiufu
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_xiufuPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_xiufu
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_xiufuPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_xiufu
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_xiufuPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_xiufu
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_xiufuPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_xiufu
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_xiufu
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_xiufu
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  tid,  <!-- tid -->
+		  xiufu_time,  <!-- xiufu_time -->
+		  xiufu_method,  <!-- xiufu_method -->
+		  xiufu_page_number,  <!-- xiufu_page_number -->
+		  xiufu_page_sum,  <!-- xiufu_page_sum -->
+		  xiufu_person,  <!-- xiufu_person -->
+		  xiufu_person_cn  <!-- xiufu_person_cn -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_xiufu.id_,  <!-- id_ -->
+		  archive_xiufu.tid,  <!-- tid -->
+		  archive_xiufu.xiufu_time,  <!-- xiufu_time -->
+		  archive_xiufu.xiufu_method,  <!-- xiufu_method -->
+		  archive_xiufu.xiufu_page_number,  <!-- xiufu_page_number -->
+		  archive_xiufu.xiufu_page_sum,  <!-- xiufu_page_sum -->
+		  archive_xiufu.xiufu_person,  <!-- xiufu_person -->
+		  archive_xiufu.xiufu_person_cn  <!-- xiufu_person_cn -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid = #{tid}  <!-- tid -->
+		</if>
+	    <if test="xiufu_time != null and xiufu_time != ''">
+		      AND xiufu_time = #{xiufu_time}  <!-- xiufu_time -->
+		</if>
+	    <if test="xiufu_method != null and xiufu_method != ''">
+		      AND xiufu_method = #{xiufu_method}  <!-- xiufu_method -->
+		</if>
+	    <if test="xiufu_page_number != null and xiufu_page_number != ''">
+		      AND xiufu_page_number = #{xiufu_page_number}  <!-- xiufu_page_number -->
+		</if>
+	    <if test="xiufu_page_sum != null and xiufu_page_sum != ''">
+		      AND xiufu_page_sum = #{xiufu_page_sum}  <!-- xiufu_page_sum -->
+		</if>
+	    <if test="xiufu_person != null and xiufu_person != ''">
+		      AND xiufu_person = #{xiufu_person}  <!-- xiufu_person -->
+		</if>
+	    <if test="xiufu_person_cn != null and xiufu_person_cn != ''">
+		      AND xiufu_person_cn = #{xiufu_person_cn}  <!-- xiufu_person_cn -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid like '%${tid}%'  <!-- tid -->
+		</if>
+	    <if test="xiufu_time != null and xiufu_time != ''">
+		      AND xiufu_time like '%${xiufu_time}%'  <!-- xiufu_time -->
+		</if>
+	    <if test="xiufu_method != null and xiufu_method != ''">
+		      AND xiufu_method like '%${xiufu_method}%'  <!-- xiufu_method -->
+		</if>
+	    <if test="xiufu_page_number != null and xiufu_page_number != ''">
+		      AND xiufu_page_number like '%${xiufu_page_number}%'  <!-- xiufu_page_number -->
+		</if>
+	    <if test="xiufu_page_sum != null and xiufu_page_sum != ''">
+		      AND xiufu_page_sum like '%${xiufu_page_sum}%'  <!-- xiufu_page_sum -->
+		</if>
+	    <if test="xiufu_person != null and xiufu_person != ''">
+		      AND xiufu_person like '%${xiufu_person}%'  <!-- xiufu_person -->
+		</if>
+	    <if test="xiufu_person_cn != null and xiufu_person_cn != ''">
+		      AND xiufu_person_cn like '%${xiufu_person_cn}%'  <!-- xiufu_person_cn -->
+		</if>
+	</sql>
+	
+</mapper>

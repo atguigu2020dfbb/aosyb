@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_zdyj[archive_zdyj]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-04-30 12:46:47 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_zdyjMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_zdyjPO">
+		INSERT INTO archive_zdyj (
+		
+		<if test="zd_person != null and zd_person != ''">
+	         zd_person, <!-- zd_person -->
+		</if>
+		<if test="zd_time != null and zd_time != ''">
+	         zd_time, <!-- zd_time -->
+		</if>
+		<if test="zd_description != null and zd_description != ''">
+	         zd_description, <!-- zd_description -->
+		</if>
+		<if test="zd_tablename != null and zd_tablename != ''">
+	         zd_tablename, <!-- zd_tablename -->
+		</if>
+		<if test="tid != null and tid != ''">
+	         tid, <!-- tid -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	         id_ <!-- id_ -->
+		</if>
+		)VALUES(
+		
+		<if test="zd_person != null and zd_person != ''">
+	          #{zd_person, jdbcType=VARCHAR}, <!-- zd_person -->
+	    </if>
+		<if test="zd_time != null and zd_time != ''">
+	          #{zd_time, jdbcType=VARCHAR}, <!-- zd_time -->
+	    </if>
+		<if test="zd_description != null and zd_description != ''">
+	          #{zd_description, jdbcType=VARCHAR}, <!-- zd_description -->
+	    </if>
+		<if test="zd_tablename != null and zd_tablename != ''">
+	          #{zd_tablename, jdbcType=VARCHAR}, <!-- zd_tablename -->
+	    </if>
+		<if test="tid != null and tid != ''">
+	          #{tid, jdbcType=VARCHAR}, <!-- tid -->
+	    </if>
+	    <if test="id_ != null and id_ != ''">
+	          #{id_, jdbcType=VARCHAR}<!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_zdyjPO">
+		INSERT INTO archive_zdyj (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{zd_person, jdbcType=VARCHAR},  <!-- zd_person -->
+		    #{zd_time, jdbcType=VARCHAR},  <!-- zd_time -->
+		    #{zd_description, jdbcType=VARCHAR},  <!-- zd_description -->
+		    #{zd_tablename, jdbcType=VARCHAR},  <!-- zd_tablename -->
+		    #{tid, jdbcType=VARCHAR}  <!-- tid -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_zdyjPO">
+		UPDATE archive_zdyj
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="zd_person != null">
+		          zd_person = #{zd_person, jdbcType=VARCHAR},  <!-- zd_person -->
+			</if>
+			<if test="zd_time != null">
+		          zd_time = #{zd_time, jdbcType=VARCHAR},  <!-- zd_time -->
+			</if>
+			<if test="zd_description != null">
+		          zd_description = #{zd_description, jdbcType=VARCHAR},  <!-- zd_description -->
+			</if>
+			<if test="zd_tablename != null">
+		          zd_tablename = #{zd_tablename, jdbcType=VARCHAR},  <!-- zd_tablename -->
+			</if>
+			<if test="tid != null">
+		          tid = #{tid, jdbcType=VARCHAR},  <!-- tid -->
+			</if>
+		</set>
+		WHERE 
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_zdyj WHERE 
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_zdyjPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_zdyj WHERE 
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_zdyjPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_zdyj
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_zdyjPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_zdyj
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_zdyjPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_zdyj
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_zdyjPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_zdyj
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_zdyjPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_zdyj
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_zdyj
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_zdyj
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  zd_person,  <!-- zd_person -->
+		  zd_time,  <!-- zd_time -->
+		  zd_description,  <!-- zd_description -->
+		  zd_tablename,  <!-- zd_tablename -->
+		  tid  <!-- tid -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_zdyj.id_,  <!-- id_ -->
+		  archive_zdyj.zd_person,  <!-- zd_person -->
+		  archive_zdyj.zd_time,  <!-- zd_time -->
+		  archive_zdyj.zd_description,  <!-- zd_description -->
+		  archive_zdyj.zd_tablename,  <!-- zd_tablename -->
+		  archive_zdyj.tid  <!-- tid -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="zd_person != null and zd_person != ''">
+		      AND zd_person = #{zd_person}  <!-- zd_person -->
+		</if>
+	    <if test="zd_time != null and zd_time != ''">
+		      AND zd_time = #{zd_time}  <!-- zd_time -->
+		</if>
+	    <if test="zd_description != null and zd_description != ''">
+		      AND zd_description = #{zd_description}  <!-- zd_description -->
+		</if>
+	    <if test="zd_tablename != null and zd_tablename != ''">
+		      AND zd_tablename = #{zd_tablename}  <!-- zd_tablename -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid = #{tid}  <!-- tid -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="zd_person != null and zd_person != ''">
+		      AND zd_person like '%${zd_person}%'  <!-- zd_person -->
+		</if>
+	    <if test="zd_time != null and zd_time != ''">
+		      AND zd_time like '%${zd_time}%'  <!-- zd_time -->
+		</if>
+	    <if test="zd_description != null and zd_description != ''">
+		      AND zd_description like '%${zd_description}%'  <!-- zd_description -->
+		</if>
+	    <if test="zd_tablename != null and zd_tablename != ''">
+		      AND zd_tablename like '%${zd_tablename}%'  <!-- zd_tablename -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid like '%${tid}%'  <!-- tid -->
+		</if>
+	</sql>
+	
+</mapper>

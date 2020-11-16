@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_receive_reset[archive_receive_reset]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-12-19 12:02:03 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_receive_resetMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_receive_resetPO">
+		INSERT INTO archive_receive_reset (
+		<if test="pch != null and pch != ''">
+	         pch, <!-- pch -->
+		</if>
+		<if test="bmmc != null and bmmc != ''">
+	         bmmc, <!-- bmmc -->
+		</if>
+		<if test="bmbh != null and bmbh != ''">
+	         bmbh, <!-- bmbh -->
+		</if>
+		<if test="sqr != null and sqr != ''">
+	         sqr, <!-- sqr -->
+		</if>
+		<if test="sqsj != null and sqsj != ''">
+	         sqsj, <!-- sqsj -->
+		</if>
+		<if test="sqms != null and sqms != ''">
+	         sqms, <!-- sqms -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+	         tablename, <!-- tablename -->
+		</if>
+		<if test="opinion_description != null and opinion_description != ''">
+	         opinion_description, <!-- opinion_description -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="pch != null and pch != ''">
+	          #{pch, jdbcType=VARCHAR}, <!-- pch -->
+	    </if>
+		<if test="bmmc != null and bmmc != ''">
+	          #{bmmc, jdbcType=VARCHAR}, <!-- bmmc -->
+	    </if>
+		<if test="bmbh != null and bmbh != ''">
+	          #{bmbh, jdbcType=VARCHAR}, <!-- bmbh -->
+	    </if>
+		<if test="sqr != null and sqr != ''">
+	          #{sqr, jdbcType=VARCHAR}, <!-- sqr -->
+	    </if>
+		<if test="sqsj != null and sqsj != ''">
+	          #{sqsj, jdbcType=VARCHAR}, <!-- sqsj -->
+	    </if>
+		<if test="sqms != null and sqms != ''">
+	          #{sqms, jdbcType=VARCHAR}, <!-- sqms -->
+	    </if>
+		<if test="tablename != null and tablename != ''">
+	          #{tablename, jdbcType=VARCHAR}, <!-- tablename -->
+	    </if>
+		<if test="opinion_description != null and opinion_description != ''">
+	          #{opinion_description, jdbcType=VARCHAR}, <!-- opinion_description -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_receive_resetPO">
+		INSERT INTO archive_receive_reset (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{pch, jdbcType=VARCHAR},  <!-- pch -->
+		    #{bmmc, jdbcType=VARCHAR},  <!-- bmmc -->
+		    #{bmbh, jdbcType=VARCHAR},  <!-- bmbh -->
+		    #{sqr, jdbcType=VARCHAR},  <!-- sqr -->
+		    #{sqsj, jdbcType=VARCHAR},  <!-- sqsj -->
+		    #{sqms, jdbcType=VARCHAR},  <!-- sqms -->
+		    #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+		    #{opinion_description, jdbcType=VARCHAR}  <!-- opinion_description -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_receive_resetPO">
+		UPDATE archive_receive_reset
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="pch != null">
+		          pch = #{pch, jdbcType=VARCHAR},  <!-- pch -->
+			</if>
+			<if test="bmmc != null">
+		          bmmc = #{bmmc, jdbcType=VARCHAR},  <!-- bmmc -->
+			</if>
+			<if test="bmbh != null">
+		          bmbh = #{bmbh, jdbcType=VARCHAR},  <!-- bmbh -->
+			</if>
+			<if test="sqr != null">
+		          sqr = #{sqr, jdbcType=VARCHAR},  <!-- sqr -->
+			</if>
+			<if test="sqsj != null">
+		          sqsj = #{sqsj, jdbcType=VARCHAR},  <!-- sqsj -->
+			</if>
+			<if test="sqms != null">
+		          sqms = #{sqms, jdbcType=VARCHAR},  <!-- sqms -->
+			</if>
+			<if test="tablename != null">
+		          tablename = #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+			</if>
+			<if test="opinion_description != null">
+		          opinion_description = #{opinion_description, jdbcType=VARCHAR},  <!-- opinion_description -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_receive_reset WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_receive_resetPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_receive_reset WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_receive_resetPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_receive_reset
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_receive_resetPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_receive_reset
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_receive_resetPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_receive_reset
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_receive_resetPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_receive_reset
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_receive_resetPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_receive_reset
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_receive_reset
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_receive_reset
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  pch,  <!-- pch -->
+		  bmmc,  <!-- bmmc -->
+		  bmbh,  <!-- bmbh -->
+		  sqr,  <!-- sqr -->
+		  sqsj,  <!-- sqsj -->
+		  sqms,  <!-- sqms -->
+		  tablename,  <!-- tablename -->
+		  opinion_description  <!-- opinion_description -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_receive_reset.id_,  <!-- id_ -->
+		  archive_receive_reset.pch,  <!-- pch -->
+		  archive_receive_reset.bmmc,  <!-- bmmc -->
+		  archive_receive_reset.bmbh,  <!-- bmbh -->
+		  archive_receive_reset.sqr,  <!-- sqr -->
+		  archive_receive_reset.sqsj,  <!-- sqsj -->
+		  archive_receive_reset.sqms,  <!-- sqms -->
+		  archive_receive_reset.tablename,  <!-- tablename -->
+		  archive_receive_reset.opinion_description  <!-- opinion_description -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="pch != null and pch != ''">
+		      AND pch = #{pch}  <!-- pch -->
+		</if>
+	    <if test="bmmc != null and bmmc != ''">
+		      AND bmmc = #{bmmc}  <!-- bmmc -->
+		</if>
+	    <if test="bmbh != null and bmbh != ''">
+		      AND bmbh = #{bmbh}  <!-- bmbh -->
+		</if>
+	    <if test="sqr != null and sqr != ''">
+		      AND sqr = #{sqr}  <!-- sqr -->
+		</if>
+	    <if test="sqsj != null and sqsj != ''">
+		      AND sqsj = #{sqsj}  <!-- sqsj -->
+		</if>
+	    <if test="sqms != null and sqms != ''">
+		      AND sqms = #{sqms}  <!-- sqms -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename = #{tablename}  <!-- tablename -->
+		</if>
+	    <if test="opinion_description != null and opinion_description != ''">
+		      AND opinion_description = #{opinion_description}  <!-- opinion_description -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="pch != null and pch != ''">
+		      AND pch like '%${pch}%'  <!-- pch -->
+		</if>
+	    <if test="bmmc != null and bmmc != ''">
+		      AND bmmc like '%${bmmc}%'  <!-- bmmc -->
+		</if>
+	    <if test="bmbh != null and bmbh != ''">
+		      AND bmbh like '%${bmbh}%'  <!-- bmbh -->
+		</if>
+	    <if test="sqr != null and sqr != ''">
+		      AND sqr like '%${sqr}%'  <!-- sqr -->
+		</if>
+	    <if test="sqsj != null and sqsj != ''">
+		      AND sqsj like '%${sqsj}%'  <!-- sqsj -->
+		</if>
+	    <if test="sqms != null and sqms != ''">
+		      AND sqms like '%${sqms}%'  <!-- sqms -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename like '%${tablename}%'  <!-- tablename -->
+		</if>
+	    <if test="opinion_description != null and opinion_description != ''">
+		      AND opinion_description like '%${opinion_description}%'  <!-- opinion_description -->
+		</if>
+	</sql>
+	
+</mapper>

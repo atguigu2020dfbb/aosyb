@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_remote[archive_remote]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-05-14 00:17:04 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_remoteMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_remotePO">
+		INSERT INTO archive_remote (
+		<if test="proc_ins_id != null and proc_ins_id != ''">
+	         proc_ins_id, <!-- proc_ins_id -->
+		</if>
+		<if test="userenname != null and userenname != ''">
+	         userenname, <!-- userenname -->
+		</if>
+		<if test="xm != null and xm != ''">
+	         xm, <!-- xm -->
+		</if>
+		<if test="sqrq != null and sqrq != ''">
+	         sqrq, <!-- sqrq -->
+		</if>
+		<if test="comment != null and comment != ''">
+	         comment, <!-- comment -->
+		</if>
+		<if test="state != null">
+	         state, <!-- state -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="proc_ins_id != null and proc_ins_id != ''">
+	          #{proc_ins_id, jdbcType=VARCHAR}, <!-- proc_ins_id -->
+	    </if>
+		<if test="userenname != null and userenname != ''">
+	          #{userenname, jdbcType=VARCHAR}, <!-- userenname -->
+	    </if>
+		<if test="xm != null and xm != ''">
+	          #{xm, jdbcType=VARCHAR}, <!-- xm -->
+	    </if>
+		<if test="sqrq != null and sqrq != ''">
+	          #{sqrq, jdbcType=VARCHAR}, <!-- sqrq -->
+	    </if>
+		<if test="comment != null and comment != ''">
+	          #{comment, jdbcType=VARCHAR}, <!-- comment -->
+	    </if>
+		<if test="state != null">
+	          #{state, jdbcType=INTEGER}, <!-- state -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_remotePO">
+		INSERT INTO archive_remote (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{proc_ins_id, jdbcType=VARCHAR},  <!-- proc_ins_id -->
+		    #{userenname, jdbcType=VARCHAR},  <!-- userenname -->
+		    #{xm, jdbcType=VARCHAR},  <!-- xm -->
+		    #{sqrq, jdbcType=VARCHAR},  <!-- sqrq -->
+		    #{comment, jdbcType=VARCHAR},  <!-- comment -->
+		    #{state, jdbcType=INTEGER}  <!-- state -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_remotePO">
+		UPDATE archive_remote
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="proc_ins_id != null">
+		          proc_ins_id = #{proc_ins_id, jdbcType=VARCHAR},  <!-- proc_ins_id -->
+			</if>
+			<if test="userenname != null">
+		          userenname = #{userenname, jdbcType=VARCHAR},  <!-- userenname -->
+			</if>
+			<if test="xm != null">
+		          xm = #{xm, jdbcType=VARCHAR},  <!-- xm -->
+			</if>
+			<if test="sqrq != null">
+		          sqrq = #{sqrq, jdbcType=VARCHAR},  <!-- sqrq -->
+			</if>
+			<if test="comment != null">
+		          comment = #{comment, jdbcType=VARCHAR},  <!-- comment -->
+			</if>
+			<if test="state != null">
+		          state = #{state, jdbcType=INTEGER},  <!-- state -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_remote WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_remotePO">
+		SELECT
+		<include refid="column" />
+		FROM archive_remote WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_remotePO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_remote
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_remotePO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_remote
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_remotePO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_remote
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_remotePO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_remote
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_remotePO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_remote
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_remote
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_remote
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  proc_ins_id,  <!-- proc_ins_id -->
+		  userenname,  <!-- userenname -->
+		  xm,  <!-- xm -->
+		  sqrq,  <!-- sqrq -->
+		  comment,  <!-- comment -->
+		  state  <!-- state -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_remote.id_,  <!-- id_ -->
+		  archive_remote.proc_ins_id,  <!-- proc_ins_id -->
+		  archive_remote.userenname,  <!-- userenname -->
+		  archive_remote.xm,  <!-- xm -->
+		  archive_remote.sqrq,  <!-- sqrq -->
+		  archive_remote.comment,  <!-- comment -->
+		  archive_remote.state  <!-- state -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="proc_ins_id != null and proc_ins_id != ''">
+		      AND proc_ins_id = #{proc_ins_id}  <!-- proc_ins_id -->
+		</if>
+	    <if test="userenname != null and userenname != ''">
+		      AND userenname = #{userenname}  <!-- userenname -->
+		</if>
+	    <if test="xm != null and xm != ''">
+		      AND xm = #{xm}  <!-- xm -->
+		</if>
+	    <if test="sqrq != null and sqrq != ''">
+		      AND sqrq = #{sqrq}  <!-- sqrq -->
+		</if>
+	    <if test="comment != null and comment != ''">
+		      AND comment = #{comment}  <!-- comment -->
+		</if>
+	   <if test="state != null ">
+		      AND state = #{state}  <!-- state -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="proc_ins_id != null and proc_ins_id != ''">
+		      AND proc_ins_id like '%${proc_ins_id}%'  <!-- proc_ins_id -->
+		</if>
+	    <if test="userenname != null and userenname != ''">
+		      AND userenname like '%${userenname}%'  <!-- userenname -->
+		</if>
+	    <if test="xm != null and xm != ''">
+		      AND xm like '%${xm}%'  <!-- xm -->
+		</if>
+	    <if test="sqrq != null and sqrq != ''">
+		      AND sqrq like '%${sqrq}%'  <!-- sqrq -->
+		</if>
+	    <if test="comment != null and comment != ''">
+		      AND comment like '%${comment}%'  <!-- comment -->
+		</if>
+	</sql>
+	
+</mapper>

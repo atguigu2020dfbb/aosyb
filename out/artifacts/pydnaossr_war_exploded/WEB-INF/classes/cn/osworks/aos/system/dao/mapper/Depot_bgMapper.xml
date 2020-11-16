@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- depot_bg[depot_bg]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-09-09 13:54:35 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Depot_bgMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Depot_bgPO">
+		INSERT INTO depot_bg (
+		<if test="kfbh != null and kfbh != ''">
+	         kfbh, <!-- kfbh -->
+		</if>
+		<if test="jcsj != null and jcsj != ''">
+	         jcsj, <!-- jcsj -->
+		</if>
+		<if test="jcbm != null and jcbm != ''">
+	         jcbm, <!-- jcbm -->
+		</if>
+		<if test="jcr != null and jcr != ''">
+	         jcr, <!-- jcr -->
+		</if>
+		<if test="daml != null and daml != ''">
+	         daml, <!-- daml -->
+		</if>
+		<if test="dh != null and dh != ''">
+	         dh, <!-- dh -->
+		</if>
+		<if test="tm != null and tm != ''">
+	         tm, <!-- tm -->
+		</if>
+		<if test="xcrq != null and xcrq != ''">
+	         xcrq, <!-- xcrq -->
+		</if>
+		<if test="bgqx != null and bgqx != ''">
+	         bgqx, <!-- bgqx -->
+		</if>
+		<if test="zrz != null and zrz != ''">
+	         zrz, <!-- zrz -->
+		</if>
+		<if test="ys != null and ys != ''">
+	         ys, <!-- ys -->
+		</if>
+		<if test="bgzk != null and bgzk != ''">
+	         bgzk, <!-- bgzk -->
+		</if>
+		<if test="wtys != null and wtys != ''">
+	         wtys, <!-- wtys -->
+		</if>
+		<if test="wtms != null and wtms != ''">
+	         wtms, <!-- wtms -->
+		</if>
+		<if test="sfcl != null and sfcl != ''">
+	         sfcl, <!-- sfcl -->
+		</if>
+		<if test="clr != null and clr != ''">
+	         clr, <!-- clr -->
+		</if>
+		<if test="clsj != null and clsj != ''">
+	         clsj, <!-- clsj -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="lx != null and lx != ''">
+	         lx, <!-- lx -->
+		</if>
+		<if test="qzh != null and qzh != ''">
+	         qzh, <!-- qzh -->
+		</if>
+		<if test="mlh != null and mlh != ''">
+	         mlh, <!-- mlh -->
+		</if>
+		<if test="ajh != null and ajh != ''">
+	         ajh, <!-- ajh -->
+		</if>
+		<if test="wtyh != null and wtyh != ''">
+	         wtyh, <!-- wtyh -->
+		</if>
+		<if test="qjfs != null and qjfs != ''">
+	         qjfs, <!-- qjfs -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="kfbh != null and kfbh != ''">
+	          #{kfbh, jdbcType=VARCHAR}, <!-- kfbh -->
+	    </if>
+		<if test="jcsj != null and jcsj != ''">
+	          #{jcsj, jdbcType=VARCHAR}, <!-- jcsj -->
+	    </if>
+		<if test="jcbm != null and jcbm != ''">
+	          #{jcbm, jdbcType=VARCHAR}, <!-- jcbm -->
+	    </if>
+		<if test="jcr != null and jcr != ''">
+	          #{jcr, jdbcType=VARCHAR}, <!-- jcr -->
+	    </if>
+		<if test="daml != null and daml != ''">
+	          #{daml, jdbcType=VARCHAR}, <!-- daml -->
+	    </if>
+		<if test="dh != null and dh != ''">
+	          #{dh, jdbcType=VARCHAR}, <!-- dh -->
+	    </if>
+		<if test="tm != null and tm != ''">
+	          #{tm, jdbcType=VARCHAR}, <!-- tm -->
+	    </if>
+		<if test="xcrq != null and xcrq != ''">
+	          #{xcrq, jdbcType=VARCHAR}, <!-- xcrq -->
+	    </if>
+		<if test="bgqx != null and bgqx != ''">
+	          #{bgqx, jdbcType=VARCHAR}, <!-- bgqx -->
+	    </if>
+		<if test="zrz != null and zrz != ''">
+	          #{zrz, jdbcType=VARCHAR}, <!-- zrz -->
+	    </if>
+		<if test="ys != null and ys != ''">
+	          #{ys, jdbcType=VARCHAR}, <!-- ys -->
+	    </if>
+		<if test="bgzk != null and bgzk != ''">
+	          #{bgzk, jdbcType=VARCHAR}, <!-- bgzk -->
+	    </if>
+		<if test="wtys != null and wtys != ''">
+	          #{wtys, jdbcType=VARCHAR}, <!-- wtys -->
+	    </if>
+		<if test="wtms != null and wtms != ''">
+	          #{wtms, jdbcType=VARCHAR}, <!-- wtms -->
+	    </if>
+		<if test="sfcl != null and sfcl != ''">
+	          #{sfcl, jdbcType=VARCHAR}, <!-- sfcl -->
+	    </if>
+		<if test="clr != null and clr != ''">
+	          #{clr, jdbcType=VARCHAR}, <!-- clr -->
+	    </if>
+		<if test="clsj != null and clsj != ''">
+	          #{clsj, jdbcType=VARCHAR}, <!-- clsj -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="lx != null and lx != ''">
+	          #{lx, jdbcType=VARCHAR}, <!-- lx -->
+	    </if>
+		<if test="qzh != null and qzh != ''">
+	          #{qzh, jdbcType=VARCHAR}, <!-- qzh -->
+	    </if>
+		<if test="mlh != null and mlh != ''">
+	          #{mlh, jdbcType=VARCHAR}, <!-- mlh -->
+	    </if>
+		<if test="ajh != null and ajh != ''">
+	          #{ajh, jdbcType=VARCHAR}, <!-- ajh -->
+	    </if>
+		<if test="wtyh != null and wtyh != ''">
+	          #{wtyh, jdbcType=VARCHAR}, <!-- wtyh -->
+	    </if>
+		<if test="qjfs != null and qjfs != ''">
+	          #{qjfs, jdbcType=VARCHAR}, <!-- qjfs -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Depot_bgPO">
+		INSERT INTO depot_bg (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{kfbh, jdbcType=VARCHAR},  <!-- kfbh -->
+		    #{jcsj, jdbcType=VARCHAR},  <!-- jcsj -->
+		    #{jcbm, jdbcType=VARCHAR},  <!-- jcbm -->
+		    #{jcr, jdbcType=VARCHAR},  <!-- jcr -->
+		    #{daml, jdbcType=VARCHAR},  <!-- daml -->
+		    #{dh, jdbcType=VARCHAR},  <!-- dh -->
+		    #{tm, jdbcType=VARCHAR},  <!-- tm -->
+		    #{xcrq, jdbcType=VARCHAR},  <!-- xcrq -->
+		    #{bgqx, jdbcType=VARCHAR},  <!-- bgqx -->
+		    #{zrz, jdbcType=VARCHAR},  <!-- zrz -->
+		    #{ys, jdbcType=VARCHAR},  <!-- ys -->
+		    #{bgzk, jdbcType=VARCHAR},  <!-- bgzk -->
+		    #{wtys, jdbcType=VARCHAR},  <!-- wtys -->
+		    #{wtms, jdbcType=VARCHAR},  <!-- wtms -->
+		    #{sfcl, jdbcType=VARCHAR},  <!-- sfcl -->
+		    #{clr, jdbcType=VARCHAR},  <!-- clr -->
+		    #{clsj, jdbcType=VARCHAR},  <!-- clsj -->
+		    #{bz, jdbcType=VARCHAR},  <!-- bz -->
+		    #{lx, jdbcType=VARCHAR},  <!-- lx -->
+		    #{qzh, jdbcType=VARCHAR},  <!-- qzh -->
+		    #{mlh, jdbcType=VARCHAR},  <!-- mlh -->
+		    #{ajh, jdbcType=VARCHAR},  <!-- ajh -->
+		    #{wtyh, jdbcType=VARCHAR},  <!-- wtyh -->
+		    #{qjfs, jdbcType=VARCHAR}  <!-- qjfs -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Depot_bgPO">
+		UPDATE depot_bg
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="kfbh != null">
+		          kfbh = #{kfbh, jdbcType=VARCHAR},  <!-- kfbh -->
+			</if>
+			<if test="jcsj != null">
+		          jcsj = #{jcsj, jdbcType=VARCHAR},  <!-- jcsj -->
+			</if>
+			<if test="jcbm != null">
+		          jcbm = #{jcbm, jdbcType=VARCHAR},  <!-- jcbm -->
+			</if>
+			<if test="jcr != null">
+		          jcr = #{jcr, jdbcType=VARCHAR},  <!-- jcr -->
+			</if>
+			<if test="daml != null">
+		          daml = #{daml, jdbcType=VARCHAR},  <!-- daml -->
+			</if>
+			<if test="dh != null">
+		          dh = #{dh, jdbcType=VARCHAR},  <!-- dh -->
+			</if>
+			<if test="tm != null">
+		          tm = #{tm, jdbcType=VARCHAR},  <!-- tm -->
+			</if>
+			<if test="xcrq != null">
+		          xcrq = #{xcrq, jdbcType=VARCHAR},  <!-- xcrq -->
+			</if>
+			<if test="bgqx != null">
+		          bgqx = #{bgqx, jdbcType=VARCHAR},  <!-- bgqx -->
+			</if>
+			<if test="zrz != null">
+		          zrz = #{zrz, jdbcType=VARCHAR},  <!-- zrz -->
+			</if>
+			<if test="ys != null">
+		          ys = #{ys, jdbcType=VARCHAR},  <!-- ys -->
+			</if>
+			<if test="bgzk != null">
+		          bgzk = #{bgzk, jdbcType=VARCHAR},  <!-- bgzk -->
+			</if>
+			<if test="wtys != null">
+		          wtys = #{wtys, jdbcType=VARCHAR},  <!-- wtys -->
+			</if>
+			<if test="wtms != null">
+		          wtms = #{wtms, jdbcType=VARCHAR},  <!-- wtms -->
+			</if>
+			<if test="sfcl != null">
+		          sfcl = #{sfcl, jdbcType=VARCHAR},  <!-- sfcl -->
+			</if>
+			<if test="clr != null">
+		          clr = #{clr, jdbcType=VARCHAR},  <!-- clr -->
+			</if>
+			<if test="clsj != null">
+		          clsj = #{clsj, jdbcType=VARCHAR},  <!-- clsj -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+			<if test="lx != null">
+		          lx = #{lx, jdbcType=VARCHAR},  <!-- lx -->
+			</if>
+			<if test="qzh != null">
+		          qzh = #{qzh, jdbcType=VARCHAR},  <!-- qzh -->
+			</if>
+			<if test="mlh != null">
+		          mlh = #{mlh, jdbcType=VARCHAR},  <!-- mlh -->
+			</if>
+			<if test="ajh != null">
+		          ajh = #{ajh, jdbcType=VARCHAR},  <!-- ajh -->
+			</if>
+			<if test="wtyh != null">
+		          wtyh = #{wtyh, jdbcType=VARCHAR},  <!-- wtyh -->
+			</if>
+			<if test="qjfs != null">
+		          qjfs = #{qjfs, jdbcType=VARCHAR},  <!-- qjfs -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM depot_bg WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Depot_bgPO">
+		SELECT
+		<include refid="column" />
+		FROM depot_bg WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Depot_bgPO">
+		SELECT
+		    <include refid="column" />
+		FROM depot_bg
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Depot_bgPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_bg
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Depot_bgPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_bg
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Depot_bgPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_bg
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Depot_bgPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_bg
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM depot_bg
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM depot_bg
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  kfbh,  <!-- kfbh -->
+		  jcsj,  <!-- jcsj -->
+		  jcbm,  <!-- jcbm -->
+		  jcr,  <!-- jcr -->
+		  daml,  <!-- daml -->
+		  dh,  <!-- dh -->
+		  tm,  <!-- tm -->
+		  xcrq,  <!-- xcrq -->
+		  bgqx,  <!-- bgqx -->
+		  zrz,  <!-- zrz -->
+		  ys,  <!-- ys -->
+		  bgzk,  <!-- bgzk -->
+		  wtys,  <!-- wtys -->
+		  wtms,  <!-- wtms -->
+		  sfcl,  <!-- sfcl -->
+		  clr,  <!-- clr -->
+		  clsj,  <!-- clsj -->
+		  bz,  <!-- bz -->
+		  lx,  <!-- lx -->
+		  qzh,  <!-- qzh -->
+		  mlh,  <!-- mlh -->
+		  ajh,  <!-- ajh -->
+		  wtyh,  <!-- wtyh -->
+		  qjfs  <!-- qjfs -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  depot_bg.id_,  <!-- id_ -->
+		  depot_bg.kfbh,  <!-- kfbh -->
+		  depot_bg.jcsj,  <!-- jcsj -->
+		  depot_bg.jcbm,  <!-- jcbm -->
+		  depot_bg.jcr,  <!-- jcr -->
+		  depot_bg.daml,  <!-- daml -->
+		  depot_bg.dh,  <!-- dh -->
+		  depot_bg.tm,  <!-- tm -->
+		  depot_bg.xcrq,  <!-- xcrq -->
+		  depot_bg.bgqx,  <!-- bgqx -->
+		  depot_bg.zrz,  <!-- zrz -->
+		  depot_bg.ys,  <!-- ys -->
+		  depot_bg.bgzk,  <!-- bgzk -->
+		  depot_bg.wtys,  <!-- wtys -->
+		  depot_bg.wtms,  <!-- wtms -->
+		  depot_bg.sfcl,  <!-- sfcl -->
+		  depot_bg.clr,  <!-- clr -->
+		  depot_bg.clsj,  <!-- clsj -->
+		  depot_bg.bz,  <!-- bz -->
+		  depot_bg.lx,  <!-- lx -->
+		  depot_bg.qzh,  <!-- qzh -->
+		  depot_bg.mlh,  <!-- mlh -->
+		  depot_bg.ajh,  <!-- ajh -->
+		  depot_bg.wtyh,  <!-- wtyh -->
+		  depot_bg.qjfs  <!-- qjfs -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="kfbh != null and kfbh != ''">
+		      AND kfbh = #{kfbh}  <!-- kfbh -->
+		</if>
+	    <if test="jcsj != null and jcsj != ''">
+		      AND jcsj = #{jcsj}  <!-- jcsj -->
+		</if>
+	    <if test="jcbm != null and jcbm != ''">
+		      AND jcbm = #{jcbm}  <!-- jcbm -->
+		</if>
+	    <if test="jcr != null and jcr != ''">
+		      AND jcr = #{jcr}  <!-- jcr -->
+		</if>
+	    <if test="daml != null and daml != ''">
+		      AND daml = #{daml}  <!-- daml -->
+		</if>
+	    <if test="dh != null and dh != ''">
+		      AND dh = #{dh}  <!-- dh -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm = #{tm}  <!-- tm -->
+		</if>
+	    <if test="xcrq != null and xcrq != ''">
+		      AND xcrq = #{xcrq}  <!-- xcrq -->
+		</if>
+	    <if test="bgqx != null and bgqx != ''">
+		      AND bgqx = #{bgqx}  <!-- bgqx -->
+		</if>
+	    <if test="zrz != null and zrz != ''">
+		      AND zrz = #{zrz}  <!-- zrz -->
+		</if>
+	    <if test="ys != null and ys != ''">
+		      AND ys = #{ys}  <!-- ys -->
+		</if>
+	    <if test="bgzk != null and bgzk != ''">
+		      AND bgzk = #{bgzk}  <!-- bgzk -->
+		</if>
+	    <if test="wtys != null and wtys != ''">
+		      AND wtys = #{wtys}  <!-- wtys -->
+		</if>
+	    <if test="wtms != null and wtms != ''">
+		      AND wtms = #{wtms}  <!-- wtms -->
+		</if>
+	    <if test="sfcl != null and sfcl != ''">
+		      AND sfcl = #{sfcl}  <!-- sfcl -->
+		</if>
+	    <if test="clr != null and clr != ''">
+		      AND clr = #{clr}  <!-- clr -->
+		</if>
+	    <if test="clsj != null and clsj != ''">
+		      AND clsj = #{clsj}  <!-- clsj -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx = #{lx}  <!-- lx -->
+		</if>
+	    <if test="qzh != null and qzh != ''">
+		      AND qzh = #{qzh}  <!-- qzh -->
+		</if>
+	    <if test="mlh != null and mlh != ''">
+		      AND mlh = #{mlh}  <!-- mlh -->
+		</if>
+	    <if test="ajh != null and ajh != ''">
+		      AND ajh = #{ajh}  <!-- ajh -->
+		</if>
+	    <if test="wtyh != null and wtyh != ''">
+		      AND wtyh = #{wtyh}  <!-- wtyh -->
+		</if>
+	    <if test="qjfs != null and qjfs != ''">
+		      AND qjfs = #{qjfs}  <!-- qjfs -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="kfbh != null and kfbh != ''">
+		      AND kfbh like '%${kfbh}%'  <!-- kfbh -->
+		</if>
+	    <if test="jcsj != null and jcsj != ''">
+		      AND jcsj like '%${jcsj}%'  <!-- jcsj -->
+		</if>
+	    <if test="jcbm != null and jcbm != ''">
+		      AND jcbm like '%${jcbm}%'  <!-- jcbm -->
+		</if>
+	    <if test="jcr != null and jcr != ''">
+		      AND jcr like '%${jcr}%'  <!-- jcr -->
+		</if>
+	    <if test="daml != null and daml != ''">
+		      AND daml like '%${daml}%'  <!-- daml -->
+		</if>
+	    <if test="dh != null and dh != ''">
+		      AND dh like '%${dh}%'  <!-- dh -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm like '%${tm}%'  <!-- tm -->
+		</if>
+	    <if test="xcrq != null and xcrq != ''">
+		      AND xcrq like '%${xcrq}%'  <!-- xcrq -->
+		</if>
+	    <if test="bgqx != null and bgqx != ''">
+		      AND bgqx like '%${bgqx}%'  <!-- bgqx -->
+		</if>
+	    <if test="zrz != null and zrz != ''">
+		      AND zrz like '%${zrz}%'  <!-- zrz -->
+		</if>
+	    <if test="ys != null and ys != ''">
+		      AND ys like '%${ys}%'  <!-- ys -->
+		</if>
+	    <if test="bgzk != null and bgzk != ''">
+		      AND bgzk like '%${bgzk}%'  <!-- bgzk -->
+		</if>
+	    <if test="wtys != null and wtys != ''">
+		      AND wtys like '%${wtys}%'  <!-- wtys -->
+		</if>
+	    <if test="wtms != null and wtms != ''">
+		      AND wtms like '%${wtms}%'  <!-- wtms -->
+		</if>
+	    <if test="sfcl != null and sfcl != ''">
+		      AND sfcl like '%${sfcl}%'  <!-- sfcl -->
+		</if>
+	    <if test="clr != null and clr != ''">
+		      AND clr like '%${clr}%'  <!-- clr -->
+		</if>
+	    <if test="clsj != null and clsj != ''">
+		      AND clsj like '%${clsj}%'  <!-- clsj -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx like '%${lx}%'  <!-- lx -->
+		</if>
+	    <if test="qzh != null and qzh != ''">
+		      AND qzh like '%${qzh}%'  <!-- qzh -->
+		</if>
+	    <if test="mlh != null and mlh != ''">
+		      AND mlh like '%${mlh}%'  <!-- mlh -->
+		</if>
+	    <if test="ajh != null and ajh != ''">
+		      AND ajh like '%${ajh}%'  <!-- ajh -->
+		</if>
+	    <if test="wtyh != null and wtyh != ''">
+		      AND wtyh like '%${wtyh}%'  <!-- wtyh -->
+		</if>
+	    <if test="qjfs != null and qjfs != ''">
+		      AND qjfs like '%${qjfs}%'  <!-- qjfs -->
+		</if>
+	</sql>
+	<select id="getDepotBgIndex" parameterType="String" resultType="String">
+   select top 1 kfbh
+   from [dbo].[depot_bg]
+      where 1=1
+      and kfbh like '${value}%'
+      order by kfbh desc
+</select>
+</mapper>

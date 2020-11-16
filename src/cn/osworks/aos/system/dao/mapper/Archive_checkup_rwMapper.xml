@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_checkup_rw[archive_checkup_rw]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-08-21 21:18:49 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_checkup_rwMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_checkup_rwPO">
+		INSERT INTO archive_checkup_rw (
+		<if test="task_number != null and task_number != ''">
+	         task_number, <!-- task_number -->
+		</if>
+		<if test="task_name != null and task_name != ''">
+	         task_name, <!-- task_name -->
+		</if>
+		<if test="task_start_time != null and task_start_time != ''">
+	         task_start_time, <!-- task_start_time -->
+		</if>
+		<if test="task_end_time != null and task_end_time != ''">
+	         task_end_time, <!-- task_end_time -->
+		</if>
+		<if test="reference != null and reference != ''">
+	         reference, <!-- reference -->
+		</if>
+		<if test="checkup_type != null and checkup_type != ''">
+	         checkup_type, <!-- checkup_type -->
+		</if>
+		<if test="compilationresearch != null and compilationresearch != ''">
+	         compilationresearch, <!-- compilationResearch -->
+		</if>
+		<if test="checkupflow != null and checkupflow != ''">
+	         checkupflow, <!-- checkupflow -->
+		</if>
+		<if test="personnel != null and personnel != ''">
+	         personnel, <!-- personnel -->
+		</if>
+		<if test="create_user != null and create_user != ''">
+	         create_user, <!-- create_user -->
+		</if>
+		<if test="first_compilationperson != null and first_compilationperson != ''">
+	         first_compilationperson, <!-- first_compilationperson -->
+		</if>
+		<if test="first_compilationperson_cn != null and first_compilationperson_cn != ''">
+	         first_compilationperson_cn, <!-- first_compilationperson_cn -->
+		</if>
+		<if test="next_compilationperson != null and next_compilationperson != ''">
+	         next_compilationperson, <!-- next_compilationperson -->
+		</if>
+		<if test="next_compilationperson_cn != null and next_compilationperson_cn != ''">
+	         next_compilationperson_cn, <!-- next_compilationperson_cn -->
+		</if>
+		<if test="last_compilationperson != null and last_compilationperson != ''">
+	         last_compilationperson, <!-- last_compilationperson -->
+		</if>
+		<if test="last_compilationperson_cn != null and last_compilationperson_cn != ''">
+	         last_compilationperson_cn, <!-- last_compilationperson_cn -->
+		</if>
+		<if test="description != null and description != ''">
+	         description, <!-- description -->
+		</if>
+		<if test="flag != null and flag != ''">
+	         flag, <!-- flag -->
+		</if>
+		<if test="zt_id != null and zt_id != ''">
+	         zt_id, <!-- zt_id -->
+		</if>
+		<if test="jdr_description != null and jdr_description != ''">
+	         jdr_description, <!-- jdr_description -->
+		</if>
+		<if test="fsr_description != null and fsr_description != ''">
+	         fsr_description, <!-- fsr_description -->
+		</if>
+		<if test="zsr_description != null and zsr_description != ''">
+	         zsr_description, <!-- zsr_description -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="task_number != null and task_number != ''">
+	          #{task_number, jdbcType=VARCHAR}, <!-- task_number -->
+	    </if>
+		<if test="task_name != null and task_name != ''">
+	          #{task_name, jdbcType=VARCHAR}, <!-- task_name -->
+	    </if>
+		<if test="task_start_time != null and task_start_time != ''">
+	          #{task_start_time, jdbcType=VARCHAR}, <!-- task_start_time -->
+	    </if>
+		<if test="task_end_time != null and task_end_time != ''">
+	          #{task_end_time, jdbcType=VARCHAR}, <!-- task_end_time -->
+	    </if>
+		<if test="reference != null and reference != ''">
+	          #{reference, jdbcType=VARCHAR}, <!-- reference -->
+	    </if>
+		<if test="checkup_type != null and checkup_type != ''">
+	          #{checkup_type, jdbcType=VARCHAR}, <!-- checkup_type -->
+	    </if>
+		<if test="compilationresearch != null and compilationresearch != ''">
+	          #{compilationresearch, jdbcType=VARCHAR}, <!-- compilationResearch -->
+	    </if>
+		<if test="checkupflow != null and checkupflow != ''">
+	          #{checkupflow, jdbcType=VARCHAR}, <!-- checkupflow -->
+	    </if>
+		<if test="personnel != null and personnel != ''">
+	          #{personnel, jdbcType=VARCHAR}, <!-- personnel -->
+	    </if>
+		<if test="create_user != null and create_user != ''">
+	          #{create_user, jdbcType=VARCHAR}, <!-- create_user -->
+	    </if>
+		<if test="first_compilationperson != null and first_compilationperson != ''">
+	          #{first_compilationperson, jdbcType=VARCHAR}, <!-- first_compilationperson -->
+	    </if>
+		<if test="first_compilationperson_cn != null and first_compilationperson_cn != ''">
+	          #{first_compilationperson_cn, jdbcType=VARCHAR}, <!-- first_compilationperson_cn -->
+	    </if>
+		<if test="next_compilationperson != null and next_compilationperson != ''">
+	          #{next_compilationperson, jdbcType=VARCHAR}, <!-- next_compilationperson -->
+	    </if>
+		<if test="next_compilationperson_cn != null and next_compilationperson_cn != ''">
+	          #{next_compilationperson_cn, jdbcType=VARCHAR}, <!-- next_compilationperson_cn -->
+	    </if>
+		<if test="last_compilationperson != null and last_compilationperson != ''">
+	          #{last_compilationperson, jdbcType=VARCHAR}, <!-- last_compilationperson -->
+	    </if>
+		<if test="last_compilationperson_cn != null and last_compilationperson_cn != ''">
+	          #{last_compilationperson_cn, jdbcType=VARCHAR}, <!-- last_compilationperson_cn -->
+	    </if>
+		<if test="description != null and description != ''">
+	          #{description, jdbcType=VARCHAR}, <!-- description -->
+	    </if>
+		<if test="flag != null and flag != ''">
+	          #{flag, jdbcType=VARCHAR}, <!-- flag -->
+	    </if>
+		<if test="zt_id != null and zt_id != ''">
+	          #{zt_id, jdbcType=VARCHAR}, <!-- zt_id -->
+	    </if>
+		<if test="jdr_description != null and jdr_description != ''">
+	          #{jdr_description, jdbcType=VARCHAR}, <!-- jdr_description -->
+	    </if>
+		<if test="fsr_description != null and fsr_description != ''">
+	          #{fsr_description, jdbcType=VARCHAR}, <!-- fsr_description -->
+	    </if>
+		<if test="zsr_description != null and zsr_description != ''">
+	          #{zsr_description, jdbcType=VARCHAR}, <!-- zsr_description -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_checkup_rwPO">
+		INSERT INTO archive_checkup_rw (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{task_number, jdbcType=VARCHAR},  <!-- task_number -->
+		    #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+		    #{task_start_time, jdbcType=VARCHAR},  <!-- task_start_time -->
+		    #{task_end_time, jdbcType=VARCHAR},  <!-- task_end_time -->
+		    #{reference, jdbcType=VARCHAR},  <!-- reference -->
+		    #{checkup_type, jdbcType=VARCHAR},  <!-- checkup_type -->
+		    #{compilationresearch, jdbcType=VARCHAR},  <!-- compilationResearch -->
+		    #{checkupflow, jdbcType=VARCHAR},  <!-- checkupflow -->
+		    #{personnel, jdbcType=VARCHAR},  <!-- personnel -->
+		    #{create_user, jdbcType=VARCHAR},  <!-- create_user -->
+		    #{first_compilationperson, jdbcType=VARCHAR},  <!-- first_compilationperson -->
+		    #{first_compilationperson_cn, jdbcType=VARCHAR},  <!-- first_compilationperson_cn -->
+		    #{next_compilationperson, jdbcType=VARCHAR},  <!-- next_compilationperson -->
+		    #{next_compilationperson_cn, jdbcType=VARCHAR},  <!-- next_compilationperson_cn -->
+		    #{last_compilationperson, jdbcType=VARCHAR},  <!-- last_compilationperson -->
+		    #{last_compilationperson_cn, jdbcType=VARCHAR},  <!-- last_compilationperson_cn -->
+		    #{description, jdbcType=VARCHAR},  <!-- description -->
+		    #{flag, jdbcType=VARCHAR},  <!-- flag -->
+		    #{zt_id, jdbcType=VARCHAR},  <!-- zt_id -->
+		    #{jdr_description, jdbcType=VARCHAR},  <!-- jdr_description -->
+		    #{fsr_description, jdbcType=VARCHAR},  <!-- fsr_description -->
+		    #{zsr_description, jdbcType=VARCHAR}  <!-- zsr_description -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_checkup_rwPO">
+		UPDATE archive_checkup_rw
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="task_number != null">
+		          task_number = #{task_number, jdbcType=VARCHAR},  <!-- task_number -->
+			</if>
+			<if test="task_name != null">
+		          task_name = #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+			</if>
+			<if test="task_start_time != null">
+		          task_start_time = #{task_start_time, jdbcType=VARCHAR},  <!-- task_start_time -->
+			</if>
+			<if test="task_end_time != null">
+		          task_end_time = #{task_end_time, jdbcType=VARCHAR},  <!-- task_end_time -->
+			</if>
+			<if test="reference != null">
+		          reference = #{reference, jdbcType=VARCHAR},  <!-- reference -->
+			</if>
+			<if test="checkup_type != null">
+		          checkup_type = #{checkup_type, jdbcType=VARCHAR},  <!-- checkup_type -->
+			</if>
+			<if test="compilationresearch != null">
+		          compilationresearch = #{compilationresearch, jdbcType=VARCHAR},  <!-- compilationResearch -->
+			</if>
+			<if test="checkupflow != null">
+		          checkupflow = #{checkupflow, jdbcType=VARCHAR},  <!-- checkupflow -->
+			</if>
+			<if test="personnel != null">
+		          personnel = #{personnel, jdbcType=VARCHAR},  <!-- personnel -->
+			</if>
+			<if test="create_user != null">
+		          create_user = #{create_user, jdbcType=VARCHAR},  <!-- create_user -->
+			</if>
+			<if test="first_compilationperson != null">
+		          first_compilationperson = #{first_compilationperson, jdbcType=VARCHAR},  <!-- first_compilationperson -->
+			</if>
+			<if test="first_compilationperson_cn != null">
+		          first_compilationperson_cn = #{first_compilationperson_cn, jdbcType=VARCHAR},  <!-- first_compilationperson_cn -->
+			</if>
+			<if test="next_compilationperson != null">
+		          next_compilationperson = #{next_compilationperson, jdbcType=VARCHAR},  <!-- next_compilationperson -->
+			</if>
+			<if test="next_compilationperson_cn != null">
+		          next_compilationperson_cn = #{next_compilationperson_cn, jdbcType=VARCHAR},  <!-- next_compilationperson_cn -->
+			</if>
+			<if test="last_compilationperson != null">
+		          last_compilationperson = #{last_compilationperson, jdbcType=VARCHAR},  <!-- last_compilationperson -->
+			</if>
+			<if test="last_compilationperson_cn != null">
+		          last_compilationperson_cn = #{last_compilationperson_cn, jdbcType=VARCHAR},  <!-- last_compilationperson_cn -->
+			</if>
+			<if test="description != null">
+		          description = #{description, jdbcType=VARCHAR},  <!-- description -->
+			</if>
+			<if test="flag != null">
+		          flag = #{flag, jdbcType=VARCHAR},  <!-- flag -->
+			</if>
+			<if test="zt_id != null">
+		          zt_id = #{zt_id, jdbcType=VARCHAR},  <!-- zt_id -->
+			</if>
+			<if test="jdr_description != null">
+		          jdr_description = #{jdr_description, jdbcType=VARCHAR},  <!-- jdr_description -->
+			</if>
+			<if test="fsr_description != null">
+		          fsr_description = #{fsr_description, jdbcType=VARCHAR},  <!-- fsr_description -->
+			</if>
+			<if test="zsr_description != null">
+		          zsr_description = #{zsr_description, jdbcType=VARCHAR},  <!-- zsr_description -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_checkup_rw WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_checkup_rwPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_checkup_rw WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_checkup_rwPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_checkup_rw
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_checkup_rwPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_checkup_rw
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_checkup_rwPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_checkup_rw
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_checkup_rwPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_checkup_rw
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_checkup_rwPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_checkup_rw
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_checkup_rw
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_checkup_rw
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  task_number,  <!-- task_number -->
+		  task_name,  <!-- task_name -->
+		  task_start_time,  <!-- task_start_time -->
+		  task_end_time,  <!-- task_end_time -->
+		  reference,  <!-- reference -->
+		  checkup_type,  <!-- checkup_type -->
+		  compilationresearch,  <!-- compilationResearch -->
+		  checkupflow,  <!-- checkupflow -->
+		  personnel,  <!-- personnel -->
+		  create_user,  <!-- create_user -->
+		  first_compilationperson,  <!-- first_compilationperson -->
+		  first_compilationperson_cn,  <!-- first_compilationperson_cn -->
+		  next_compilationperson,  <!-- next_compilationperson -->
+		  next_compilationperson_cn,  <!-- next_compilationperson_cn -->
+		  last_compilationperson,  <!-- last_compilationperson -->
+		  last_compilationperson_cn,  <!-- last_compilationperson_cn -->
+		  description,  <!-- description -->
+		  flag,  <!-- flag -->
+		  zt_id,  <!-- zt_id -->
+		  jdr_description,  <!-- jdr_description -->
+		  fsr_description,  <!-- fsr_description -->
+		  zsr_description  <!-- zsr_description -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_checkup_rw.id_,  <!-- id_ -->
+		  archive_checkup_rw.task_number,  <!-- task_number -->
+		  archive_checkup_rw.task_name,  <!-- task_name -->
+		  archive_checkup_rw.task_start_time,  <!-- task_start_time -->
+		  archive_checkup_rw.task_end_time,  <!-- task_end_time -->
+		  archive_checkup_rw.reference,  <!-- reference -->
+		  archive_checkup_rw.checkup_type,  <!-- checkup_type -->
+		  archive_checkup_rw.compilationresearch,  <!-- compilationResearch -->
+		  archive_checkup_rw.checkupflow,  <!-- checkupflow -->
+		  archive_checkup_rw.personnel,  <!-- personnel -->
+		  archive_checkup_rw.create_user,  <!-- create_user -->
+		  archive_checkup_rw.first_compilationperson,  <!-- first_compilationperson -->
+		  archive_checkup_rw.first_compilationperson_cn,  <!-- first_compilationperson_cn -->
+		  archive_checkup_rw.next_compilationperson,  <!-- next_compilationperson -->
+		  archive_checkup_rw.next_compilationperson_cn,  <!-- next_compilationperson_cn -->
+		  archive_checkup_rw.last_compilationperson,  <!-- last_compilationperson -->
+		  archive_checkup_rw.last_compilationperson_cn,  <!-- last_compilationperson_cn -->
+		  archive_checkup_rw.description,  <!-- description -->
+		  archive_checkup_rw.flag,  <!-- flag -->
+		  archive_checkup_rw.zt_id,  <!-- zt_id -->
+		  archive_checkup_rw.jdr_description,  <!-- jdr_description -->
+		  archive_checkup_rw.fsr_description,  <!-- fsr_description -->
+		  archive_checkup_rw.zsr_description  <!-- zsr_description -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="task_number != null and task_number != ''">
+		      AND task_number = #{task_number}  <!-- task_number -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name = #{task_name}  <!-- task_name -->
+		</if>
+	    <if test="task_start_time != null and task_start_time != ''">
+		      AND task_start_time = #{task_start_time}  <!-- task_start_time -->
+		</if>
+	    <if test="task_end_time != null and task_end_time != ''">
+		      AND task_end_time = #{task_end_time}  <!-- task_end_time -->
+		</if>
+	    <if test="reference != null and reference != ''">
+		      AND reference = #{reference}  <!-- reference -->
+		</if>
+	    <if test="checkup_type != null and checkup_type != ''">
+		      AND checkup_type = #{checkup_type}  <!-- checkup_type -->
+		</if>
+	    <if test="compilationresearch != null and compilationresearch != ''">
+		      AND compilationresearch = #{compilationresearch}  <!-- compilationResearch -->
+		</if>
+	    <if test="checkupflow != null and checkupflow != ''">
+		      AND checkupflow = #{checkupflow}  <!-- checkupflow -->
+		</if>
+	    <if test="personnel != null and personnel != ''">
+		      AND personnel = #{personnel}  <!-- personnel -->
+		</if>
+	    <if test="create_user != null and create_user != ''">
+		      AND create_user = #{create_user}  <!-- create_user -->
+		</if>
+	    <if test="first_compilationperson != null and first_compilationperson != ''">
+		      AND first_compilationperson = #{first_compilationperson}  <!-- first_compilationperson -->
+		</if>
+	    <if test="first_compilationperson_cn != null and first_compilationperson_cn != ''">
+		      AND first_compilationperson_cn = #{first_compilationperson_cn}  <!-- first_compilationperson_cn -->
+		</if>
+	    <if test="next_compilationperson != null and next_compilationperson != ''">
+		      AND next_compilationperson = #{next_compilationperson}  <!-- next_compilationperson -->
+		</if>
+	    <if test="next_compilationperson_cn != null and next_compilationperson_cn != ''">
+		      AND next_compilationperson_cn = #{next_compilationperson_cn}  <!-- next_compilationperson_cn -->
+		</if>
+	    <if test="last_compilationperson != null and last_compilationperson != ''">
+		      AND last_compilationperson = #{last_compilationperson}  <!-- last_compilationperson -->
+		</if>
+	    <if test="last_compilationperson_cn != null and last_compilationperson_cn != ''">
+		      AND last_compilationperson_cn = #{last_compilationperson_cn}  <!-- last_compilationperson_cn -->
+		</if>
+	    <if test="description != null and description != ''">
+		      AND description = #{description}  <!-- description -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag = #{flag}  <!-- flag -->
+		</if>
+	    <if test="zt_id != null and zt_id != ''">
+		      AND zt_id = #{zt_id}  <!-- zt_id -->
+		</if>
+	    <if test="jdr_description != null and jdr_description != ''">
+		      AND jdr_description = #{jdr_description}  <!-- jdr_description -->
+		</if>
+	    <if test="fsr_description != null and fsr_description != ''">
+		      AND fsr_description = #{fsr_description}  <!-- fsr_description -->
+		</if>
+	    <if test="zsr_description != null and zsr_description != ''">
+		      AND zsr_description = #{zsr_description}  <!-- zsr_description -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="task_number != null and task_number != ''">
+		      AND task_number like '%${task_number}%'  <!-- task_number -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name like '%${task_name}%'  <!-- task_name -->
+		</if>
+	    <if test="task_start_time != null and task_start_time != ''">
+		      AND task_start_time like '%${task_start_time}%'  <!-- task_start_time -->
+		</if>
+	    <if test="task_end_time != null and task_end_time != ''">
+		      AND task_end_time like '%${task_end_time}%'  <!-- task_end_time -->
+		</if>
+	    <if test="reference != null and reference != ''">
+		      AND reference like '%${reference}%'  <!-- reference -->
+		</if>
+	    <if test="checkup_type != null and checkup_type != ''">
+		      AND checkup_type like '%${checkup_type}%'  <!-- checkup_type -->
+		</if>
+	    <if test="compilationresearch != null and compilationresearch != ''">
+		      AND compilationresearch like '%${compilationresearch}%'  <!-- compilationResearch -->
+		</if>
+	    <if test="checkupflow != null and checkupflow != ''">
+		      AND checkupflow like '%${checkupflow}%'  <!-- checkupflow -->
+		</if>
+	    <if test="personnel != null and personnel != ''">
+		      AND personnel like '%${personnel}%'  <!-- personnel -->
+		</if>
+	    <if test="create_user != null and create_user != ''">
+		      AND create_user like '%${create_user}%'  <!-- create_user -->
+		</if>
+	    <if test="first_compilationperson != null and first_compilationperson != ''">
+		      AND first_compilationperson like '%${first_compilationperson}%'  <!-- first_compilationperson -->
+		</if>
+	    <if test="first_compilationperson_cn != null and first_compilationperson_cn != ''">
+		      AND first_compilationperson_cn like '%${first_compilationperson_cn}%'  <!-- first_compilationperson_cn -->
+		</if>
+	    <if test="next_compilationperson != null and next_compilationperson != ''">
+		      AND next_compilationperson like '%${next_compilationperson}%'  <!-- next_compilationperson -->
+		</if>
+	    <if test="next_compilationperson_cn != null and next_compilationperson_cn != ''">
+		      AND next_compilationperson_cn like '%${next_compilationperson_cn}%'  <!-- next_compilationperson_cn -->
+		</if>
+	    <if test="last_compilationperson != null and last_compilationperson != ''">
+		      AND last_compilationperson like '%${last_compilationperson}%'  <!-- last_compilationperson -->
+		</if>
+	    <if test="last_compilationperson_cn != null and last_compilationperson_cn != ''">
+		      AND last_compilationperson_cn like '%${last_compilationperson_cn}%'  <!-- last_compilationperson_cn -->
+		</if>
+	    <if test="description != null and description != ''">
+		      AND description like '%${description}%'  <!-- description -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag like '%${flag}%'  <!-- flag -->
+		</if>
+	    <if test="zt_id != null and zt_id != ''">
+		      AND zt_id like '%${zt_id}%'  <!-- zt_id -->
+		</if>
+	    <if test="jdr_description != null and jdr_description != ''">
+		      AND jdr_description like '%${jdr_description}%'  <!-- jdr_description -->
+		</if>
+	    <if test="fsr_description != null and fsr_description != ''">
+		      AND fsr_description like '%${fsr_description}%'  <!-- fsr_description -->
+		</if>
+	    <if test="zsr_description != null and zsr_description != ''">
+		      AND zsr_description like '%${zsr_description}%'  <!-- zsr_description -->
+		</if>
+	</sql>
+	<select id="getJDIndex" parameterType="String" resultType="String">
+		select top 1 task_number
+		from [dbo].[archive_checkup_rw]
+ 		where 1=1
+ 		and checkup_type = '${value}'
+ 		order by task_number desc
+	</select>
+</mapper>

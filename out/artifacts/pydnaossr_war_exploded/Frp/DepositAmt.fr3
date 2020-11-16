@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Version="4.9.32" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="3583" PreviewOptions.Zoom="1" PrintOptions.Printer="Ô¤Éè" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="40494.6458349537" ReportOptions.Description.Text="" ReportOptions.LastChange="44007.8061305324" ScriptLanguage="PascalScript" ScriptText.Text="&#13;&#10;begin&#13;&#10;&#13;&#10;end." PropData="044C656674020803546F70020808446174617365747301010C3200000020446174615365743D2246727844617461536574312220446174615365744E616D653D2266727844424461746173657431220000095661726961626C657301010C0D000000204E616D653D2220B2CECAFD2200010C10000000204E616D653D2253686F704E616D652200010C0D000000204E616D653D225469746C652200010C14000000204E616D653D225072696E7450617065724E6F2200010C17000000204E616D653D225072696E744465706F736974416464220000055374796C650100">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="215.9" PaperHeight="139.7" PaperSize="256" LeftMargin="15" RightMargin="15" TopMargin="0" BottomMargin="0" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData1" Font.Charset="0" Font.Color="0" Font.Height="-16" Font.Name="ËÎÌå" Font.Style="0" Height="439.78244316" Left="0" ParentFont="False" Top="18.89765" Width="702.614627" ColumnWidth="0" ColumnGap="0" DataSet="FrxDataSet1" DataSetName="frxDBDataset1" RowCount="0" StartNewPage="True">
+      <TfrxMemoView Name="Memo2" Left="82.00170894" Top="103.27601474" Width="345.97820895" Height="53.24909684" ShowHint="False" DataSet="FrxDataSet1" DataSetName="frxDBDataset1" Font.Charset="0" Font.Color="0" Font.Height="-15" Font.Name="ËÎÌå" Font.Style="0" Frame.Typ="15" ParentFont="False" VAlign="vaCenter" Text="[frxDBDataset1.&#34;tm&#34;]"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+</TfrxReport>

@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_compilation[archive_compilation]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-02-12 17:39:14 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_compilationMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_compilationPO">
+		INSERT INTO archive_compilation (
+
+		<if test="byrwbh != null and byrwbh != ''">
+	         byrwbh, <!-- byrwbh -->
+		</if>
+		<if test="byrwmc != null and byrwmc != ''">
+	         byrwmc, <!-- byrwmc -->
+		</if>
+		<if test="ztyq != null and ztyq != ''">
+	         ztyq, <!-- ztyq -->
+		</if>
+		<if test="bysj != null and bysj != ''">
+	         bysj, <!-- bysj -->
+		</if>
+		<if test="ckfw != null and ckfw != ''">
+	         ckfw, <!-- ckfw -->
+		</if>
+		<if test="bybz != null and bybz != ''">
+	         bybz, <!-- bybz -->
+		</if>
+		<if test="zgr != null and zgr != ''">
+	         zgr, <!-- zgr -->
+		</if>
+		<if test="hgr != null and hgr != ''">
+	         hgr, <!-- hgr -->
+		</if>
+		<if test="jdr != null and jdr != ''">
+	         jdr, <!-- jdr -->
+		</if>
+		<if test="zbj != null and zbj != ''">
+	         zbj, <!-- zbj -->
+		</if>
+		<if test="qtsm != null and qtsm != ''">
+	         qtsm, <!-- qtsm -->
+		</if>
+		<if test="shr != null and shr != ''">
+	         shr, <!-- shr -->
+		</if>
+		<if test="shsj != null and shsj != ''">
+	         shsj, <!-- shsj -->
+		</if>
+		<if test="shyj != null and shyj != ''">
+	         shyj, <!-- shyj -->
+		</if>
+		<if test="hgsj != null and hgsj != ''">
+	         hgsj, <!-- hgsj -->
+		</if>
+		<if test="jdsj != null and jdsj != ''">
+	         jdsj, <!-- jdsj -->
+		</if>
+		<if test="dgsj != null and dgsj != ''">
+	         dgsj, <!-- dgsj -->
+		</if>
+		<if test="cjr != null and cjr != ''">
+	         cjr, <!-- cjr -->
+		</if>
+		<if test="flag_submit != null and flag_submit != ''">
+	         flag_submit, <!-- flag_submit -->
+		</if>
+		<if test="flag_examine != null and flag_examine != ''">
+	         flag_examine, <!-- flag_examine -->
+		</if>
+		<if test="ktmc != null and ktmc != ''">
+	         ktmc, <!-- ktmc -->
+		</if>
+		<if test="sjkmc != null and sjkmc != ''">
+	         sjkmc, <!-- sjkmc -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+			id_ <!-- id_ -->
+		</if>
+		)VALUES(
+
+		<if test="byrwbh != null and byrwbh != ''">
+	          #{byrwbh, jdbcType=VARCHAR}, <!-- byrwbh -->
+	    </if>
+		<if test="byrwmc != null and byrwmc != ''">
+	          #{byrwmc, jdbcType=VARCHAR}, <!-- byrwmc -->
+	    </if>
+		<if test="ztyq != null and ztyq != ''">
+	          #{ztyq, jdbcType=VARCHAR}, <!-- ztyq -->
+	    </if>
+		<if test="bysj != null and bysj != ''">
+	          #{bysj, jdbcType=VARCHAR}, <!-- bysj -->
+	    </if>
+		<if test="ckfw != null and ckfw != ''">
+	          #{ckfw, jdbcType=VARCHAR}, <!-- ckfw -->
+	    </if>
+		<if test="bybz != null and bybz != ''">
+	          #{bybz, jdbcType=VARCHAR}, <!-- bybz -->
+	    </if>
+		<if test="zgr != null and zgr != ''">
+	          #{zgr, jdbcType=VARCHAR}, <!-- zgr -->
+	    </if>
+		<if test="hgr != null and hgr != ''">
+	          #{hgr, jdbcType=VARCHAR}, <!-- hgr -->
+	    </if>
+		<if test="jdr != null and jdr != ''">
+	          #{jdr, jdbcType=VARCHAR}, <!-- jdr -->
+	    </if>
+		<if test="zbj != null and zbj != ''">
+	          #{zbj, jdbcType=VARCHAR}, <!-- zbj -->
+	    </if>
+		<if test="qtsm != null and qtsm != ''">
+	          #{qtsm, jdbcType=VARCHAR}, <!-- qtsm -->
+	    </if>
+		<if test="shry!= null and shry != ''">
+	          #{shr, jdbcType=VARCHAR}, <!-- shr -->
+	    </if>
+		<if test="shsj != null and shsj != ''">
+	          #{shsj, jdbcType=VARCHAR}, <!-- shsj -->
+	    </if>
+		<if test="shyj != null and shyj != ''">
+	          #{shyj, jdbcType=VARCHAR}, <!-- shyj -->
+	    </if>
+		<if test="hgsj != null and hgsj != ''">
+	          #{hgsj, jdbcType=VARCHAR}, <!-- hgsj -->
+	    </if>
+		<if test="jdsj != null and jdsj != ''">
+	          #{jdsj, jdbcType=VARCHAR}, <!-- jdsj -->
+	    </if>
+		<if test="dgsj != null and dgsj != ''">
+	          #{dgsj, jdbcType=VARCHAR}, <!-- dgsj -->
+	    </if>
+		<if test="cjr != null and cjr != ''">
+	          #{cjr, jdbcType=VARCHAR}, <!-- cjr -->
+	    </if>
+		<if test="flag_submit != null and flag_submit != ''">
+	          #{flag_submit, jdbcType=VARCHAR}, <!-- flag_submit -->
+	    </if>
+		<if test="flag_examine != null and flag_examine != ''">
+	          #{flag_examine, jdbcType=VARCHAR}, <!-- flag_examine -->
+	    </if>
+		<if test="ktmc != null and ktmc != ''">
+	          #{ktmc, jdbcType=VARCHAR}, <!-- ktmc -->
+	    </if>
+		<if test="sjkmc != null and sjkmc != ''">
+	          #{sjkmc, jdbcType=VARCHAR}, <!-- sjkmc -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+			#{id_, jdbcType=VARCHAR} <!-- id_ -->
+		</if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_compilationPO">
+		INSERT INTO archive_compilation (
+		    <include refid="column" />
+		)
+		VALUES (
+
+		    #{byrwbh, jdbcType=VARCHAR},  <!-- byrwbh -->
+		    #{byrwmc, jdbcType=VARCHAR},  <!-- byrwmc -->
+		    #{ztyq, jdbcType=VARCHAR},  <!-- ztyq -->
+		    #{bysj, jdbcType=VARCHAR},  <!-- bysj -->
+		    #{ckfw, jdbcType=VARCHAR},  <!-- ckfw -->
+		    #{bybz, jdbcType=VARCHAR},  <!-- bybz -->
+		    #{zgr, jdbcType=VARCHAR},  <!-- zgr -->
+		    #{hgr, jdbcType=VARCHAR},  <!-- hgr -->
+		    #{jdr, jdbcType=VARCHAR},  <!-- jdr -->
+		    #{zbj, jdbcType=VARCHAR},  <!-- zbj -->
+		    #{qtsm, jdbcType=VARCHAR},  <!-- qtsm -->
+		    #{shry, jdbcType=VARCHAR},  <!-- shr -->
+		    #{shsj, jdbcType=VARCHAR},  <!-- shsj -->
+		    #{shyj, jdbcType=VARCHAR},  <!-- shyj -->
+		    #{hgsj, jdbcType=VARCHAR},  <!-- hgsj -->
+		    #{jdsj, jdbcType=VARCHAR},  <!-- jdsj -->
+		    #{dgsj, jdbcType=VARCHAR},  <!-- dgsj -->
+		    #{cjr, jdbcType=VARCHAR},  <!-- cjr -->
+		    #{flag_submit, jdbcType=VARCHAR},  <!-- flag_submit -->
+		    #{flag_examine, jdbcType=VARCHAR},  <!-- flag_examine -->
+		    #{ktmc, jdbcType=VARCHAR},  <!-- ktmc -->
+		    #{sjkmc, jdbcType=VARCHAR},  <!-- sjkmc -->
+		#{id_, jdbcType=VARCHAR}  <!-- id_ -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_compilationPO">
+		UPDATE archive_compilation
+		<set>
+
+			<if test="byrwbh != null">
+		          byrwbh = #{byrwbh, jdbcType=VARCHAR},  <!-- byrwbh -->
+			</if>
+			<if test="byrwmc != null">
+		          byrwmc = #{byrwmc, jdbcType=VARCHAR},  <!-- byrwmc -->
+			</if>
+			<if test="ztyq != null">
+		          ztyq = #{ztyq, jdbcType=VARCHAR},  <!-- ztyq -->
+			</if>
+			<if test="bysj != null">
+		          bysj = #{bysj, jdbcType=VARCHAR},  <!-- bysj -->
+			</if>
+			<if test="ckfw != null">
+		          ckfw = #{ckfw, jdbcType=VARCHAR},  <!-- ckfw -->
+			</if>
+			<if test="bybz != null">
+		          bybz = #{bybz, jdbcType=VARCHAR},  <!-- bybz -->
+			</if>
+			<if test="zgr != null">
+		          zgr = #{zgr, jdbcType=VARCHAR},  <!-- zgr -->
+			</if>
+			<if test="hgr != null">
+		          hgr = #{hgr, jdbcType=VARCHAR},  <!-- hgr -->
+			</if>
+			<if test="jdr != null">
+		          jdr = #{jdr, jdbcType=VARCHAR},  <!-- jdr -->
+			</if>
+			<if test="zbj != null">
+		          zbj = #{zbj, jdbcType=VARCHAR},  <!-- zbj -->
+			</if>
+			<if test="qtsm != null">
+		          qtsm = #{qtsm, jdbcType=VARCHAR},  <!-- qtsm -->
+			</if>
+			<if test="shry != null">
+				shry = #{shry, jdbcType=VARCHAR},  <!-- shr -->
+			</if>
+			<if test="shsj != null">
+		          shsj = #{shsj, jdbcType=VARCHAR},  <!-- shsj -->
+			</if>
+			<if test="shyj != null">
+		          shyj = #{shyj, jdbcType=VARCHAR},  <!-- shyj -->
+			</if>
+			<if test="hgsj != null">
+		          hgsj = #{hgsj, jdbcType=VARCHAR},  <!-- hgsj -->
+			</if>
+			<if test="jdsj != null">
+		          jdsj = #{jdsj, jdbcType=VARCHAR},  <!-- jdsj -->
+			</if>
+			<if test="dgsj != null">
+		          dgsj = #{dgsj, jdbcType=VARCHAR},  <!-- dgsj -->
+			</if>
+			<if test="cjr != null">
+		          cjr = #{cjr, jdbcType=VARCHAR},  <!-- cjr -->
+			</if>
+			<if test="flag_submit != null">
+		          flag_submit = #{flag_submit, jdbcType=VARCHAR},  <!-- flag_submit -->
+			</if>
+			<if test="flag_examine != null">
+		          flag_examine = #{flag_examine, jdbcType=VARCHAR},  <!-- flag_examine -->
+			</if>
+			<if test="ktmc != null">
+		          ktmc = #{ktmc, jdbcType=VARCHAR},  <!-- ktmc -->
+			</if>
+			<if test="sjkmc != null">
+		          sjkmc = #{sjkmc, jdbcType=VARCHAR},  <!-- sjkmc -->
+			</if>
+			<if test="id_ != null">
+				id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+		</set>
+		WHERE 
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_compilation WHERE   id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_compilationPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_compilation WHERE   id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_compilationPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_compilation
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_compilationPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_compilation
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_compilationPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_compilation
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_compilationPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_compilation
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_compilationPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_compilation
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_compilation
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_compilation
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  <!-- id_ -->
+		  byrwbh,  <!-- byrwbh -->
+		  byrwmc,  <!-- byrwmc -->
+		  ztyq,  <!-- ztyq -->
+		  bysj,  <!-- bysj -->
+		  ckfw,  <!-- ckfw -->
+		  bybz,  <!-- bybz -->
+		  zgr,  <!-- zgr -->
+		  hgr,  <!-- hgr -->
+		  jdr,  <!-- jdr -->
+		  zbj,  <!-- zbj -->
+		  qtsm,  <!-- qtsm -->
+		shry,  <!-- shr -->
+		  shsj,  <!-- shsj -->
+		  shyj,  <!-- shyj -->
+		  hgsj,  <!-- hgsj -->
+		  jdsj,  <!-- jdsj -->
+		  dgsj,  <!-- dgsj -->
+		  cjr,  <!-- cjr -->
+		  flag_submit,  <!-- flag_submit -->
+		  flag_examine,  <!-- flag_examine -->
+		  ktmc,  <!-- ktmc -->
+		  sjkmc,  <!-- sjkmc -->
+		id_
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+
+		  archive_compilation.byrwbh,  <!-- byrwbh -->
+		  archive_compilation.byrwmc,  <!-- byrwmc -->
+		  archive_compilation.ztyq,  <!-- ztyq -->
+		  archive_compilation.bysj,  <!-- bysj -->
+		  archive_compilation.ckfw,  <!-- ckfw -->
+		  archive_compilation.bybz,  <!-- bybz -->
+		  archive_compilation.zgr,  <!-- zgr -->
+		  archive_compilation.hgr,  <!-- hgr -->
+		  archive_compilation.jdr,  <!-- jdr -->
+		  archive_compilation.zbj,  <!-- zbj -->
+		  archive_compilation.qtsm,  <!-- qtsm -->
+		  archive_compilation.shry,  <!-- shr -->
+		  archive_compilation.shsj,  <!-- shsj -->
+		  archive_compilation.shyj,  <!-- shyj -->
+		  archive_compilation.hgsj,  <!-- hgsj -->
+		  archive_compilation.jdsj,  <!-- jdsj -->
+		  archive_compilation.dgsj,  <!-- dgsj -->
+		  archive_compilation.cjr,  <!-- cjr -->
+		  archive_compilation.flag_submit,  <!-- flag_submit -->
+		  archive_compilation.flag_examine,  <!-- flag_examine -->
+		  archive_compilation.ktmc,  <!-- ktmc -->
+		  archive_compilation.sjkmc,  <!-- sjkmc -->
+		archive_compilation.id_  <!-- id_ -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+
+	    <if test="byrwbh != null and byrwbh != ''">
+		      AND byrwbh = #{byrwbh}  <!-- byrwbh -->
+		</if>
+	    <if test="byrwmc != null and byrwmc != ''">
+		      AND byrwmc = #{byrwmc}  <!-- byrwmc -->
+		</if>
+	    <if test="ztyq != null and ztyq != ''">
+		      AND ztyq = #{ztyq}  <!-- ztyq -->
+		</if>
+	    <if test="bysj != null and bysj != ''">
+		      AND bysj = #{bysj}  <!-- bysj -->
+		</if>
+	    <if test="ckfw != null and ckfw != ''">
+		      AND ckfw = #{ckfw}  <!-- ckfw -->
+		</if>
+	    <if test="bybz != null and bybz != ''">
+		      AND bybz = #{bybz}  <!-- bybz -->
+		</if>
+	    <if test="zgr != null and zgr != ''">
+		      AND zgr = #{zgr}  <!-- zgr -->
+		</if>
+	    <if test="hgr != null and hgr != ''">
+		      AND hgr = #{hgr}  <!-- hgr -->
+		</if>
+	    <if test="jdr != null and jdr != ''">
+		      AND jdr = #{jdr}  <!-- jdr -->
+		</if>
+	    <if test="zbj != null and zbj != ''">
+		      AND zbj = #{zbj}  <!-- zbj -->
+		</if>
+	    <if test="qtsm != null and qtsm != ''">
+		      AND qtsm = #{qtsm}  <!-- qtsm -->
+		</if>
+	    <if test="shr != null and shr != ''">
+		      AND shry = #{shry}  <!-- shr -->
+		</if>
+	    <if test="shsj != null and shsj != ''">
+		      AND shsj = #{shsj}  <!-- shsj -->
+		</if>
+	    <if test="shyj != null and shyj != ''">
+		      AND shyj = #{shyj}  <!-- shyj -->
+		</if>
+	    <if test="hgsj != null and hgsj != ''">
+		      AND hgsj = #{hgsj}  <!-- hgsj -->
+		</if>
+	    <if test="jdsj != null and jdsj != ''">
+		      AND jdsj = #{jdsj}  <!-- jdsj -->
+		</if>
+	    <if test="dgsj != null and dgsj != ''">
+		      AND dgsj = #{dgsj}  <!-- dgsj -->
+		</if>
+	    <if test="cjr != null and cjr != ''">
+		      AND cjr = #{cjr}  <!-- cjr -->
+		</if>
+	    <if test="flag_submit != null and flag_submit != ''">
+		      AND flag_submit = #{flag_submit}  <!-- flag_submit -->
+		</if>
+	    <if test="flag_examine != null and flag_examine != ''">
+		      AND flag_examine = #{flag_examine}  <!-- flag_examine -->
+		</if>
+	    <if test="ktmc != null and ktmc != ''">
+		      AND ktmc = #{ktmc}  <!-- ktmc -->
+		</if>
+	    <if test="sjkmc != null and sjkmc != ''">
+		      AND sjkmc = #{sjkmc}  <!-- sjkmc -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+			AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+
+	    <if test="byrwbh != null and byrwbh != ''">
+		      AND byrwbh like '%${byrwbh}%'  <!-- byrwbh -->
+		</if>
+	    <if test="byrwmc != null and byrwmc != ''">
+		      AND byrwmc like '%${byrwmc}%'  <!-- byrwmc -->
+		</if>
+	    <if test="ztyq != null and ztyq != ''">
+		      AND ztyq like '%${ztyq}%'  <!-- ztyq -->
+		</if>
+	    <if test="bysj != null and bysj != ''">
+		      AND bysj like '%${bysj}%'  <!-- bysj -->
+		</if>
+	    <if test="ckfw != null and ckfw != ''">
+		      AND ckfw like '%${ckfw}%'  <!-- ckfw -->
+		</if>
+	    <if test="bybz != null and bybz != ''">
+		      AND bybz like '%${bybz}%'  <!-- bybz -->
+		</if>
+	    <if test="zgr != null and zgr != ''">
+		      AND zgr like '%${zgr}%'  <!-- zgr -->
+		</if>
+	    <if test="hgr != null and hgr != ''">
+		      AND hgr like '%${hgr}%'  <!-- hgr -->
+		</if>
+	    <if test="jdr != null and jdr != ''">
+		      AND jdr like '%${jdr}%'  <!-- jdr -->
+		</if>
+	    <if test="zbj != null and zbj != ''">
+		      AND zbj like '%${zbj}%'  <!-- zbj -->
+		</if>
+	    <if test="qtsm != null and qtsm != ''">
+		      AND qtsm like '%${qtsm}%'  <!-- qtsm -->
+		</if>
+	    <if test="shry != null and shry != ''">
+		      AND shry like '%${shry}%'  <!-- shr -->
+		</if>
+	    <if test="shsj != null and shsj != ''">
+		      AND shsj like '%${shsj}%'  <!-- shsj -->
+		</if>
+	    <if test="shyj != null and shyj != ''">
+		      AND shyj like '%${shyj}%'  <!-- shyj -->
+		</if>
+	    <if test="hgsj != null and hgsj != ''">
+		      AND hgsj like '%${hgsj}%'  <!-- hgsj -->
+		</if>
+	    <if test="jdsj != null and jdsj != ''">
+		      AND jdsj like '%${jdsj}%'  <!-- jdsj -->
+		</if>
+	    <if test="dgsj != null and dgsj != ''">
+		      AND dgsj like '%${dgsj}%'  <!-- dgsj -->
+		</if>
+	    <if test="cjr != null and cjr != ''">
+		      AND cjr like '%${cjr}%'  <!-- cjr -->
+		</if>
+	    <if test="flag_submit != null and flag_submit != ''">
+		      AND flag_submit like '%${flag_submit}%'  <!-- flag_submit -->
+		</if>
+	    <if test="flag_examine != null and flag_examine != ''">
+		      AND flag_examine like '%${flag_examine}%'  <!-- flag_examine -->
+		</if>
+	    <if test="ktmc != null and ktmc != ''">
+		      AND ktmc like '%${ktmc}%'  <!-- ktmc -->
+		</if>
+	    <if test="sjkmc != null and sjkmc != ''">
+		      AND sjkmc like '%${sjkmc}%'  <!-- sjkmc -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+			AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	</sql>
+	
+</mapper>

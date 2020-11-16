@@ -1,0 +1,36 @@
+.x-grid-cell-tm b {
+	display: block;
+	margin-top:15px;
+}
+.x-grid-cell-tm .x-grid-cell-inner {
+	white-space: normal;
+}
+
+.x-grid-cell-tm a {
+	color: #0000e3;
+	text-decoration: none;
+	border-bottom: 2px solid #0000e3;
+}
+
+.x-grid-cell-tm a:hover {
+	text-decoration: none;
+}
+
+.x-grid-cell-tm .x-grid-cell-innerf {
+	padding: 5px;
+}
+
+.x-grid-rowbody {
+	padding: 0 10px 10px 5px;
+}
+.title{
+	
+	font-size:15px;
+}
+.title2{
+	color: #6699ff;
+	margin-bottom:10px;
+}
+.x-grid-table{
+	margin-left:50px;
+}

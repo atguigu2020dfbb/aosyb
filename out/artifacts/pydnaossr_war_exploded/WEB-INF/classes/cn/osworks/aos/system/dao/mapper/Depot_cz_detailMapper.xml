@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- depot_cz_detail[depot_cz_detail]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-01-04 18:25:18 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Depot_cz_detailMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Depot_cz_detailPO">
+		INSERT INTO depot_cz_detail (
+		<if test="cz_bh != null and cz_bh != ''">
+	         cz_bh, <!-- cz_bh -->
+		</if>
+		<if test="qzdw != null and qzdw != ''">
+	         qzdw, <!-- qzdw -->
+		</if>
+		<if test="dh != null and dh != ''">
+	         dh, <!-- dh -->
+		</if>
+		<if test="tm != null and tm != ''">
+	         tm, <!-- tm -->
+		</if>
+		<if test="xcsj != null and xcsj != ''">
+	         xcsj, <!-- xcsj -->
+		</if>
+		<if test="hh != null and hh != ''">
+	         hh, <!-- hh -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="cz_bh != null and cz_bh != ''">
+	          #{cz_bh, jdbcType=VARCHAR}, <!-- cz_bh -->
+	    </if>
+		<if test="qzdw != null and qzdw != ''">
+	          #{qzdw, jdbcType=VARCHAR}, <!-- qzdw -->
+	    </if>
+		<if test="dh != null and dh != ''">
+	          #{dh, jdbcType=VARCHAR}, <!-- dh -->
+	    </if>
+		<if test="tm != null and tm != ''">
+	          #{tm, jdbcType=VARCHAR}, <!-- tm -->
+	    </if>
+		<if test="xcsj != null and xcsj != ''">
+	          #{xcsj, jdbcType=VARCHAR}, <!-- xcsj -->
+	    </if>
+		<if test="hh != null and hh != ''">
+	          #{hh, jdbcType=VARCHAR}, <!-- hh -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Depot_cz_detailPO">
+		INSERT INTO depot_cz_detail (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{cz_bh, jdbcType=VARCHAR},  <!-- cz_bh -->
+		    #{qzdw, jdbcType=VARCHAR},  <!-- qzdw -->
+		    #{dh, jdbcType=VARCHAR},  <!-- dh -->
+		    #{tm, jdbcType=VARCHAR},  <!-- tm -->
+		    #{xcsj, jdbcType=VARCHAR},  <!-- xcsj -->
+		    #{hh, jdbcType=VARCHAR},  <!-- hh -->
+		    #{bz, jdbcType=VARCHAR}  <!-- bz -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Depot_cz_detailPO">
+		UPDATE depot_cz_detail
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="cz_bh != null">
+		          cz_bh = #{cz_bh, jdbcType=VARCHAR},  <!-- cz_bh -->
+			</if>
+			<if test="qzdw != null">
+		          qzdw = #{qzdw, jdbcType=VARCHAR},  <!-- qzdw -->
+			</if>
+			<if test="dh != null">
+		          dh = #{dh, jdbcType=VARCHAR},  <!-- dh -->
+			</if>
+			<if test="tm != null">
+		          tm = #{tm, jdbcType=VARCHAR},  <!-- tm -->
+			</if>
+			<if test="xcsj != null">
+		          xcsj = #{xcsj, jdbcType=VARCHAR},  <!-- xcsj -->
+			</if>
+			<if test="hh != null">
+		          hh = #{hh, jdbcType=VARCHAR},  <!-- hh -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM depot_cz_detail WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Depot_cz_detailPO">
+		SELECT
+		<include refid="column" />
+		FROM depot_cz_detail WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Depot_cz_detailPO">
+		SELECT
+		    <include refid="column" />
+		FROM depot_cz_detail
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Depot_cz_detailPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_cz_detail
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Depot_cz_detailPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_cz_detail
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Depot_cz_detailPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_cz_detail
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Depot_cz_detailPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_cz_detail
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM depot_cz_detail
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM depot_cz_detail
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  cz_bh,  <!-- cz_bh -->
+		  qzdw,  <!-- qzdw -->
+		  dh,  <!-- dh -->
+		  tm,  <!-- tm -->
+		  xcsj,  <!-- xcsj -->
+		  hh,  <!-- hh -->
+		  bz  <!-- bz -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  depot_cz_detail.id_,  <!-- id_ -->
+		  depot_cz_detail.cz_bh,  <!-- cz_bh -->
+		  depot_cz_detail.qzdw,  <!-- qzdw -->
+		  depot_cz_detail.dh,  <!-- dh -->
+		  depot_cz_detail.tm,  <!-- tm -->
+		  depot_cz_detail.xcsj,  <!-- xcsj -->
+		  depot_cz_detail.hh,  <!-- hh -->
+		  depot_cz_detail.bz  <!-- bz -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="cz_bh != null and cz_bh != ''">
+		      AND cz_bh = #{cz_bh}  <!-- cz_bh -->
+		</if>
+	    <if test="qzdw != null and qzdw != ''">
+		      AND qzdw = #{qzdw}  <!-- qzdw -->
+		</if>
+	    <if test="dh != null and dh != ''">
+		      AND dh = #{dh}  <!-- dh -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm = #{tm}  <!-- tm -->
+		</if>
+	    <if test="xcsj != null and xcsj != ''">
+		      AND xcsj = #{xcsj}  <!-- xcsj -->
+		</if>
+	    <if test="hh != null and hh != ''">
+		      AND hh = #{hh}  <!-- hh -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="cz_bh != null and cz_bh != ''">
+		      AND cz_bh like '%${cz_bh}%'  <!-- cz_bh -->
+		</if>
+	    <if test="qzdw != null and qzdw != ''">
+		      AND qzdw like '%${qzdw}%'  <!-- qzdw -->
+		</if>
+	    <if test="dh != null and dh != ''">
+		      AND dh like '%${dh}%'  <!-- dh -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm like '%${tm}%'  <!-- tm -->
+		</if>
+	    <if test="xcsj != null and xcsj != ''">
+		      AND xcsj like '%${xcsj}%'  <!-- xcsj -->
+		</if>
+	    <if test="hh != null and hh != ''">
+		      AND hh like '%${hh}%'  <!-- hh -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	</sql>
+	
+</mapper>

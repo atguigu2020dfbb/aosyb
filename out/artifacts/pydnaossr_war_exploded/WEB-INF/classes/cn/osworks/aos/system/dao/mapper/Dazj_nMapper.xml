@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- dazj_n[dazj_n]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-07-22 11:29:26 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Dazj_nMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Dazj_nPO">
+		INSERT INTO dazj_n (
+		<if test="zjbh != null and zjbh != ''">
+	         zjbh, <!-- zjbh -->
+		</if>
+		<if test="zjsj != null and zjsj != ''">
+	         zjsj, <!-- zjsj -->
+		</if>
+		<if test="zjbm != null and zjbm != ''">
+	         zjbm, <!-- zjbm -->
+		</if>
+		<if test="zjr != null and zjr != ''">
+	         zjr, <!-- zjr -->
+		</if>
+		<if test="yjbm != null and yjbm != ''">
+	         yjbm, <!-- yjbm -->
+		</if>
+		<if test="yjr != null and yjr != ''">
+	         yjr, <!-- yjr -->
+		</if>
+		<if test="tm != null and tm != ''">
+	         tm, <!-- tm -->
+		</if>
+		<if test="xcsj != null and xcsj != ''">
+	         xcsj, <!-- xcsj -->
+		</if>
+		<if test="ztlx != null and ztlx != ''">
+	         ztlx, <!-- ztlx -->
+		</if>
+		<if test="ys != null and ys != ''">
+	         ys, <!-- ys -->
+		</if>
+		<if test="sc != null and sc != ''">
+	         sc, <!-- sc -->
+		</if>
+		<if test="sfzj != null and sfzj != ''">
+	         sfzj, <!-- sfzj -->
+		</if>
+		<if test="zhjsj != null and zhjsj != ''">
+	         zhjsj, <!-- zhjsj -->
+		</if>
+		<if test="zhjbm != null and zhjbm != ''">
+	         zhjbm, <!-- zhjbm -->
+		</if>
+		<if test="zhjr != null and zhjr != ''">
+	         zhjr, <!-- zhjr -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="_lrr != null and _lrr != ''">
+	         _lrr, <!-- _lrr -->
+		</if>
+		<if test="_lrrq != null and _lrrq != ''">
+	         _lrrq, <!-- _lrrq -->
+		</if>
+		<if test="_classtree != null and _classtree != ''">
+	         _classtree, <!-- _classtree -->
+		</if>
+		<if test="_jy != null and _jy != ''">
+	         _jy, <!-- _jy -->
+		</if>
+		<if test="_jd != null and _jd != ''">
+	         _jd, <!-- _jd -->
+		</if>
+		<if test="_path != null">
+	         _path, <!-- _path -->
+		</if>
+		<if test="zrz != null and zrz != ''">
+	         zrz, <!-- zrz -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="zjbh != null and zjbh != ''">
+	          #{zjbh, jdbcType=VARCHAR}, <!-- zjbh -->
+	    </if>
+		<if test="zjsj != null and zjsj != ''">
+	          #{zjsj, jdbcType=VARCHAR}, <!-- zjsj -->
+	    </if>
+		<if test="zjbm != null and zjbm != ''">
+	          #{zjbm, jdbcType=VARCHAR}, <!-- zjbm -->
+	    </if>
+		<if test="zjr != null and zjr != ''">
+	          #{zjr, jdbcType=VARCHAR}, <!-- zjr -->
+	    </if>
+		<if test="yjbm != null and yjbm != ''">
+	          #{yjbm, jdbcType=VARCHAR}, <!-- yjbm -->
+	    </if>
+		<if test="yjr != null and yjr != ''">
+	          #{yjr, jdbcType=VARCHAR}, <!-- yjr -->
+	    </if>
+		<if test="tm != null and tm != ''">
+	          #{tm, jdbcType=VARCHAR}, <!-- tm -->
+	    </if>
+		<if test="xcsj != null and xcsj != ''">
+	          #{xcsj, jdbcType=VARCHAR}, <!-- xcsj -->
+	    </if>
+		<if test="ztlx != null and ztlx != ''">
+	          #{ztlx, jdbcType=VARCHAR}, <!-- ztlx -->
+	    </if>
+		<if test="ys != null and ys != ''">
+	          #{ys, jdbcType=VARCHAR}, <!-- ys -->
+	    </if>
+		<if test="sc != null and sc != ''">
+	          #{sc, jdbcType=VARCHAR}, <!-- sc -->
+	    </if>
+		<if test="sfzj != null and sfzj != ''">
+	          #{sfzj, jdbcType=VARCHAR}, <!-- sfzj -->
+	    </if>
+		<if test="zhjsj != null and zhjsj != ''">
+	          #{zhjsj, jdbcType=VARCHAR}, <!-- zhjsj -->
+	    </if>
+		<if test="zhjbm != null and zhjbm != ''">
+	          #{zhjbm, jdbcType=VARCHAR}, <!-- zhjbm -->
+	    </if>
+		<if test="zhjr != null and zhjr != ''">
+	          #{zhjr, jdbcType=VARCHAR}, <!-- zhjr -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="_lrr != null and _lrr != ''">
+	          #{_lrr, jdbcType=VARCHAR}, <!-- _lrr -->
+	    </if>
+		<if test="_lrrq != null and _lrrq != ''">
+	          #{_lrrq, jdbcType=VARCHAR}, <!-- _lrrq -->
+	    </if>
+		<if test="_classtree != null and _classtree != ''">
+	          #{_classtree, jdbcType=VARCHAR}, <!-- _classtree -->
+	    </if>
+		<if test="_jy != null and _jy != ''">
+	          #{_jy, jdbcType=VARCHAR}, <!-- _jy -->
+	    </if>
+		<if test="_jd != null and _jd != ''">
+	          #{_jd, jdbcType=VARCHAR}, <!-- _jd -->
+	    </if>
+		<if test="_path != null">
+	          #{_path, jdbcType=INTEGER}, <!-- _path -->
+	    </if>
+		<if test="zrz != null and zrz != ''">
+	          #{zrz, jdbcType=VARCHAR}, <!-- zrz -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Dazj_nPO">
+		INSERT INTO dazj_n (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{zjbh, jdbcType=VARCHAR},  <!-- zjbh -->
+		    #{zjsj, jdbcType=VARCHAR},  <!-- zjsj -->
+		    #{zjbm, jdbcType=VARCHAR},  <!-- zjbm -->
+		    #{zjr, jdbcType=VARCHAR},  <!-- zjr -->
+		    #{yjbm, jdbcType=VARCHAR},  <!-- yjbm -->
+		    #{yjr, jdbcType=VARCHAR},  <!-- yjr -->
+		    #{tm, jdbcType=VARCHAR},  <!-- tm -->
+		    #{xcsj, jdbcType=VARCHAR},  <!-- xcsj -->
+		    #{ztlx, jdbcType=VARCHAR},  <!-- ztlx -->
+		    #{ys, jdbcType=VARCHAR},  <!-- ys -->
+		    #{sc, jdbcType=VARCHAR},  <!-- sc -->
+		    #{sfzj, jdbcType=VARCHAR},  <!-- sfzj -->
+		    #{zhjsj, jdbcType=VARCHAR},  <!-- zhjsj -->
+		    #{zhjbm, jdbcType=VARCHAR},  <!-- zhjbm -->
+		    #{zhjr, jdbcType=VARCHAR},  <!-- zhjr -->
+		    #{bz, jdbcType=VARCHAR},  <!-- bz -->
+		    #{_lrr, jdbcType=VARCHAR},  <!-- _lrr -->
+		    #{_lrrq, jdbcType=VARCHAR},  <!-- _lrrq -->
+		    #{_classtree, jdbcType=VARCHAR},  <!-- _classtree -->
+		    #{_jy, jdbcType=VARCHAR},  <!-- _jy -->
+		    #{_jd, jdbcType=VARCHAR},  <!-- _jd -->
+		    #{_path, jdbcType=INTEGER},  <!-- _path -->
+		    #{zrz, jdbcType=VARCHAR}  <!-- zrz -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Dazj_nPO">
+		UPDATE dazj_n
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="zjbh != null">
+		          zjbh = #{zjbh, jdbcType=VARCHAR},  <!-- zjbh -->
+			</if>
+			<if test="zjsj != null">
+		          zjsj = #{zjsj, jdbcType=VARCHAR},  <!-- zjsj -->
+			</if>
+			<if test="zjbm != null">
+		          zjbm = #{zjbm, jdbcType=VARCHAR},  <!-- zjbm -->
+			</if>
+			<if test="zjr != null">
+		          zjr = #{zjr, jdbcType=VARCHAR},  <!-- zjr -->
+			</if>
+			<if test="yjbm != null">
+		          yjbm = #{yjbm, jdbcType=VARCHAR},  <!-- yjbm -->
+			</if>
+			<if test="yjr != null">
+		          yjr = #{yjr, jdbcType=VARCHAR},  <!-- yjr -->
+			</if>
+			<if test="tm != null">
+		          tm = #{tm, jdbcType=VARCHAR},  <!-- tm -->
+			</if>
+			<if test="xcsj != null">
+		          xcsj = #{xcsj, jdbcType=VARCHAR},  <!-- xcsj -->
+			</if>
+			<if test="ztlx != null">
+		          ztlx = #{ztlx, jdbcType=VARCHAR},  <!-- ztlx -->
+			</if>
+			<if test="ys != null">
+		          ys = #{ys, jdbcType=VARCHAR},  <!-- ys -->
+			</if>
+			<if test="sc != null">
+		          sc = #{sc, jdbcType=VARCHAR},  <!-- sc -->
+			</if>
+			<if test="sfzj != null">
+		          sfzj = #{sfzj, jdbcType=VARCHAR},  <!-- sfzj -->
+			</if>
+			<if test="zhjsj != null">
+		          zhjsj = #{zhjsj, jdbcType=VARCHAR},  <!-- zhjsj -->
+			</if>
+			<if test="zhjbm != null">
+		          zhjbm = #{zhjbm, jdbcType=VARCHAR},  <!-- zhjbm -->
+			</if>
+			<if test="zhjr != null">
+		          zhjr = #{zhjr, jdbcType=VARCHAR},  <!-- zhjr -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+			<if test="_lrr != null">
+		          _lrr = #{_lrr, jdbcType=VARCHAR},  <!-- _lrr -->
+			</if>
+			<if test="_lrrq != null">
+		          _lrrq = #{_lrrq, jdbcType=VARCHAR},  <!-- _lrrq -->
+			</if>
+			<if test="_classtree != null">
+		          _classtree = #{_classtree, jdbcType=VARCHAR},  <!-- _classtree -->
+			</if>
+			<if test="_jy != null">
+		          _jy = #{_jy, jdbcType=VARCHAR},  <!-- _jy -->
+			</if>
+			<if test="_jd != null">
+		          _jd = #{_jd, jdbcType=VARCHAR},  <!-- _jd -->
+			</if>
+			<if test="_path != null">
+		          _path = #{_path, jdbcType=INTEGER},  <!-- _path -->
+			</if>
+			<if test="zrz != null">
+		          zrz = #{zrz, jdbcType=VARCHAR},  <!-- zrz -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM dazj_n WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Dazj_nPO">
+		SELECT
+		<include refid="column" />
+		FROM dazj_n WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Dazj_nPO">
+		SELECT
+		    <include refid="column" />
+		FROM dazj_n
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Dazj_nPO">
+		SELECT
+			<include refid="column" />	
+		FROM dazj_n
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Dazj_nPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM dazj_n
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Dazj_nPO">
+		SELECT
+			<include refid="column" />	
+		FROM dazj_n
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Dazj_nPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM dazj_n
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM dazj_n
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM dazj_n
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  zjbh,  <!-- zjbh -->
+		  zjsj,  <!-- zjsj -->
+		  zjbm,  <!-- zjbm -->
+		  zjr,  <!-- zjr -->
+		  yjbm,  <!-- yjbm -->
+		  yjr,  <!-- yjr -->
+		  tm,  <!-- tm -->
+		  xcsj,  <!-- xcsj -->
+		  ztlx,  <!-- ztlx -->
+		  ys,  <!-- ys -->
+		  sc,  <!-- sc -->
+		  sfzj,  <!-- sfzj -->
+		  zhjsj,  <!-- zhjsj -->
+		  zhjbm,  <!-- zhjbm -->
+		  zhjr,  <!-- zhjr -->
+		  bz,  <!-- bz -->
+		  _lrr,  <!-- _lrr -->
+		  _lrrq,  <!-- _lrrq -->
+		  _classtree,  <!-- _classtree -->
+		  _jy,  <!-- _jy -->
+		  _jd,  <!-- _jd -->
+		  _path,  <!-- _path -->
+		  zrz  <!-- zrz -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  dazj_n.id_,  <!-- id_ -->
+		  dazj_n.zjbh,  <!-- zjbh -->
+		  dazj_n.zjsj,  <!-- zjsj -->
+		  dazj_n.zjbm,  <!-- zjbm -->
+		  dazj_n.zjr,  <!-- zjr -->
+		  dazj_n.yjbm,  <!-- yjbm -->
+		  dazj_n.yjr,  <!-- yjr -->
+		  dazj_n.tm,  <!-- tm -->
+		  dazj_n.xcsj,  <!-- xcsj -->
+		  dazj_n.ztlx,  <!-- ztlx -->
+		  dazj_n.ys,  <!-- ys -->
+		  dazj_n.sc,  <!-- sc -->
+		  dazj_n.sfzj,  <!-- sfzj -->
+		  dazj_n.zhjsj,  <!-- zhjsj -->
+		  dazj_n.zhjbm,  <!-- zhjbm -->
+		  dazj_n.zhjr,  <!-- zhjr -->
+		  dazj_n.bz,  <!-- bz -->
+		  dazj_n._lrr,  <!-- _lrr -->
+		  dazj_n._lrrq,  <!-- _lrrq -->
+		  dazj_n._classtree,  <!-- _classtree -->
+		  dazj_n._jy,  <!-- _jy -->
+		  dazj_n._jd,  <!-- _jd -->
+		  dazj_n._path,  <!-- _path -->
+		  dazj_n.zrz  <!-- zrz -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="zjbh != null and zjbh != ''">
+		      AND zjbh = #{zjbh}  <!-- zjbh -->
+		</if>
+	    <if test="zjsj != null and zjsj != ''">
+		      AND zjsj = #{zjsj}  <!-- zjsj -->
+		</if>
+	    <if test="zjbm != null and zjbm != ''">
+		      AND zjbm = #{zjbm}  <!-- zjbm -->
+		</if>
+	    <if test="zjr != null and zjr != ''">
+		      AND zjr = #{zjr}  <!-- zjr -->
+		</if>
+	    <if test="yjbm != null and yjbm != ''">
+		      AND yjbm = #{yjbm}  <!-- yjbm -->
+		</if>
+	    <if test="yjr != null and yjr != ''">
+		      AND yjr = #{yjr}  <!-- yjr -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm = #{tm}  <!-- tm -->
+		</if>
+	    <if test="xcsj != null and xcsj != ''">
+		      AND xcsj = #{xcsj}  <!-- xcsj -->
+		</if>
+	    <if test="ztlx != null and ztlx != ''">
+		      AND ztlx = #{ztlx}  <!-- ztlx -->
+		</if>
+	    <if test="ys != null and ys != ''">
+		      AND ys = #{ys}  <!-- ys -->
+		</if>
+	    <if test="sc != null and sc != ''">
+		      AND sc = #{sc}  <!-- sc -->
+		</if>
+	    <if test="sfzj != null and sfzj != ''">
+		      AND sfzj = #{sfzj}  <!-- sfzj -->
+		</if>
+	    <if test="zhjsj != null and zhjsj != ''">
+		      AND zhjsj = #{zhjsj}  <!-- zhjsj -->
+		</if>
+	    <if test="zhjbm != null and zhjbm != ''">
+		      AND zhjbm = #{zhjbm}  <!-- zhjbm -->
+		</if>
+	    <if test="zhjr != null and zhjr != ''">
+		      AND zhjr = #{zhjr}  <!-- zhjr -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	    <if test="_lrr != null and _lrr != ''">
+		      AND _lrr = #{_lrr}  <!-- _lrr -->
+		</if>
+	    <if test="_lrrq != null and _lrrq != ''">
+		      AND _lrrq = #{_lrrq}  <!-- _lrrq -->
+		</if>
+	    <if test="_classtree != null and _classtree != ''">
+		      AND _classtree = #{_classtree}  <!-- _classtree -->
+		</if>
+	    <if test="_jy != null and _jy != ''">
+		      AND _jy = #{_jy}  <!-- _jy -->
+		</if>
+	    <if test="_jd != null and _jd != ''">
+		      AND _jd = #{_jd}  <!-- _jd -->
+		</if>
+	   <if test="_path != null ">
+		      AND _path = #{_path}  <!-- _path -->
+		</if>
+	    <if test="zrz != null and zrz != ''">
+		      AND zrz = #{zrz}  <!-- zrz -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="zjbh != null and zjbh != ''">
+		      AND zjbh like '%${zjbh}%'  <!-- zjbh -->
+		</if>
+	    <if test="zjsj != null and zjsj != ''">
+		      AND zjsj like '%${zjsj}%'  <!-- zjsj -->
+		</if>
+	    <if test="zjbm != null and zjbm != ''">
+		      AND zjbm like '%${zjbm}%'  <!-- zjbm -->
+		</if>
+	    <if test="zjr != null and zjr != ''">
+		      AND zjr like '%${zjr}%'  <!-- zjr -->
+		</if>
+	    <if test="yjbm != null and yjbm != ''">
+		      AND yjbm like '%${yjbm}%'  <!-- yjbm -->
+		</if>
+	    <if test="yjr != null and yjr != ''">
+		      AND yjr like '%${yjr}%'  <!-- yjr -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm like '%${tm}%'  <!-- tm -->
+		</if>
+	    <if test="xcsj != null and xcsj != ''">
+		      AND xcsj like '%${xcsj}%'  <!-- xcsj -->
+		</if>
+	    <if test="ztlx != null and ztlx != ''">
+		      AND ztlx like '%${ztlx}%'  <!-- ztlx -->
+		</if>
+	    <if test="ys != null and ys != ''">
+		      AND ys like '%${ys}%'  <!-- ys -->
+		</if>
+	    <if test="sc != null and sc != ''">
+		      AND sc like '%${sc}%'  <!-- sc -->
+		</if>
+	    <if test="sfzj != null and sfzj != ''">
+		      AND sfzj like '%${sfzj}%'  <!-- sfzj -->
+		</if>
+	    <if test="zhjsj != null and zhjsj != ''">
+		      AND zhjsj like '%${zhjsj}%'  <!-- zhjsj -->
+		</if>
+	    <if test="zhjbm != null and zhjbm != ''">
+		      AND zhjbm like '%${zhjbm}%'  <!-- zhjbm -->
+		</if>
+	    <if test="zhjr != null and zhjr != ''">
+		      AND zhjr like '%${zhjr}%'  <!-- zhjr -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	    <if test="_lrr != null and _lrr != ''">
+		      AND _lrr like '%${_lrr}%'  <!-- _lrr -->
+		</if>
+	    <if test="_lrrq != null and _lrrq != ''">
+		      AND _lrrq like '%${_lrrq}%'  <!-- _lrrq -->
+		</if>
+	    <if test="_classtree != null and _classtree != ''">
+		      AND _classtree like '%${_classtree}%'  <!-- _classtree -->
+		</if>
+	    <if test="_jy != null and _jy != ''">
+		      AND _jy like '%${_jy}%'  <!-- _jy -->
+		</if>
+	    <if test="_jd != null and _jd != ''">
+		      AND _jd like '%${_jd}%'  <!-- _jd -->
+		</if>
+	    <if test="zrz != null and zrz != ''">
+		      AND zrz like '%${zrz}%'  <!-- zrz -->
+		</if>
+	</sql>
+	
+</mapper>

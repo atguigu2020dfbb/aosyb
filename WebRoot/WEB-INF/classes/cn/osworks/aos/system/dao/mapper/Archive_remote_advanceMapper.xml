@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_remote_advance[archive_remote_advance]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-09-07 21:18:50 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_remote_advanceMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_remote_advancePO">
+		INSERT INTO archive_remote_advance (
+		<if test="djsj != null and djsj != ''">
+	         djsj, <!-- djsj -->
+		</if>
+		<if test="yyr != null and yyr != ''">
+	         yyr, <!-- yyr -->
+		</if>
+		<if test="yysj != null and yysj != ''">
+	         yysj, <!-- yysj -->
+		</if>
+		<if test="yyfs != null and yyfs != ''">
+	         yyfs, <!-- yyfs -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="cynr != null and cynr != ''">
+	         cynr, <!-- cynr -->
+		</if>
+		<if test="cdmd != null and cdmd != ''">
+	         cdmd, <!-- cdmd -->
+		</if>
+		<if test="sfzh != null and sfzh != ''">
+	         sfzh, <!-- sfzh -->
+		</if>
+		<if test="cdnr != null and cdnr != ''">
+	         cdnr, <!-- cdnr -->
+		</if>
+		<if test="flag != null and flag != ''">
+	         flag, <!-- flag -->
+		</if>
+		<if test="yybh != null and yybh != ''">
+	         yybh, <!-- yybh -->
+		</if>
+		<if test="yydw != null and yydw != ''">
+	         yydw, <!-- yydw -->
+		</if>
+		<if test="jdr != null and jdr != ''">
+	         jdr, <!-- jdr -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="djsj != null and djsj != ''">
+	          #{djsj, jdbcType=VARCHAR}, <!-- djsj -->
+	    </if>
+		<if test="yyr != null and yyr != ''">
+	          #{yyr, jdbcType=VARCHAR}, <!-- yyr -->
+	    </if>
+		<if test="yysj != null and yysj != ''">
+	          #{yysj, jdbcType=VARCHAR}, <!-- yysj -->
+	    </if>
+		<if test="yyfs != null and yyfs != ''">
+	          #{yyfs, jdbcType=VARCHAR}, <!-- yyfs -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="cynr != null and cynr != ''">
+	          #{cynr, jdbcType=VARCHAR}, <!-- cynr -->
+	    </if>
+		<if test="cdmd != null and cdmd != ''">
+	          #{cdmd, jdbcType=VARCHAR}, <!-- cdmd -->
+	    </if>
+		<if test="sfzh != null and sfzh != ''">
+	          #{sfzh, jdbcType=VARCHAR}, <!-- sfzh -->
+	    </if>
+		<if test="cdnr != null and cdnr != ''">
+	          #{cdnr, jdbcType=VARCHAR}, <!-- cdnr -->
+	    </if>
+		<if test="flag != null and flag != ''">
+	          #{flag, jdbcType=VARCHAR}, <!-- flag -->
+	    </if>
+		<if test="yybh != null and yybh != ''">
+	          #{yybh, jdbcType=VARCHAR}, <!-- yybh -->
+	    </if>
+		<if test="yydw != null and yydw != ''">
+	          #{yydw, jdbcType=VARCHAR}, <!-- yydw -->
+	    </if>
+		<if test="jdr != null and jdr != ''">
+	          #{jdr, jdbcType=VARCHAR}, <!-- jdr -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_remote_advancePO">
+		INSERT INTO archive_remote_advance (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{djsj, jdbcType=VARCHAR},  <!-- djsj -->
+		    #{yyr, jdbcType=VARCHAR},  <!-- yyr -->
+		    #{yysj, jdbcType=VARCHAR},  <!-- yysj -->
+		    #{yyfs, jdbcType=VARCHAR},  <!-- yyfs -->
+		    #{bz, jdbcType=VARCHAR},  <!-- bz -->
+		    #{cynr, jdbcType=VARCHAR},  <!-- cynr -->
+		    #{cdmd, jdbcType=VARCHAR},  <!-- cdmd -->
+		    #{sfzh, jdbcType=VARCHAR},  <!-- sfzh -->
+		    #{cdnr, jdbcType=VARCHAR},  <!-- cdnr -->
+		    #{flag, jdbcType=VARCHAR},  <!-- flag -->
+		    #{yybh, jdbcType=VARCHAR},  <!-- yybh -->
+		    #{yydw, jdbcType=VARCHAR},  <!-- yydw -->
+		    #{jdr, jdbcType=VARCHAR}  <!-- jdr -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_remote_advancePO">
+		UPDATE archive_remote_advance
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="djsj != null">
+		          djsj = #{djsj, jdbcType=VARCHAR},  <!-- djsj -->
+			</if>
+			<if test="yyr != null">
+		          yyr = #{yyr, jdbcType=VARCHAR},  <!-- yyr -->
+			</if>
+			<if test="yysj != null">
+		          yysj = #{yysj, jdbcType=VARCHAR},  <!-- yysj -->
+			</if>
+			<if test="yyfs != null">
+		          yyfs = #{yyfs, jdbcType=VARCHAR},  <!-- yyfs -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+			<if test="cynr != null">
+		          cynr = #{cynr, jdbcType=VARCHAR},  <!-- cynr -->
+			</if>
+			<if test="cdmd != null">
+		          cdmd = #{cdmd, jdbcType=VARCHAR},  <!-- cdmd -->
+			</if>
+			<if test="sfzh != null">
+		          sfzh = #{sfzh, jdbcType=VARCHAR},  <!-- sfzh -->
+			</if>
+			<if test="cdnr != null">
+		          cdnr = #{cdnr, jdbcType=VARCHAR},  <!-- cdnr -->
+			</if>
+			<if test="flag != null">
+		          flag = #{flag, jdbcType=VARCHAR},  <!-- flag -->
+			</if>
+			<if test="yybh != null">
+		          yybh = #{yybh, jdbcType=VARCHAR},  <!-- yybh -->
+			</if>
+			<if test="yydw != null">
+		          yydw = #{yydw, jdbcType=VARCHAR},  <!-- yydw -->
+			</if>
+			<if test="jdr != null">
+		          jdr = #{jdr, jdbcType=VARCHAR},  <!-- jdr -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_remote_advance WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_remote_advancePO">
+		SELECT
+		<include refid="column" />
+		FROM archive_remote_advance WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_remote_advancePO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_remote_advance
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_remote_advancePO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_remote_advance
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_remote_advancePO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_remote_advance
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_remote_advancePO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_remote_advance
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_remote_advancePO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_remote_advance
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_remote_advance
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_remote_advance
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  djsj,  <!-- djsj -->
+		  yyr,  <!-- yyr -->
+		  yysj,  <!-- yysj -->
+		  yyfs,  <!-- yyfs -->
+		  bz,  <!-- bz -->
+		  cynr,  <!-- cynr -->
+		  cdmd,  <!-- cdmd -->
+		  sfzh,  <!-- sfzh -->
+		  cdnr,  <!-- cdnr -->
+		  flag,  <!-- flag -->
+		  yybh,  <!-- yybh -->
+		  yydw,  <!-- yydw -->
+		  jdr  <!-- jdr -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_remote_advance.id_,  <!-- id_ -->
+		  archive_remote_advance.djsj,  <!-- djsj -->
+		  archive_remote_advance.yyr,  <!-- yyr -->
+		  archive_remote_advance.yysj,  <!-- yysj -->
+		  archive_remote_advance.yyfs,  <!-- yyfs -->
+		  archive_remote_advance.bz,  <!-- bz -->
+		  archive_remote_advance.cynr,  <!-- cynr -->
+		  archive_remote_advance.cdmd,  <!-- cdmd -->
+		  archive_remote_advance.sfzh,  <!-- sfzh -->
+		  archive_remote_advance.cdnr,  <!-- cdnr -->
+		  archive_remote_advance.flag,  <!-- flag -->
+		  archive_remote_advance.yybh,  <!-- yybh -->
+		  archive_remote_advance.yydw,  <!-- yydw -->
+		  archive_remote_advance.jdr  <!-- jdr -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="djsj != null and djsj != ''">
+		      AND djsj = #{djsj}  <!-- djsj -->
+		</if>
+	    <if test="yyr != null and yyr != ''">
+		      AND yyr = #{yyr}  <!-- yyr -->
+		</if>
+	    <if test="yysj != null and yysj != ''">
+		      AND yysj = #{yysj}  <!-- yysj -->
+		</if>
+	    <if test="yyfs != null and yyfs != ''">
+		      AND yyfs = #{yyfs}  <!-- yyfs -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	    <if test="cynr != null and cynr != ''">
+		      AND cynr = #{cynr}  <!-- cynr -->
+		</if>
+	    <if test="cdmd != null and cdmd != ''">
+		      AND cdmd = #{cdmd}  <!-- cdmd -->
+		</if>
+	    <if test="sfzh != null and sfzh != ''">
+		      AND sfzh = #{sfzh}  <!-- sfzh -->
+		</if>
+	    <if test="cdnr != null and cdnr != ''">
+		      AND cdnr = #{cdnr}  <!-- cdnr -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag = #{flag}  <!-- flag -->
+		</if>
+	    <if test="yybh != null and yybh != ''">
+		      AND yybh = #{yybh}  <!-- yybh -->
+		</if>
+	    <if test="yydw != null and yydw != ''">
+		      AND yydw = #{yydw}  <!-- yydw -->
+		</if>
+	    <if test="jdr != null and jdr != ''">
+		      AND jdr = #{jdr}  <!-- jdr -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="djsj != null and djsj != ''">
+		      AND djsj like '%${djsj}%'  <!-- djsj -->
+		</if>
+	    <if test="yyr != null and yyr != ''">
+		      AND yyr like '%${yyr}%'  <!-- yyr -->
+		</if>
+	    <if test="yysj != null and yysj != ''">
+		      AND yysj like '%${yysj}%'  <!-- yysj -->
+		</if>
+	    <if test="yyfs != null and yyfs != ''">
+		      AND yyfs like '%${yyfs}%'  <!-- yyfs -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	    <if test="cynr != null and cynr != ''">
+		      AND cynr like '%${cynr}%'  <!-- cynr -->
+		</if>
+	    <if test="cdmd != null and cdmd != ''">
+		      AND cdmd like '%${cdmd}%'  <!-- cdmd -->
+		</if>
+	    <if test="sfzh != null and sfzh != ''">
+		      AND sfzh like '%${sfzh}%'  <!-- sfzh -->
+		</if>
+	    <if test="cdnr != null and cdnr != ''">
+		      AND cdnr like '%${cdnr}%'  <!-- cdnr -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag like '%${flag}%'  <!-- flag -->
+		</if>
+	    <if test="yybh != null and yybh != ''">
+		      AND yybh like '%${yybh}%'  <!-- yybh -->
+		</if>
+	    <if test="yydw != null and yydw != ''">
+		      AND yydw like '%${yydw}%'  <!-- yydw -->
+		</if>
+	    <if test="jdr != null and jdr != ''">
+		      AND jdr like '%${jdr}%'  <!-- jdr -->
+		</if>
+	</sql>
+	
+</mapper>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- ACT_ID_USER[act_id_user]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2018-12-18 15:50:46 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Act_id_userMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Act_id_userPO">
+		INSERT INTO act_id_user (
+		<if test="rev_ != null">
+	         rev_, <!-- REV_ -->
+		</if>
+		<if test="first_ != null and first_ != ''">
+	         first_, <!-- FIRST_ -->
+		</if>
+		<if test="last_ != null and last_ != ''">
+	         last_, <!-- LAST_ -->
+		</if>
+		<if test="email_ != null and email_ != ''">
+	         email_, <!-- EMAIL_ -->
+		</if>
+		<if test="pwd_ != null and pwd_ != ''">
+	         pwd_, <!-- PWD_ -->
+		</if>
+		<if test="picture_id_ != null and picture_id_ != ''">
+	         picture_id_, <!-- PICTURE_ID_ -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- ID_ -->
+	   </if>
+		)VALUES(
+		<if test="rev_ != null">
+	          #{rev_, jdbcType=INTEGER}, <!-- REV_ -->
+	    </if>
+		<if test="first_ != null and first_ != ''">
+	          #{first_, jdbcType=VARCHAR}, <!-- FIRST_ -->
+	    </if>
+		<if test="last_ != null and last_ != ''">
+	          #{last_, jdbcType=VARCHAR}, <!-- LAST_ -->
+	    </if>
+		<if test="email_ != null and email_ != ''">
+	          #{email_, jdbcType=VARCHAR}, <!-- EMAIL_ -->
+	    </if>
+		<if test="pwd_ != null and pwd_ != ''">
+	          #{pwd_, jdbcType=VARCHAR}, <!-- PWD_ -->
+	    </if>
+		<if test="picture_id_ != null and picture_id_ != ''">
+	          #{picture_id_, jdbcType=VARCHAR}, <!-- PICTURE_ID_ -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- ID_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Act_id_userPO">
+		INSERT INTO act_id_user (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- ID_ -->
+		    #{rev_, jdbcType=INTEGER},  <!-- REV_ -->
+		    #{first_, jdbcType=VARCHAR},  <!-- FIRST_ -->
+		    #{last_, jdbcType=VARCHAR},  <!-- LAST_ -->
+		    #{email_, jdbcType=VARCHAR},  <!-- EMAIL_ -->
+		    #{pwd_, jdbcType=VARCHAR},  <!-- PWD_ -->
+		    #{picture_id_, jdbcType=VARCHAR}  <!-- PICTURE_ID_ -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Act_id_userPO">
+		UPDATE act_id_user
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- ID_ -->
+			</if>
+			<if test="rev_ != null">
+		          rev_ = #{rev_, jdbcType=INTEGER},  <!-- REV_ -->
+			</if>
+			<if test="first_ != null">
+		          first_ = #{first_, jdbcType=VARCHAR},  <!-- FIRST_ -->
+			</if>
+			<if test="last_ != null">
+		          last_ = #{last_, jdbcType=VARCHAR},  <!-- LAST_ -->
+			</if>
+			<if test="email_ != null">
+		          email_ = #{email_, jdbcType=VARCHAR},  <!-- EMAIL_ -->
+			</if>
+			<if test="pwd_ != null">
+		          pwd_ = #{pwd_, jdbcType=VARCHAR},  <!-- PWD_ -->
+			</if>
+			<if test="picture_id_ != null">
+		          picture_id_ = #{picture_id_, jdbcType=VARCHAR},  <!-- PICTURE_ID_ -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM act_id_user WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Act_id_userPO">
+		SELECT
+		<include refid="column" />
+		FROM act_id_user WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Act_id_userPO">
+		SELECT
+		    <include refid="column" />
+		FROM act_id_user
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Act_id_userPO">
+		SELECT
+			<include refid="column" />	
+		FROM act_id_user
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Act_id_userPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM act_id_user
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Act_id_userPO">
+		SELECT
+			<include refid="column" />	
+		FROM act_id_user
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Act_id_userPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM act_id_user
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM act_id_user
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM act_id_user
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- ID_ -->
+		  rev_,  <!-- REV_ -->
+		  first_,  <!-- FIRST_ -->
+		  last_,  <!-- LAST_ -->
+		  email_,  <!-- EMAIL_ -->
+		  pwd_,  <!-- PWD_ -->
+		  picture_id_  <!-- PICTURE_ID_ -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  act_id_user.id_,  <!-- ID_ -->
+		  act_id_user.rev_,  <!-- REV_ -->
+		  act_id_user.first_,  <!-- FIRST_ -->
+		  act_id_user.last_,  <!-- LAST_ -->
+		  act_id_user.email_,  <!-- EMAIL_ -->
+		  act_id_user.pwd_,  <!-- PWD_ -->
+		  act_id_user.picture_id_  <!-- PICTURE_ID_ -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- ID_ -->
+		</if>
+	   <if test="rev_ != null ">
+		      AND rev_ = #{rev_}  <!-- REV_ -->
+		</if>
+	    <if test="first_ != null and first_ != ''">
+		      AND first_ = #{first_}  <!-- FIRST_ -->
+		</if>
+	    <if test="last_ != null and last_ != ''">
+		      AND last_ = #{last_}  <!-- LAST_ -->
+		</if>
+	    <if test="email_ != null and email_ != ''">
+		      AND email_ = #{email_}  <!-- EMAIL_ -->
+		</if>
+	    <if test="pwd_ != null and pwd_ != ''">
+		      AND pwd_ = #{pwd_}  <!-- PWD_ -->
+		</if>
+	    <if test="picture_id_ != null and picture_id_ != ''">
+		      AND picture_id_ = #{picture_id_}  <!-- PICTURE_ID_ -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- ID_ -->
+		</if>
+	    <if test="first_ != null and first_ != ''">
+		      AND first_ like '%${first_}%'  <!-- FIRST_ -->
+		</if>
+	    <if test="last_ != null and last_ != ''">
+		      AND last_ like '%${last_}%'  <!-- LAST_ -->
+		</if>
+	    <if test="email_ != null and email_ != ''">
+		      AND email_ like '%${email_}%'  <!-- EMAIL_ -->
+		</if>
+	    <if test="pwd_ != null and pwd_ != ''">
+		      AND pwd_ like '%${pwd_}%'  <!-- PWD_ -->
+		</if>
+	    <if test="picture_id_ != null and picture_id_ != ''">
+		      AND picture_id_ like '%${picture_id_}%'  <!-- PICTURE_ID_ -->
+		</if>
+	</sql>
+	
+</mapper>

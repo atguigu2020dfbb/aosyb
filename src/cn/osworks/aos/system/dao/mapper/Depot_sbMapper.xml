@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- depot_sb[depot_sb]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-06-05 18:23:46 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Depot_sbMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Depot_sbPO">
+		INSERT INTO depot_sb (
+		<if test="kfbh != null and kfbh != ''">
+	         kfbh, <!-- kfbh -->
+		</if>
+		<if test="jcsj != null and jcsj != ''">
+	         jcsj, <!-- jcsj -->
+		</if>
+		<if test="jcbm != null and jcbm != ''">
+	         jcbm, <!-- jcbm -->
+		</if>
+		<if test="jcr != null and jcr != ''">
+	         jcr, <!-- jcr -->
+		</if>
+		<if test="jclx != null and jclx != ''">
+	         jclx, <!-- jclx -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="lx != null and lx != ''">
+	         lx, <!-- lx -->
+		</if>
+		<if test="sbmc != null and sbmc != ''">
+	         sbmc, <!-- sbmc -->
+		</if>
+		<if test="sbxh != null and sbxh != ''">
+	         sbxh, <!-- sbxh -->
+		</if>
+		<if test="gzms != null and gzms != ''">
+	         gzms, <!-- gzms -->
+		</if>
+		<if test="gzyy != null and gzyy != ''">
+	         gzyy, <!-- gzyy -->
+		</if>
+		<if test="gzsfjj != null and gzsfjj != ''">
+	         gzsfjj, <!-- gzsfjj -->
+		</if>
+		<if test="ywqtwt != null and ywqtwt != ''">
+	         ywqtwt, <!-- ywqtwt -->
+		</if>
+		<if test="wxbm != null and wxbm != ''">
+	         wxbm, <!-- wxbm -->
+		</if>
+		<if test="wxr != null and wxr != ''">
+	         wxr, <!-- wxr -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="kfbh != null and kfbh != ''">
+	          #{kfbh, jdbcType=VARCHAR}, <!-- kfbh -->
+	    </if>
+		<if test="jcsj != null and jcsj != ''">
+	          #{jcsj, jdbcType=VARCHAR}, <!-- jcsj -->
+	    </if>
+		<if test="jcbm != null and jcbm != ''">
+	          #{jcbm, jdbcType=VARCHAR}, <!-- jcbm -->
+	    </if>
+		<if test="jcr != null and jcr != ''">
+	          #{jcr, jdbcType=VARCHAR}, <!-- jcr -->
+	    </if>
+		<if test="jclx != null and jclx != ''">
+	          #{jclx, jdbcType=VARCHAR}, <!-- jclx -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="lx != null and lx != ''">
+	          #{lx, jdbcType=VARCHAR}, <!-- lx -->
+	    </if>
+		<if test="sbmc != null and sbmc != ''">
+	          #{sbmc, jdbcType=VARCHAR}, <!-- sbmc -->
+	    </if>
+		<if test="sbxh != null and sbxh != ''">
+	          #{sbxh, jdbcType=VARCHAR}, <!-- sbxh -->
+	    </if>
+		<if test="gzms != null and gzms != ''">
+	          #{gzms, jdbcType=VARCHAR}, <!-- gzms -->
+	    </if>
+		<if test="gzyy != null and gzyy != ''">
+	          #{gzyy, jdbcType=VARCHAR}, <!-- gzyy -->
+	    </if>
+		<if test="gzsfjj != null and gzsfjj != ''">
+	          #{gzsfjj, jdbcType=VARCHAR}, <!-- gzsfjj -->
+	    </if>
+		<if test="ywqtwt != null and ywqtwt != ''">
+	          #{ywqtwt, jdbcType=VARCHAR}, <!-- ywqtwt -->
+	    </if>
+		<if test="wxbm != null and wxbm != ''">
+	          #{wxbm, jdbcType=VARCHAR}, <!-- wxbm -->
+	    </if>
+		<if test="wxr != null and wxr != ''">
+	          #{wxr, jdbcType=VARCHAR}, <!-- wxr -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Depot_sbPO">
+		INSERT INTO depot_sb (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{kfbh, jdbcType=VARCHAR},  <!-- kfbh -->
+		    #{jcsj, jdbcType=VARCHAR},  <!-- jcsj -->
+		    #{jcbm, jdbcType=VARCHAR},  <!-- jcbm -->
+		    #{jcr, jdbcType=VARCHAR},  <!-- jcr -->
+		    #{jclx, jdbcType=VARCHAR},  <!-- jclx -->
+		    #{bz, jdbcType=VARCHAR},  <!-- bz -->
+		    #{lx, jdbcType=VARCHAR},  <!-- lx -->
+		    #{sbmc, jdbcType=VARCHAR},  <!-- sbmc -->
+		    #{sbxh, jdbcType=VARCHAR},  <!-- sbxh -->
+		    #{gzms, jdbcType=VARCHAR},  <!-- gzms -->
+		    #{gzyy, jdbcType=VARCHAR},  <!-- gzyy -->
+		    #{gzsfjj, jdbcType=VARCHAR},  <!-- gzsfjj -->
+		    #{ywqtwt, jdbcType=VARCHAR},  <!-- ywqtwt -->
+		    #{wxbm, jdbcType=VARCHAR},  <!-- wxbm -->
+		    #{wxr, jdbcType=VARCHAR}  <!-- wxr -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Depot_sbPO">
+		UPDATE depot_sb
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="kfbh != null">
+		          kfbh = #{kfbh, jdbcType=VARCHAR},  <!-- kfbh -->
+			</if>
+			<if test="jcsj != null">
+		          jcsj = #{jcsj, jdbcType=VARCHAR},  <!-- jcsj -->
+			</if>
+			<if test="jcbm != null">
+		          jcbm = #{jcbm, jdbcType=VARCHAR},  <!-- jcbm -->
+			</if>
+			<if test="jcr != null">
+		          jcr = #{jcr, jdbcType=VARCHAR},  <!-- jcr -->
+			</if>
+			<if test="jclx != null">
+		          jclx = #{jclx, jdbcType=VARCHAR},  <!-- jclx -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+			<if test="lx != null">
+		          lx = #{lx, jdbcType=VARCHAR},  <!-- lx -->
+			</if>
+			<if test="sbmc != null">
+		          sbmc = #{sbmc, jdbcType=VARCHAR},  <!-- sbmc -->
+			</if>
+			<if test="sbxh != null">
+		          sbxh = #{sbxh, jdbcType=VARCHAR},  <!-- sbxh -->
+			</if>
+			<if test="gzms != null">
+		          gzms = #{gzms, jdbcType=VARCHAR},  <!-- gzms -->
+			</if>
+			<if test="gzyy != null">
+		          gzyy = #{gzyy, jdbcType=VARCHAR},  <!-- gzyy -->
+			</if>
+			<if test="gzsfjj != null">
+		          gzsfjj = #{gzsfjj, jdbcType=VARCHAR},  <!-- gzsfjj -->
+			</if>
+			<if test="ywqtwt != null">
+		          ywqtwt = #{ywqtwt, jdbcType=VARCHAR},  <!-- ywqtwt -->
+			</if>
+			<if test="wxbm != null">
+		          wxbm = #{wxbm, jdbcType=VARCHAR},  <!-- wxbm -->
+			</if>
+			<if test="wxr != null">
+		          wxr = #{wxr, jdbcType=VARCHAR},  <!-- wxr -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM depot_sb WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Depot_sbPO">
+		SELECT
+		<include refid="column" />
+		FROM depot_sb WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Depot_sbPO">
+		SELECT
+		    <include refid="column" />
+		FROM depot_sb
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Depot_sbPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_sb
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Depot_sbPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_sb
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Depot_sbPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_sb
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Depot_sbPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_sb
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM depot_sb
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM depot_sb
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	<!--*******************************************************-->
+	<select id="getDeviceIndex" parameterType="String" resultType="String">
+		select top 1 kfbh
+		from [dbo].[depot_sb]
+ 		where 1=1
+ 		and kfbh like '${value}%'
+ 		order by kfbh desc
+	</select>
+
+	<!--*******************************************************-->
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  kfbh,  <!-- kfbh -->
+		  jcsj,  <!-- jcsj -->
+		  jcbm,  <!-- jcbm -->
+		  jcr,  <!-- jcr -->
+		  jclx,  <!-- jclx -->
+		  bz,  <!-- bz -->
+		  lx,  <!-- lx -->
+		  sbmc,  <!-- sbmc -->
+		  sbxh,  <!-- sbxh -->
+		  gzms,  <!-- gzms -->
+		  gzyy,  <!-- gzyy -->
+		  gzsfjj,  <!-- gzsfjj -->
+		  ywqtwt,  <!-- ywqtwt -->
+		  wxbm,  <!-- wxbm -->
+		  wxr  <!-- wxr -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  depot_sb.id_,  <!-- id_ -->
+		  depot_sb.kfbh,  <!-- kfbh -->
+		  depot_sb.jcsj,  <!-- jcsj -->
+		  depot_sb.jcbm,  <!-- jcbm -->
+		  depot_sb.jcr,  <!-- jcr -->
+		  depot_sb.jclx,  <!-- jclx -->
+		  depot_sb.bz,  <!-- bz -->
+		  depot_sb.lx,  <!-- lx -->
+		  depot_sb.sbmc,  <!-- sbmc -->
+		  depot_sb.sbxh,  <!-- sbxh -->
+		  depot_sb.gzms,  <!-- gzms -->
+		  depot_sb.gzyy,  <!-- gzyy -->
+		  depot_sb.gzsfjj,  <!-- gzsfjj -->
+		  depot_sb.ywqtwt,  <!-- ywqtwt -->
+		  depot_sb.wxbm,  <!-- wxbm -->
+		  depot_sb.wxr  <!-- wxr -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="kfbh != null and kfbh != ''">
+		      AND kfbh = #{kfbh}  <!-- kfbh -->
+		</if>
+	    <if test="jcsj != null and jcsj != ''">
+		      AND jcsj = #{jcsj}  <!-- jcsj -->
+		</if>
+	    <if test="jcbm != null and jcbm != ''">
+		      AND jcbm = #{jcbm}  <!-- jcbm -->
+		</if>
+	    <if test="jcr != null and jcr != ''">
+		      AND jcr = #{jcr}  <!-- jcr -->
+		</if>
+	    <if test="jclx != null and jclx != ''">
+		      AND jclx = #{jclx}  <!-- jclx -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx = #{lx}  <!-- lx -->
+		</if>
+	    <if test="sbmc != null and sbmc != ''">
+		      AND sbmc = #{sbmc}  <!-- sbmc -->
+		</if>
+	    <if test="sbxh != null and sbxh != ''">
+		      AND sbxh = #{sbxh}  <!-- sbxh -->
+		</if>
+	    <if test="gzms != null and gzms != ''">
+		      AND gzms = #{gzms}  <!-- gzms -->
+		</if>
+	    <if test="gzyy != null and gzyy != ''">
+		      AND gzyy = #{gzyy}  <!-- gzyy -->
+		</if>
+	    <if test="gzsfjj != null and gzsfjj != ''">
+		      AND gzsfjj = #{gzsfjj}  <!-- gzsfjj -->
+		</if>
+	    <if test="ywqtwt != null and ywqtwt != ''">
+		      AND ywqtwt = #{ywqtwt}  <!-- ywqtwt -->
+		</if>
+	    <if test="wxbm != null and wxbm != ''">
+		      AND wxbm = #{wxbm}  <!-- wxbm -->
+		</if>
+	    <if test="wxr != null and wxr != ''">
+		      AND wxr = #{wxr}  <!-- wxr -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="kfbh != null and kfbh != ''">
+		      AND kfbh like '%${kfbh}%'  <!-- kfbh -->
+		</if>
+	    <if test="jcsj != null and jcsj != ''">
+		      AND jcsj like '%${jcsj}%'  <!-- jcsj -->
+		</if>
+	    <if test="jcbm != null and jcbm != ''">
+		      AND jcbm like '%${jcbm}%'  <!-- jcbm -->
+		</if>
+	    <if test="jcr != null and jcr != ''">
+		      AND jcr like '%${jcr}%'  <!-- jcr -->
+		</if>
+	    <if test="jclx != null and jclx != ''">
+		      AND jclx like '%${jclx}%'  <!-- jclx -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx like '%${lx}%'  <!-- lx -->
+		</if>
+	    <if test="sbmc != null and sbmc != ''">
+		      AND sbmc like '%${sbmc}%'  <!-- sbmc -->
+		</if>
+	    <if test="sbxh != null and sbxh != ''">
+		      AND sbxh like '%${sbxh}%'  <!-- sbxh -->
+		</if>
+	    <if test="gzms != null and gzms != ''">
+		      AND gzms like '%${gzms}%'  <!-- gzms -->
+		</if>
+	    <if test="gzyy != null and gzyy != ''">
+		      AND gzyy like '%${gzyy}%'  <!-- gzyy -->
+		</if>
+	    <if test="gzsfjj != null and gzsfjj != ''">
+		      AND gzsfjj like '%${gzsfjj}%'  <!-- gzsfjj -->
+		</if>
+	    <if test="ywqtwt != null and ywqtwt != ''">
+		      AND ywqtwt like '%${ywqtwt}%'  <!-- ywqtwt -->
+		</if>
+	    <if test="wxbm != null and wxbm != ''">
+		      AND wxbm like '%${wxbm}%'  <!-- wxbm -->
+		</if>
+	    <if test="wxr != null and wxr != ''">
+		      AND wxr like '%${wxr}%'  <!-- wxr -->
+		</if>
+	</sql>
+	<select id="getSafeIndex" parameterType="String" resultType="String">
+		select top 1 kfbh
+		from [dbo].[depot_sb]
+ 		where 1=1
+ 		and kfbh like '${value}%'
+ 		order by kfbh desc
+	</select>
+</mapper>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_write_topic[archive_write_topic]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-10-21 18:13:26 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_write_topicMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_write_topicPO">
+		INSERT INTO archive_write_topic (
+		<if test="tid != null and tid != ''">
+	         tid, <!-- tid -->
+		</if>
+		<if test="task_number != null and task_number != ''">
+	         task_number, <!-- task_number -->
+		</if>
+		<if test="write_number != null and write_number != ''">
+	         write_number, <!-- write_number -->
+		</if>
+		<if test="write_datatime != null and write_datatime != ''">
+	         write_datatime, <!-- write_datatime -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+	         tablename, <!-- tablename -->
+		</if>
+		<if test="write_createperson != null and write_createperson != ''">
+	         write_createperson, <!-- write_createperson -->
+		</if>
+		<if test="write_description != null and write_description != ''">
+	         write_description, <!-- write_description -->
+		</if>
+		<if test="task_name != null and task_name != ''">
+	         task_name, <!-- task_name -->
+		</if>
+		<if test="write_name != null and write_name != ''">
+	         write_name, <!-- write_name -->
+		</if>
+		<if test="write_flag != null and write_flag != ''">
+	         write_flag, <!-- write_flag -->
+		</if>
+		<if test="first_flag != null and first_flag != ''">
+	         first_flag, <!-- first_flag -->
+		</if>
+		<if test="next_flag != null and next_flag != ''">
+	         next_flag, <!-- next_flag -->
+		</if>
+		<if test="last_flag != null and last_flag != ''">
+	         last_flag, <!-- last_flag -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="tid != null and tid != ''">
+	          #{tid, jdbcType=VARCHAR}, <!-- tid -->
+	    </if>
+		<if test="task_number != null and task_number != ''">
+	          #{task_number, jdbcType=VARCHAR}, <!-- task_number -->
+	    </if>
+		<if test="write_number != null and write_number != ''">
+	          #{write_number, jdbcType=VARCHAR}, <!-- write_number -->
+	    </if>
+		<if test="write_datatime != null and write_datatime != ''">
+	          #{write_datatime, jdbcType=VARCHAR}, <!-- write_datatime -->
+	    </if>
+		<if test="tablename != null and tablename != ''">
+	          #{tablename, jdbcType=VARCHAR}, <!-- tablename -->
+	    </if>
+		<if test="write_createperson != null and write_createperson != ''">
+	          #{write_createperson, jdbcType=VARCHAR}, <!-- write_createperson -->
+	    </if>
+		<if test="write_description != null and write_description != ''">
+	          #{write_description, jdbcType=VARCHAR}, <!-- write_description -->
+	    </if>
+		<if test="task_name != null and task_name != ''">
+	          #{task_name, jdbcType=VARCHAR}, <!-- task_name -->
+	    </if>
+		<if test="write_name != null and write_name != ''">
+	          #{write_name, jdbcType=VARCHAR}, <!-- write_name -->
+	    </if>
+		<if test="write_flag != null and write_flag != ''">
+	          #{write_flag, jdbcType=VARCHAR}, <!-- write_flag -->
+	    </if>
+		<if test="first_flag != null and first_flag != ''">
+	          #{first_flag, jdbcType=VARCHAR}, <!-- first_flag -->
+	    </if>
+		<if test="next_flag != null and next_flag != ''">
+	          #{next_flag, jdbcType=VARCHAR}, <!-- next_flag -->
+	    </if>
+		<if test="last_flag != null and last_flag != ''">
+	          #{last_flag, jdbcType=VARCHAR}, <!-- last_flag -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_write_topicPO">
+		INSERT INTO archive_write_topic (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{tid, jdbcType=VARCHAR},  <!-- tid -->
+		    #{task_number, jdbcType=VARCHAR},  <!-- task_number -->
+		    #{write_number, jdbcType=VARCHAR},  <!-- write_number -->
+		    #{write_datatime, jdbcType=VARCHAR},  <!-- write_datatime -->
+		    #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+		    #{write_createperson, jdbcType=VARCHAR},  <!-- write_createperson -->
+		    #{write_description, jdbcType=VARCHAR},  <!-- write_description -->
+		    #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+		    #{write_name, jdbcType=VARCHAR},  <!-- write_name -->
+		    #{write_flag, jdbcType=VARCHAR},  <!-- write_flag -->
+		    #{first_flag, jdbcType=VARCHAR},  <!-- first_flag -->
+		    #{next_flag, jdbcType=VARCHAR},  <!-- next_flag -->
+		    #{last_flag, jdbcType=VARCHAR}  <!-- last_flag -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_write_topicPO">
+		UPDATE archive_write_topic
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="tid != null">
+		          tid = #{tid, jdbcType=VARCHAR},  <!-- tid -->
+			</if>
+			<if test="task_number != null">
+		          task_number = #{task_number, jdbcType=VARCHAR},  <!-- task_number -->
+			</if>
+			<if test="write_number != null">
+		          write_number = #{write_number, jdbcType=VARCHAR},  <!-- write_number -->
+			</if>
+			<if test="write_datatime != null">
+		          write_datatime = #{write_datatime, jdbcType=VARCHAR},  <!-- write_datatime -->
+			</if>
+			<if test="tablename != null">
+		          tablename = #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+			</if>
+			<if test="write_createperson != null">
+		          write_createperson = #{write_createperson, jdbcType=VARCHAR},  <!-- write_createperson -->
+			</if>
+			<if test="write_description != null">
+		          write_description = #{write_description, jdbcType=VARCHAR},  <!-- write_description -->
+			</if>
+			<if test="task_name != null">
+		          task_name = #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+			</if>
+			<if test="write_name != null">
+		          write_name = #{write_name, jdbcType=VARCHAR},  <!-- write_name -->
+			</if>
+			<if test="write_flag != null">
+		          write_flag = #{write_flag, jdbcType=VARCHAR},  <!-- write_flag -->
+			</if>
+			<if test="first_flag != null">
+		          first_flag = #{first_flag, jdbcType=VARCHAR},  <!-- first_flag -->
+			</if>
+			<if test="next_flag != null">
+		          next_flag = #{next_flag, jdbcType=VARCHAR},  <!-- next_flag -->
+			</if>
+			<if test="last_flag != null">
+		          last_flag = #{last_flag, jdbcType=VARCHAR},  <!-- last_flag -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_write_topic WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_write_topicPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_write_topic WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_write_topicPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_write_topic
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_write_topicPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_write_topic
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_write_topicPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_write_topic
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_write_topicPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_write_topic
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_write_topicPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_write_topic
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_write_topic
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_write_topic
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  tid,  <!-- tid -->
+		  task_number,  <!-- task_number -->
+		  write_number,  <!-- write_number -->
+		  write_datatime,  <!-- write_datatime -->
+		  tablename,  <!-- tablename -->
+		  write_createperson,  <!-- write_createperson -->
+		  write_description,  <!-- write_description -->
+		  task_name,  <!-- task_name -->
+		  write_name,  <!-- write_name -->
+		  write_flag,  <!-- write_flag -->
+		  first_flag,  <!-- first_flag -->
+		  next_flag,  <!-- next_flag -->
+		  last_flag  <!-- last_flag -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_write_topic.id_,  <!-- id_ -->
+		  archive_write_topic.tid,  <!-- tid -->
+		  archive_write_topic.task_number,  <!-- task_number -->
+		  archive_write_topic.write_number,  <!-- write_number -->
+		  archive_write_topic.write_datatime,  <!-- write_datatime -->
+		  archive_write_topic.tablename,  <!-- tablename -->
+		  archive_write_topic.write_createperson,  <!-- write_createperson -->
+		  archive_write_topic.write_description,  <!-- write_description -->
+		  archive_write_topic.task_name,  <!-- task_name -->
+		  archive_write_topic.write_name,  <!-- write_name -->
+		  archive_write_topic.write_flag,  <!-- write_flag -->
+		  archive_write_topic.first_flag,  <!-- first_flag -->
+		  archive_write_topic.next_flag,  <!-- next_flag -->
+		  archive_write_topic.last_flag  <!-- last_flag -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid = #{tid}  <!-- tid -->
+		</if>
+	    <if test="task_number != null and task_number != ''">
+		      AND task_number = #{task_number}  <!-- task_number -->
+		</if>
+	    <if test="write_number != null and write_number != ''">
+		      AND write_number = #{write_number}  <!-- write_number -->
+		</if>
+	    <if test="write_datatime != null and write_datatime != ''">
+		      AND write_datatime = #{write_datatime}  <!-- write_datatime -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename = #{tablename}  <!-- tablename -->
+		</if>
+	    <if test="write_createperson != null and write_createperson != ''">
+		      AND write_createperson = #{write_createperson}  <!-- write_createperson -->
+		</if>
+	    <if test="write_description != null and write_description != ''">
+		      AND write_description = #{write_description}  <!-- write_description -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name = #{task_name}  <!-- task_name -->
+		</if>
+	    <if test="write_name != null and write_name != ''">
+		      AND write_name = #{write_name}  <!-- write_name -->
+		</if>
+	    <if test="write_flag != null and write_flag != ''">
+		      AND write_flag = #{write_flag}  <!-- write_flag -->
+		</if>
+	    <if test="first_flag != null and first_flag != ''">
+		      AND first_flag = #{first_flag}  <!-- first_flag -->
+		</if>
+	    <if test="next_flag != null and next_flag != ''">
+		      AND next_flag = #{next_flag}  <!-- next_flag -->
+		</if>
+	    <if test="last_flag != null and last_flag != ''">
+		      AND last_flag = #{last_flag}  <!-- last_flag -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid like '%${tid}%'  <!-- tid -->
+		</if>
+	    <if test="task_number != null and task_number != ''">
+		      AND task_number like '%${task_number}%'  <!-- task_number -->
+		</if>
+	    <if test="write_number != null and write_number != ''">
+		      AND write_number like '%${write_number}%'  <!-- write_number -->
+		</if>
+	    <if test="write_datatime != null and write_datatime != ''">
+		      AND write_datatime like '%${write_datatime}%'  <!-- write_datatime -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename like '%${tablename}%'  <!-- tablename -->
+		</if>
+	    <if test="write_createperson != null and write_createperson != ''">
+		      AND write_createperson like '%${write_createperson}%'  <!-- write_createperson -->
+		</if>
+	    <if test="write_description != null and write_description != ''">
+		      AND write_description like '%${write_description}%'  <!-- write_description -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name like '%${task_name}%'  <!-- task_name -->
+		</if>
+	    <if test="write_name != null and write_name != ''">
+		      AND write_name like '%${write_name}%'  <!-- write_name -->
+		</if>
+	    <if test="write_flag != null and write_flag != ''">
+		      AND write_flag like '%${write_flag}%'  <!-- write_flag -->
+		</if>
+	    <if test="first_flag != null and first_flag != ''">
+		      AND first_flag like '%${first_flag}%'  <!-- first_flag -->
+		</if>
+	    <if test="next_flag != null and next_flag != ''">
+		      AND next_flag like '%${next_flag}%'  <!-- next_flag -->
+		</if>
+	    <if test="last_flag != null and last_flag != ''">
+		      AND last_flag like '%${last_flag}%'  <!-- last_flag -->
+		</if>
+	</sql>
+	
+</mapper>

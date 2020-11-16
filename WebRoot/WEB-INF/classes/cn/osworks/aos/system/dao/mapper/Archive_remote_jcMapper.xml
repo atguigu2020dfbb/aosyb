@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_remote_jc[archive_remote_jc]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-10-30 15:53:01 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_remote_jcMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_remote_jcPO">
+		INSERT INTO archive_remote_jc (
+		<if test="tablename != null and tablename != ''">
+	         tablename, <!-- tablename -->
+		</if>
+		<if test="data_id != null and data_id != ''">
+	         data_id, <!-- data_id -->
+		</if>
+		<if test="dh != null and dh != ''">
+	         dh, <!-- dh -->
+		</if>
+		<if test="qzdw != null and qzdw != ''">
+	         qzdw, <!-- qzdw -->
+		</if>
+		<if test="daml != null and daml != ''">
+	         daml, <!-- daml -->
+		</if>
+		<if test="tm != null and tm != ''">
+	         tm, <!-- tm -->
+		</if>
+		<if test="cwrq != null and cwrq != ''">
+	         cwrq, <!-- cwrq -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="cishu != null">
+	         cishu, <!-- cishu -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="tablename != null and tablename != ''">
+	          #{tablename, jdbcType=VARCHAR}, <!-- tablename -->
+	    </if>
+		<if test="data_id != null and data_id != ''">
+	          #{data_id, jdbcType=VARCHAR}, <!-- data_id -->
+	    </if>
+		<if test="dh != null and dh != ''">
+	          #{dh, jdbcType=VARCHAR}, <!-- dh -->
+	    </if>
+		<if test="qzdw != null and qzdw != ''">
+	          #{qzdw, jdbcType=VARCHAR}, <!-- qzdw -->
+	    </if>
+		<if test="daml != null and daml != ''">
+	          #{daml, jdbcType=VARCHAR}, <!-- daml -->
+	    </if>
+		<if test="tm != null and tm != ''">
+	          #{tm, jdbcType=VARCHAR}, <!-- tm -->
+	    </if>
+		<if test="cwrq != null and cwrq != ''">
+	          #{cwrq, jdbcType=VARCHAR}, <!-- cwrq -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="cishu != null">
+	          #{cishu, jdbcType=INTEGER}, <!-- cishu -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_remote_jcPO">
+		INSERT INTO archive_remote_jc (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+		    #{data_id, jdbcType=VARCHAR},  <!-- data_id -->
+		    #{dh, jdbcType=VARCHAR},  <!-- dh -->
+		    #{qzdw, jdbcType=VARCHAR},  <!-- qzdw -->
+		    #{daml, jdbcType=VARCHAR},  <!-- daml -->
+		    #{tm, jdbcType=VARCHAR},  <!-- tm -->
+		    #{cwrq, jdbcType=VARCHAR},  <!-- cwrq -->
+		    #{bz, jdbcType=VARCHAR},  <!-- bz -->
+		    #{cishu, jdbcType=INTEGER}  <!-- cishu -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_remote_jcPO">
+		UPDATE archive_remote_jc
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="tablename != null">
+		          tablename = #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+			</if>
+			<if test="data_id != null">
+		          data_id = #{data_id, jdbcType=VARCHAR},  <!-- data_id -->
+			</if>
+			<if test="dh != null">
+		          dh = #{dh, jdbcType=VARCHAR},  <!-- dh -->
+			</if>
+			<if test="qzdw != null">
+		          qzdw = #{qzdw, jdbcType=VARCHAR},  <!-- qzdw -->
+			</if>
+			<if test="daml != null">
+		          daml = #{daml, jdbcType=VARCHAR},  <!-- daml -->
+			</if>
+			<if test="tm != null">
+		          tm = #{tm, jdbcType=VARCHAR},  <!-- tm -->
+			</if>
+			<if test="cwrq != null">
+		          cwrq = #{cwrq, jdbcType=VARCHAR},  <!-- cwrq -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+			<if test="cishu != null">
+		          cishu = #{cishu, jdbcType=INTEGER},  <!-- cishu -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_remote_jc WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_remote_jcPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_remote_jc WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_remote_jcPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_remote_jc
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_remote_jcPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_remote_jc
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_remote_jcPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_remote_jc
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_remote_jcPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_remote_jc
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_remote_jcPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_remote_jc
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_remote_jc
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_remote_jc
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  tablename,  <!-- tablename -->
+		  data_id,  <!-- data_id -->
+		  dh,  <!-- dh -->
+		  qzdw,  <!-- qzdw -->
+		  daml,  <!-- daml -->
+		  tm,  <!-- tm -->
+		  cwrq,  <!-- cwrq -->
+		  bz,  <!-- bz -->
+		  cishu  <!-- cishu -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_remote_jc.id_,  <!-- id_ -->
+		  archive_remote_jc.tablename,  <!-- tablename -->
+		  archive_remote_jc.data_id,  <!-- data_id -->
+		  archive_remote_jc.dh,  <!-- dh -->
+		  archive_remote_jc.qzdw,  <!-- qzdw -->
+		  archive_remote_jc.daml,  <!-- daml -->
+		  archive_remote_jc.tm,  <!-- tm -->
+		  archive_remote_jc.cwrq,  <!-- cwrq -->
+		  archive_remote_jc.bz,  <!-- bz -->
+		  archive_remote_jc.cishu  <!-- cishu -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename = #{tablename}  <!-- tablename -->
+		</if>
+	    <if test="data_id != null and data_id != ''">
+		      AND data_id = #{data_id}  <!-- data_id -->
+		</if>
+	    <if test="dh != null and dh != ''">
+		      AND dh = #{dh}  <!-- dh -->
+		</if>
+	    <if test="qzdw != null and qzdw != ''">
+		      AND qzdw = #{qzdw}  <!-- qzdw -->
+		</if>
+	    <if test="daml != null and daml != ''">
+		      AND daml = #{daml}  <!-- daml -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm = #{tm}  <!-- tm -->
+		</if>
+	    <if test="cwrq != null and cwrq != ''">
+		      AND cwrq = #{cwrq}  <!-- cwrq -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	   <if test="cishu != null ">
+		      AND cishu = #{cishu}  <!-- cishu -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename like '%${tablename}%'  <!-- tablename -->
+		</if>
+	    <if test="data_id != null and data_id != ''">
+		      AND data_id like '%${data_id}%'  <!-- data_id -->
+		</if>
+	    <if test="dh != null and dh != ''">
+		      AND dh like '%${dh}%'  <!-- dh -->
+		</if>
+	    <if test="qzdw != null and qzdw != ''">
+		      AND qzdw like '%${qzdw}%'  <!-- qzdw -->
+		</if>
+	    <if test="daml != null and daml != ''">
+		      AND daml like '%${daml}%'  <!-- daml -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm like '%${tm}%'  <!-- tm -->
+		</if>
+	    <if test="cwrq != null and cwrq != ''">
+		      AND cwrq like '%${cwrq}%'  <!-- cwrq -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	</sql>
+	
+</mapper>

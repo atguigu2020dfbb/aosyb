@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_transfer[archive_transfer]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-11-08 09:15:02 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_transferMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_transferPO">
+		INSERT INTO archive_transfer (
+		<if test="transfer_number != null and transfer_number != ''">
+	         transfer_number, <!-- transfer_number -->
+		</if>
+		<if test="transfer_purpose != null and transfer_purpose != ''">
+	         transfer_purpose, <!-- transfer_purpose -->
+		</if>
+		<if test="transfer_time != null and transfer_time != ''">
+	         transfer_time, <!-- transfer_time -->
+		</if>
+		<if test="transfer_description != null and transfer_description != ''">
+	         transfer_description, <!-- transfer_description -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+	         tablename, <!-- tablename -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="transfer_number != null and transfer_number != ''">
+	          #{transfer_number, jdbcType=VARCHAR}, <!-- transfer_number -->
+	    </if>
+		<if test="transfer_purpose != null and transfer_purpose != ''">
+	          #{transfer_purpose, jdbcType=VARCHAR}, <!-- transfer_purpose -->
+	    </if>
+		<if test="transfer_time != null and transfer_time != ''">
+	          #{transfer_time, jdbcType=VARCHAR}, <!-- transfer_time -->
+	    </if>
+		<if test="transfer_description != null and transfer_description != ''">
+	          #{transfer_description, jdbcType=VARCHAR}, <!-- transfer_description -->
+	    </if>
+		<if test="tablename != null and tablename != ''">
+	          #{tablename, jdbcType=VARCHAR}, <!-- tablename -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_transferPO">
+		INSERT INTO archive_transfer (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{transfer_number, jdbcType=VARCHAR},  <!-- transfer_number -->
+		    #{transfer_purpose, jdbcType=VARCHAR},  <!-- transfer_purpose -->
+		    #{transfer_time, jdbcType=VARCHAR},  <!-- transfer_time -->
+		    #{transfer_description, jdbcType=VARCHAR},  <!-- transfer_description -->
+		    #{tablename, jdbcType=VARCHAR}  <!-- tablename -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_transferPO">
+		UPDATE archive_transfer
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="transfer_number != null">
+		          transfer_number = #{transfer_number, jdbcType=VARCHAR},  <!-- transfer_number -->
+			</if>
+			<if test="transfer_purpose != null">
+		          transfer_purpose = #{transfer_purpose, jdbcType=VARCHAR},  <!-- transfer_purpose -->
+			</if>
+			<if test="transfer_time != null">
+		          transfer_time = #{transfer_time, jdbcType=VARCHAR},  <!-- transfer_time -->
+			</if>
+			<if test="transfer_description != null">
+		          transfer_description = #{transfer_description, jdbcType=VARCHAR},  <!-- transfer_description -->
+			</if>
+			<if test="tablename != null">
+		          tablename = #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_transfer WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_transferPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_transfer WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_transferPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_transfer
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_transferPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_transfer
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_transferPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_transfer
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_transferPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_transfer
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_transferPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_transfer
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_transfer
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_transfer
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  transfer_number,  <!-- transfer_number -->
+		  transfer_purpose,  <!-- transfer_purpose -->
+		  transfer_time,  <!-- transfer_time -->
+		  transfer_description,  <!-- transfer_description -->
+		  tablename  <!-- tablename -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_transfer.id_,  <!-- id_ -->
+		  archive_transfer.transfer_number,  <!-- transfer_number -->
+		  archive_transfer.transfer_purpose,  <!-- transfer_purpose -->
+		  archive_transfer.transfer_time,  <!-- transfer_time -->
+		  archive_transfer.transfer_description,  <!-- transfer_description -->
+		  archive_transfer.tablename  <!-- tablename -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="transfer_number != null and transfer_number != ''">
+		      AND transfer_number = #{transfer_number}  <!-- transfer_number -->
+		</if>
+	    <if test="transfer_purpose != null and transfer_purpose != ''">
+		      AND transfer_purpose = #{transfer_purpose}  <!-- transfer_purpose -->
+		</if>
+	    <if test="transfer_time != null and transfer_time != ''">
+		      AND transfer_time = #{transfer_time}  <!-- transfer_time -->
+		</if>
+	    <if test="transfer_description != null and transfer_description != ''">
+		      AND transfer_description = #{transfer_description}  <!-- transfer_description -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename = #{tablename}  <!-- tablename -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="transfer_number != null and transfer_number != ''">
+		      AND transfer_number like '%${transfer_number}%'  <!-- transfer_number -->
+		</if>
+	    <if test="transfer_purpose != null and transfer_purpose != ''">
+		      AND transfer_purpose like '%${transfer_purpose}%'  <!-- transfer_purpose -->
+		</if>
+	    <if test="transfer_time != null and transfer_time != ''">
+		      AND transfer_time like '%${transfer_time}%'  <!-- transfer_time -->
+		</if>
+	    <if test="transfer_description != null and transfer_description != ''">
+		      AND transfer_description like '%${transfer_description}%'  <!-- transfer_description -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename like '%${tablename}%'  <!-- tablename -->
+		</if>
+	</sql>
+	
+</mapper>

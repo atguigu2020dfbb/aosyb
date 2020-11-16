@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_compilation_hg[archive_compilation_hg]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-02-24 12:01:51 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_compilation_hgMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_compilation_hgPO">
+		INSERT INTO archive_compilation_hg (
+		<if test="rw_id_ != null and rw_id_ != ''">
+	         rw_id_, <!-- rw_id_ -->
+		</if>
+		<if test="username != null and username != ''">
+	         username, <!-- username -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+	         tablename, <!-- tablename -->
+		</if>
+		<if test="hg_path != null and hg_path != ''">
+	         hg_path, <!-- hg_path -->
+		</if>
+		<if test="hg_description != null and hg_description != ''">
+	         hg_description, <!-- hg_description -->
+		</if>
+		<if test="operate_time != null and operate_time != ''">
+	         operate_time, <!-- operate_time -->
+		</if>
+		<if test="jd_description != null and jd_description != ''">
+	         jd_description, <!-- jd_description -->
+		</if>
+		<if test="zbj_description != null and zbj_description != ''">
+	         zbj_description, <!-- zbj_description -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="rw_id_ != null and rw_id_ != ''">
+	          #{rw_id_, jdbcType=VARCHAR}, <!-- rw_id_ -->
+	    </if>
+		<if test="username != null and username != ''">
+	          #{username, jdbcType=VARCHAR}, <!-- username -->
+	    </if>
+		<if test="tablename != null and tablename != ''">
+	          #{tablename, jdbcType=VARCHAR}, <!-- tablename -->
+	    </if>
+		<if test="hg_path != null and hg_path != ''">
+	          #{hg_path, jdbcType=VARCHAR}, <!-- hg_path -->
+	    </if>
+		<if test="hg_description != null and hg_description != ''">
+	          #{hg_description, jdbcType=VARCHAR}, <!-- hg_description -->
+	    </if>
+		<if test="operate_time != null and operate_time != ''">
+	          #{operate_time, jdbcType=VARCHAR}, <!-- operate_time -->
+	    </if>
+		<if test="jd_description != null and jd_description != ''">
+	          #{jd_description, jdbcType=VARCHAR}, <!-- jd_description -->
+	    </if>
+		<if test="zbj_description != null and zbj_description != ''">
+	          #{zbj_description, jdbcType=VARCHAR}, <!-- zbj_description -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_compilation_hgPO">
+		INSERT INTO archive_compilation_hg (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{rw_id_, jdbcType=VARCHAR},  <!-- rw_id_ -->
+		    #{username, jdbcType=VARCHAR},  <!-- username -->
+		    #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+		    #{hg_path, jdbcType=VARCHAR},  <!-- hg_path -->
+		    #{hg_description, jdbcType=VARCHAR},  <!-- hg_description -->
+		    #{operate_time, jdbcType=VARCHAR},  <!-- operate_time -->
+		    #{jd_description, jdbcType=VARCHAR},  <!-- jd_description -->
+		    #{zbj_description, jdbcType=VARCHAR}  <!-- zbj_description -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_compilation_hgPO">
+		UPDATE archive_compilation_hg
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="rw_id_ != null">
+		          rw_id_ = #{rw_id_, jdbcType=VARCHAR},  <!-- rw_id_ -->
+			</if>
+			<if test="username != null">
+		          username = #{username, jdbcType=VARCHAR},  <!-- username -->
+			</if>
+			<if test="tablename != null">
+		          tablename = #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+			</if>
+			<if test="hg_path != null">
+		          hg_path = #{hg_path, jdbcType=VARCHAR},  <!-- hg_path -->
+			</if>
+			<if test="hg_description != null">
+		          hg_description = #{hg_description, jdbcType=VARCHAR},  <!-- hg_description -->
+			</if>
+			<if test="operate_time != null">
+		          operate_time = #{operate_time, jdbcType=VARCHAR},  <!-- operate_time -->
+			</if>
+			<if test="jd_description != null">
+		          jd_description = #{jd_description, jdbcType=VARCHAR},  <!-- jd_description -->
+			</if>
+			<if test="zbj_description != null">
+		          zbj_description = #{zbj_description, jdbcType=VARCHAR},  <!-- zbj_description -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_compilation_hg WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_compilation_hgPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_compilation_hg WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_compilation_hgPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_compilation_hg
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_compilation_hgPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_compilation_hg
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_compilation_hgPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_compilation_hg
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_compilation_hgPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_compilation_hg
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_compilation_hgPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_compilation_hg
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_compilation_hg
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_compilation_hg
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  rw_id_,  <!-- rw_id_ -->
+		  username,  <!-- username -->
+		  tablename,  <!-- tablename -->
+		  hg_path,  <!-- hg_path -->
+		  hg_description,  <!-- hg_description -->
+		  operate_time,  <!-- operate_time -->
+		  jd_description,  <!-- jd_description -->
+		  zbj_description  <!-- zbj_description -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_compilation_hg.id_,  <!-- id_ -->
+		  archive_compilation_hg.rw_id_,  <!-- rw_id_ -->
+		  archive_compilation_hg.username,  <!-- username -->
+		  archive_compilation_hg.tablename,  <!-- tablename -->
+		  archive_compilation_hg.hg_path,  <!-- hg_path -->
+		  archive_compilation_hg.hg_description,  <!-- hg_description -->
+		  archive_compilation_hg.operate_time,  <!-- operate_time -->
+		  archive_compilation_hg.jd_description,  <!-- jd_description -->
+		  archive_compilation_hg.zbj_description  <!-- zbj_description -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="rw_id_ != null and rw_id_ != ''">
+		      AND rw_id_ = #{rw_id_}  <!-- rw_id_ -->
+		</if>
+	    <if test="username != null and username != ''">
+		      AND username = #{username}  <!-- username -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename = #{tablename}  <!-- tablename -->
+		</if>
+	    <if test="hg_path != null and hg_path != ''">
+		      AND hg_path = #{hg_path}  <!-- hg_path -->
+		</if>
+	    <if test="hg_description != null and hg_description != ''">
+		      AND hg_description = #{hg_description}  <!-- hg_description -->
+		</if>
+	    <if test="operate_time != null and operate_time != ''">
+		      AND operate_time = #{operate_time}  <!-- operate_time -->
+		</if>
+	    <if test="jd_description != null and jd_description != ''">
+		      AND jd_description = #{jd_description}  <!-- jd_description -->
+		</if>
+	    <if test="zbj_description != null and zbj_description != ''">
+		      AND zbj_description = #{zbj_description}  <!-- zbj_description -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="rw_id_ != null and rw_id_ != ''">
+		      AND rw_id_ like '%${rw_id_}%'  <!-- rw_id_ -->
+		</if>
+	    <if test="username != null and username != ''">
+		      AND username like '%${username}%'  <!-- username -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename like '%${tablename}%'  <!-- tablename -->
+		</if>
+	    <if test="hg_path != null and hg_path != ''">
+		      AND hg_path like '%${hg_path}%'  <!-- hg_path -->
+		</if>
+	    <if test="hg_description != null and hg_description != ''">
+		      AND hg_description like '%${hg_description}%'  <!-- hg_description -->
+		</if>
+	    <if test="operate_time != null and operate_time != ''">
+		      AND operate_time like '%${operate_time}%'  <!-- operate_time -->
+		</if>
+	    <if test="jd_description != null and jd_description != ''">
+		      AND jd_description like '%${jd_description}%'  <!-- jd_description -->
+		</if>
+	    <if test="zbj_description != null and zbj_description != ''">
+		      AND zbj_description like '%${zbj_description}%'  <!-- zbj_description -->
+		</if>
+	</sql>
+	
+</mapper>

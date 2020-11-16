@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- backups_carrier[backups_carrier]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-12-24 17:51:46 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Backups_carrierMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Backups_carrierPO">
+		INSERT INTO backups_carrier (
+		<if test="bfmc != null and bfmc != ''">
+	         bfmc, <!-- bfmc -->
+		</if>
+		<if test="bfdx != null and bfdx != ''">
+	         bfdx, <!-- bfdx -->
+		</if>
+		<if test="bfsj != null and bfsj != ''">
+	         bfsj, <!-- bfsj -->
+		</if>
+		<if test="bfgs != null and bfgs != ''">
+	         bfgs, <!-- bfgs -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="bfmc != null and bfmc != ''">
+	          #{bfmc, jdbcType=VARCHAR}, <!-- bfmc -->
+	    </if>
+		<if test="bfdx != null and bfdx != ''">
+	          #{bfdx, jdbcType=VARCHAR}, <!-- bfdx -->
+	    </if>
+		<if test="bfsj != null and bfsj != ''">
+	          #{bfsj, jdbcType=VARCHAR}, <!-- bfsj -->
+	    </if>
+		<if test="bfgs != null and bfgs != ''">
+	          #{bfgs, jdbcType=VARCHAR}, <!-- bfgs -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Backups_carrierPO">
+		INSERT INTO backups_carrier (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{bfmc, jdbcType=VARCHAR},  <!-- bfmc -->
+		    #{bfdx, jdbcType=VARCHAR},  <!-- bfdx -->
+		    #{bfsj, jdbcType=VARCHAR},  <!-- bfsj -->
+		    #{bfgs, jdbcType=VARCHAR},  <!-- bfgs -->
+		    #{bz, jdbcType=VARCHAR}  <!-- bz -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Backups_carrierPO">
+		UPDATE backups_carrier
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="bfmc != null">
+		          bfmc = #{bfmc, jdbcType=VARCHAR},  <!-- bfmc -->
+			</if>
+			<if test="bfdx != null">
+		          bfdx = #{bfdx, jdbcType=VARCHAR},  <!-- bfdx -->
+			</if>
+			<if test="bfsj != null">
+		          bfsj = #{bfsj, jdbcType=VARCHAR},  <!-- bfsj -->
+			</if>
+			<if test="bfgs != null">
+		          bfgs = #{bfgs, jdbcType=VARCHAR},  <!-- bfgs -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM backups_carrier WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Backups_carrierPO">
+		SELECT
+		<include refid="column" />
+		FROM backups_carrier WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Backups_carrierPO">
+		SELECT
+		    <include refid="column" />
+		FROM backups_carrier
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Backups_carrierPO">
+		SELECT
+			<include refid="column" />	
+		FROM backups_carrier
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Backups_carrierPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM backups_carrier
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Backups_carrierPO">
+		SELECT
+			<include refid="column" />	
+		FROM backups_carrier
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Backups_carrierPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM backups_carrier
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM backups_carrier
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM backups_carrier
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  bfmc,  <!-- bfmc -->
+		  bfdx,  <!-- bfdx -->
+		  bfsj,  <!-- bfsj -->
+		  bfgs,  <!-- bfgs -->
+		  bz  <!-- bz -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  backups_carrier.id_,  <!-- id_ -->
+		  backups_carrier.bfmc,  <!-- bfmc -->
+		  backups_carrier.bfdx,  <!-- bfdx -->
+		  backups_carrier.bfsj,  <!-- bfsj -->
+		  backups_carrier.bfgs,  <!-- bfgs -->
+		  backups_carrier.bz  <!-- bz -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="bfmc != null and bfmc != ''">
+		      AND bfmc = #{bfmc}  <!-- bfmc -->
+		</if>
+	    <if test="bfdx != null and bfdx != ''">
+		      AND bfdx = #{bfdx}  <!-- bfdx -->
+		</if>
+	    <if test="bfsj != null and bfsj != ''">
+		      AND bfsj = #{bfsj}  <!-- bfsj -->
+		</if>
+	    <if test="bfgs != null and bfgs != ''">
+		      AND bfgs = #{bfgs}  <!-- bfgs -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="bfmc != null and bfmc != ''">
+		      AND bfmc like '%${bfmc}%'  <!-- bfmc -->
+		</if>
+	    <if test="bfdx != null and bfdx != ''">
+		      AND bfdx like '%${bfdx}%'  <!-- bfdx -->
+		</if>
+	    <if test="bfsj != null and bfsj != ''">
+		      AND bfsj like '%${bfsj}%'  <!-- bfsj -->
+		</if>
+	    <if test="bfgs != null and bfgs != ''">
+		      AND bfgs like '%${bfgs}%'  <!-- bfgs -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	</sql>
+	
+</mapper>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- depot_cz[depot_cz]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-08-13 13:58:35 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Depot_czMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Depot_czPO">
+		INSERT INTO depot_cz (
+		<if test="cz_bh != null and cz_bh != ''">
+	         cz_bh, <!-- cz_bh -->
+		</if>
+		<if test="cz_liehao != null">
+	         cz_liehao, <!-- cz_liehao -->
+		</if>
+		<if test="cz_zuhao != null and cz_zuhao != ''">
+	         cz_zuhao, <!-- cz_zuhao -->
+		</if>
+		<if test="cz_jiehao != null and cz_jiehao != ''">
+	         cz_jiehao, <!-- cz_jiehao -->
+		</if>
+		<if test="cz_gehao != null and cz_gehao != ''">
+	         cz_gehao, <!-- cz_gehao -->
+		</if>
+		<if test="cz_name != null and cz_name != ''">
+	         cz_name, <!-- cz_name -->
+		</if>
+		<if test="archive_storehouse != null and archive_storehouse != ''">
+	         archive_storehouse, <!-- archive_storehouse -->
+		</if>
+		<if test="djnd != null and djnd != ''">
+	         djnd, <!-- djnd -->
+		</if>
+		<if test="djqz != null and djqz != ''">
+	         djqz, <!-- djqz -->
+		</if>
+		<if test="kfbh != null and kfbh != ''">
+	         kfbh, <!-- kfbh -->
+		</if>
+		<if test="djr_cn != null and djr_cn != ''">
+	         djr_cn, <!-- djr_cn -->
+		</if>
+		<if test="djr_en != null and djr_en != ''">
+	         djr_en, <!-- djr_en -->
+		</if>
+		<if test="djsj != null and djsj != ''">
+	         djsj, <!-- djsj -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="cz_bh != null and cz_bh != ''">
+	          #{cz_bh, jdbcType=VARCHAR}, <!-- cz_bh -->
+	    </if>
+		<if test="cz_liehao != null">
+	          #{cz_liehao, jdbcType=INTEGER}, <!-- cz_liehao -->
+	    </if>
+		<if test="cz_zuhao != null and cz_zuhao != ''">
+	          #{cz_zuhao, jdbcType=VARCHAR}, <!-- cz_zuhao -->
+	    </if>
+		<if test="cz_jiehao != null and cz_jiehao != ''">
+	          #{cz_jiehao, jdbcType=VARCHAR}, <!-- cz_jiehao -->
+	    </if>
+		<if test="cz_gehao != null and cz_gehao != ''">
+	          #{cz_gehao, jdbcType=VARCHAR}, <!-- cz_gehao -->
+	    </if>
+		<if test="cz_name != null and cz_name != ''">
+	          #{cz_name, jdbcType=VARCHAR}, <!-- cz_name -->
+	    </if>
+		<if test="archive_storehouse != null and archive_storehouse != ''">
+	          #{archive_storehouse, jdbcType=VARCHAR}, <!-- archive_storehouse -->
+	    </if>
+		<if test="djnd != null and djnd != ''">
+	          #{djnd, jdbcType=VARCHAR}, <!-- djnd -->
+	    </if>
+		<if test="djqz != null and djqz != ''">
+	          #{djqz, jdbcType=VARCHAR}, <!-- djqz -->
+	    </if>
+		<if test="kfbh != null and kfbh != ''">
+	          #{kfbh, jdbcType=VARCHAR}, <!-- kfbh -->
+	    </if>
+		<if test="djr_cn != null and djr_cn != ''">
+	          #{djr_cn, jdbcType=VARCHAR}, <!-- djr_cn -->
+	    </if>
+		<if test="djr_en != null and djr_en != ''">
+	          #{djr_en, jdbcType=VARCHAR}, <!-- djr_en -->
+	    </if>
+		<if test="djsj != null and djsj != ''">
+	          #{djsj, jdbcType=VARCHAR}, <!-- djsj -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Depot_czPO">
+		INSERT INTO depot_cz (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{cz_bh, jdbcType=VARCHAR},  <!-- cz_bh -->
+		    #{cz_liehao, jdbcType=INTEGER},  <!-- cz_liehao -->
+		    #{cz_zuhao, jdbcType=VARCHAR},  <!-- cz_zuhao -->
+		    #{cz_jiehao, jdbcType=VARCHAR},  <!-- cz_jiehao -->
+		    #{cz_gehao, jdbcType=VARCHAR},  <!-- cz_gehao -->
+		    #{cz_name, jdbcType=VARCHAR},  <!-- cz_name -->
+		    #{archive_storehouse, jdbcType=VARCHAR},  <!-- archive_storehouse -->
+		    #{djnd, jdbcType=VARCHAR},  <!-- djnd -->
+		    #{djqz, jdbcType=VARCHAR},  <!-- djqz -->
+		    #{kfbh, jdbcType=VARCHAR},  <!-- kfbh -->
+		    #{djr_cn, jdbcType=VARCHAR},  <!-- djr_cn -->
+		    #{djr_en, jdbcType=VARCHAR},  <!-- djr_en -->
+		    #{djsj, jdbcType=VARCHAR},  <!-- djsj -->
+		    #{bz, jdbcType=VARCHAR}  <!-- bz -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Depot_czPO">
+		UPDATE depot_cz
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="cz_bh != null">
+		          cz_bh = #{cz_bh, jdbcType=VARCHAR},  <!-- cz_bh -->
+			</if>
+			<if test="cz_liehao != null">
+		          cz_liehao = #{cz_liehao, jdbcType=INTEGER},  <!-- cz_liehao -->
+			</if>
+			<if test="cz_zuhao != null">
+		          cz_zuhao = #{cz_zuhao, jdbcType=VARCHAR},  <!-- cz_zuhao -->
+			</if>
+			<if test="cz_jiehao != null">
+		          cz_jiehao = #{cz_jiehao, jdbcType=VARCHAR},  <!-- cz_jiehao -->
+			</if>
+			<if test="cz_gehao != null">
+		          cz_gehao = #{cz_gehao, jdbcType=VARCHAR},  <!-- cz_gehao -->
+			</if>
+			<if test="cz_name != null">
+		          cz_name = #{cz_name, jdbcType=VARCHAR},  <!-- cz_name -->
+			</if>
+			<if test="archive_storehouse != null">
+		          archive_storehouse = #{archive_storehouse, jdbcType=VARCHAR},  <!-- archive_storehouse -->
+			</if>
+			<if test="djnd != null">
+		          djnd = #{djnd, jdbcType=VARCHAR},  <!-- djnd -->
+			</if>
+			<if test="djqz != null">
+		          djqz = #{djqz, jdbcType=VARCHAR},  <!-- djqz -->
+			</if>
+			<if test="kfbh != null">
+		          kfbh = #{kfbh, jdbcType=VARCHAR},  <!-- kfbh -->
+			</if>
+			<if test="djr_cn != null">
+		          djr_cn = #{djr_cn, jdbcType=VARCHAR},  <!-- djr_cn -->
+			</if>
+			<if test="djr_en != null">
+		          djr_en = #{djr_en, jdbcType=VARCHAR},  <!-- djr_en -->
+			</if>
+			<if test="djsj != null">
+		          djsj = #{djsj, jdbcType=VARCHAR},  <!-- djsj -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM depot_cz WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Depot_czPO">
+		SELECT
+		<include refid="column" />
+		FROM depot_cz WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Depot_czPO">
+		SELECT
+		    <include refid="column" />
+		FROM depot_cz
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Depot_czPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_cz
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Depot_czPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_cz
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Depot_czPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_cz
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Depot_czPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_cz
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM depot_cz
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM depot_cz
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  cz_bh,  <!-- cz_bh -->
+		  cz_liehao,  <!-- cz_liehao -->
+		  cz_zuhao,  <!-- cz_zuhao -->
+		  cz_jiehao,  <!-- cz_jiehao -->
+		  cz_gehao,  <!-- cz_gehao -->
+		  cz_name,  <!-- cz_name -->
+		  archive_storehouse,  <!-- archive_storehouse -->
+		  djnd,  <!-- djnd -->
+		  djqz,  <!-- djqz -->
+		  kfbh,  <!-- kfbh -->
+		  djr_cn,  <!-- djr_cn -->
+		  djr_en,  <!-- djr_en -->
+		  djsj,  <!-- djsj -->
+		  bz  <!-- bz -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  depot_cz.id_,  <!-- id_ -->
+		  depot_cz.cz_bh,  <!-- cz_bh -->
+		  depot_cz.cz_liehao,  <!-- cz_liehao -->
+		  depot_cz.cz_zuhao,  <!-- cz_zuhao -->
+		  depot_cz.cz_jiehao,  <!-- cz_jiehao -->
+		  depot_cz.cz_gehao,  <!-- cz_gehao -->
+		  depot_cz.cz_name,  <!-- cz_name -->
+		  depot_cz.archive_storehouse,  <!-- archive_storehouse -->
+		  depot_cz.djnd,  <!-- djnd -->
+		  depot_cz.djqz,  <!-- djqz -->
+		  depot_cz.kfbh,  <!-- kfbh -->
+		  depot_cz.djr_cn,  <!-- djr_cn -->
+		  depot_cz.djr_en,  <!-- djr_en -->
+		  depot_cz.djsj,  <!-- djsj -->
+		  depot_cz.bz  <!-- bz -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="cz_bh != null and cz_bh != ''">
+		      AND cz_bh = #{cz_bh}  <!-- cz_bh -->
+		</if>
+	   <if test="cz_liehao != null ">
+		      AND cz_liehao = #{cz_liehao}  <!-- cz_liehao -->
+		</if>
+	    <if test="cz_zuhao != null and cz_zuhao != ''">
+		      AND cz_zuhao = #{cz_zuhao}  <!-- cz_zuhao -->
+		</if>
+	    <if test="cz_jiehao != null and cz_jiehao != ''">
+		      AND cz_jiehao = #{cz_jiehao}  <!-- cz_jiehao -->
+		</if>
+	    <if test="cz_gehao != null and cz_gehao != ''">
+		      AND cz_gehao = #{cz_gehao}  <!-- cz_gehao -->
+		</if>
+	    <if test="cz_name != null and cz_name != ''">
+		      AND cz_name = #{cz_name}  <!-- cz_name -->
+		</if>
+	    <if test="archive_storehouse != null and archive_storehouse != ''">
+		      AND archive_storehouse = #{archive_storehouse}  <!-- archive_storehouse -->
+		</if>
+	    <if test="djnd != null and djnd != ''">
+		      AND djnd = #{djnd}  <!-- djnd -->
+		</if>
+	    <if test="djqz != null and djqz != ''">
+		      AND djqz = #{djqz}  <!-- djqz -->
+		</if>
+	    <if test="kfbh != null and kfbh != ''">
+		      AND kfbh = #{kfbh}  <!-- kfbh -->
+		</if>
+	    <if test="djr_cn != null and djr_cn != ''">
+		      AND djr_cn = #{djr_cn}  <!-- djr_cn -->
+		</if>
+	    <if test="djr_en != null and djr_en != ''">
+		      AND djr_en = #{djr_en}  <!-- djr_en -->
+		</if>
+	    <if test="djsj != null and djsj != ''">
+		      AND djsj = #{djsj}  <!-- djsj -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="cz_bh != null and cz_bh != ''">
+		      AND cz_bh like '%${cz_bh}%'  <!-- cz_bh -->
+		</if>
+	    <if test="cz_zuhao != null and cz_zuhao != ''">
+		      AND cz_zuhao like '%${cz_zuhao}%'  <!-- cz_zuhao -->
+		</if>
+	    <if test="cz_jiehao != null and cz_jiehao != ''">
+		      AND cz_jiehao like '%${cz_jiehao}%'  <!-- cz_jiehao -->
+		</if>
+	    <if test="cz_gehao != null and cz_gehao != ''">
+		      AND cz_gehao like '%${cz_gehao}%'  <!-- cz_gehao -->
+		</if>
+	    <if test="cz_name != null and cz_name != ''">
+		      AND cz_name like '%${cz_name}%'  <!-- cz_name -->
+		</if>
+	    <if test="archive_storehouse != null and archive_storehouse != ''">
+		      AND archive_storehouse like '%${archive_storehouse}%'  <!-- archive_storehouse -->
+		</if>
+	    <if test="djnd != null and djnd != ''">
+		      AND djnd like '%${djnd}%'  <!-- djnd -->
+		</if>
+	    <if test="djqz != null and djqz != ''">
+		      AND djqz like '%${djqz}%'  <!-- djqz -->
+		</if>
+	    <if test="kfbh != null and kfbh != ''">
+		      AND kfbh like '%${kfbh}%'  <!-- kfbh -->
+		</if>
+	    <if test="djr_cn != null and djr_cn != ''">
+		      AND djr_cn like '%${djr_cn}%'  <!-- djr_cn -->
+		</if>
+	    <if test="djr_en != null and djr_en != ''">
+		      AND djr_en like '%${djr_en}%'  <!-- djr_en -->
+		</if>
+	    <if test="djsj != null and djsj != ''">
+		      AND djsj like '%${djsj}%'  <!-- djsj -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	</sql>
+	
+</mapper>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- depot_ry[depot_ry]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-08-14 11:14:11 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Depot_ryMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Depot_ryPO">
+		INSERT INTO depot_ry (
+		<if test="lsh != null and lsh != ''">
+	         lsh, <!-- lsh -->
+		</if>
+		<if test="f_recid != null and f_recid != ''">
+	         f_recid, <!-- f_recid -->
+		</if>
+		<if test="glnd != null and glnd != ''">
+	         glnd, <!-- glnd -->
+		</if>
+		<if test="f_eventtype != null and f_eventtype != ''">
+	         f_eventtype, <!-- f_eventtype -->
+		</if>
+		<if test="f_eventdesc != null and f_eventdesc != ''">
+	         f_eventdesc, <!-- f_eventdesc -->
+		</if>
+		<if test="f_userid != null and f_userid != ''">
+	         f_userid, <!-- f_userid -->
+		</if>
+		<if test="card != null and card != ''">
+	         card, <!-- card -->
+		</if>
+		<if test="xm != null and xm != ''">
+	         xm, <!-- xm -->
+		</if>
+		<if test="lx != null and lx != ''">
+	         lx, <!-- lx -->
+		</if>
+		<if test="bm != null and bm != ''">
+	         bm, <!-- bm -->
+		</if>
+		<if test="zt != null and zt != ''">
+	         zt, <!-- zt -->
+		</if>
+		<if test="f_logdatetime != null and f_logdatetime != ''">
+	         f_logdatetime, <!-- f_logdatetime -->
+		</if>
+		<if test="dd != null and dd != ''">
+	         dd, <!-- dd -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="lsh != null and lsh != ''">
+	          #{lsh, jdbcType=VARCHAR}, <!-- lsh -->
+	    </if>
+		<if test="f_recid != null and f_recid != ''">
+	          #{f_recid, jdbcType=VARCHAR}, <!-- f_recid -->
+	    </if>
+		<if test="glnd != null and glnd != ''">
+	          #{glnd, jdbcType=VARCHAR}, <!-- glnd -->
+	    </if>
+		<if test="f_eventtype != null and f_eventtype != ''">
+	          #{f_eventtype, jdbcType=VARCHAR}, <!-- f_eventtype -->
+	    </if>
+		<if test="f_eventdesc != null and f_eventdesc != ''">
+	          #{f_eventdesc, jdbcType=VARCHAR}, <!-- f_eventdesc -->
+	    </if>
+		<if test="f_userid != null and f_userid != ''">
+	          #{f_userid, jdbcType=VARCHAR}, <!-- f_userid -->
+	    </if>
+		<if test="card != null and card != ''">
+	          #{card, jdbcType=VARCHAR}, <!-- card -->
+	    </if>
+		<if test="xm != null and xm != ''">
+	          #{xm, jdbcType=VARCHAR}, <!-- xm -->
+	    </if>
+		<if test="lx != null and lx != ''">
+	          #{lx, jdbcType=VARCHAR}, <!-- lx -->
+	    </if>
+		<if test="bm != null and bm != ''">
+	          #{bm, jdbcType=VARCHAR}, <!-- bm -->
+	    </if>
+		<if test="zt != null and zt != ''">
+	          #{zt, jdbcType=VARCHAR}, <!-- zt -->
+	    </if>
+		<if test="f_logdatetime != null and f_logdatetime != ''">
+	          #{f_logdatetime, jdbcType=VARCHAR}, <!-- f_logdatetime -->
+	    </if>
+		<if test="dd != null and dd != ''">
+	          #{dd, jdbcType=VARCHAR}, <!-- dd -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Depot_ryPO">
+		INSERT INTO depot_ry (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{lsh, jdbcType=VARCHAR},  <!-- lsh -->
+		    #{f_recid, jdbcType=VARCHAR},  <!-- f_recid -->
+		    #{glnd, jdbcType=VARCHAR},  <!-- glnd -->
+		    #{f_eventtype, jdbcType=VARCHAR},  <!-- f_eventtype -->
+		    #{f_eventdesc, jdbcType=VARCHAR},  <!-- f_eventdesc -->
+		    #{f_userid, jdbcType=VARCHAR},  <!-- f_userid -->
+		    #{card, jdbcType=VARCHAR},  <!-- card -->
+		    #{xm, jdbcType=VARCHAR},  <!-- xm -->
+		    #{lx, jdbcType=VARCHAR},  <!-- lx -->
+		    #{bm, jdbcType=VARCHAR},  <!-- bm -->
+		    #{zt, jdbcType=VARCHAR},  <!-- zt -->
+		    #{f_logdatetime, jdbcType=VARCHAR},  <!-- f_logdatetime -->
+		    #{dd, jdbcType=VARCHAR},  <!-- dd -->
+		    #{bz, jdbcType=VARCHAR}  <!-- bz -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Depot_ryPO">
+		UPDATE depot_ry
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="lsh != null">
+		          lsh = #{lsh, jdbcType=VARCHAR},  <!-- lsh -->
+			</if>
+			<if test="f_recid != null">
+		          f_recid = #{f_recid, jdbcType=VARCHAR},  <!-- f_recid -->
+			</if>
+			<if test="glnd != null">
+		          glnd = #{glnd, jdbcType=VARCHAR},  <!-- glnd -->
+			</if>
+			<if test="f_eventtype != null">
+		          f_eventtype = #{f_eventtype, jdbcType=VARCHAR},  <!-- f_eventtype -->
+			</if>
+			<if test="f_eventdesc != null">
+		          f_eventdesc = #{f_eventdesc, jdbcType=VARCHAR},  <!-- f_eventdesc -->
+			</if>
+			<if test="f_userid != null">
+		          f_userid = #{f_userid, jdbcType=VARCHAR},  <!-- f_userid -->
+			</if>
+			<if test="card != null">
+		          card = #{card, jdbcType=VARCHAR},  <!-- card -->
+			</if>
+			<if test="xm != null">
+		          xm = #{xm, jdbcType=VARCHAR},  <!-- xm -->
+			</if>
+			<if test="lx != null">
+		          lx = #{lx, jdbcType=VARCHAR},  <!-- lx -->
+			</if>
+			<if test="bm != null">
+		          bm = #{bm, jdbcType=VARCHAR},  <!-- bm -->
+			</if>
+			<if test="zt != null">
+		          zt = #{zt, jdbcType=VARCHAR},  <!-- zt -->
+			</if>
+			<if test="f_logdatetime != null">
+		          f_logdatetime = #{f_logdatetime, jdbcType=VARCHAR},  <!-- f_logdatetime -->
+			</if>
+			<if test="dd != null">
+		          dd = #{dd, jdbcType=VARCHAR},  <!-- dd -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM depot_ry WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Depot_ryPO">
+		SELECT
+		<include refid="column" />
+		FROM depot_ry WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Depot_ryPO">
+		SELECT
+		    <include refid="column" />
+		FROM depot_ry
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Depot_ryPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_ry
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Depot_ryPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_ry
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Depot_ryPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_ry
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Depot_ryPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_ry
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM depot_ry
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM depot_ry
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  lsh,  <!-- lsh -->
+		  f_recid,  <!-- f_recid -->
+		  glnd,  <!-- glnd -->
+		  f_eventtype,  <!-- f_eventtype -->
+		  f_eventdesc,  <!-- f_eventdesc -->
+		  f_userid,  <!-- f_userid -->
+		  card,  <!-- card -->
+		  xm,  <!-- xm -->
+		  lx,  <!-- lx -->
+		  bm,  <!-- bm -->
+		  zt,  <!-- zt -->
+		  f_logdatetime,  <!-- f_logdatetime -->
+		  dd,  <!-- dd -->
+		  bz  <!-- bz -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  depot_ry.id_,  <!-- id_ -->
+		  depot_ry.lsh,  <!-- lsh -->
+		  depot_ry.f_recid,  <!-- f_recid -->
+		  depot_ry.glnd,  <!-- glnd -->
+		  depot_ry.f_eventtype,  <!-- f_eventtype -->
+		  depot_ry.f_eventdesc,  <!-- f_eventdesc -->
+		  depot_ry.f_userid,  <!-- f_userid -->
+		  depot_ry.card,  <!-- card -->
+		  depot_ry.xm,  <!-- xm -->
+		  depot_ry.lx,  <!-- lx -->
+		  depot_ry.bm,  <!-- bm -->
+		  depot_ry.zt,  <!-- zt -->
+		  depot_ry.f_logdatetime,  <!-- f_logdatetime -->
+		  depot_ry.dd,  <!-- dd -->
+		  depot_ry.bz  <!-- bz -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="lsh != null and lsh != ''">
+		      AND lsh = #{lsh}  <!-- lsh -->
+		</if>
+	    <if test="f_recid != null and f_recid != ''">
+		      AND f_recid = #{f_recid}  <!-- f_recid -->
+		</if>
+	    <if test="glnd != null and glnd != ''">
+		      AND glnd = #{glnd}  <!-- glnd -->
+		</if>
+	    <if test="f_eventtype != null and f_eventtype != ''">
+		      AND f_eventtype = #{f_eventtype}  <!-- f_eventtype -->
+		</if>
+	    <if test="f_eventdesc != null and f_eventdesc != ''">
+		      AND f_eventdesc = #{f_eventdesc}  <!-- f_eventdesc -->
+		</if>
+	    <if test="f_userid != null and f_userid != ''">
+		      AND f_userid = #{f_userid}  <!-- f_userid -->
+		</if>
+	    <if test="card != null and card != ''">
+		      AND card = #{card}  <!-- card -->
+		</if>
+	    <if test="xm != null and xm != ''">
+		      AND xm = #{xm}  <!-- xm -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx = #{lx}  <!-- lx -->
+		</if>
+	    <if test="bm != null and bm != ''">
+		      AND bm = #{bm}  <!-- bm -->
+		</if>
+	    <if test="zt != null and zt != ''">
+		      AND zt = #{zt}  <!-- zt -->
+		</if>
+	    <if test="f_logdatetime != null and f_logdatetime != ''">
+		      AND f_logdatetime = #{f_logdatetime}  <!-- f_logdatetime -->
+		</if>
+	    <if test="dd != null and dd != ''">
+		      AND dd = #{dd}  <!-- dd -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="lsh != null and lsh != ''">
+		      AND lsh like '%${lsh}%'  <!-- lsh -->
+		</if>
+	    <if test="f_recid != null and f_recid != ''">
+		      AND f_recid like '%${f_recid}%'  <!-- f_recid -->
+		</if>
+	    <if test="glnd != null and glnd != ''">
+		      AND glnd like '%${glnd}%'  <!-- glnd -->
+		</if>
+	    <if test="f_eventtype != null and f_eventtype != ''">
+		      AND f_eventtype like '%${f_eventtype}%'  <!-- f_eventtype -->
+		</if>
+	    <if test="f_eventdesc != null and f_eventdesc != ''">
+		      AND f_eventdesc like '%${f_eventdesc}%'  <!-- f_eventdesc -->
+		</if>
+	    <if test="f_userid != null and f_userid != ''">
+		      AND f_userid like '%${f_userid}%'  <!-- f_userid -->
+		</if>
+	    <if test="card != null and card != ''">
+		      AND card like '%${card}%'  <!-- card -->
+		</if>
+	    <if test="xm != null and xm != ''">
+		      AND xm like '%${xm}%'  <!-- xm -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx like '%${lx}%'  <!-- lx -->
+		</if>
+	    <if test="bm != null and bm != ''">
+		      AND bm like '%${bm}%'  <!-- bm -->
+		</if>
+	    <if test="zt != null and zt != ''">
+		      AND zt like '%${zt}%'  <!-- zt -->
+		</if>
+	    <if test="f_logdatetime != null and f_logdatetime != ''">
+		      AND f_logdatetime like '%${f_logdatetime}%'  <!-- f_logdatetime -->
+		</if>
+	    <if test="dd != null and dd != ''">
+		      AND dd like '%${dd}%'  <!-- dd -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	</sql>
+	<select id="getPersonIndex" parameterType="String" resultType="String">
+		select top 1 lsh
+		from [dbo].[depot_ry]
+ 		where 1=1
+ 		and lx like '${value}%'
+ 		order by lsh desc
+	</select>
+</mapper>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_DengJiRW[archive_dengjirw]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-03-06 14:16:47 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_dengjirwMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_dengjirwPO">
+		INSERT INTO archive_dengjirw (
+		<if test="task_number != null and task_number != ''">
+	         task_number, <!-- task_number -->
+		</if>
+		<if test="dh != null and dh != ''">
+	         dh, <!-- dh -->
+		</if>
+		<if test="tm != null and tm != ''">
+	         tm, <!-- tm -->
+		</if>
+		<if test="ys != null and ys != ''">
+	         ys, <!-- ys -->
+		</if>
+		<if test="dzwj != null and dzwj != ''">
+	         dzwj, <!-- dzwj -->
+		</if>
+		<if test="archive_time != null and archive_time != ''">
+	         archive_time, <!-- archive_time -->
+		</if>
+		<if test="archive_path != null and archive_path != ''">
+	         archive_path, <!-- archive_path -->
+		</if>
+		<if test="task_type != null and task_type != ''">
+	         task_type, <!-- task_type -->
+		</if>
+		<if test="task_name != null and task_name != ''">
+	         task_name, <!-- task_name -->
+		</if>
+		<if test="operator_person != null and operator_person != ''">
+	         operator_person, <!-- operator_person -->
+		</if>
+		<if test="dj_flag != null">
+	         dj_flag, <!-- dj_flag -->
+		</if>
+		<if test="task_tablename != null and task_tablename != ''">
+	         task_tablename, <!-- task_tablename -->
+		</if>
+		<if test="task_cn_tablename != null and task_cn_tablename != ''">
+	         task_cn_tablename, <!-- task_cn_tablename -->
+		</if>
+		<if test="sh_flag != null">
+	         sh_flag, <!-- sh_flag -->
+		</if>
+		<if test="lx != null and lx != ''">
+	         lx, <!-- lx -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="task_number != null and task_number != ''">
+	          #{task_number, jdbcType=VARCHAR}, <!-- task_number -->
+	    </if>
+		<if test="dh != null and dh != ''">
+	          #{dh, jdbcType=VARCHAR}, <!-- dh -->
+	    </if>
+		<if test="tm != null and tm != ''">
+	          #{tm, jdbcType=VARCHAR}, <!-- tm -->
+	    </if>
+		<if test="ys != null and ys != ''">
+	          #{ys, jdbcType=VARCHAR}, <!-- ys -->
+	    </if>
+		<if test="dzwj != null and dzwj != ''">
+	          #{dzwj, jdbcType=VARCHAR}, <!-- dzwj -->
+	    </if>
+		<if test="archive_time != null and archive_time != ''">
+	          #{archive_time, jdbcType=VARCHAR}, <!-- archive_time -->
+	    </if>
+		<if test="archive_path != null and archive_path != ''">
+	          #{archive_path, jdbcType=VARCHAR}, <!-- archive_path -->
+	    </if>
+		<if test="task_type != null and task_type != ''">
+	          #{task_type, jdbcType=VARCHAR}, <!-- task_type -->
+	    </if>
+		<if test="task_name != null and task_name != ''">
+	          #{task_name, jdbcType=VARCHAR}, <!-- task_name -->
+	    </if>
+		<if test="operator_person != null and operator_person != ''">
+	          #{operator_person, jdbcType=VARCHAR}, <!-- operator_person -->
+	    </if>
+		<if test="dj_flag != null">
+	          #{dj_flag, jdbcType=INTEGER}, <!-- dj_flag -->
+	    </if>
+		<if test="task_tablename != null and task_tablename != ''">
+	          #{task_tablename, jdbcType=VARCHAR}, <!-- task_tablename -->
+	    </if>
+		<if test="task_cn_tablename != null and task_cn_tablename != ''">
+	          #{task_cn_tablename, jdbcType=VARCHAR}, <!-- task_cn_tablename -->
+	    </if>
+		<if test="sh_flag != null">
+	          #{sh_flag, jdbcType=INTEGER}, <!-- sh_flag -->
+	    </if>
+		<if test="lx != null and lx != ''">
+	          #{lx, jdbcType=VARCHAR}, <!-- lx -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_dengjirwPO">
+		INSERT INTO archive_dengjirw (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{task_number, jdbcType=VARCHAR},  <!-- task_number -->
+		    #{dh, jdbcType=VARCHAR},  <!-- dh -->
+		    #{tm, jdbcType=VARCHAR},  <!-- tm -->
+		    #{ys, jdbcType=VARCHAR},  <!-- ys -->
+		    #{dzwj, jdbcType=VARCHAR},  <!-- dzwj -->
+		    #{archive_time, jdbcType=VARCHAR},  <!-- archive_time -->
+		    #{archive_path, jdbcType=VARCHAR},  <!-- archive_path -->
+		    #{task_type, jdbcType=VARCHAR},  <!-- task_type -->
+		    #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+		    #{operator_person, jdbcType=VARCHAR},  <!-- operator_person -->
+		    #{dj_flag, jdbcType=INTEGER},  <!-- dj_flag -->
+		    #{task_tablename, jdbcType=VARCHAR},  <!-- task_tablename -->
+		    #{task_cn_tablename, jdbcType=VARCHAR},  <!-- task_cn_tablename -->
+		    #{sh_flag, jdbcType=INTEGER},  <!-- sh_flag -->
+		    #{lx, jdbcType=VARCHAR}  <!-- lx -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_dengjirwPO">
+		UPDATE archive_dengjirw
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="task_number != null">
+		          task_number = #{task_number, jdbcType=VARCHAR},  <!-- task_number -->
+			</if>
+			<if test="dh != null">
+		          dh = #{dh, jdbcType=VARCHAR},  <!-- dh -->
+			</if>
+			<if test="tm != null">
+		          tm = #{tm, jdbcType=VARCHAR},  <!-- tm -->
+			</if>
+			<if test="ys != null">
+		          ys = #{ys, jdbcType=VARCHAR},  <!-- ys -->
+			</if>
+			<if test="dzwj != null">
+		          dzwj = #{dzwj, jdbcType=VARCHAR},  <!-- dzwj -->
+			</if>
+			<if test="archive_time != null">
+		          archive_time = #{archive_time, jdbcType=VARCHAR},  <!-- archive_time -->
+			</if>
+			<if test="archive_path != null">
+		          archive_path = #{archive_path, jdbcType=VARCHAR},  <!-- archive_path -->
+			</if>
+			<if test="task_type != null">
+		          task_type = #{task_type, jdbcType=VARCHAR},  <!-- task_type -->
+			</if>
+			<if test="task_name != null">
+		          task_name = #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+			</if>
+			<if test="operator_person != null">
+		          operator_person = #{operator_person, jdbcType=VARCHAR},  <!-- operator_person -->
+			</if>
+			<if test="dj_flag != null">
+		          dj_flag = #{dj_flag, jdbcType=INTEGER},  <!-- dj_flag -->
+			</if>
+			<if test="task_tablename != null">
+		          task_tablename = #{task_tablename, jdbcType=VARCHAR},  <!-- task_tablename -->
+			</if>
+			<if test="task_cn_tablename != null">
+		          task_cn_tablename = #{task_cn_tablename, jdbcType=VARCHAR},  <!-- task_cn_tablename -->
+			</if>
+			<if test="sh_flag != null">
+		          sh_flag = #{sh_flag, jdbcType=INTEGER},  <!-- sh_flag -->
+			</if>
+			<if test="lx != null">
+		          lx = #{lx, jdbcType=VARCHAR},  <!-- lx -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_dengjirw WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_dengjirwPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_dengjirw WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_dengjirwPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_dengjirw
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_dengjirwPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_dengjirw
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_dengjirwPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_dengjirw
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_dengjirwPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_dengjirw
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_dengjirwPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_dengjirw
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_dengjirw
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_dengjirw
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  task_number,  <!-- task_number -->
+		  dh,  <!-- dh -->
+		  tm,  <!-- tm -->
+		  ys,  <!-- ys -->
+		  dzwj,  <!-- dzwj -->
+		  archive_time,  <!-- archive_time -->
+		  archive_path,  <!-- archive_path -->
+		  task_type,  <!-- task_type -->
+		  task_name,  <!-- task_name -->
+		  operator_person,  <!-- operator_person -->
+		  dj_flag,  <!-- dj_flag -->
+		  task_tablename,  <!-- task_tablename -->
+		  task_cn_tablename,  <!-- task_cn_tablename -->
+		  sh_flag,  <!-- sh_flag -->
+		  lx  <!-- lx -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_dengjirw.id_,  <!-- id_ -->
+		  archive_dengjirw.task_number,  <!-- task_number -->
+		  archive_dengjirw.dh,  <!-- dh -->
+		  archive_dengjirw.tm,  <!-- tm -->
+		  archive_dengjirw.ys,  <!-- ys -->
+		  archive_dengjirw.dzwj,  <!-- dzwj -->
+		  archive_dengjirw.archive_time,  <!-- archive_time -->
+		  archive_dengjirw.archive_path,  <!-- archive_path -->
+		  archive_dengjirw.task_type,  <!-- task_type -->
+		  archive_dengjirw.task_name,  <!-- task_name -->
+		  archive_dengjirw.operator_person,  <!-- operator_person -->
+		  archive_dengjirw.dj_flag,  <!-- dj_flag -->
+		  archive_dengjirw.task_tablename,  <!-- task_tablename -->
+		  archive_dengjirw.task_cn_tablename,  <!-- task_cn_tablename -->
+		  archive_dengjirw.sh_flag,  <!-- sh_flag -->
+		  archive_dengjirw.lx  <!-- lx -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="task_number != null and task_number != ''">
+		      AND task_number = #{task_number}  <!-- task_number -->
+		</if>
+	    <if test="dh != null and dh != ''">
+		      AND dh = #{dh}  <!-- dh -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm = #{tm}  <!-- tm -->
+		</if>
+	    <if test="ys != null and ys != ''">
+		      AND ys = #{ys}  <!-- ys -->
+		</if>
+	    <if test="dzwj != null and dzwj != ''">
+		      AND dzwj = #{dzwj}  <!-- dzwj -->
+		</if>
+	    <if test="archive_time != null and archive_time != ''">
+		      AND archive_time = #{archive_time}  <!-- archive_time -->
+		</if>
+	    <if test="archive_path != null and archive_path != ''">
+		      AND archive_path = #{archive_path}  <!-- archive_path -->
+		</if>
+	    <if test="task_type != null and task_type != ''">
+		      AND task_type = #{task_type}  <!-- task_type -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name = #{task_name}  <!-- task_name -->
+		</if>
+	    <if test="operator_person != null and operator_person != ''">
+		      AND operator_person = #{operator_person}  <!-- operator_person -->
+		</if>
+	   <if test="dj_flag != null ">
+		      AND dj_flag = #{dj_flag}  <!-- dj_flag -->
+		</if>
+	    <if test="task_tablename != null and task_tablename != ''">
+		      AND task_tablename = #{task_tablename}  <!-- task_tablename -->
+		</if>
+	    <if test="task_cn_tablename != null and task_cn_tablename != ''">
+		      AND task_cn_tablename = #{task_cn_tablename}  <!-- task_cn_tablename -->
+		</if>
+	   <if test="sh_flag != null ">
+		      AND sh_flag = #{sh_flag}  <!-- sh_flag -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx = #{lx}  <!-- lx -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="task_number != null and task_number != ''">
+		      AND task_number like '%${task_number}%'  <!-- task_number -->
+		</if>
+	    <if test="dh != null and dh != ''">
+		      AND dh like '%${dh}%'  <!-- dh -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm like '%${tm}%'  <!-- tm -->
+		</if>
+	    <if test="ys != null and ys != ''">
+		      AND ys like '%${ys}%'  <!-- ys -->
+		</if>
+	    <if test="dzwj != null and dzwj != ''">
+		      AND dzwj like '%${dzwj}%'  <!-- dzwj -->
+		</if>
+	    <if test="archive_time != null and archive_time != ''">
+		      AND archive_time like '%${archive_time}%'  <!-- archive_time -->
+		</if>
+	    <if test="archive_path != null and archive_path != ''">
+		      AND archive_path like '%${archive_path}%'  <!-- archive_path -->
+		</if>
+	    <if test="task_type != null and task_type != ''">
+		      AND task_type like '%${task_type}%'  <!-- task_type -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name like '%${task_name}%'  <!-- task_name -->
+		</if>
+	    <if test="operator_person != null and operator_person != ''">
+		      AND operator_person like '%${operator_person}%'  <!-- operator_person -->
+		</if>
+	    <if test="task_tablename != null and task_tablename != ''">
+		      AND task_tablename like '%${task_tablename}%'  <!-- task_tablename -->
+		</if>
+	    <if test="task_cn_tablename != null and task_cn_tablename != ''">
+		      AND task_cn_tablename like '%${task_cn_tablename}%'  <!-- task_cn_tablename -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx like '%${lx}%'  <!-- lx -->
+		</if>
+	</sql>
+	
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 基础数据表信息使用的SQL语句 -->
+<mapper namespace="dbtable">
+<!-- 根据Dto查询并返回Archive_tablefieldlistPO数据持久化对象集合 -->
+	<select id="listTablefield" parameterType="Dto" resultType="Archive_tablefieldlistPO">
+		SELECT
+			<include refid="cn.osworks.aos.system.dao.mapper.Archive_tablefieldlistMapper.column" />
+		FROM archive_tablefieldlist
+		<where>
+		    <if test="tid != null and tid != ''">
+			    AND tid = #{tid} 
+			</if>
+			AND FieldEnName not in ('_lrr','_lrrq') order by indx  asc
+		</where>	
+	</select>
+
+
+</mapper>

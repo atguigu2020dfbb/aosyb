@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- depot_pd[depot_pd]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-09-08 09:55:41 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Depot_pdMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Depot_pdPO">
+		INSERT INTO depot_pd (
+		<if test="lsh != null and lsh != ''">
+	         lsh, <!-- lsh -->
+		</if>
+		<if test="pdnd != null and pdnd != ''">
+	         pdnd, <!-- pdnd -->
+		</if>
+		<if test="pdqz != null and pdqz != ''">
+	         pdqz, <!-- pdqz -->
+		</if>
+		<if test="pdsl != null and pdsl != ''">
+	         pdsl, <!-- pdsl -->
+		</if>
+		<if test="pdqj != null and pdqj != ''">
+	         pdqj, <!-- pdqj -->
+		</if>
+		<if test="ywyc != null and ywyc != ''">
+	         ywyc, <!-- ywyc -->
+		</if>
+		<if test="wtms != null and wtms != ''">
+	         wtms, <!-- wtms -->
+		</if>
+		<if test="pdr_en != null and pdr_en != ''">
+	         pdr_en, <!-- pdr_en -->
+		</if>
+		<if test="lx != null and lx != ''">
+	         lx, <!-- lx -->
+		</if>
+		<if test="pdr_cn != null and pdr_cn != ''">
+	         pdr_cn, <!-- pdr_cn -->
+		</if>
+		<if test="pdsj != null and pdsj != ''">
+	         pdsj, <!-- pdsj -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="qzdw != null and qzdw != ''">
+	         qzdw, <!-- qzdw -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="lsh != null and lsh != ''">
+	          #{lsh, jdbcType=VARCHAR}, <!-- lsh -->
+	    </if>
+		<if test="pdnd != null and pdnd != ''">
+	          #{pdnd, jdbcType=VARCHAR}, <!-- pdnd -->
+	    </if>
+		<if test="pdqz != null and pdqz != ''">
+	          #{pdqz, jdbcType=VARCHAR}, <!-- pdqz -->
+	    </if>
+		<if test="pdsl != null and pdsl != ''">
+	          #{pdsl, jdbcType=VARCHAR}, <!-- pdsl -->
+	    </if>
+		<if test="pdqj != null and pdqj != ''">
+	          #{pdqj, jdbcType=VARCHAR}, <!-- pdqj -->
+	    </if>
+		<if test="ywyc != null and ywyc != ''">
+	          #{ywyc, jdbcType=VARCHAR}, <!-- ywyc -->
+	    </if>
+		<if test="wtms != null and wtms != ''">
+	          #{wtms, jdbcType=VARCHAR}, <!-- wtms -->
+	    </if>
+		<if test="pdr_en != null and pdr_en != ''">
+	          #{pdr_en, jdbcType=VARCHAR}, <!-- pdr_en -->
+	    </if>
+		<if test="lx != null and lx != ''">
+	          #{lx, jdbcType=VARCHAR}, <!-- lx -->
+	    </if>
+		<if test="pdr_cn != null and pdr_cn != ''">
+	          #{pdr_cn, jdbcType=VARCHAR}, <!-- pdr_cn -->
+	    </if>
+		<if test="pdsj != null and pdsj != ''">
+	          #{pdsj, jdbcType=VARCHAR}, <!-- pdsj -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="qzdw != null and qzdw != ''">
+	          #{qzdw, jdbcType=VARCHAR}, <!-- qzdw -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Depot_pdPO">
+		INSERT INTO depot_pd (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{lsh, jdbcType=VARCHAR},  <!-- lsh -->
+		    #{pdnd, jdbcType=VARCHAR},  <!-- pdnd -->
+		    #{pdqz, jdbcType=VARCHAR},  <!-- pdqz -->
+		    #{pdsl, jdbcType=VARCHAR},  <!-- pdsl -->
+		    #{pdqj, jdbcType=VARCHAR},  <!-- pdqj -->
+		    #{ywyc, jdbcType=VARCHAR},  <!-- ywyc -->
+		    #{wtms, jdbcType=VARCHAR},  <!-- wtms -->
+		    #{pdr_en, jdbcType=VARCHAR},  <!-- pdr_en -->
+		    #{lx, jdbcType=VARCHAR},  <!-- lx -->
+		    #{pdr_cn, jdbcType=VARCHAR},  <!-- pdr_cn -->
+		    #{pdsj, jdbcType=VARCHAR},  <!-- pdsj -->
+		    #{bz, jdbcType=VARCHAR},  <!-- bz -->
+		    #{qzdw, jdbcType=VARCHAR}  <!-- qzdw -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Depot_pdPO">
+		UPDATE depot_pd
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="lsh != null">
+		          lsh = #{lsh, jdbcType=VARCHAR},  <!-- lsh -->
+			</if>
+			<if test="pdnd != null">
+		          pdnd = #{pdnd, jdbcType=VARCHAR},  <!-- pdnd -->
+			</if>
+			<if test="pdqz != null">
+		          pdqz = #{pdqz, jdbcType=VARCHAR},  <!-- pdqz -->
+			</if>
+			<if test="pdsl != null">
+		          pdsl = #{pdsl, jdbcType=VARCHAR},  <!-- pdsl -->
+			</if>
+			<if test="pdqj != null">
+		          pdqj = #{pdqj, jdbcType=VARCHAR},  <!-- pdqj -->
+			</if>
+			<if test="ywyc != null">
+		          ywyc = #{ywyc, jdbcType=VARCHAR},  <!-- ywyc -->
+			</if>
+			<if test="wtms != null">
+		          wtms = #{wtms, jdbcType=VARCHAR},  <!-- wtms -->
+			</if>
+			<if test="pdr_en != null">
+		          pdr_en = #{pdr_en, jdbcType=VARCHAR},  <!-- pdr_en -->
+			</if>
+			<if test="lx != null">
+		          lx = #{lx, jdbcType=VARCHAR},  <!-- lx -->
+			</if>
+			<if test="pdr_cn != null">
+		          pdr_cn = #{pdr_cn, jdbcType=VARCHAR},  <!-- pdr_cn -->
+			</if>
+			<if test="pdsj != null">
+		          pdsj = #{pdsj, jdbcType=VARCHAR},  <!-- pdsj -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+			<if test="qzdw != null">
+		          qzdw = #{qzdw, jdbcType=VARCHAR},  <!-- qzdw -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM depot_pd WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Depot_pdPO">
+		SELECT
+		<include refid="column" />
+		FROM depot_pd WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Depot_pdPO">
+		SELECT
+		    <include refid="column" />
+		FROM depot_pd
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Depot_pdPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_pd
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Depot_pdPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_pd
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Depot_pdPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_pd
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Depot_pdPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_pd
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM depot_pd
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM depot_pd
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  lsh,  <!-- lsh -->
+		  pdnd,  <!-- pdnd -->
+		  pdqz,  <!-- pdqz -->
+		  pdsl,  <!-- pdsl -->
+		  pdqj,  <!-- pdqj -->
+		  ywyc,  <!-- ywyc -->
+		  wtms,  <!-- wtms -->
+		  pdr_en,  <!-- pdr_en -->
+		  lx,  <!-- lx -->
+		  pdr_cn,  <!-- pdr_cn -->
+		  pdsj,  <!-- pdsj -->
+		  bz,  <!-- bz -->
+		  qzdw  <!-- qzdw -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  depot_pd.id_,  <!-- id_ -->
+		  depot_pd.lsh,  <!-- lsh -->
+		  depot_pd.pdnd,  <!-- pdnd -->
+		  depot_pd.pdqz,  <!-- pdqz -->
+		  depot_pd.pdsl,  <!-- pdsl -->
+		  depot_pd.pdqj,  <!-- pdqj -->
+		  depot_pd.ywyc,  <!-- ywyc -->
+		  depot_pd.wtms,  <!-- wtms -->
+		  depot_pd.pdr_en,  <!-- pdr_en -->
+		  depot_pd.lx,  <!-- lx -->
+		  depot_pd.pdr_cn,  <!-- pdr_cn -->
+		  depot_pd.pdsj,  <!-- pdsj -->
+		  depot_pd.bz,  <!-- bz -->
+		  depot_pd.qzdw  <!-- qzdw -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="lsh != null and lsh != ''">
+		      AND lsh = #{lsh}  <!-- lsh -->
+		</if>
+	    <if test="pdnd != null and pdnd != ''">
+		      AND pdnd = #{pdnd}  <!-- pdnd -->
+		</if>
+	    <if test="pdqz != null and pdqz != ''">
+		      AND pdqz = #{pdqz}  <!-- pdqz -->
+		</if>
+	    <if test="pdsl != null and pdsl != ''">
+		      AND pdsl = #{pdsl}  <!-- pdsl -->
+		</if>
+	    <if test="pdqj != null and pdqj != ''">
+		      AND pdqj = #{pdqj}  <!-- pdqj -->
+		</if>
+	    <if test="ywyc != null and ywyc != ''">
+		      AND ywyc = #{ywyc}  <!-- ywyc -->
+		</if>
+	    <if test="wtms != null and wtms != ''">
+		      AND wtms = #{wtms}  <!-- wtms -->
+		</if>
+	    <if test="pdr_en != null and pdr_en != ''">
+		      AND pdr_en = #{pdr_en}  <!-- pdr_en -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx = #{lx}  <!-- lx -->
+		</if>
+	    <if test="pdr_cn != null and pdr_cn != ''">
+		      AND pdr_cn = #{pdr_cn}  <!-- pdr_cn -->
+		</if>
+	    <if test="pdsj != null and pdsj != ''">
+		      AND pdsj = #{pdsj}  <!-- pdsj -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	    <if test="qzdw != null and qzdw != ''">
+		      AND qzdw = #{qzdw}  <!-- qzdw -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="lsh != null and lsh != ''">
+		      AND lsh like '%${lsh}%'  <!-- lsh -->
+		</if>
+	    <if test="pdnd != null and pdnd != ''">
+		      AND pdnd like '%${pdnd}%'  <!-- pdnd -->
+		</if>
+	    <if test="pdqz != null and pdqz != ''">
+		      AND pdqz like '%${pdqz}%'  <!-- pdqz -->
+		</if>
+	    <if test="pdsl != null and pdsl != ''">
+		      AND pdsl like '%${pdsl}%'  <!-- pdsl -->
+		</if>
+	    <if test="pdqj != null and pdqj != ''">
+		      AND pdqj like '%${pdqj}%'  <!-- pdqj -->
+		</if>
+	    <if test="ywyc != null and ywyc != ''">
+		      AND ywyc like '%${ywyc}%'  <!-- ywyc -->
+		</if>
+	    <if test="wtms != null and wtms != ''">
+		      AND wtms like '%${wtms}%'  <!-- wtms -->
+		</if>
+	    <if test="pdr_en != null and pdr_en != ''">
+		      AND pdr_en like '%${pdr_en}%'  <!-- pdr_en -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx like '%${lx}%'  <!-- lx -->
+		</if>
+	    <if test="pdr_cn != null and pdr_cn != ''">
+		      AND pdr_cn like '%${pdr_cn}%'  <!-- pdr_cn -->
+		</if>
+	    <if test="pdsj != null and pdsj != ''">
+		      AND pdsj like '%${pdsj}%'  <!-- pdsj -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	    <if test="qzdw != null and qzdw != ''">
+		      AND qzdw like '%${qzdw}%'  <!-- qzdw -->
+		</if>
+	</sql>
+	<select id="getDepotPdIndex" parameterType="String" resultType="String">
+   select top 1 lsh
+   from [dbo].[depot_pd]
+      where 1=1
+      and lsh like '${value}%'
+      order by lsh desc
+</select>
+</mapper>

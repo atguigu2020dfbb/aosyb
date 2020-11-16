@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- ACT_RE_PROCDEF[act_re_procdef]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2018-12-18 15:50:46 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Act_re_procdefMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Act_re_procdefPO">
+		INSERT INTO act_re_procdef (
+		<if test="rev_ != null">
+	         rev_, <!-- REV_ -->
+		</if>
+		<if test="category_ != null and category_ != ''">
+	         category_, <!-- CATEGORY_ -->
+		</if>
+		<if test="name_ != null and name_ != ''">
+	         name_, <!-- NAME_ -->
+		</if>
+		<if test="key_ != null and key_ != ''">
+	         key_, <!-- KEY_ -->
+		</if>
+		<if test="version_ != null">
+	         version_, <!-- VERSION_ -->
+		</if>
+		<if test="deployment_id_ != null and deployment_id_ != ''">
+	         deployment_id_, <!-- DEPLOYMENT_ID_ -->
+		</if>
+		<if test="resource_name_ != null and resource_name_ != ''">
+	         resource_name_, <!-- RESOURCE_NAME_ -->
+		</if>
+		<if test="dgrm_resource_name_ != null and dgrm_resource_name_ != ''">
+	         dgrm_resource_name_, <!-- DGRM_RESOURCE_NAME_ -->
+		</if>
+		<if test="description_ != null and description_ != ''">
+	         description_, <!-- DESCRIPTION_ -->
+		</if>
+		<if test="has_start_form_key_ != null">
+	         has_start_form_key_, <!-- HAS_START_FORM_KEY_ -->
+		</if>
+		<if test="has_graphical_notation_ != null">
+	         has_graphical_notation_, <!-- HAS_GRAPHICAL_NOTATION_ -->
+		</if>
+		<if test="suspension_state_ != null">
+	         suspension_state_, <!-- SUSPENSION_STATE_ -->
+		</if>
+		<if test="tenant_id_ != null and tenant_id_ != ''">
+	         tenant_id_, <!-- TENANT_ID_ -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- ID_ -->
+	   </if>
+		)VALUES(
+		<if test="rev_ != null">
+	          #{rev_, jdbcType=INTEGER}, <!-- REV_ -->
+	    </if>
+		<if test="category_ != null and category_ != ''">
+	          #{category_, jdbcType=VARCHAR}, <!-- CATEGORY_ -->
+	    </if>
+		<if test="name_ != null and name_ != ''">
+	          #{name_, jdbcType=VARCHAR}, <!-- NAME_ -->
+	    </if>
+		<if test="key_ != null and key_ != ''">
+	          #{key_, jdbcType=VARCHAR}, <!-- KEY_ -->
+	    </if>
+		<if test="version_ != null">
+	          #{version_, jdbcType=INTEGER}, <!-- VERSION_ -->
+	    </if>
+		<if test="deployment_id_ != null and deployment_id_ != ''">
+	          #{deployment_id_, jdbcType=VARCHAR}, <!-- DEPLOYMENT_ID_ -->
+	    </if>
+		<if test="resource_name_ != null and resource_name_ != ''">
+	          #{resource_name_, jdbcType=VARCHAR}, <!-- RESOURCE_NAME_ -->
+	    </if>
+		<if test="dgrm_resource_name_ != null and dgrm_resource_name_ != ''">
+	          #{dgrm_resource_name_, jdbcType=VARCHAR}, <!-- DGRM_RESOURCE_NAME_ -->
+	    </if>
+		<if test="description_ != null and description_ != ''">
+	          #{description_, jdbcType=VARCHAR}, <!-- DESCRIPTION_ -->
+	    </if>
+		<if test="has_start_form_key_ != null">
+	          #{has_start_form_key_, jdbcType=INTEGER}, <!-- HAS_START_FORM_KEY_ -->
+	    </if>
+		<if test="has_graphical_notation_ != null">
+	          #{has_graphical_notation_, jdbcType=INTEGER}, <!-- HAS_GRAPHICAL_NOTATION_ -->
+	    </if>
+		<if test="suspension_state_ != null">
+	          #{suspension_state_, jdbcType=INTEGER}, <!-- SUSPENSION_STATE_ -->
+	    </if>
+		<if test="tenant_id_ != null and tenant_id_ != ''">
+	          #{tenant_id_, jdbcType=VARCHAR}, <!-- TENANT_ID_ -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- ID_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Act_re_procdefPO">
+		INSERT INTO act_re_procdef (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- ID_ -->
+		    #{rev_, jdbcType=INTEGER},  <!-- REV_ -->
+		    #{category_, jdbcType=VARCHAR},  <!-- CATEGORY_ -->
+		    #{name_, jdbcType=VARCHAR},  <!-- NAME_ -->
+		    #{key_, jdbcType=VARCHAR},  <!-- KEY_ -->
+		    #{version_, jdbcType=INTEGER},  <!-- VERSION_ -->
+		    #{deployment_id_, jdbcType=VARCHAR},  <!-- DEPLOYMENT_ID_ -->
+		    #{resource_name_, jdbcType=VARCHAR},  <!-- RESOURCE_NAME_ -->
+		    #{dgrm_resource_name_, jdbcType=VARCHAR},  <!-- DGRM_RESOURCE_NAME_ -->
+		    #{description_, jdbcType=VARCHAR},  <!-- DESCRIPTION_ -->
+		    #{has_start_form_key_, jdbcType=INTEGER},  <!-- HAS_START_FORM_KEY_ -->
+		    #{has_graphical_notation_, jdbcType=INTEGER},  <!-- HAS_GRAPHICAL_NOTATION_ -->
+		    #{suspension_state_, jdbcType=INTEGER},  <!-- SUSPENSION_STATE_ -->
+		    #{tenant_id_, jdbcType=VARCHAR}  <!-- TENANT_ID_ -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Act_re_procdefPO">
+		UPDATE act_re_procdef
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- ID_ -->
+			</if>
+			<if test="rev_ != null">
+		          rev_ = #{rev_, jdbcType=INTEGER},  <!-- REV_ -->
+			</if>
+			<if test="category_ != null">
+		          category_ = #{category_, jdbcType=VARCHAR},  <!-- CATEGORY_ -->
+			</if>
+			<if test="name_ != null">
+		          name_ = #{name_, jdbcType=VARCHAR},  <!-- NAME_ -->
+			</if>
+			<if test="key_ != null">
+		          key_ = #{key_, jdbcType=VARCHAR},  <!-- KEY_ -->
+			</if>
+			<if test="version_ != null">
+		          version_ = #{version_, jdbcType=INTEGER},  <!-- VERSION_ -->
+			</if>
+			<if test="deployment_id_ != null">
+		          deployment_id_ = #{deployment_id_, jdbcType=VARCHAR},  <!-- DEPLOYMENT_ID_ -->
+			</if>
+			<if test="resource_name_ != null">
+		          resource_name_ = #{resource_name_, jdbcType=VARCHAR},  <!-- RESOURCE_NAME_ -->
+			</if>
+			<if test="dgrm_resource_name_ != null">
+		          dgrm_resource_name_ = #{dgrm_resource_name_, jdbcType=VARCHAR},  <!-- DGRM_RESOURCE_NAME_ -->
+			</if>
+			<if test="description_ != null">
+		          description_ = #{description_, jdbcType=VARCHAR},  <!-- DESCRIPTION_ -->
+			</if>
+			<if test="has_start_form_key_ != null">
+		          has_start_form_key_ = #{has_start_form_key_, jdbcType=INTEGER},  <!-- HAS_START_FORM_KEY_ -->
+			</if>
+			<if test="has_graphical_notation_ != null">
+		          has_graphical_notation_ = #{has_graphical_notation_, jdbcType=INTEGER},  <!-- HAS_GRAPHICAL_NOTATION_ -->
+			</if>
+			<if test="suspension_state_ != null">
+		          suspension_state_ = #{suspension_state_, jdbcType=INTEGER},  <!-- SUSPENSION_STATE_ -->
+			</if>
+			<if test="tenant_id_ != null">
+		          tenant_id_ = #{tenant_id_, jdbcType=VARCHAR},  <!-- TENANT_ID_ -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM act_re_procdef WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Act_re_procdefPO">
+		SELECT
+		<include refid="column" />
+		FROM act_re_procdef WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Act_re_procdefPO">
+		SELECT
+		    <include refid="column" />
+		FROM act_re_procdef
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Act_re_procdefPO">
+		SELECT
+			<include refid="column" />	
+		FROM act_re_procdef
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Act_re_procdefPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM act_re_procdef
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Act_re_procdefPO">
+		SELECT
+			<include refid="column" />	
+		FROM act_re_procdef
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Act_re_procdefPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM act_re_procdef
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM act_re_procdef
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM act_re_procdef
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- ID_ -->
+		  rev_,  <!-- REV_ -->
+		  category_,  <!-- CATEGORY_ -->
+		  name_,  <!-- NAME_ -->
+		  key_,  <!-- KEY_ -->
+		  version_,  <!-- VERSION_ -->
+		  deployment_id_,  <!-- DEPLOYMENT_ID_ -->
+		  resource_name_,  <!-- RESOURCE_NAME_ -->
+		  dgrm_resource_name_,  <!-- DGRM_RESOURCE_NAME_ -->
+		  description_,  <!-- DESCRIPTION_ -->
+		  has_start_form_key_,  <!-- HAS_START_FORM_KEY_ -->
+		  has_graphical_notation_,  <!-- HAS_GRAPHICAL_NOTATION_ -->
+		  suspension_state_,  <!-- SUSPENSION_STATE_ -->
+		  tenant_id_  <!-- TENANT_ID_ -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  act_re_procdef.id_,  <!-- ID_ -->
+		  act_re_procdef.rev_,  <!-- REV_ -->
+		  act_re_procdef.category_,  <!-- CATEGORY_ -->
+		  act_re_procdef.name_,  <!-- NAME_ -->
+		  act_re_procdef.key_,  <!-- KEY_ -->
+		  act_re_procdef.version_,  <!-- VERSION_ -->
+		  act_re_procdef.deployment_id_,  <!-- DEPLOYMENT_ID_ -->
+		  act_re_procdef.resource_name_,  <!-- RESOURCE_NAME_ -->
+		  act_re_procdef.dgrm_resource_name_,  <!-- DGRM_RESOURCE_NAME_ -->
+		  act_re_procdef.description_,  <!-- DESCRIPTION_ -->
+		  act_re_procdef.has_start_form_key_,  <!-- HAS_START_FORM_KEY_ -->
+		  act_re_procdef.has_graphical_notation_,  <!-- HAS_GRAPHICAL_NOTATION_ -->
+		  act_re_procdef.suspension_state_,  <!-- SUSPENSION_STATE_ -->
+		  act_re_procdef.tenant_id_  <!-- TENANT_ID_ -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- ID_ -->
+		</if>
+	   <if test="rev_ != null ">
+		      AND rev_ = #{rev_}  <!-- REV_ -->
+		</if>
+	    <if test="category_ != null and category_ != ''">
+		      AND category_ = #{category_}  <!-- CATEGORY_ -->
+		</if>
+	    <if test="name_ != null and name_ != ''">
+		      AND name_ = #{name_}  <!-- NAME_ -->
+		</if>
+	    <if test="key_ != null and key_ != ''">
+		      AND key_ = #{key_}  <!-- KEY_ -->
+		</if>
+	   <if test="version_ != null ">
+		      AND version_ = #{version_}  <!-- VERSION_ -->
+		</if>
+	    <if test="deployment_id_ != null and deployment_id_ != ''">
+		      AND deployment_id_ = #{deployment_id_}  <!-- DEPLOYMENT_ID_ -->
+		</if>
+	    <if test="resource_name_ != null and resource_name_ != ''">
+		      AND resource_name_ = #{resource_name_}  <!-- RESOURCE_NAME_ -->
+		</if>
+	    <if test="dgrm_resource_name_ != null and dgrm_resource_name_ != ''">
+		      AND dgrm_resource_name_ = #{dgrm_resource_name_}  <!-- DGRM_RESOURCE_NAME_ -->
+		</if>
+	    <if test="description_ != null and description_ != ''">
+		      AND description_ = #{description_}  <!-- DESCRIPTION_ -->
+		</if>
+	   <if test="has_start_form_key_ != null ">
+		      AND has_start_form_key_ = #{has_start_form_key_}  <!-- HAS_START_FORM_KEY_ -->
+		</if>
+	   <if test="has_graphical_notation_ != null ">
+		      AND has_graphical_notation_ = #{has_graphical_notation_}  <!-- HAS_GRAPHICAL_NOTATION_ -->
+		</if>
+	   <if test="suspension_state_ != null ">
+		      AND suspension_state_ = #{suspension_state_}  <!-- SUSPENSION_STATE_ -->
+		</if>
+	    <if test="tenant_id_ != null and tenant_id_ != ''">
+		      AND tenant_id_ = #{tenant_id_}  <!-- TENANT_ID_ -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- ID_ -->
+		</if>
+	    <if test="category_ != null and category_ != ''">
+		      AND category_ like '%${category_}%'  <!-- CATEGORY_ -->
+		</if>
+	    <if test="name_ != null and name_ != ''">
+		      AND name_ like '%${name_}%'  <!-- NAME_ -->
+		</if>
+	    <if test="key_ != null and key_ != ''">
+		      AND key_ like '%${key_}%'  <!-- KEY_ -->
+		</if>
+	    <if test="deployment_id_ != null and deployment_id_ != ''">
+		      AND deployment_id_ like '%${deployment_id_}%'  <!-- DEPLOYMENT_ID_ -->
+		</if>
+	    <if test="resource_name_ != null and resource_name_ != ''">
+		      AND resource_name_ like '%${resource_name_}%'  <!-- RESOURCE_NAME_ -->
+		</if>
+	    <if test="dgrm_resource_name_ != null and dgrm_resource_name_ != ''">
+		      AND dgrm_resource_name_ like '%${dgrm_resource_name_}%'  <!-- DGRM_RESOURCE_NAME_ -->
+		</if>
+	    <if test="description_ != null and description_ != ''">
+		      AND description_ like '%${description_}%'  <!-- DESCRIPTION_ -->
+		</if>
+	    <if test="tenant_id_ != null and tenant_id_ != ''">
+		      AND tenant_id_ like '%${tenant_id_}%'  <!-- TENANT_ID_ -->
+		</if>
+	</sql>
+	
+</mapper>

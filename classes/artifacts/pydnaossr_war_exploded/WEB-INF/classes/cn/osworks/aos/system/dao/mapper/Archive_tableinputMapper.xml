@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_TableInput[archive_tableinput]SQLMapper自动映射 -->
+<!-- 注意:此文件由AOS平台自动生成-禁止手工修改 2017-07-31 10:28:15 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_tableinputMapper">
+
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert" parameterType="Archive_tableinputPO">
+		INSERT INTO archive_tableinput (
+		
+		<if test="fieldname != null and fieldname != ''">
+			fieldname, <!-- fieldname -->
+		</if>
+		<if test="flag != null and flag != ''">
+			flag, <!-- flag -->
+		</if>
+		<if test="displayname != null and displayname != ''">
+			displayname, <!-- displayname -->
+		</if>
+		<if test="yndisplay != null and yndisplay != ''">
+			yndisplay, <!-- Yndisplay -->
+		</if>
+		<if test="ynxd != null and ynxd != ''">
+			ynxd, <!-- ynxd -->
+		</if>
+		<if test="ynchar != null and ynchar != ''">
+			ynchar, <!-- ynchar -->
+		</if>
+		<if test="ynnum != null and ynnum != ''">
+			ynnum, <!-- ynnum -->
+		</if>
+		<if test="ynnnull != null and ynnnull != ''">
+			ynnnull, <!-- ynNnull -->
+		</if>
+		<if test="edtmax != null and edtmax != ''">
+			edtmax, <!-- EdtMax -->
+		</if>
+		<if test="ynpw != null and ynpw != ''">
+			ynpw, <!-- ynPW -->
+		</if>
+		<if test="edtpwchar != null and edtpwchar != ''">
+			edtpwchar, <!-- Edtpwchar -->
+		</if>
+		<if test="nextcontrol != null">
+			nextcontrol, <!-- nextcontrol -->
+		</if>
+		<if test="yndic != null and yndic != ''">
+			yndic, <!-- YNDIC -->
+		</if>
+		<if test="dic != null and dic != ''">
+			dic, <!-- DIC -->
+		</if>
+		<if test="yntj != null and yntj != ''">
+			yntj, <!-- ynTJ -->
+		</if>
+		<if test="cleft != null and cleft != ''">
+			cleft, <!-- Cleft -->
+		</if>
+		<if test="ctop != null and ctop != ''">
+			ctop, <!-- ctop -->
+		</if>
+		<if test="cheight != null and cheight != ''">
+			cheight, <!-- cheight -->
+		</if>
+		<if test="cwidth != null and cwidth != ''">
+			cwidth, <!-- cwidth -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+			tablename, <!-- tablename -->
+		</if>
+		<if test="info != null and info != ''">
+			info, <!-- info -->
+		</if>
+		<if test="dh != null and dh != ''">
+			dh, <!-- dh -->
+		</if>
+		<if test="dh1 != null and dh1 != ''">
+			dh1, <!-- dh1 -->
+		</if>
+		<if test="dh2 != null and dh2 != ''">
+			dh2, <!-- dh2 -->
+		</if>
+		<if test="dh3 != null and dh3 != ''">
+			dh3, <!-- dh3 -->
+		</if>
+		<if test="dh4 != null and dh4 != ''">
+			dh4, <!-- dh4 -->
+		</if>
+		<if test="dh5 != null and dh5 != ''">
+			dh5, <!-- dh5 -->
+		</if>
+		<if test="dh6 != null and dh6 != ''">
+			dh6, <!-- dh6 -->
+		</if>
+		<if test="dh7 != null and dh7 != ''">
+			dh7, <!-- dh7 -->
+		</if>
+		<if test="dagdm != null and dagdm != ''">
+			dagdm, <!-- dagdm -->
+		</if>
+		<if test="yndate != null and yndate != ''">
+			yndate, <!-- yndate -->
+		</if>
+		<if test="font != null and font != ''">
+			font, <!-- font -->
+		</if>
+		<if test="size != null and size != ''">
+			size, <!-- size -->
+		</if>
+		<if test="color != null and color != ''">
+			color, <!-- color -->
+		</if>
+		<if test="c1 != null and c1 != ''">
+			c1, <!-- c1 -->
+		</if>
+		<if test="c2 != null and c2 != ''">
+			c2, <!-- c2 -->
+		</if>
+		<if test="c3 != null and c3 != ''">
+			c3, <!-- c3 -->
+		</if>
+		<if test="c4 != null and c4 != ''">
+			c4 <!-- c4 -->
+		</if>
+		<if test="id != null">
+			id <!-- id -->
+		</if>
+		)VALUES(
+		
+		<if test="fieldname != null and fieldname != ''">
+			#{fieldname, jdbcType=VARCHAR}, <!-- fieldname -->
+		</if>
+		<if test="flag != null and flag != ''">
+			#{flag, jdbcType=VARCHAR}, <!-- flag -->
+		</if>
+		<if test="displayname != null and displayname != ''">
+			#{displayname, jdbcType=VARCHAR}, <!-- displayname -->
+		</if>
+		<if test="yndisplay != null and yndisplay != ''">
+			#{yndisplay, jdbcType=VARCHAR}, <!-- Yndisplay -->
+		</if>
+		<if test="ynxd != null and ynxd != ''">
+			#{ynxd, jdbcType=VARCHAR}, <!-- ynxd -->
+		</if>
+		<if test="ynchar != null and ynchar != ''">
+			#{ynchar, jdbcType=VARCHAR}, <!-- ynchar -->
+		</if>
+		<if test="ynnum != null and ynnum != ''">
+			#{ynnum, jdbcType=VARCHAR}, <!-- ynnum -->
+		</if>
+		<if test="ynnnull != null and ynnnull != ''">
+			#{ynnnull, jdbcType=VARCHAR}, <!-- ynNnull -->
+		</if>
+		<if test="edtmax != null and edtmax != ''">
+			#{edtmax, jdbcType=VARCHAR}, <!-- EdtMax -->
+		</if>
+		<if test="ynpw != null and ynpw != ''">
+			#{ynpw, jdbcType=VARCHAR}, <!-- ynPW -->
+		</if>
+		<if test="edtpwchar != null and edtpwchar != ''">
+			#{edtpwchar, jdbcType=VARCHAR}, <!-- Edtpwchar -->
+		</if>
+		<if test="nextcontrol != null">
+			#{nextcontrol, jdbcType=INTEGER}, <!-- nextcontrol -->
+		</if>
+		<if test="yndic != null and yndic != ''">
+			#{yndic, jdbcType=VARCHAR}, <!-- YNDIC -->
+		</if>
+		<if test="dic != null and dic != ''">
+			#{dic, jdbcType=VARCHAR}, <!-- DIC -->
+		</if>
+		<if test="yntj != null and yntj != ''">
+			#{yntj, jdbcType=VARCHAR}, <!-- ynTJ -->
+		</if>
+		<if test="cleft != null and cleft != ''">
+			#{cleft, jdbcType=VARCHAR}, <!-- Cleft -->
+		</if>
+		<if test="ctop != null and ctop != ''">
+			#{ctop, jdbcType=VARCHAR}, <!-- ctop -->
+		</if>
+		<if test="cheight != null and cheight != ''">
+			#{cheight, jdbcType=VARCHAR}, <!-- cheight -->
+		</if>
+		<if test="cwidth != null and cwidth != ''">
+			#{cwidth, jdbcType=VARCHAR}, <!-- cwidth -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+			#{tablename, jdbcType=VARCHAR}, <!-- tablename -->
+		</if>
+		<if test="info != null and info != ''">
+			#{info, jdbcType=VARCHAR}, <!-- info -->
+		</if>
+		<if test="dh != null and dh != ''">
+			#{dh, jdbcType=VARCHAR}, <!-- dh -->
+		</if>
+		<if test="dh1 != null and dh1 != ''">
+			#{dh1, jdbcType=VARCHAR}, <!-- dh1 -->
+		</if>
+		<if test="dh2 != null and dh2 != ''">
+			#{dh2, jdbcType=VARCHAR}, <!-- dh2 -->
+		</if>
+		<if test="dh3 != null and dh3 != ''">
+			#{dh3, jdbcType=VARCHAR}, <!-- dh3 -->
+		</if>
+		<if test="dh4 != null and dh4 != ''">
+			#{dh4, jdbcType=VARCHAR}, <!-- dh4 -->
+		</if>
+		<if test="dh5 != null and dh5 != ''">
+			#{dh5, jdbcType=VARCHAR}, <!-- dh5 -->
+		</if>
+		<if test="dh6 != null and dh6 != ''">
+			#{dh6, jdbcType=VARCHAR}, <!-- dh6 -->
+		</if>
+		<if test="dh7 != null and dh7 != ''">
+			#{dh7, jdbcType=VARCHAR}, <!-- dh7 -->
+		</if>
+		<if test="dagdm != null and dagdm != ''">
+			#{dagdm, jdbcType=VARCHAR}, <!-- dagdm -->
+		</if>
+		<if test="yndate != null and yndate != ''">
+			#{yndate, jdbcType=VARCHAR}, <!-- yndate -->
+		</if>
+		<if test="font != null and font != ''">
+			#{font, jdbcType=VARCHAR}, <!-- font -->
+		</if>
+		<if test="size != null and size != ''">
+			#{size, jdbcType=VARCHAR}, <!-- size -->
+		</if>
+		<if test="color != null and color != ''">
+			#{color, jdbcType=VARCHAR}, <!-- color -->
+		</if>
+		<if test="c1 != null and c1 != ''">
+			#{c1, jdbcType=VARCHAR}, <!-- c1 -->
+		</if>
+		<if test="c2 != null and c2 != ''">
+			#{c2, jdbcType=VARCHAR}, <!-- c2 -->
+		</if>
+		<if test="c3 != null and c3 != ''">
+			#{c3, jdbcType=VARCHAR}, <!-- c3 -->
+		</if>
+		<if test="c4 != null and c4 != ''">
+			#{c4, jdbcType=VARCHAR}, <!-- c4 -->
+		</if>
+		<if test="id != null">
+			#{id, jdbcType=VARCHAR} <!-- id -->
+		</if>
+		)
+	</insert>
+
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll" parameterType="Archive_tableinputPO">
+		INSERT INTO archive_tableinput (
+		<include refid="column" />
+		)
+		VALUES (
+		#{id, jdbcType=VARCHAR},  <!-- id -->
+		#{fieldname, jdbcType=VARCHAR},  <!-- fieldname -->
+		#{flag, jdbcType=VARCHAR},  <!-- flag -->
+		#{displayname, jdbcType=VARCHAR},  <!-- displayname -->
+		#{yndisplay, jdbcType=VARCHAR},  <!-- Yndisplay -->
+		#{ynxd, jdbcType=VARCHAR},  <!-- ynxd -->
+		#{ynchar, jdbcType=VARCHAR},  <!-- ynchar -->
+		#{ynnum, jdbcType=VARCHAR},  <!-- ynnum -->
+		#{ynnnull, jdbcType=VARCHAR},  <!-- ynNnull -->
+		#{edtmax, jdbcType=VARCHAR},  <!-- EdtMax -->
+		#{ynpw, jdbcType=VARCHAR},  <!-- ynPW -->
+		#{edtpwchar, jdbcType=VARCHAR},  <!-- Edtpwchar -->
+		#{nextcontrol, jdbcType=INTEGER},  <!-- nextcontrol -->
+		#{yndic, jdbcType=VARCHAR},  <!-- YNDIC -->
+		#{dic, jdbcType=VARCHAR},  <!-- DIC -->
+		#{yntj, jdbcType=VARCHAR},  <!-- ynTJ -->
+		#{cleft, jdbcType=VARCHAR},  <!-- Cleft -->
+		#{ctop, jdbcType=VARCHAR},  <!-- ctop -->
+		#{cheight, jdbcType=VARCHAR},  <!-- cheight -->
+		#{cwidth, jdbcType=VARCHAR},  <!-- cwidth -->
+		#{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+		#{info, jdbcType=VARCHAR},  <!-- info -->
+		#{dh, jdbcType=VARCHAR},  <!-- dh -->
+		#{dh1, jdbcType=VARCHAR},  <!-- dh1 -->
+		#{dh2, jdbcType=VARCHAR},  <!-- dh2 -->
+		#{dh3, jdbcType=VARCHAR},  <!-- dh3 -->
+		#{dh4, jdbcType=VARCHAR},  <!-- dh4 -->
+		#{dh5, jdbcType=VARCHAR},  <!-- dh5 -->
+		#{dh6, jdbcType=VARCHAR},  <!-- dh6 -->
+		#{dh7, jdbcType=VARCHAR},  <!-- dh7 -->
+		#{dagdm, jdbcType=VARCHAR},  <!-- dagdm -->
+		#{yndate, jdbcType=VARCHAR},  <!-- yndate -->
+		#{font, jdbcType=VARCHAR},  <!-- font -->
+		#{size, jdbcType=VARCHAR},  <!-- size -->
+		#{color, jdbcType=VARCHAR},  <!-- color -->
+		#{c1, jdbcType=VARCHAR},  <!-- c1 -->
+		#{c2, jdbcType=VARCHAR},  <!-- c2 -->
+		#{c3, jdbcType=VARCHAR},  <!-- c3 -->
+		#{c4, jdbcType=VARCHAR}  <!-- c4 -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_tableinputPO">
+		UPDATE archive_tableinput
+		<set>
+			<if test="id != null">
+				id = #{id, jdbcType=INTEGER},  <!-- id -->
+			</if>
+			<if test="fieldname != null">
+				fieldname = #{fieldname, jdbcType=VARCHAR},  <!-- fieldname -->
+			</if>
+			<if test="flag != null">
+				flag = #{flag, jdbcType=VARCHAR},  <!-- flag -->
+			</if>
+			<if test="displayname != null">
+				displayname = #{displayname, jdbcType=VARCHAR},  <!-- displayname -->
+			</if>
+			<if test="yndisplay != null">
+				yndisplay = #{yndisplay, jdbcType=VARCHAR},  <!-- Yndisplay -->
+			</if>
+			<if test="ynxd != null">
+				ynxd = #{ynxd, jdbcType=VARCHAR},  <!-- ynxd -->
+			</if>
+			<if test="ynchar != null">
+				ynchar = #{ynchar, jdbcType=VARCHAR},  <!-- ynchar -->
+			</if>
+			<if test="ynnum != null">
+				ynnum = #{ynnum, jdbcType=VARCHAR},  <!-- ynnum -->
+			</if>
+			<if test="ynnnull != null">
+				ynnnull = #{ynnnull, jdbcType=VARCHAR},  <!-- ynNnull -->
+			</if>
+			<if test="edtmax != null">
+				edtmax = #{edtmax, jdbcType=VARCHAR},  <!-- EdtMax -->
+			</if>
+			<if test="ynpw != null">
+				ynpw = #{ynpw, jdbcType=VARCHAR},  <!-- ynPW -->
+			</if>
+			<if test="edtpwchar != null">
+				edtpwchar = #{edtpwchar, jdbcType=VARCHAR},  <!-- Edtpwchar -->
+			</if>
+			<if test="nextcontrol != null">
+				nextcontrol = #{nextcontrol, jdbcType=INTEGER},  <!-- nextcontrol -->
+			</if>
+			<if test="yndic != null">
+				yndic = #{yndic, jdbcType=VARCHAR},  <!-- YNDIC -->
+			</if>
+			<if test="dic != null">
+				dic = #{dic, jdbcType=VARCHAR},  <!-- DIC -->
+			</if>
+			<if test="yntj != null">
+				yntj = #{yntj, jdbcType=VARCHAR},  <!-- ynTJ -->
+			</if>
+			<if test="cleft != null">
+				cleft = #{cleft, jdbcType=VARCHAR},  <!-- Cleft -->
+			</if>
+			<if test="ctop != null">
+				ctop = #{ctop, jdbcType=VARCHAR},  <!-- ctop -->
+			</if>
+			<if test="cheight != null">
+				cheight = #{cheight, jdbcType=VARCHAR},  <!-- cheight -->
+			</if>
+			<if test="cwidth != null">
+				cwidth = #{cwidth, jdbcType=VARCHAR},  <!-- cwidth -->
+			</if>
+			<if test="tablename != null">
+				tablename = #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+			</if>
+			<if test="info != null">
+				info = #{info, jdbcType=VARCHAR},  <!-- info -->
+			</if>
+			<if test="dh != null">
+				dh = #{dh, jdbcType=VARCHAR},  <!-- dh -->
+			</if>
+			<if test="dh1 != null">
+				dh1 = #{dh1, jdbcType=VARCHAR},  <!-- dh1 -->
+			</if>
+			<if test="dh2 != null">
+				dh2 = #{dh2, jdbcType=VARCHAR},  <!-- dh2 -->
+			</if>
+			<if test="dh3 != null">
+				dh3 = #{dh3, jdbcType=VARCHAR},  <!-- dh3 -->
+			</if>
+			<if test="dh4 != null">
+				dh4 = #{dh4, jdbcType=VARCHAR},  <!-- dh4 -->
+			</if>
+			<if test="dh5 != null">
+				dh5 = #{dh5, jdbcType=VARCHAR},  <!-- dh5 -->
+			</if>
+			<if test="dh6 != null">
+				dh6 = #{dh6, jdbcType=VARCHAR},  <!-- dh6 -->
+			</if>
+			<if test="dh7 != null">
+				dh7 = #{dh7, jdbcType=VARCHAR},  <!-- dh7 -->
+			</if>
+			<if test="dagdm != null">
+				dagdm = #{dagdm, jdbcType=VARCHAR},  <!-- dagdm -->
+			</if>
+			<if test="yndate != null">
+				yndate = #{yndate, jdbcType=VARCHAR},  <!-- yndate -->
+			</if>
+			<if test="font != null">
+				font = #{font, jdbcType=VARCHAR},  <!-- font -->
+			</if>
+			<if test="size != null">
+				size = #{size, jdbcType=VARCHAR},  <!-- size -->
+			</if>
+			<if test="color != null">
+				color = #{color, jdbcType=VARCHAR},  <!-- color -->
+			</if>
+			<if test="c1 != null">
+				c1 = #{c1, jdbcType=VARCHAR},  <!-- c1 -->
+			</if>
+			<if test="c2 != null">
+				c2 = #{c2, jdbcType=VARCHAR},  <!-- c2 -->
+			</if>
+			<if test="c3 != null">
+				c3 = #{c3, jdbcType=VARCHAR},  <!-- c3 -->
+			</if>
+			<if test="c4 != null">
+				c4 = #{c4, jdbcType=VARCHAR},  <!-- c4 -->
+			</if>
+		</set>
+		WHERE
+	</update>
+
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_tableinput WHERE id=#{id}
+	</delete>
+	
+	
+	<!-- 根据fieldname删除数据持久化对象 -->
+	<delete id="deleteByFieldname" parameterType="String">
+		DELETE FROM archive_tableinput WHERE tablename=#{tablename}
+	</delete>
+	
+	
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_tableinputPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_tableinput WHERE
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_tableinputPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_tableinput
+		<where>
+			<include refid="equal" />
+		</where>
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_tableinputPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_tableinput
+		<where>
+			<include refid="equal" />
+
+			
+		</where>
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_tableinputPO"
+		useCache="false">
+		SELECT
+		<include refid="column" />
+		FROM archive_tableinput
+		<where>
+			<include refid="equal" />
+		</where>
+	</select>
+
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_tableinputPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_tableinput
+		<where>
+			<include refid="like" />
+		</where>
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_tableinputPO"
+		useCache="false">
+		SELECT
+		<include refid="column" />
+		FROM archive_tableinput
+		<where>
+			<include refid="like" />
+		</where>
+	</select>
+
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_tableinput
+		<where>
+			<include refid="equal" />
+		</where>
+	</select>
+
+	<!-- 查询ID最大值 -->
+	<select id="getMaxId" resultType="Integer" parameterType="Dto">
+		SELECT max(id) AS aos_id_ FROM archive_tableinput
+		<where>
+			<include refid="equal" />
+		</where>
+	</select>
+
+
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+		${_expr}
+		FROM archive_tableinput
+		<where>
+			<include refid="equal" />
+		</where>
+	</select>
+
+	<!-- 表字段 -->
+	<sql id="column">
+		id,  <!-- id -->
+		fieldname,  <!-- fieldname -->
+		flag,  <!-- flag -->
+		displayname,  <!-- displayname -->
+		yndisplay,  <!-- Yndisplay -->
+		ynxd,  <!-- ynxd -->
+		ynchar,  <!-- ynchar -->
+		ynnum,  <!-- ynnum -->
+		ynnnull,  <!-- ynNnull -->
+		edtmax,  <!-- EdtMax -->
+		ynpw,  <!-- ynPW -->
+		edtpwchar,  <!-- Edtpwchar -->
+		nextcontrol,  <!-- nextcontrol -->
+		yndic,  <!-- YNDIC -->
+		dic,  <!-- DIC -->
+		yntj,  <!-- ynTJ -->
+		cleft,  <!-- Cleft -->
+		ctop,  <!-- ctop -->
+		cheight,  <!-- cheight -->
+		cwidth,  <!-- cwidth -->
+		tablename,  <!-- tablename -->
+		info,  <!-- info -->
+		dh,  <!-- dh -->
+		dh1,  <!-- dh1 -->
+		dh2,  <!-- dh2 -->
+		dh3,  <!-- dh3 -->
+		dh4,  <!-- dh4 -->
+		dh5,  <!-- dh5 -->
+		dh6,  <!-- dh6 -->
+		dh7,  <!-- dh7 -->
+		dagdm,  <!-- dagdm -->
+		yndate,  <!-- yndate -->
+		font,  <!-- font -->
+		size,  <!-- size -->
+		color,  <!-- color -->
+		c1,  <!-- c1 -->
+		c2,  <!-- c2 -->
+		c3,  <!-- c3 -->
+		c4  <!-- c4 -->
+	</sql>
+
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		archive_tableinput.id,  <!-- id -->
+		archive_tableinput.fieldname,  <!-- fieldname -->
+		archive_tableinput.flag,  <!-- flag -->
+		archive_tableinput.displayname,  <!-- displayname -->
+		archive_tableinput.yndisplay,  <!-- Yndisplay -->
+		archive_tableinput.ynxd,  <!-- ynxd -->
+		archive_tableinput.ynchar,  <!-- ynchar -->
+		archive_tableinput.ynnum,  <!-- ynnum -->
+		archive_tableinput.ynnnull,  <!-- ynNnull -->
+		archive_tableinput.edtmax,  <!-- EdtMax -->
+		archive_tableinput.ynpw,  <!-- ynPW -->
+		archive_tableinput.edtpwchar,  <!-- Edtpwchar -->
+		archive_tableinput.nextcontrol,  <!-- nextcontrol -->
+		archive_tableinput.yndic,  <!-- YNDIC -->
+		archive_tableinput.dic,  <!-- DIC -->
+		archive_tableinput.yntj,  <!-- ynTJ -->
+		archive_tableinput.cleft,  <!-- Cleft -->
+		archive_tableinput.ctop,  <!-- ctop -->
+		archive_tableinput.cheight,  <!-- cheight -->
+		archive_tableinput.cwidth,  <!-- cwidth -->
+		archive_tableinput.tablename,  <!-- tablename -->
+		archive_tableinput.info,  <!-- info -->
+		archive_tableinput.dh,  <!-- dh -->
+		archive_tableinput.dh1,  <!-- dh1 -->
+		archive_tableinput.dh2,  <!-- dh2 -->
+		archive_tableinput.dh3,  <!-- dh3 -->
+		archive_tableinput.dh4,  <!-- dh4 -->
+		archive_tableinput.dh5,  <!-- dh5 -->
+		archive_tableinput.dh6,  <!-- dh6 -->
+		archive_tableinput.dh7,  <!-- dh7 -->
+		archive_tableinput.dagdm,  <!-- dagdm -->
+		archive_tableinput.yndate,  <!-- yndate -->
+		archive_tableinput.font,  <!-- font -->
+		archive_tableinput.size,  <!-- size -->
+		archive_tableinput.color,  <!-- color -->
+		archive_tableinput.c1,  <!-- c1 -->
+		archive_tableinput.c2,  <!-- c2 -->
+		archive_tableinput.c3,  <!-- c3 -->
+		archive_tableinput.c4  <!-- c4 -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+		<if test="id != null ">
+			AND id = #{id}  <!-- id -->
+		</if>
+		<if test="fieldname != null and fieldname != ''">
+			AND fieldname = #{fieldname}  <!-- fieldname -->
+		</if>
+		<if test="flag != null and flag != ''">
+			AND flag = #{flag}  <!-- flag -->
+		</if>
+		<if test="displayname != null and displayname != ''">
+			AND displayname = #{displayname}  <!-- displayname -->
+		</if>
+		<if test="yndisplay != null and yndisplay != ''">
+			AND yndisplay = #{yndisplay}  <!-- Yndisplay -->
+		</if>
+		<if test="ynxd != null and ynxd != ''">
+			AND ynxd = #{ynxd}  <!-- ynxd -->
+		</if>
+		<if test="ynchar != null and ynchar != ''">
+			AND ynchar = #{ynchar}  <!-- ynchar -->
+		</if>
+		<if test="ynnum != null and ynnum != ''">
+			AND ynnum = #{ynnum}  <!-- ynnum -->
+		</if>
+		<if test="ynnnull != null and ynnnull != ''">
+			AND ynnnull = #{ynnnull}  <!-- ynNnull -->
+		</if>
+		<if test="edtmax != null and edtmax != ''">
+			AND edtmax = #{edtmax}  <!-- EdtMax -->
+		</if>
+		<if test="ynpw != null and ynpw != ''">
+			AND ynpw = #{ynpw}  <!-- ynPW -->
+		</if>
+		<if test="edtpwchar != null and edtpwchar != ''">
+			AND edtpwchar = #{edtpwchar}  <!-- Edtpwchar -->
+		</if>
+		<if test="nextcontrol != null ">
+			AND nextcontrol = #{nextcontrol}  <!-- nextcontrol -->
+		</if>
+		<if test="yndic != null and yndic != ''">
+			AND yndic = #{yndic}  <!-- YNDIC -->
+		</if>
+		<if test="dic != null and dic != ''">
+			AND dic = #{dic}  <!-- DIC -->
+		</if>
+		<if test="yntj != null and yntj != ''">
+			AND yntj = #{yntj}  <!-- ynTJ -->
+		</if>
+		<if test="cleft != null and cleft != ''">
+			AND cleft = #{cleft}  <!-- Cleft -->
+		</if>
+		<if test="ctop != null and ctop != ''">
+			AND ctop = #{ctop}  <!-- ctop -->
+		</if>
+		<if test="cheight != null and cheight != ''">
+			AND cheight = #{cheight}  <!-- cheight -->
+		</if>
+		<if test="cwidth != null and cwidth != ''">
+			AND cwidth = #{cwidth}  <!-- cwidth -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+			AND tablename = #{tablename}  <!-- tablename -->
+		</if>
+		<if test="info != null and info != ''">
+			AND info = #{info}  <!-- info -->
+		</if>
+		<if test="dh != null and dh != ''">
+			AND dh = #{dh}  <!-- dh -->
+		</if>
+		<if test="dh1 != null and dh1 != ''">
+			AND dh1 = #{dh1}  <!-- dh1 -->
+		</if>
+		<if test="dh2 != null and dh2 != ''">
+			AND dh2 = #{dh2}  <!-- dh2 -->
+		</if>
+		<if test="dh3 != null and dh3 != ''">
+			AND dh3 = #{dh3}  <!-- dh3 -->
+		</if>
+		<if test="dh4 != null and dh4 != ''">
+			AND dh4 = #{dh4}  <!-- dh4 -->
+		</if>
+		<if test="dh5 != null and dh5 != ''">
+			AND dh5 = #{dh5}  <!-- dh5 -->
+		</if>
+		<if test="dh6 != null and dh6 != ''">
+			AND dh6 = #{dh6}  <!-- dh6 -->
+		</if>
+		<if test="dh7 != null and dh7 != ''">
+			AND dh7 = #{dh7}  <!-- dh7 -->
+		</if>
+		<if test="dagdm != null and dagdm != ''">
+			AND dagdm = #{dagdm}  <!-- dagdm -->
+		</if>
+		<if test="yndate != null and yndate != ''">
+			AND yndate = #{yndate}  <!-- yndate -->
+		</if>
+		<if test="font != null and font != ''">
+			AND font = #{font}  <!-- font -->
+		</if>
+		<if test="size != null and size != ''">
+			AND size = #{size}  <!-- size -->
+		</if>
+		<if test="color != null and color != ''">
+			AND color = #{color}  <!-- color -->
+		</if>
+		<if test="c1 != null and c1 != ''">
+			AND c1 = #{c1}  <!-- c1 -->
+		</if>
+		<if test="c2 != null and c2 != ''">
+			AND c2 = #{c2}  <!-- c2 -->
+		</if>
+		<if test="c3 != null and c3 != ''">
+			AND c3 = #{c3}  <!-- c3 -->
+		</if>
+		<if test="c4 != null and c4 != ''">
+			AND c4 = #{c4}  <!-- c4 -->
+		</if>
+	</sql>
+
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+		<if test="fieldname != null and fieldname != ''">
+			AND fieldname like '%${fieldname}%'  <!-- fieldname -->
+		</if>
+		<if test="flag != null and flag != ''">
+			AND flag like '%${flag}%'  <!-- flag -->
+		</if>
+		<if test="displayname != null and displayname != ''">
+			AND displayname like '%${displayname}%'  <!-- displayname -->
+		</if>
+		<if test="yndisplay != null and yndisplay != ''">
+			AND yndisplay like '%${yndisplay}%'  <!-- Yndisplay -->
+		</if>
+		<if test="ynxd != null and ynxd != ''">
+			AND ynxd like '%${ynxd}%'  <!-- ynxd -->
+		</if>
+		<if test="ynchar != null and ynchar != ''">
+			AND ynchar like '%${ynchar}%'  <!-- ynchar -->
+		</if>
+		<if test="ynnum != null and ynnum != ''">
+			AND ynnum like '%${ynnum}%'  <!-- ynnum -->
+		</if>
+		<if test="ynnnull != null and ynnnull != ''">
+			AND ynnnull like '%${ynnnull}%'  <!-- ynNnull -->
+		</if>
+		<if test="edtmax != null and edtmax != ''">
+			AND edtmax like '%${edtmax}%'  <!-- EdtMax -->
+		</if>
+		<if test="ynpw != null and ynpw != ''">
+			AND ynpw like '%${ynpw}%'  <!-- ynPW -->
+		</if>
+		<if test="edtpwchar != null and edtpwchar != ''">
+			AND edtpwchar like '%${edtpwchar}%'  <!-- Edtpwchar -->
+		</if>
+		<if test="yndic != null and yndic != ''">
+			AND yndic like '%${yndic}%'  <!-- YNDIC -->
+		</if>
+		<if test="dic != null and dic != ''">
+			AND dic like '%${dic}%'  <!-- DIC -->
+		</if>
+		<if test="yntj != null and yntj != ''">
+			AND yntj like '%${yntj}%'  <!-- ynTJ -->
+		</if>
+		<if test="cleft != null and cleft != ''">
+			AND cleft like '%${cleft}%'  <!-- Cleft -->
+		</if>
+		<if test="ctop != null and ctop != ''">
+			AND ctop like '%${ctop}%'  <!-- ctop -->
+		</if>
+		<if test="cheight != null and cheight != ''">
+			AND cheight like '%${cheight}%'  <!-- cheight -->
+		</if>
+		<if test="cwidth != null and cwidth != ''">
+			AND cwidth like '%${cwidth}%'  <!-- cwidth -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+			AND tablename like '%${tablename}%'  <!-- tablename -->
+		</if>
+		<if test="info != null and info != ''">
+			AND info like '%${info}%'  <!-- info -->
+		</if>
+		<if test="dh != null and dh != ''">
+			AND dh like '%${dh}%'  <!-- dh -->
+		</if>
+		<if test="dh1 != null and dh1 != ''">
+			AND dh1 like '%${dh1}%'  <!-- dh1 -->
+		</if>
+		<if test="dh2 != null and dh2 != ''">
+			AND dh2 like '%${dh2}%'  <!-- dh2 -->
+		</if>
+		<if test="dh3 != null and dh3 != ''">
+			AND dh3 like '%${dh3}%'  <!-- dh3 -->
+		</if>
+		<if test="dh4 != null and dh4 != ''">
+			AND dh4 like '%${dh4}%'  <!-- dh4 -->
+		</if>
+		<if test="dh5 != null and dh5 != ''">
+			AND dh5 like '%${dh5}%'  <!-- dh5 -->
+		</if>
+		<if test="dh6 != null and dh6 != ''">
+			AND dh6 like '%${dh6}%'  <!-- dh6 -->
+		</if>
+		<if test="dh7 != null and dh7 != ''">
+			AND dh7 like '%${dh7}%'  <!-- dh7 -->
+		</if>
+		<if test="dagdm != null and dagdm != ''">
+			AND dagdm like '%${dagdm}%'  <!-- dagdm -->
+		</if>
+		<if test="yndate != null and yndate != ''">
+			AND yndate like '%${yndate}%'  <!-- yndate -->
+		</if>
+		<if test="font != null and font != ''">
+			AND font like '%${font}%'  <!-- font -->
+		</if>
+		<if test="size != null and size != ''">
+			AND size like '%${size}%'  <!-- size -->
+		</if>
+		<if test="color != null and color != ''">
+			AND color like '%${color}%'  <!-- color -->
+		</if>
+		<if test="c1 != null and c1 != ''">
+			AND c1 like '%${c1}%'  <!-- c1 -->
+		</if>
+		<if test="c2 != null and c2 != ''">
+			AND c2 like '%${c2}%'  <!-- c2 -->
+		</if>
+		<if test="c3 != null and c3 != ''">
+			AND c3 like '%${c3}%'  <!-- c3 -->
+		</if>
+		<if test="c4 != null and c4 != ''">
+			AND c4 like '%${c4}%'  <!-- c4 -->
+		</if>
+	</sql>
+
+</mapper>

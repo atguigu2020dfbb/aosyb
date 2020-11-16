@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- depot_hj[depot_hj]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-09-09 15:44:43 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Depot_hjMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Depot_hjPO">
+		INSERT INTO depot_hj (
+		<if test="depotname != null and depotname != ''">
+	         depotname, <!-- DepotName -->
+		</if>
+		<if test="wd != null and wd != ''">
+	         wd, <!-- wd -->
+		</if>
+		<if test="sd != null and sd != ''">
+	         sd, <!-- sd -->
+		</if>
+		<if test="jcr_cn != null and jcr_cn != ''">
+	         jcr_cn, <!-- jcr_cn -->
+		</if>
+		<if test="jcr_en != null and jcr_en != ''">
+	         jcr_en, <!-- jcr_en -->
+		</if>
+		<if test="jcrq != null and jcrq != ''">
+	         jcrq, <!-- jcrq -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="wdzk != null and wdzk != ''">
+	         wdzk, <!-- wdzk -->
+		</if>
+		<if test="sdzk != null and sdzk != ''">
+	         sdzk, <!-- sdzk -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="depotname != null and depotname != ''">
+	          #{depotname, jdbcType=VARCHAR}, <!-- DepotName -->
+	    </if>
+		<if test="wd != null and wd != ''">
+	          #{wd, jdbcType=VARCHAR}, <!-- wd -->
+	    </if>
+		<if test="sd != null and sd != ''">
+	          #{sd, jdbcType=VARCHAR}, <!-- sd -->
+	    </if>
+		<if test="jcr_cn != null and jcr_cn != ''">
+	          #{jcr_cn, jdbcType=VARCHAR}, <!-- jcr_cn -->
+	    </if>
+		<if test="jcr_en != null and jcr_en != ''">
+	          #{jcr_en, jdbcType=VARCHAR}, <!-- jcr_en -->
+	    </if>
+		<if test="jcrq != null and jcrq != ''">
+	          #{jcrq, jdbcType=VARCHAR}, <!-- jcrq -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="wdzk != null and wdzk != ''">
+	          #{wdzk, jdbcType=VARCHAR}, <!-- wdzk -->
+	    </if>
+		<if test="sdzk != null and sdzk != ''">
+	          #{sdzk, jdbcType=VARCHAR}, <!-- sdzk -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Depot_hjPO">
+		INSERT INTO depot_hj (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{depotname, jdbcType=VARCHAR},  <!-- DepotName -->
+		    #{wd, jdbcType=VARCHAR},  <!-- wd -->
+		    #{sd, jdbcType=VARCHAR},  <!-- sd -->
+		    #{jcr_cn, jdbcType=VARCHAR},  <!-- jcr_cn -->
+		    #{jcr_en, jdbcType=VARCHAR},  <!-- jcr_en -->
+		    #{jcrq, jdbcType=VARCHAR},  <!-- jcrq -->
+		    #{bz, jdbcType=VARCHAR},  <!-- bz -->
+		    #{wdzk, jdbcType=VARCHAR},  <!-- wdzk -->
+		    #{sdzk, jdbcType=VARCHAR}  <!-- sdzk -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Depot_hjPO">
+		UPDATE depot_hj
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="depotname != null">
+		          depotname = #{depotname, jdbcType=VARCHAR},  <!-- DepotName -->
+			</if>
+			<if test="wd != null">
+		          wd = #{wd, jdbcType=VARCHAR},  <!-- wd -->
+			</if>
+			<if test="sd != null">
+		          sd = #{sd, jdbcType=VARCHAR},  <!-- sd -->
+			</if>
+			<if test="jcr_cn != null">
+		          jcr_cn = #{jcr_cn, jdbcType=VARCHAR},  <!-- jcr_cn -->
+			</if>
+			<if test="jcr_en != null">
+		          jcr_en = #{jcr_en, jdbcType=VARCHAR},  <!-- jcr_en -->
+			</if>
+			<if test="jcrq != null">
+		          jcrq = #{jcrq, jdbcType=VARCHAR},  <!-- jcrq -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+			<if test="wdzk != null">
+		          wdzk = #{wdzk, jdbcType=VARCHAR},  <!-- wdzk -->
+			</if>
+			<if test="sdzk != null">
+		          sdzk = #{sdzk, jdbcType=VARCHAR},  <!-- sdzk -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM depot_hj WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Depot_hjPO">
+		SELECT
+		<include refid="column" />
+		FROM depot_hj WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Depot_hjPO">
+		SELECT
+		    <include refid="column" />
+		FROM depot_hj
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Depot_hjPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_hj
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Depot_hjPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_hj
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Depot_hjPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_hj
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Depot_hjPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_hj
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM depot_hj
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM depot_hj
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  depotname,  <!-- DepotName -->
+		  wd,  <!-- wd -->
+		  sd,  <!-- sd -->
+		  jcr_cn,  <!-- jcr_cn -->
+		  jcr_en,  <!-- jcr_en -->
+		  jcrq,  <!-- jcrq -->
+		  bz,  <!-- bz -->
+		  wdzk,  <!-- wdzk -->
+		  sdzk  <!-- sdzk -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  depot_hj.id_,  <!-- id_ -->
+		  depot_hj.depotname,  <!-- DepotName -->
+		  depot_hj.wd,  <!-- wd -->
+		  depot_hj.sd,  <!-- sd -->
+		  depot_hj.jcr_cn,  <!-- jcr_cn -->
+		  depot_hj.jcr_en,  <!-- jcr_en -->
+		  depot_hj.jcrq,  <!-- jcrq -->
+		  depot_hj.bz,  <!-- bz -->
+		  depot_hj.wdzk,  <!-- wdzk -->
+		  depot_hj.sdzk  <!-- sdzk -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="depotname != null and depotname != ''">
+		      AND depotname = #{depotname}  <!-- DepotName -->
+		</if>
+	    <if test="wd != null and wd != ''">
+		      AND wd = #{wd}  <!-- wd -->
+		</if>
+	    <if test="sd != null and sd != ''">
+		      AND sd = #{sd}  <!-- sd -->
+		</if>
+	    <if test="jcr_cn != null and jcr_cn != ''">
+		      AND jcr_cn = #{jcr_cn}  <!-- jcr_cn -->
+		</if>
+	    <if test="jcr_en != null and jcr_en != ''">
+		      AND jcr_en = #{jcr_en}  <!-- jcr_en -->
+		</if>
+	    <if test="jcrq != null and jcrq != ''">
+		      AND jcrq = #{jcrq}  <!-- jcrq -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	    <if test="wdzk != null and wdzk != ''">
+		      AND wdzk = #{wdzk}  <!-- wdzk -->
+		</if>
+	    <if test="sdzk != null and sdzk != ''">
+		      AND sdzk = #{sdzk}  <!-- sdzk -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="depotname != null and depotname != ''">
+		      AND depotname like '%${depotname}%'  <!-- DepotName -->
+		</if>
+	    <if test="wd != null and wd != ''">
+		      AND wd like '%${wd}%'  <!-- wd -->
+		</if>
+	    <if test="sd != null and sd != ''">
+		      AND sd like '%${sd}%'  <!-- sd -->
+		</if>
+	    <if test="jcr_cn != null and jcr_cn != ''">
+		      AND jcr_cn like '%${jcr_cn}%'  <!-- jcr_cn -->
+		</if>
+	    <if test="jcr_en != null and jcr_en != ''">
+		      AND jcr_en like '%${jcr_en}%'  <!-- jcr_en -->
+		</if>
+	    <if test="jcrq != null and jcrq != ''">
+		      AND jcrq like '%${jcrq}%'  <!-- jcrq -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	    <if test="wdzk != null and wdzk != ''">
+		      AND wdzk like '%${wdzk}%'  <!-- wdzk -->
+		</if>
+	    <if test="sdzk != null and sdzk != ''">
+		      AND sdzk like '%${sdzk}%'  <!-- sdzk -->
+		</if>
+	</sql>
+	
+</mapper>

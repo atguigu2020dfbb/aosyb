@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- ACT_RU_EXECUTION[act_ru_execution]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2018-12-18 15:50:46 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Act_ru_executionMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Act_ru_executionPO">
+		INSERT INTO act_ru_execution (
+		<if test="rev_ != null">
+	         rev_, <!-- REV_ -->
+		</if>
+		<if test="proc_inst_id_ != null and proc_inst_id_ != ''">
+	         proc_inst_id_, <!-- PROC_INST_ID_ -->
+		</if>
+		<if test="business_key_ != null and business_key_ != ''">
+	         business_key_, <!-- BUSINESS_KEY_ -->
+		</if>
+		<if test="parent_id_ != null and parent_id_ != ''">
+	         parent_id_, <!-- PARENT_ID_ -->
+		</if>
+		<if test="proc_def_id_ != null and proc_def_id_ != ''">
+	         proc_def_id_, <!-- PROC_DEF_ID_ -->
+		</if>
+		<if test="super_exec_ != null and super_exec_ != ''">
+	         super_exec_, <!-- SUPER_EXEC_ -->
+		</if>
+		<if test="act_id_ != null and act_id_ != ''">
+	         act_id_, <!-- ACT_ID_ -->
+		</if>
+		<if test="is_active_ != null">
+	         is_active_, <!-- IS_ACTIVE_ -->
+		</if>
+		<if test="is_concurrent_ != null">
+	         is_concurrent_, <!-- IS_CONCURRENT_ -->
+		</if>
+		<if test="is_scope_ != null">
+	         is_scope_, <!-- IS_SCOPE_ -->
+		</if>
+		<if test="is_event_scope_ != null">
+	         is_event_scope_, <!-- IS_EVENT_SCOPE_ -->
+		</if>
+		<if test="suspension_state_ != null">
+	         suspension_state_, <!-- SUSPENSION_STATE_ -->
+		</if>
+		<if test="cached_ent_state_ != null">
+	         cached_ent_state_, <!-- CACHED_ENT_STATE_ -->
+		</if>
+		<if test="tenant_id_ != null and tenant_id_ != ''">
+	         tenant_id_, <!-- TENANT_ID_ -->
+		</if>
+		<if test="name_ != null and name_ != ''">
+	         name_, <!-- NAME_ -->
+		</if>
+		<if test="lock_time_ != null and lock_time_ != ''">
+	         lock_time_, <!-- LOCK_TIME_ -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- ID_ -->
+	   </if>
+		)VALUES(
+		<if test="rev_ != null">
+	          #{rev_, jdbcType=INTEGER}, <!-- REV_ -->
+	    </if>
+		<if test="proc_inst_id_ != null and proc_inst_id_ != ''">
+	          #{proc_inst_id_, jdbcType=VARCHAR}, <!-- PROC_INST_ID_ -->
+	    </if>
+		<if test="business_key_ != null and business_key_ != ''">
+	          #{business_key_, jdbcType=VARCHAR}, <!-- BUSINESS_KEY_ -->
+	    </if>
+		<if test="parent_id_ != null and parent_id_ != ''">
+	          #{parent_id_, jdbcType=VARCHAR}, <!-- PARENT_ID_ -->
+	    </if>
+		<if test="proc_def_id_ != null and proc_def_id_ != ''">
+	          #{proc_def_id_, jdbcType=VARCHAR}, <!-- PROC_DEF_ID_ -->
+	    </if>
+		<if test="super_exec_ != null and super_exec_ != ''">
+	          #{super_exec_, jdbcType=VARCHAR}, <!-- SUPER_EXEC_ -->
+	    </if>
+		<if test="act_id_ != null and act_id_ != ''">
+	          #{act_id_, jdbcType=VARCHAR}, <!-- ACT_ID_ -->
+	    </if>
+		<if test="is_active_ != null">
+	          #{is_active_, jdbcType=INTEGER}, <!-- IS_ACTIVE_ -->
+	    </if>
+		<if test="is_concurrent_ != null">
+	          #{is_concurrent_, jdbcType=INTEGER}, <!-- IS_CONCURRENT_ -->
+	    </if>
+		<if test="is_scope_ != null">
+	          #{is_scope_, jdbcType=INTEGER}, <!-- IS_SCOPE_ -->
+	    </if>
+		<if test="is_event_scope_ != null">
+	          #{is_event_scope_, jdbcType=INTEGER}, <!-- IS_EVENT_SCOPE_ -->
+	    </if>
+		<if test="suspension_state_ != null">
+	          #{suspension_state_, jdbcType=INTEGER}, <!-- SUSPENSION_STATE_ -->
+	    </if>
+		<if test="cached_ent_state_ != null">
+	          #{cached_ent_state_, jdbcType=INTEGER}, <!-- CACHED_ENT_STATE_ -->
+	    </if>
+		<if test="tenant_id_ != null and tenant_id_ != ''">
+	          #{tenant_id_, jdbcType=VARCHAR}, <!-- TENANT_ID_ -->
+	    </if>
+		<if test="name_ != null and name_ != ''">
+	          #{name_, jdbcType=VARCHAR}, <!-- NAME_ -->
+	    </if>
+		<if test="lock_time_ != null and lock_time_ != ''">
+	          #{lock_time_, jdbcType=VARCHAR}, <!-- LOCK_TIME_ -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- ID_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Act_ru_executionPO">
+		INSERT INTO act_ru_execution (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- ID_ -->
+		    #{rev_, jdbcType=INTEGER},  <!-- REV_ -->
+		    #{proc_inst_id_, jdbcType=VARCHAR},  <!-- PROC_INST_ID_ -->
+		    #{business_key_, jdbcType=VARCHAR},  <!-- BUSINESS_KEY_ -->
+		    #{parent_id_, jdbcType=VARCHAR},  <!-- PARENT_ID_ -->
+		    #{proc_def_id_, jdbcType=VARCHAR},  <!-- PROC_DEF_ID_ -->
+		    #{super_exec_, jdbcType=VARCHAR},  <!-- SUPER_EXEC_ -->
+		    #{act_id_, jdbcType=VARCHAR},  <!-- ACT_ID_ -->
+		    #{is_active_, jdbcType=INTEGER},  <!-- IS_ACTIVE_ -->
+		    #{is_concurrent_, jdbcType=INTEGER},  <!-- IS_CONCURRENT_ -->
+		    #{is_scope_, jdbcType=INTEGER},  <!-- IS_SCOPE_ -->
+		    #{is_event_scope_, jdbcType=INTEGER},  <!-- IS_EVENT_SCOPE_ -->
+		    #{suspension_state_, jdbcType=INTEGER},  <!-- SUSPENSION_STATE_ -->
+		    #{cached_ent_state_, jdbcType=INTEGER},  <!-- CACHED_ENT_STATE_ -->
+		    #{tenant_id_, jdbcType=VARCHAR},  <!-- TENANT_ID_ -->
+		    #{name_, jdbcType=VARCHAR},  <!-- NAME_ -->
+		    #{lock_time_, jdbcType=VARCHAR}  <!-- LOCK_TIME_ -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Act_ru_executionPO">
+		UPDATE act_ru_execution
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- ID_ -->
+			</if>
+			<if test="rev_ != null">
+		          rev_ = #{rev_, jdbcType=INTEGER},  <!-- REV_ -->
+			</if>
+			<if test="proc_inst_id_ != null">
+		          proc_inst_id_ = #{proc_inst_id_, jdbcType=VARCHAR},  <!-- PROC_INST_ID_ -->
+			</if>
+			<if test="business_key_ != null">
+		          business_key_ = #{business_key_, jdbcType=VARCHAR},  <!-- BUSINESS_KEY_ -->
+			</if>
+			<if test="parent_id_ != null">
+		          parent_id_ = #{parent_id_, jdbcType=VARCHAR},  <!-- PARENT_ID_ -->
+			</if>
+			<if test="proc_def_id_ != null">
+		          proc_def_id_ = #{proc_def_id_, jdbcType=VARCHAR},  <!-- PROC_DEF_ID_ -->
+			</if>
+			<if test="super_exec_ != null">
+		          super_exec_ = #{super_exec_, jdbcType=VARCHAR},  <!-- SUPER_EXEC_ -->
+			</if>
+			<if test="act_id_ != null">
+		          act_id_ = #{act_id_, jdbcType=VARCHAR},  <!-- ACT_ID_ -->
+			</if>
+			<if test="is_active_ != null">
+		          is_active_ = #{is_active_, jdbcType=INTEGER},  <!-- IS_ACTIVE_ -->
+			</if>
+			<if test="is_concurrent_ != null">
+		          is_concurrent_ = #{is_concurrent_, jdbcType=INTEGER},  <!-- IS_CONCURRENT_ -->
+			</if>
+			<if test="is_scope_ != null">
+		          is_scope_ = #{is_scope_, jdbcType=INTEGER},  <!-- IS_SCOPE_ -->
+			</if>
+			<if test="is_event_scope_ != null">
+		          is_event_scope_ = #{is_event_scope_, jdbcType=INTEGER},  <!-- IS_EVENT_SCOPE_ -->
+			</if>
+			<if test="suspension_state_ != null">
+		          suspension_state_ = #{suspension_state_, jdbcType=INTEGER},  <!-- SUSPENSION_STATE_ -->
+			</if>
+			<if test="cached_ent_state_ != null">
+		          cached_ent_state_ = #{cached_ent_state_, jdbcType=INTEGER},  <!-- CACHED_ENT_STATE_ -->
+			</if>
+			<if test="tenant_id_ != null">
+		          tenant_id_ = #{tenant_id_, jdbcType=VARCHAR},  <!-- TENANT_ID_ -->
+			</if>
+			<if test="name_ != null">
+		          name_ = #{name_, jdbcType=VARCHAR},  <!-- NAME_ -->
+			</if>
+			<if test="lock_time_ != null">
+		          lock_time_ = #{lock_time_, jdbcType=VARCHAR},  <!-- LOCK_TIME_ -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM act_ru_execution WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Act_ru_executionPO">
+		SELECT
+		<include refid="column" />
+		FROM act_ru_execution WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Act_ru_executionPO">
+		SELECT
+		    <include refid="column" />
+		FROM act_ru_execution
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Act_ru_executionPO">
+		SELECT
+			<include refid="column" />	
+		FROM act_ru_execution
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Act_ru_executionPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM act_ru_execution
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Act_ru_executionPO">
+		SELECT
+			<include refid="column" />	
+		FROM act_ru_execution
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Act_ru_executionPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM act_ru_execution
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM act_ru_execution
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM act_ru_execution
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- ID_ -->
+		  rev_,  <!-- REV_ -->
+		  proc_inst_id_,  <!-- PROC_INST_ID_ -->
+		  business_key_,  <!-- BUSINESS_KEY_ -->
+		  parent_id_,  <!-- PARENT_ID_ -->
+		  proc_def_id_,  <!-- PROC_DEF_ID_ -->
+		  super_exec_,  <!-- SUPER_EXEC_ -->
+		  act_id_,  <!-- ACT_ID_ -->
+		  is_active_,  <!-- IS_ACTIVE_ -->
+		  is_concurrent_,  <!-- IS_CONCURRENT_ -->
+		  is_scope_,  <!-- IS_SCOPE_ -->
+		  is_event_scope_,  <!-- IS_EVENT_SCOPE_ -->
+		  suspension_state_,  <!-- SUSPENSION_STATE_ -->
+		  cached_ent_state_,  <!-- CACHED_ENT_STATE_ -->
+		  tenant_id_,  <!-- TENANT_ID_ -->
+		  name_,  <!-- NAME_ -->
+		  lock_time_  <!-- LOCK_TIME_ -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  act_ru_execution.id_,  <!-- ID_ -->
+		  act_ru_execution.rev_,  <!-- REV_ -->
+		  act_ru_execution.proc_inst_id_,  <!-- PROC_INST_ID_ -->
+		  act_ru_execution.business_key_,  <!-- BUSINESS_KEY_ -->
+		  act_ru_execution.parent_id_,  <!-- PARENT_ID_ -->
+		  act_ru_execution.proc_def_id_,  <!-- PROC_DEF_ID_ -->
+		  act_ru_execution.super_exec_,  <!-- SUPER_EXEC_ -->
+		  act_ru_execution.act_id_,  <!-- ACT_ID_ -->
+		  act_ru_execution.is_active_,  <!-- IS_ACTIVE_ -->
+		  act_ru_execution.is_concurrent_,  <!-- IS_CONCURRENT_ -->
+		  act_ru_execution.is_scope_,  <!-- IS_SCOPE_ -->
+		  act_ru_execution.is_event_scope_,  <!-- IS_EVENT_SCOPE_ -->
+		  act_ru_execution.suspension_state_,  <!-- SUSPENSION_STATE_ -->
+		  act_ru_execution.cached_ent_state_,  <!-- CACHED_ENT_STATE_ -->
+		  act_ru_execution.tenant_id_,  <!-- TENANT_ID_ -->
+		  act_ru_execution.name_,  <!-- NAME_ -->
+		  act_ru_execution.lock_time_  <!-- LOCK_TIME_ -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- ID_ -->
+		</if>
+	   <if test="rev_ != null ">
+		      AND rev_ = #{rev_}  <!-- REV_ -->
+		</if>
+	    <if test="proc_inst_id_ != null and proc_inst_id_ != ''">
+		      AND proc_inst_id_ = #{proc_inst_id_}  <!-- PROC_INST_ID_ -->
+		</if>
+	    <if test="business_key_ != null and business_key_ != ''">
+		      AND business_key_ = #{business_key_}  <!-- BUSINESS_KEY_ -->
+		</if>
+	    <if test="parent_id_ != null and parent_id_ != ''">
+		      AND parent_id_ = #{parent_id_}  <!-- PARENT_ID_ -->
+		</if>
+	    <if test="proc_def_id_ != null and proc_def_id_ != ''">
+		      AND proc_def_id_ = #{proc_def_id_}  <!-- PROC_DEF_ID_ -->
+		</if>
+	    <if test="super_exec_ != null and super_exec_ != ''">
+		      AND super_exec_ = #{super_exec_}  <!-- SUPER_EXEC_ -->
+		</if>
+	    <if test="act_id_ != null and act_id_ != ''">
+		      AND act_id_ = #{act_id_}  <!-- ACT_ID_ -->
+		</if>
+	   <if test="is_active_ != null ">
+		      AND is_active_ = #{is_active_}  <!-- IS_ACTIVE_ -->
+		</if>
+	   <if test="is_concurrent_ != null ">
+		      AND is_concurrent_ = #{is_concurrent_}  <!-- IS_CONCURRENT_ -->
+		</if>
+	   <if test="is_scope_ != null ">
+		      AND is_scope_ = #{is_scope_}  <!-- IS_SCOPE_ -->
+		</if>
+	   <if test="is_event_scope_ != null ">
+		      AND is_event_scope_ = #{is_event_scope_}  <!-- IS_EVENT_SCOPE_ -->
+		</if>
+	   <if test="suspension_state_ != null ">
+		      AND suspension_state_ = #{suspension_state_}  <!-- SUSPENSION_STATE_ -->
+		</if>
+	   <if test="cached_ent_state_ != null ">
+		      AND cached_ent_state_ = #{cached_ent_state_}  <!-- CACHED_ENT_STATE_ -->
+		</if>
+	    <if test="tenant_id_ != null and tenant_id_ != ''">
+		      AND tenant_id_ = #{tenant_id_}  <!-- TENANT_ID_ -->
+		</if>
+	    <if test="name_ != null and name_ != ''">
+		      AND name_ = #{name_}  <!-- NAME_ -->
+		</if>
+	    <if test="lock_time_ != null and lock_time_ != ''">
+		      AND lock_time_ = #{lock_time_}  <!-- LOCK_TIME_ -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- ID_ -->
+		</if>
+	    <if test="proc_inst_id_ != null and proc_inst_id_ != ''">
+		      AND proc_inst_id_ like '%${proc_inst_id_}%'  <!-- PROC_INST_ID_ -->
+		</if>
+	    <if test="business_key_ != null and business_key_ != ''">
+		      AND business_key_ like '%${business_key_}%'  <!-- BUSINESS_KEY_ -->
+		</if>
+	    <if test="parent_id_ != null and parent_id_ != ''">
+		      AND parent_id_ like '%${parent_id_}%'  <!-- PARENT_ID_ -->
+		</if>
+	    <if test="proc_def_id_ != null and proc_def_id_ != ''">
+		      AND proc_def_id_ like '%${proc_def_id_}%'  <!-- PROC_DEF_ID_ -->
+		</if>
+	    <if test="super_exec_ != null and super_exec_ != ''">
+		      AND super_exec_ like '%${super_exec_}%'  <!-- SUPER_EXEC_ -->
+		</if>
+	    <if test="act_id_ != null and act_id_ != ''">
+		      AND act_id_ like '%${act_id_}%'  <!-- ACT_ID_ -->
+		</if>
+	    <if test="tenant_id_ != null and tenant_id_ != ''">
+		      AND tenant_id_ like '%${tenant_id_}%'  <!-- TENANT_ID_ -->
+		</if>
+	    <if test="name_ != null and name_ != ''">
+		      AND name_ like '%${name_}%'  <!-- NAME_ -->
+		</if>
+	    <if test="lock_time_ != null and lock_time_ != ''">
+		      AND lock_time_ like '%${lock_time_}%'  <!-- LOCK_TIME_ -->
+		</if>
+	</sql>
+	
+</mapper>

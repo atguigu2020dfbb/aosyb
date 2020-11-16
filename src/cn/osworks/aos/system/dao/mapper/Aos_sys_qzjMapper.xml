@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- aos_sys_qzj[aos_sys_qzj]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-10-12 14:30:19 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Aos_sys_qzjMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Aos_sys_qzjPO">
+		INSERT INTO aos_sys_qzj (
+		<if test="cascade_id_ != null and cascade_id_ != ''">
+	         cascade_id_, <!-- cascade_id_ -->
+		</if>
+		<if test="name_ != null and name_ != ''">
+	         name_, <!-- name_ -->
+		</if>
+		<if test="url_ != null and url_ != ''">
+	         url_, <!-- url_ -->
+		</if>
+		<if test="hotkey_ != null and hotkey_ != ''">
+	         hotkey_, <!-- hotkey_ -->
+		</if>
+		<if test="parent_id_ != null and parent_id_ != ''">
+	         parent_id_, <!-- parent_id_ -->
+		</if>
+		<if test="is_leaf_ != null and is_leaf_ != ''">
+	         is_leaf_, <!-- is_leaf_ -->
+		</if>
+		<if test="is_auto_expand_ != null and is_auto_expand_ != ''">
+	         is_auto_expand_, <!-- is_auto_expand_ -->
+		</if>
+		<if test="icon_name_ != null and icon_name_ != ''">
+	         icon_name_, <!-- icon_name_ -->
+		</if>
+		<if test="status_ != null and status_ != ''">
+	         status_, <!-- status_ -->
+		</if>
+		<if test="parent_name_ != null and parent_name_ != ''">
+	         parent_name_, <!-- parent_name_ -->
+		</if>
+		<if test="vector_ != null and vector_ != ''">
+	         vector_, <!-- vector_ -->
+		</if>
+		<if test="sort_no_ != null">
+	         sort_no_, <!-- sort_no_ -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+	         tablename, <!-- tablename -->
+		</if>
+		<if test="qzh_ != null and qzh_ != ''">
+	         qzh_, <!-- qzh_ -->
+		</if>
+		<if test="dalb_ != null and dalb_ != ''">
+	         dalb_, <!-- dalb_ -->
+		</if>
+		<if test="qzsj_ != null and qzsj_ != ''">
+	         qzsj_, <!-- qzsj_ -->
+		</if>
+		<if test="js_ != null and js_ != ''">
+	         js_, <!-- js_ -->
+		</if>
+		<if test="jsbh != null and jsbh != ''">
+	         jsbh, <!-- jsbh -->
+		</if>
+		<if test="jsnd != null and jsnd != ''">
+	         jsnd, <!-- jsnd -->
+		</if>
+		<if test="yjbm != null and yjbm != ''">
+	         yjbm, <!-- yjbm -->
+		</if>
+		<if test="yjr != null and yjr != ''">
+	         yjr, <!-- yjr -->
+		</if>
+		<if test="jjsj != null and jjsj != ''">
+	         jjsj, <!-- jjsj -->
+		</if>
+		<if test="jsr != null and jsr != ''">
+	         jsr, <!-- jsr -->
+		</if>
+		<if test="tm != null and tm != ''">
+	         tm, <!-- tm -->
+		</if>
+		<if test="xcdw != null and xcdw != ''">
+	         xcdw, <!-- xcdw -->
+		</if>
+		<if test="xcsj != null and xcsj != ''">
+	         xcsj, <!-- xcsj -->
+		</if>
+		<if test="ys != null and ys != ''">
+	         ys, <!-- ys -->
+		</if>
+		<if test="sxh != null and sxh != ''">
+	         sxh, <!-- sxh -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="cascade_id_ != null and cascade_id_ != ''">
+	          #{cascade_id_, jdbcType=VARCHAR}, <!-- cascade_id_ -->
+	    </if>
+		<if test="name_ != null and name_ != ''">
+	          #{name_, jdbcType=VARCHAR}, <!-- name_ -->
+	    </if>
+		<if test="url_ != null and url_ != ''">
+	          #{url_, jdbcType=VARCHAR}, <!-- url_ -->
+	    </if>
+		<if test="hotkey_ != null and hotkey_ != ''">
+	          #{hotkey_, jdbcType=VARCHAR}, <!-- hotkey_ -->
+	    </if>
+		<if test="parent_id_ != null and parent_id_ != ''">
+	          #{parent_id_, jdbcType=VARCHAR}, <!-- parent_id_ -->
+	    </if>
+		<if test="is_leaf_ != null and is_leaf_ != ''">
+	          #{is_leaf_, jdbcType=VARCHAR}, <!-- is_leaf_ -->
+	    </if>
+		<if test="is_auto_expand_ != null and is_auto_expand_ != ''">
+	          #{is_auto_expand_, jdbcType=VARCHAR}, <!-- is_auto_expand_ -->
+	    </if>
+		<if test="icon_name_ != null and icon_name_ != ''">
+	          #{icon_name_, jdbcType=VARCHAR}, <!-- icon_name_ -->
+	    </if>
+		<if test="status_ != null and status_ != ''">
+	          #{status_, jdbcType=VARCHAR}, <!-- status_ -->
+	    </if>
+		<if test="parent_name_ != null and parent_name_ != ''">
+	          #{parent_name_, jdbcType=VARCHAR}, <!-- parent_name_ -->
+	    </if>
+		<if test="vector_ != null and vector_ != ''">
+	          #{vector_, jdbcType=VARCHAR}, <!-- vector_ -->
+	    </if>
+		<if test="sort_no_ != null">
+	          #{sort_no_, jdbcType=INTEGER}, <!-- sort_no_ -->
+	    </if>
+		<if test="tablename != null and tablename != ''">
+	          #{tablename, jdbcType=VARCHAR}, <!-- tablename -->
+	    </if>
+		<if test="qzh_ != null and qzh_ != ''">
+	          #{qzh_, jdbcType=VARCHAR}, <!-- qzh_ -->
+	    </if>
+		<if test="dalb_ != null and dalb_ != ''">
+	          #{dalb_, jdbcType=VARCHAR}, <!-- dalb_ -->
+	    </if>
+		<if test="qzsj_ != null and qzsj_ != ''">
+	          #{qzsj_, jdbcType=VARCHAR}, <!-- qzsj_ -->
+	    </if>
+		<if test="js_ != null and js_ != ''">
+	          #{js_, jdbcType=VARCHAR}, <!-- js_ -->
+	    </if>
+		<if test="jsbh != null and jsbh != ''">
+	          #{jsbh, jdbcType=VARCHAR}, <!-- jsbh -->
+	    </if>
+		<if test="jsnd != null and jsnd != ''">
+	          #{jsnd, jdbcType=VARCHAR}, <!-- jsnd -->
+	    </if>
+		<if test="yjbm != null and yjbm != ''">
+	          #{yjbm, jdbcType=VARCHAR}, <!-- yjbm -->
+	    </if>
+		<if test="yjr != null and yjr != ''">
+	          #{yjr, jdbcType=VARCHAR}, <!-- yjr -->
+	    </if>
+		<if test="jjsj != null and jjsj != ''">
+	          #{jjsj, jdbcType=VARCHAR}, <!-- jjsj -->
+	    </if>
+		<if test="jsr != null and jsr != ''">
+	          #{jsr, jdbcType=VARCHAR}, <!-- jsr -->
+	    </if>
+		<if test="tm != null and tm != ''">
+	          #{tm, jdbcType=VARCHAR}, <!-- tm -->
+	    </if>
+		<if test="xcdw != null and xcdw != ''">
+	          #{xcdw, jdbcType=VARCHAR}, <!-- xcdw -->
+	    </if>
+		<if test="xcsj != null and xcsj != ''">
+	          #{xcsj, jdbcType=VARCHAR}, <!-- xcsj -->
+	    </if>
+		<if test="ys != null and ys != ''">
+	          #{ys, jdbcType=VARCHAR}, <!-- ys -->
+	    </if>
+		<if test="sxh != null and sxh != ''">
+	          #{sxh, jdbcType=VARCHAR}, <!-- sxh -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Aos_sys_qzjPO">
+		INSERT INTO aos_sys_qzj (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{cascade_id_, jdbcType=VARCHAR},  <!-- cascade_id_ -->
+		    #{name_, jdbcType=VARCHAR},  <!-- name_ -->
+		    #{url_, jdbcType=VARCHAR},  <!-- url_ -->
+		    #{hotkey_, jdbcType=VARCHAR},  <!-- hotkey_ -->
+		    #{parent_id_, jdbcType=VARCHAR},  <!-- parent_id_ -->
+		    #{is_leaf_, jdbcType=VARCHAR},  <!-- is_leaf_ -->
+		    #{is_auto_expand_, jdbcType=VARCHAR},  <!-- is_auto_expand_ -->
+		    #{icon_name_, jdbcType=VARCHAR},  <!-- icon_name_ -->
+		    #{status_, jdbcType=VARCHAR},  <!-- status_ -->
+		    #{parent_name_, jdbcType=VARCHAR},  <!-- parent_name_ -->
+		    #{vector_, jdbcType=VARCHAR},  <!-- vector_ -->
+		    #{sort_no_, jdbcType=INTEGER},  <!-- sort_no_ -->
+		    #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+		    #{qzh_, jdbcType=VARCHAR},  <!-- qzh_ -->
+		    #{dalb_, jdbcType=VARCHAR},  <!-- dalb_ -->
+		    #{qzsj_, jdbcType=VARCHAR},  <!-- qzsj_ -->
+		    #{js_, jdbcType=VARCHAR},  <!-- js_ -->
+		    #{jsbh, jdbcType=VARCHAR},  <!-- jsbh -->
+		    #{jsnd, jdbcType=VARCHAR},  <!-- jsnd -->
+		    #{yjbm, jdbcType=VARCHAR},  <!-- yjbm -->
+		    #{yjr, jdbcType=VARCHAR},  <!-- yjr -->
+		    #{jjsj, jdbcType=VARCHAR},  <!-- jjsj -->
+		    #{jsr, jdbcType=VARCHAR},  <!-- jsr -->
+		    #{tm, jdbcType=VARCHAR},  <!-- tm -->
+		    #{xcdw, jdbcType=VARCHAR},  <!-- xcdw -->
+		    #{xcsj, jdbcType=VARCHAR},  <!-- xcsj -->
+		    #{ys, jdbcType=VARCHAR},  <!-- ys -->
+		    #{sxh, jdbcType=VARCHAR},  <!-- sxh -->
+		    #{bz, jdbcType=VARCHAR}  <!-- bz -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Aos_sys_qzjPO">
+		UPDATE aos_sys_qzj
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="cascade_id_ != null">
+		          cascade_id_ = #{cascade_id_, jdbcType=VARCHAR},  <!-- cascade_id_ -->
+			</if>
+			<if test="name_ != null">
+		          name_ = #{name_, jdbcType=VARCHAR},  <!-- name_ -->
+			</if>
+			<if test="url_ != null">
+		          url_ = #{url_, jdbcType=VARCHAR},  <!-- url_ -->
+			</if>
+			<if test="hotkey_ != null">
+		          hotkey_ = #{hotkey_, jdbcType=VARCHAR},  <!-- hotkey_ -->
+			</if>
+			<if test="parent_id_ != null">
+		          parent_id_ = #{parent_id_, jdbcType=VARCHAR},  <!-- parent_id_ -->
+			</if>
+			<if test="is_leaf_ != null">
+		          is_leaf_ = #{is_leaf_, jdbcType=VARCHAR},  <!-- is_leaf_ -->
+			</if>
+			<if test="is_auto_expand_ != null">
+		          is_auto_expand_ = #{is_auto_expand_, jdbcType=VARCHAR},  <!-- is_auto_expand_ -->
+			</if>
+			<if test="icon_name_ != null">
+		          icon_name_ = #{icon_name_, jdbcType=VARCHAR},  <!-- icon_name_ -->
+			</if>
+			<if test="status_ != null">
+		          status_ = #{status_, jdbcType=VARCHAR},  <!-- status_ -->
+			</if>
+			<if test="parent_name_ != null">
+		          parent_name_ = #{parent_name_, jdbcType=VARCHAR},  <!-- parent_name_ -->
+			</if>
+			<if test="vector_ != null">
+		          vector_ = #{vector_, jdbcType=VARCHAR},  <!-- vector_ -->
+			</if>
+			<if test="sort_no_ != null">
+		          sort_no_ = #{sort_no_, jdbcType=INTEGER},  <!-- sort_no_ -->
+			</if>
+			<if test="tablename != null">
+		          tablename = #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+			</if>
+			<if test="qzh_ != null">
+		          qzh_ = #{qzh_, jdbcType=VARCHAR},  <!-- qzh_ -->
+			</if>
+			<if test="dalb_ != null">
+		          dalb_ = #{dalb_, jdbcType=VARCHAR},  <!-- dalb_ -->
+			</if>
+			<if test="qzsj_ != null">
+		          qzsj_ = #{qzsj_, jdbcType=VARCHAR},  <!-- qzsj_ -->
+			</if>
+			<if test="js_ != null">
+		          js_ = #{js_, jdbcType=VARCHAR},  <!-- js_ -->
+			</if>
+			<if test="jsbh != null">
+		          jsbh = #{jsbh, jdbcType=VARCHAR},  <!-- jsbh -->
+			</if>
+			<if test="jsnd != null">
+		          jsnd = #{jsnd, jdbcType=VARCHAR},  <!-- jsnd -->
+			</if>
+			<if test="yjbm != null">
+		          yjbm = #{yjbm, jdbcType=VARCHAR},  <!-- yjbm -->
+			</if>
+			<if test="yjr != null">
+		          yjr = #{yjr, jdbcType=VARCHAR},  <!-- yjr -->
+			</if>
+			<if test="jjsj != null">
+		          jjsj = #{jjsj, jdbcType=VARCHAR},  <!-- jjsj -->
+			</if>
+			<if test="jsr != null">
+		          jsr = #{jsr, jdbcType=VARCHAR},  <!-- jsr -->
+			</if>
+			<if test="tm != null">
+		          tm = #{tm, jdbcType=VARCHAR},  <!-- tm -->
+			</if>
+			<if test="xcdw != null">
+		          xcdw = #{xcdw, jdbcType=VARCHAR},  <!-- xcdw -->
+			</if>
+			<if test="xcsj != null">
+		          xcsj = #{xcsj, jdbcType=VARCHAR},  <!-- xcsj -->
+			</if>
+			<if test="ys != null">
+		          ys = #{ys, jdbcType=VARCHAR},  <!-- ys -->
+			</if>
+			<if test="sxh != null">
+		          sxh = #{sxh, jdbcType=VARCHAR},  <!-- sxh -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM aos_sys_qzj WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Aos_sys_qzjPO">
+		SELECT
+		<include refid="column" />
+		FROM aos_sys_qzj WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Aos_sys_qzjPO">
+		SELECT
+		    <include refid="column" />
+		FROM aos_sys_qzj
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Aos_sys_qzjPO">
+		SELECT
+			<include refid="column" />	
+		FROM aos_sys_qzj
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Aos_sys_qzjPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM aos_sys_qzj
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Aos_sys_qzjPO">
+		SELECT
+			<include refid="column" />	
+		FROM aos_sys_qzj
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Aos_sys_qzjPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM aos_sys_qzj
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM aos_sys_qzj
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM aos_sys_qzj
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  cascade_id_,  <!-- cascade_id_ -->
+		  name_,  <!-- name_ -->
+		  url_,  <!-- url_ -->
+		  hotkey_,  <!-- hotkey_ -->
+		  parent_id_,  <!-- parent_id_ -->
+		  is_leaf_,  <!-- is_leaf_ -->
+		  is_auto_expand_,  <!-- is_auto_expand_ -->
+		  icon_name_,  <!-- icon_name_ -->
+		  status_,  <!-- status_ -->
+		  parent_name_,  <!-- parent_name_ -->
+		  vector_,  <!-- vector_ -->
+		  sort_no_,  <!-- sort_no_ -->
+		  tablename,  <!-- tablename -->
+		  qzh_,  <!-- qzh_ -->
+		  dalb_,  <!-- dalb_ -->
+		  qzsj_,  <!-- qzsj_ -->
+		  js_,  <!-- js_ -->
+		  jsbh,  <!-- jsbh -->
+		  jsnd,  <!-- jsnd -->
+		  yjbm,  <!-- yjbm -->
+		  yjr,  <!-- yjr -->
+		  jjsj,  <!-- jjsj -->
+		  jsr,  <!-- jsr -->
+		  tm,  <!-- tm -->
+		  xcdw,  <!-- xcdw -->
+		  xcsj,  <!-- xcsj -->
+		  ys,  <!-- ys -->
+		  sxh,  <!-- sxh -->
+		  bz  <!-- bz -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  aos_sys_qzj.id_,  <!-- id_ -->
+		  aos_sys_qzj.cascade_id_,  <!-- cascade_id_ -->
+		  aos_sys_qzj.name_,  <!-- name_ -->
+		  aos_sys_qzj.url_,  <!-- url_ -->
+		  aos_sys_qzj.hotkey_,  <!-- hotkey_ -->
+		  aos_sys_qzj.parent_id_,  <!-- parent_id_ -->
+		  aos_sys_qzj.is_leaf_,  <!-- is_leaf_ -->
+		  aos_sys_qzj.is_auto_expand_,  <!-- is_auto_expand_ -->
+		  aos_sys_qzj.icon_name_,  <!-- icon_name_ -->
+		  aos_sys_qzj.status_,  <!-- status_ -->
+		  aos_sys_qzj.parent_name_,  <!-- parent_name_ -->
+		  aos_sys_qzj.vector_,  <!-- vector_ -->
+		  aos_sys_qzj.sort_no_,  <!-- sort_no_ -->
+		  aos_sys_qzj.tablename,  <!-- tablename -->
+		  aos_sys_qzj.qzh_,  <!-- qzh_ -->
+		  aos_sys_qzj.dalb_,  <!-- dalb_ -->
+		  aos_sys_qzj.qzsj_,  <!-- qzsj_ -->
+		  aos_sys_qzj.js_,  <!-- js_ -->
+		  aos_sys_qzj.jsbh,  <!-- jsbh -->
+		  aos_sys_qzj.jsnd,  <!-- jsnd -->
+		  aos_sys_qzj.yjbm,  <!-- yjbm -->
+		  aos_sys_qzj.yjr,  <!-- yjr -->
+		  aos_sys_qzj.jjsj,  <!-- jjsj -->
+		  aos_sys_qzj.jsr,  <!-- jsr -->
+		  aos_sys_qzj.tm,  <!-- tm -->
+		  aos_sys_qzj.xcdw,  <!-- xcdw -->
+		  aos_sys_qzj.xcsj,  <!-- xcsj -->
+		  aos_sys_qzj.ys,  <!-- ys -->
+		  aos_sys_qzj.sxh,  <!-- sxh -->
+		  aos_sys_qzj.bz  <!-- bz -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="cascade_id_ != null and cascade_id_ != ''">
+		      AND cascade_id_ = #{cascade_id_}  <!-- cascade_id_ -->
+		</if>
+	    <if test="name_ != null and name_ != ''">
+		      AND name_ = #{name_}  <!-- name_ -->
+		</if>
+	    <if test="url_ != null and url_ != ''">
+		      AND url_ = #{url_}  <!-- url_ -->
+		</if>
+	    <if test="hotkey_ != null and hotkey_ != ''">
+		      AND hotkey_ = #{hotkey_}  <!-- hotkey_ -->
+		</if>
+	    <if test="parent_id_ != null and parent_id_ != ''">
+		      AND parent_id_ = #{parent_id_}  <!-- parent_id_ -->
+		</if>
+	    <if test="is_leaf_ != null and is_leaf_ != ''">
+		      AND is_leaf_ = #{is_leaf_}  <!-- is_leaf_ -->
+		</if>
+	    <if test="is_auto_expand_ != null and is_auto_expand_ != ''">
+		      AND is_auto_expand_ = #{is_auto_expand_}  <!-- is_auto_expand_ -->
+		</if>
+	    <if test="icon_name_ != null and icon_name_ != ''">
+		      AND icon_name_ = #{icon_name_}  <!-- icon_name_ -->
+		</if>
+	    <if test="status_ != null and status_ != ''">
+		      AND status_ = #{status_}  <!-- status_ -->
+		</if>
+	    <if test="parent_name_ != null and parent_name_ != ''">
+		      AND parent_name_ = #{parent_name_}  <!-- parent_name_ -->
+		</if>
+	    <if test="vector_ != null and vector_ != ''">
+		      AND vector_ = #{vector_}  <!-- vector_ -->
+		</if>
+	   <if test="sort_no_ != null ">
+		      AND sort_no_ = #{sort_no_}  <!-- sort_no_ -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename = #{tablename}  <!-- tablename -->
+		</if>
+	    <if test="qzh_ != null and qzh_ != ''">
+		      AND qzh_ = #{qzh_}  <!-- qzh_ -->
+		</if>
+	    <if test="dalb_ != null and dalb_ != ''">
+		      AND dalb_ = #{dalb_}  <!-- dalb_ -->
+		</if>
+	    <if test="qzsj_ != null and qzsj_ != ''">
+		      AND qzsj_ = #{qzsj_}  <!-- qzsj_ -->
+		</if>
+	    <if test="js_ != null and js_ != ''">
+		      AND js_ = #{js_}  <!-- js_ -->
+		</if>
+	    <if test="jsbh != null and jsbh != ''">
+		      AND jsbh = #{jsbh}  <!-- jsbh -->
+		</if>
+	    <if test="jsnd != null and jsnd != ''">
+		      AND jsnd = #{jsnd}  <!-- jsnd -->
+		</if>
+	    <if test="yjbm != null and yjbm != ''">
+		      AND yjbm = #{yjbm}  <!-- yjbm -->
+		</if>
+	    <if test="yjr != null and yjr != ''">
+		      AND yjr = #{yjr}  <!-- yjr -->
+		</if>
+	    <if test="jjsj != null and jjsj != ''">
+		      AND jjsj = #{jjsj}  <!-- jjsj -->
+		</if>
+	    <if test="jsr != null and jsr != ''">
+		      AND jsr = #{jsr}  <!-- jsr -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm = #{tm}  <!-- tm -->
+		</if>
+	    <if test="xcdw != null and xcdw != ''">
+		      AND xcdw = #{xcdw}  <!-- xcdw -->
+		</if>
+	    <if test="xcsj != null and xcsj != ''">
+		      AND xcsj = #{xcsj}  <!-- xcsj -->
+		</if>
+	    <if test="ys != null and ys != ''">
+		      AND ys = #{ys}  <!-- ys -->
+		</if>
+	    <if test="sxh != null and sxh != ''">
+		      AND sxh = #{sxh}  <!-- sxh -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="cascade_id_ != null and cascade_id_ != ''">
+		      AND cascade_id_ like '%${cascade_id_}%'  <!-- cascade_id_ -->
+		</if>
+	    <if test="name_ != null and name_ != ''">
+		      AND name_ like '%${name_}%'  <!-- name_ -->
+		</if>
+	    <if test="url_ != null and url_ != ''">
+		      AND url_ like '%${url_}%'  <!-- url_ -->
+		</if>
+	    <if test="hotkey_ != null and hotkey_ != ''">
+		      AND hotkey_ like '%${hotkey_}%'  <!-- hotkey_ -->
+		</if>
+	    <if test="parent_id_ != null and parent_id_ != ''">
+		      AND parent_id_ like '%${parent_id_}%'  <!-- parent_id_ -->
+		</if>
+	    <if test="is_leaf_ != null and is_leaf_ != ''">
+		      AND is_leaf_ like '%${is_leaf_}%'  <!-- is_leaf_ -->
+		</if>
+	    <if test="is_auto_expand_ != null and is_auto_expand_ != ''">
+		      AND is_auto_expand_ like '%${is_auto_expand_}%'  <!-- is_auto_expand_ -->
+		</if>
+	    <if test="icon_name_ != null and icon_name_ != ''">
+		      AND icon_name_ like '%${icon_name_}%'  <!-- icon_name_ -->
+		</if>
+	    <if test="status_ != null and status_ != ''">
+		      AND status_ like '%${status_}%'  <!-- status_ -->
+		</if>
+	    <if test="parent_name_ != null and parent_name_ != ''">
+		      AND parent_name_ like '%${parent_name_}%'  <!-- parent_name_ -->
+		</if>
+	    <if test="vector_ != null and vector_ != ''">
+		      AND vector_ like '%${vector_}%'  <!-- vector_ -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename like '%${tablename}%'  <!-- tablename -->
+		</if>
+	    <if test="qzh_ != null and qzh_ != ''">
+		      AND qzh_ like '%${qzh_}%'  <!-- qzh_ -->
+		</if>
+	    <if test="dalb_ != null and dalb_ != ''">
+		      AND dalb_ like '%${dalb_}%'  <!-- dalb_ -->
+		</if>
+	    <if test="qzsj_ != null and qzsj_ != ''">
+		      AND qzsj_ like '%${qzsj_}%'  <!-- qzsj_ -->
+		</if>
+	    <if test="js_ != null and js_ != ''">
+		      AND js_ like '%${js_}%'  <!-- js_ -->
+		</if>
+	    <if test="jsbh != null and jsbh != ''">
+		      AND jsbh like '%${jsbh}%'  <!-- jsbh -->
+		</if>
+	    <if test="jsnd != null and jsnd != ''">
+		      AND jsnd like '%${jsnd}%'  <!-- jsnd -->
+		</if>
+	    <if test="yjbm != null and yjbm != ''">
+		      AND yjbm like '%${yjbm}%'  <!-- yjbm -->
+		</if>
+	    <if test="yjr != null and yjr != ''">
+		      AND yjr like '%${yjr}%'  <!-- yjr -->
+		</if>
+	    <if test="jjsj != null and jjsj != ''">
+		      AND jjsj like '%${jjsj}%'  <!-- jjsj -->
+		</if>
+	    <if test="jsr != null and jsr != ''">
+		      AND jsr like '%${jsr}%'  <!-- jsr -->
+		</if>
+	    <if test="tm != null and tm != ''">
+		      AND tm like '%${tm}%'  <!-- tm -->
+		</if>
+	    <if test="xcdw != null and xcdw != ''">
+		      AND xcdw like '%${xcdw}%'  <!-- xcdw -->
+		</if>
+	    <if test="xcsj != null and xcsj != ''">
+		      AND xcsj like '%${xcsj}%'  <!-- xcsj -->
+		</if>
+	    <if test="ys != null and ys != ''">
+		      AND ys like '%${ys}%'  <!-- ys -->
+		</if>
+	    <if test="sxh != null and sxh != ''">
+		      AND sxh like '%${sxh}%'  <!-- sxh -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	</sql>
+	
+</mapper>

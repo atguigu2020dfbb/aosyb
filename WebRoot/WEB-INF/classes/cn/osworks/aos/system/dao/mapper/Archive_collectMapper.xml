@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_collect[archive_collect]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-12-27 13:54:25 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_collectMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_collectPO">
+		INSERT INTO archive_collect (
+		<if test="zjmc != null and zjmc != ''">
+	         zjmc, <!-- zjmc -->
+		</if>
+		<if test="zjms != null and zjms != ''">
+	         zjms, <!-- zjms -->
+		</if>
+		<if test="zjsj != null and zjsj != ''">
+	         zjsj, <!-- zjsj -->
+		</if>
+		<if test="zjr != null and zjr != ''">
+	         zjr, <!-- zjr -->
+		</if>
+		<if test="jszt != null and jszt != ''">
+	         jszt, <!-- jszt -->
+		</if>
+		<if test="shr != null and shr != ''">
+	         shr, <!-- shr -->
+		</if>
+		<if test="shsj != null and shsj != ''">
+	         shsj, <!-- shsj -->
+		</if>
+		<if test="shyj != null and shyj != ''">
+	         shyj, <!-- shyj -->
+		</if>
+		<if test="flag_submit != null and flag_submit != ''">
+	         flag_submit, <!-- flag_submit -->
+		</if>
+		<if test="flag_examine != null and flag_examine != ''">
+	         flag_examine, <!-- flag_examine -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="zjmc != null and zjmc != ''">
+	          #{zjmc, jdbcType=VARCHAR}, <!-- zjmc -->
+	    </if>
+		<if test="zjms != null and zjms != ''">
+	          #{zjms, jdbcType=VARCHAR}, <!-- zjms -->
+	    </if>
+		<if test="zjsj != null and zjsj != ''">
+	          #{zjsj, jdbcType=VARCHAR}, <!-- zjsj -->
+	    </if>
+		<if test="zjr != null and zjr != ''">
+	          #{zjr, jdbcType=VARCHAR}, <!-- zjr -->
+	    </if>
+		<if test="jszt != null and jszt != ''">
+	          #{jszt, jdbcType=VARCHAR}, <!-- jszt -->
+	    </if>
+		<if test="shr != null and shr != ''">
+	          #{shr, jdbcType=VARCHAR}, <!-- shr -->
+	    </if>
+		<if test="shsj != null and shsj != ''">
+	          #{shsj, jdbcType=VARCHAR}, <!-- shsj -->
+	    </if>
+		<if test="shyj != null and shyj != ''">
+	          #{shyj, jdbcType=VARCHAR}, <!-- shyj -->
+	    </if>
+		<if test="flag_submit != null and flag_submit != ''">
+	          #{flag_submit, jdbcType=VARCHAR}, <!-- flag_submit -->
+	    </if>
+		<if test="flag_examine != null and flag_examine != ''">
+	          #{flag_examine, jdbcType=VARCHAR}, <!-- flag_examine -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_collectPO">
+		INSERT INTO archive_collect (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{zjmc, jdbcType=VARCHAR},  <!-- zjmc -->
+		    #{zjms, jdbcType=VARCHAR},  <!-- zjms -->
+		    #{zjsj, jdbcType=VARCHAR},  <!-- zjsj -->
+		    #{zjr, jdbcType=VARCHAR},  <!-- zjr -->
+		    #{jszt, jdbcType=VARCHAR},  <!-- jszt -->
+		    #{shr, jdbcType=VARCHAR},  <!-- shr -->
+		    #{shsj, jdbcType=VARCHAR},  <!-- shsj -->
+		    #{shyj, jdbcType=VARCHAR},  <!-- shyj -->
+		    #{flag_submit, jdbcType=VARCHAR},  <!-- flag_submit -->
+		    #{flag_examine, jdbcType=VARCHAR}  <!-- flag_examine -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_collectPO">
+		UPDATE archive_collect
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="zjmc != null">
+		          zjmc = #{zjmc, jdbcType=VARCHAR},  <!-- zjmc -->
+			</if>
+			<if test="zjms != null">
+		          zjms = #{zjms, jdbcType=VARCHAR},  <!-- zjms -->
+			</if>
+			<if test="zjsj != null">
+		          zjsj = #{zjsj, jdbcType=VARCHAR},  <!-- zjsj -->
+			</if>
+			<if test="zjr != null">
+		          zjr = #{zjr, jdbcType=VARCHAR},  <!-- zjr -->
+			</if>
+			<if test="jszt != null">
+		          jszt = #{jszt, jdbcType=VARCHAR},  <!-- jszt -->
+			</if>
+			<if test="shr != null">
+		          shr = #{shr, jdbcType=VARCHAR},  <!-- shr -->
+			</if>
+			<if test="shsj != null">
+		          shsj = #{shsj, jdbcType=VARCHAR},  <!-- shsj -->
+			</if>
+			<if test="shyj != null">
+		          shyj = #{shyj, jdbcType=VARCHAR},  <!-- shyj -->
+			</if>
+			<if test="flag_submit != null">
+		          flag_submit = #{flag_submit, jdbcType=VARCHAR},  <!-- flag_submit -->
+			</if>
+			<if test="flag_examine != null">
+		          flag_examine = #{flag_examine, jdbcType=VARCHAR},  <!-- flag_examine -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_collect WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_collectPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_collect WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_collectPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_collect
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_collectPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_collect
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_collectPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_collect
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_collectPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_collect
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_collectPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_collect
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_collect
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_collect
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  zjmc,  <!-- zjmc -->
+		  zjms,  <!-- zjms -->
+		  zjsj,  <!-- zjsj -->
+		  zjr,  <!-- zjr -->
+		  jszt,  <!-- jszt -->
+		  shr,  <!-- shr -->
+		  shsj,  <!-- shsj -->
+		  shyj,  <!-- shyj -->
+		  flag_submit,  <!-- flag_submit -->
+		  flag_examine  <!-- flag_examine -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_collect.id_,  <!-- id_ -->
+		  archive_collect.zjmc,  <!-- zjmc -->
+		  archive_collect.zjms,  <!-- zjms -->
+		  archive_collect.zjsj,  <!-- zjsj -->
+		  archive_collect.zjr,  <!-- zjr -->
+		  archive_collect.jszt,  <!-- jszt -->
+		  archive_collect.shr,  <!-- shr -->
+		  archive_collect.shsj,  <!-- shsj -->
+		  archive_collect.shyj,  <!-- shyj -->
+		  archive_collect.flag_submit,  <!-- flag_submit -->
+		  archive_collect.flag_examine  <!-- flag_examine -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="zjmc != null and zjmc != ''">
+		      AND zjmc = #{zjmc}  <!-- zjmc -->
+		</if>
+	    <if test="zjms != null and zjms != ''">
+		      AND zjms = #{zjms}  <!-- zjms -->
+		</if>
+	    <if test="zjsj != null and zjsj != ''">
+		      AND zjsj = #{zjsj}  <!-- zjsj -->
+		</if>
+	    <if test="zjr != null and zjr != ''">
+		      AND zjr = #{zjr}  <!-- zjr -->
+		</if>
+	    <if test="jszt != null and jszt != ''">
+		      AND jszt = #{jszt}  <!-- jszt -->
+		</if>
+	    <if test="shr != null and shr != ''">
+		      AND shr = #{shr}  <!-- shr -->
+		</if>
+	    <if test="shsj != null and shsj != ''">
+		      AND shsj = #{shsj}  <!-- shsj -->
+		</if>
+	    <if test="shyj != null and shyj != ''">
+		      AND shyj = #{shyj}  <!-- shyj -->
+		</if>
+	    <if test="flag_submit != null and flag_submit != ''">
+		      AND flag_submit = #{flag_submit}  <!-- flag_submit -->
+		</if>
+	    <if test="flag_examine != null and flag_examine != ''">
+		      AND flag_examine = #{flag_examine}  <!-- flag_examine -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="zjmc != null and zjmc != ''">
+		      AND zjmc like '%${zjmc}%'  <!-- zjmc -->
+		</if>
+	    <if test="zjms != null and zjms != ''">
+		      AND zjms like '%${zjms}%'  <!-- zjms -->
+		</if>
+	    <if test="zjsj != null and zjsj != ''">
+		      AND zjsj like '%${zjsj}%'  <!-- zjsj -->
+		</if>
+	    <if test="zjr != null and zjr != ''">
+		      AND zjr like '%${zjr}%'  <!-- zjr -->
+		</if>
+	    <if test="jszt != null and jszt != ''">
+		      AND jszt like '%${jszt}%'  <!-- jszt -->
+		</if>
+	    <if test="shr != null and shr != ''">
+		      AND shr like '%${shr}%'  <!-- shr -->
+		</if>
+	    <if test="shsj != null and shsj != ''">
+		      AND shsj like '%${shsj}%'  <!-- shsj -->
+		</if>
+	    <if test="shyj != null and shyj != ''">
+		      AND shyj like '%${shyj}%'  <!-- shyj -->
+		</if>
+	    <if test="flag_submit != null and flag_submit != ''">
+		      AND flag_submit like '%${flag_submit}%'  <!-- flag_submit -->
+		</if>
+	    <if test="flag_examine != null and flag_examine != ''">
+		      AND flag_examine like '%${flag_examine}%'  <!-- flag_examine -->
+		</if>
+	</sql>
+	
+</mapper>

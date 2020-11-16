@@ -1,0 +1,257 @@
+﻿<html>  
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style>
+			td {background-color:#eeeeee}
+			input {width:400px;}
+			.butt {width:155px; height:30px}
+			.title {padding-left:10px; width:130px}
+			
+		</style>  	
+  </head>  
+	<script type="text/javascript" >  
+		
+		function clearText()
+		{
+			document.all("text_name").value = "";
+			document.all("text_sex").value = "";
+			document.all("text_nation").value = "";
+			document.all("text_birthday").value = "";
+			document.all("text_address").value = "";
+			document.all("text_idNum").value = "";
+			document.all("text_dept").value = "";
+			document.all("text_effDate").value = "";
+			document.all("text_expDate").value = "";
+			document.all("text_certType").value = "";
+			document.all("text_result").value = "";
+			document.all("text_json").value = "";
+		}
+		
+		function doConnect() 
+		{  
+				clearText();
+		    var strResult = CertCtl.connect();
+		    
+		    document.all['text_json'].value = strResult;
+		    
+		    var jsValue = eval('(' + strResult + ')');
+		    if(jsValue.resultFlag == 0)
+		    {
+		    	document.all['text_result'].value = '成功';
+		    }
+		    else
+		    {
+		    	document.all['text_result'].value = '失败';
+		    }
+		}
+		
+		function doGetVersion() 
+		{  
+		    clearText();
+		    var strResult = CertCtl.getVersion();
+		    
+		    document.all['text_json'].value = strResult;
+		    
+		    var jsValue = eval('(' + strResult + ')');
+		    if(jsValue.resultFlag == 0)
+		    {
+		    	document.all['text_result'].value = '成功';
+		    }
+		    else
+		    {
+		    	document.all['text_result'].value = '失败';
+		    }
+		}
+		
+		function doDisconnect() 
+		{  
+		    clearText();
+		    var strResult = CertCtl.disconnect();
+		    
+		    document.all['text_json'].value = strResult;
+		    
+		    var jsValue = eval('(' + strResult + ')');
+		    if(jsValue.resultFlag == 0)
+		    {
+		    	document.all['text_result'].value = '成功';
+		    }
+		    else
+		    {
+		    	document.all['text_result'].value = '失败';
+		    }
+		}
+		
+		function doGetStatus() 
+		{  
+		    clearText();
+		    var strResult = CertCtl.getStatus();
+		    
+		    document.all['text_json'].value = strResult;
+		    
+		    var jsValue = eval('(' + strResult + ')');
+		    if(jsValue.resultFlag == 0)
+		    {
+		    	document.all['text_result'].value = '成功';
+		    }
+		    else
+		    {
+		    	document.all['text_result'].value = '失败';
+		    }
+		}
+		
+		function doReadCert() 
+		{  
+		    clearText();
+		    
+		    var strBusiSerial_32 = "0000000000000000AAAAAAAAAAAAAAAA";
+		    var strStaffCode_16 = "1111111111111111";
+		    var strChannelCode_32 = "1111111111111111BBBBBBBBBBBBBBBB";
+		    var strBusiArre_200 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+		    strBusiArre_200 += "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+		    
+		    //var strResult = CertCtl.readCert(strBusiSerial_32, strStaffCode_16, strChannelCode_32, strBusiArre_200);
+		    var strResult = CertCtl.readCert();
+		    
+		    document.all['text_json'].value = strResult;
+	  		
+	  		var jsValue = eval('(' + strResult + ')');
+	  		if(jsValue.resultFlag == 0)
+		    {
+		    	document.all['text_result'].value = '成功';
+		   
+		   		document.all("text_name").value = jsValue.resultContent.partyName;
+					document.all("text_sex").value = jsValue.resultContent.gender;
+					document.all("text_nation").value = jsValue.resultContent.nation;
+					document.all("text_birthday").value = jsValue.resultContent.bornDay;
+					document.all("text_address").value = jsValue.resultContent.certAddress;
+					document.all("text_idNum").value = jsValue.resultContent.certNumber;
+					document.all("text_dept").value = jsValue.resultContent.certOrg;
+					document.all("text_effDate").value = jsValue.resultContent.effDate;
+					document.all("text_expDate").value = jsValue.resultContent.expDate;
+					document.all("text_certType").value = jsValue.resultContent.certType;
+	  			document.all('PhotoID').src = 'data:image/jpeg;base64,' + jsValue.resultContent.identityPic;
+		    }
+		    else
+		    {
+		    	document.all['text_result'].value = '失败';
+		    }
+		}
+		
+		function doCloudReadCert() 
+		{  
+		    clearText();
+		    
+		    var appId_32 = "0000000000000000AAAAAAAAAAAAAAAA";
+		    var timestamp_32 = "1111111111111111BBBBBBBBBBBBBBBB";
+		    var nonce_32 = "1111111111111111BBBBBBBBBBBBBBBB";
+		    var businessExt_200 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+		    businessExt_200 += "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+		    
+		    var signature_200 = "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
+		    signature_200 += "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
+		    
+		    var strResult = CertCtl.cloudReadCert(appId_32, timestamp_32, nonce_32, businessExt_200, signature_200);
+		    
+		    document.all['text_json'].value = strResult;
+		    
+		    var jsValue = eval('(' + strResult + ')');
+		    if(jsValue.resultFlag == 0)
+		    {
+		    	document.all['text_result'].value = '成功';
+		    }
+		    else
+		    {
+		    	document.all['text_result'].value = '失败';
+		    }
+		}
+
+	</script>  
+	
+	<object id="CertCtl" TYPE="application/cert-reader" width=0 height=0"></object>
+	<body> 
+		<table width="700px" border="0" cellspacing="1" cellpadding="2" align="center" bgcolor="#FFFFFF">
+			<tr>
+				<td colspan="3" align="center">
+					<input class="butt" type="button" name="connect" value="连接设备（connect）" onClick="doConnect();">
+					<input class="butt" type="button" name="getStatus" value="连接状态（getStatus）" onClick="doGetStatus();">
+					<input class="butt" type="button" name="readCert" value="读身份信息（readCert）" onClick="doReadCert();">
+					<input class="butt" type="button" name="disconnect" value="断开设备（disconnect）" onClick="doDisconnect();">
+					<input class="butt" type="button" name="getVersion" value="获取控件版本号（getVersion）" onClick="doGetVersion();" style = "width:200px">
+				</td>
+			</tr> 
+	    <tr> 
+	 			<td class="title">姓名：</td>
+	      <td width="400px">
+	      	<input type="text" name="text_name" value="" readonly >
+	      </td>
+	      <td rowspan="4" align="center"><img id="PhotoID" name="Photo" style="width:96px; height:118px;"/></td>
+			</tr>
+			  <tr> 
+	    	<td class="title">性别：</td>
+	      <td>
+	      	<input type="text" name="text_sex" value="" readonly >
+	      </td>
+			</tr>
+	    <tr> 
+	    	<td class="title">民族或国籍：</td>
+	      <td>
+	      	<input type="text" name="text_nation" value="" readonly >
+	      </td>
+			</tr>
+	    <tr> 
+	 	  	<td class="title">出生：</td>
+	      <td>
+	      	<input type="text" name="text_birthday" value="" readonly >
+	      </td>
+			</tr>
+	    <tr> 
+				<td class="title">地址：</td>
+	      <td colspan="2">
+	      	<input type="text" name="text_address" value="" readonly >
+	      </td>
+			</tr>
+	    <tr> 
+	    	<td class="title">身份证号：</td>
+	      <td colspan="2">
+	      	<input type="text" name="text_idNum" value="" readonly >
+	      </td>
+			</tr>
+	    <tr> 
+	    	<td class="title">签发机关：</td>
+	      <td colspan="2">
+	      	<input type="text" name="text_dept" value="" readonly >
+	      </td>
+			</tr>
+	    <tr> 
+	 	  	<td class="title">开始期限：</td>
+	      <td colspan="2">
+	      	<input type="text" name="text_effDate" value="" readonly >
+				</td>
+	 		</tr>
+	 		<tr> 
+	 	  	<td class="title">结束期限：</td>
+	      <td colspan="2">
+	      	<input type="text" name="text_expDate" value="" readonly >
+				</td>
+	 		</tr>
+	 		<tr> 
+	 	  	<td class="title">证件类型：</td>
+	      <td colspan="2">
+	      	<input type="text" name="text_certType" value="" readonly >
+				</td>
+	 		</tr>
+	 		<tr> 
+	 	  	<td class="title">执行结果：</td>
+	      <td colspan="2">
+	      	<input type="text" name="text_result" style="color:#FF0000" value="" readonly >
+				</td>
+	 		</tr>
+	 		<tr> 
+	 	  	<td class="title">返回数据：</td>
+	      <td colspan="2">
+	      	<textarea id="text_json" rows="20" name="text_json" cols="70" readonly></textarea>
+				</td>
+	 		</tr>   
+		</table>
+	</body>  
+</html>

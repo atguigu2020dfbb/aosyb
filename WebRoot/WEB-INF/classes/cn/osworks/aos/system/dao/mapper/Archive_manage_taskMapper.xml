@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_manage_task[archive_manage_task]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-01-03 14:24:00 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_manage_taskMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_manage_taskPO">
+		INSERT INTO archive_manage_task (
+		<if test="task_name != null and task_name != ''">
+	         task_name, <!-- task_name -->
+		</if>
+		<if test="pch != null and pch != ''">
+	         pch, <!-- pch -->
+		</if>
+		<if test="tjr != null and tjr != ''">
+	         tjr, <!-- tjr -->
+		</if>
+		<if test="tjsj != null and tjsj != ''">
+	         tjsj, <!-- tjsj -->
+		</if>
+		<if test="tjms != null and tjms != ''">
+	         tjms, <!-- tjms -->
+		</if>
+		<if test="shrr != null and shrr != ''">
+	         shrr, <!-- shrr -->
+		</if>
+		<if test="shsj != null and shsj != ''">
+	         shsj, <!-- shsj -->
+		</if>
+		<if test="shms != null and shms != ''">
+	         shms, <!-- shms -->
+		</if>
+		<if test="bmmc != null and bmmc != ''">
+	         bmmc, <!-- bmmc -->
+		</if>
+		<if test="bmbh != null and bmbh != ''">
+	         bmbh, <!-- bmbh -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+	         tablename, <!-- tablename -->
+		</if>
+		<if test="flag_submit != null and flag_submit != ''">
+	         flag_submit, <!-- flag_submit -->
+		</if>
+		<if test="flag_examine != null and flag_examine != ''">
+	         flag_examine, <!-- flag_examine -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="task_name != null and task_name != ''">
+	          #{task_name, jdbcType=VARCHAR}, <!-- task_name -->
+	    </if>
+		<if test="pch != null and pch != ''">
+	          #{pch, jdbcType=VARCHAR}, <!-- pch -->
+	    </if>
+		<if test="tjr != null and tjr != ''">
+	          #{tjr, jdbcType=VARCHAR}, <!-- tjr -->
+	    </if>
+		<if test="tjsj != null and tjsj != ''">
+	          #{tjsj, jdbcType=VARCHAR}, <!-- tjsj -->
+	    </if>
+		<if test="tjms != null and tjms != ''">
+	          #{tjms, jdbcType=VARCHAR}, <!-- tjms -->
+	    </if>
+		<if test="shrr != null and shrr != ''">
+	          #{shrr, jdbcType=VARCHAR}, <!-- shrr -->
+	    </if>
+		<if test="shsj != null and shsj != ''">
+	          #{shsj, jdbcType=VARCHAR}, <!-- shsj -->
+	    </if>
+		<if test="shms != null and shms != ''">
+	          #{shms, jdbcType=VARCHAR}, <!-- shms -->
+	    </if>
+		<if test="bmmc != null and bmmc != ''">
+	          #{bmmc, jdbcType=VARCHAR}, <!-- bmmc -->
+	    </if>
+		<if test="bmbh != null and bmbh != ''">
+	          #{bmbh, jdbcType=VARCHAR}, <!-- bmbh -->
+	    </if>
+		<if test="tablename != null and tablename != ''">
+	          #{tablename, jdbcType=VARCHAR}, <!-- tablename -->
+	    </if>
+		<if test="flag_submit != null and flag_submit != ''">
+	          #{flag_submit, jdbcType=VARCHAR}, <!-- flag_submit -->
+	    </if>
+		<if test="flag_examine != null and flag_examine != ''">
+	          #{flag_examine, jdbcType=VARCHAR}, <!-- flag_examine -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_manage_taskPO">
+		INSERT INTO archive_manage_task (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+		    #{pch, jdbcType=VARCHAR},  <!-- pch -->
+		    #{tjr, jdbcType=VARCHAR},  <!-- tjr -->
+		    #{tjsj, jdbcType=VARCHAR},  <!-- tjsj -->
+		    #{tjms, jdbcType=VARCHAR},  <!-- tjms -->
+		    #{shrr, jdbcType=VARCHAR},  <!-- shrr -->
+		    #{shsj, jdbcType=VARCHAR},  <!-- shsj -->
+		    #{shms, jdbcType=VARCHAR},  <!-- shms -->
+		    #{bmmc, jdbcType=VARCHAR},  <!-- bmmc -->
+		    #{bmbh, jdbcType=VARCHAR},  <!-- bmbh -->
+		    #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+		    #{flag_submit, jdbcType=VARCHAR},  <!-- flag_submit -->
+		    #{flag_examine, jdbcType=VARCHAR}  <!-- flag_examine -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_manage_taskPO">
+		UPDATE archive_manage_task
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="task_name != null">
+		          task_name = #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+			</if>
+			<if test="pch != null">
+		          pch = #{pch, jdbcType=VARCHAR},  <!-- pch -->
+			</if>
+			<if test="tjr != null">
+		          tjr = #{tjr, jdbcType=VARCHAR},  <!-- tjr -->
+			</if>
+			<if test="tjsj != null">
+		          tjsj = #{tjsj, jdbcType=VARCHAR},  <!-- tjsj -->
+			</if>
+			<if test="tjms != null">
+		          tjms = #{tjms, jdbcType=VARCHAR},  <!-- tjms -->
+			</if>
+			<if test="shrr != null">
+		          shrr = #{shrr, jdbcType=VARCHAR},  <!-- shrr -->
+			</if>
+			<if test="shsj != null">
+		          shsj = #{shsj, jdbcType=VARCHAR},  <!-- shsj -->
+			</if>
+			<if test="shms != null">
+		          shms = #{shms, jdbcType=VARCHAR},  <!-- shms -->
+			</if>
+			<if test="bmmc != null">
+		          bmmc = #{bmmc, jdbcType=VARCHAR},  <!-- bmmc -->
+			</if>
+			<if test="bmbh != null">
+		          bmbh = #{bmbh, jdbcType=VARCHAR},  <!-- bmbh -->
+			</if>
+			<if test="tablename != null">
+		          tablename = #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+			</if>
+			<if test="flag_submit != null">
+		          flag_submit = #{flag_submit, jdbcType=VARCHAR},  <!-- flag_submit -->
+			</if>
+			<if test="flag_examine != null">
+		          flag_examine = #{flag_examine, jdbcType=VARCHAR},  <!-- flag_examine -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_manage_task WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_manage_taskPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_manage_task WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_manage_taskPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_manage_task
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_manage_taskPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_manage_task
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_manage_taskPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_manage_task
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_manage_taskPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_manage_task
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_manage_taskPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_manage_task
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_manage_task
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_manage_task
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  task_name,  <!-- task_name -->
+		  pch,  <!-- pch -->
+		  tjr,  <!-- tjr -->
+		  tjsj,  <!-- tjsj -->
+		  tjms,  <!-- tjms -->
+		  shrr,  <!-- shrr -->
+		  shsj,  <!-- shsj -->
+		  shms,  <!-- shms -->
+		  bmmc,  <!-- bmmc -->
+		  bmbh,  <!-- bmbh -->
+		  tablename,  <!-- tablename -->
+		  flag_submit,  <!-- flag_submit -->
+		  flag_examine  <!-- flag_examine -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_manage_task.id_,  <!-- id_ -->
+		  archive_manage_task.task_name,  <!-- task_name -->
+		  archive_manage_task.pch,  <!-- pch -->
+		  archive_manage_task.tjr,  <!-- tjr -->
+		  archive_manage_task.tjsj,  <!-- tjsj -->
+		  archive_manage_task.tjms,  <!-- tjms -->
+		  archive_manage_task.shrr,  <!-- shrr -->
+		  archive_manage_task.shsj,  <!-- shsj -->
+		  archive_manage_task.shms,  <!-- shms -->
+		  archive_manage_task.bmmc,  <!-- bmmc -->
+		  archive_manage_task.bmbh,  <!-- bmbh -->
+		  archive_manage_task.tablename,  <!-- tablename -->
+		  archive_manage_task.flag_submit,  <!-- flag_submit -->
+		  archive_manage_task.flag_examine  <!-- flag_examine -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name = #{task_name}  <!-- task_name -->
+		</if>
+	    <if test="pch != null and pch != ''">
+		      AND pch = #{pch}  <!-- pch -->
+		</if>
+	    <if test="tjr != null and tjr != ''">
+		      AND tjr = #{tjr}  <!-- tjr -->
+		</if>
+	    <if test="tjsj != null and tjsj != ''">
+		      AND tjsj = #{tjsj}  <!-- tjsj -->
+		</if>
+	    <if test="tjms != null and tjms != ''">
+		      AND tjms = #{tjms}  <!-- tjms -->
+		</if>
+	    <if test="shrr != null and shrr != ''">
+		      AND shrr = #{shrr}  <!-- shrr -->
+		</if>
+	    <if test="shsj != null and shsj != ''">
+		      AND shsj = #{shsj}  <!-- shsj -->
+		</if>
+	    <if test="shms != null and shms != ''">
+		      AND shms = #{shms}  <!-- shms -->
+		</if>
+	    <if test="bmmc != null and bmmc != ''">
+		      AND bmmc = #{bmmc}  <!-- bmmc -->
+		</if>
+	    <if test="bmbh != null and bmbh != ''">
+		      AND bmbh = #{bmbh}  <!-- bmbh -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename = #{tablename}  <!-- tablename -->
+		</if>
+	    <if test="flag_submit != null and flag_submit != ''">
+		      AND flag_submit = #{flag_submit}  <!-- flag_submit -->
+		</if>
+	    <if test="flag_examine != null and flag_examine != ''">
+		      AND flag_examine = #{flag_examine}  <!-- flag_examine -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name like '%${task_name}%'  <!-- task_name -->
+		</if>
+	    <if test="pch != null and pch != ''">
+		      AND pch like '%${pch}%'  <!-- pch -->
+		</if>
+	    <if test="tjr != null and tjr != ''">
+		      AND tjr like '%${tjr}%'  <!-- tjr -->
+		</if>
+	    <if test="tjsj != null and tjsj != ''">
+		      AND tjsj like '%${tjsj}%'  <!-- tjsj -->
+		</if>
+	    <if test="tjms != null and tjms != ''">
+		      AND tjms like '%${tjms}%'  <!-- tjms -->
+		</if>
+	    <if test="shrr != null and shrr != ''">
+		      AND shrr like '%${shrr}%'  <!-- shrr -->
+		</if>
+	    <if test="shsj != null and shsj != ''">
+		      AND shsj like '%${shsj}%'  <!-- shsj -->
+		</if>
+	    <if test="shms != null and shms != ''">
+		      AND shms like '%${shms}%'  <!-- shms -->
+		</if>
+	    <if test="bmmc != null and bmmc != ''">
+		      AND bmmc like '%${bmmc}%'  <!-- bmmc -->
+		</if>
+	    <if test="bmbh != null and bmbh != ''">
+		      AND bmbh like '%${bmbh}%'  <!-- bmbh -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename like '%${tablename}%'  <!-- tablename -->
+		</if>
+	    <if test="flag_submit != null and flag_submit != ''">
+		      AND flag_submit like '%${flag_submit}%'  <!-- flag_submit -->
+		</if>
+	    <if test="flag_examine != null and flag_examine != ''">
+		      AND flag_examine like '%${flag_examine}%'  <!-- flag_examine -->
+		</if>
+	</sql>
+	
+</mapper>

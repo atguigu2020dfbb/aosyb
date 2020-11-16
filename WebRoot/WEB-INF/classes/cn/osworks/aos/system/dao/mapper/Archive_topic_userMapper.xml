@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_topic_user[archive_topic_user]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-10-15 17:15:20 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_topic_userMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_topic_userPO">
+		INSERT INTO archive_topic_user (
+		<if test="pid != null and pid != ''">
+	         pid, <!-- pid -->
+		</if>
+		<if test="users != null and users != ''">
+	         users, <!-- users -->
+		</if>
+		<if test="operate_time != null and operate_time != ''">
+	         operate_time, <!-- operate_time -->
+		</if>
+		<if test="operate_description != null and operate_description != ''">
+	         operate_description, <!-- operate_description -->
+		</if>
+		<if test="index_ != null">
+	         index_, <!-- index_ -->
+		</if>
+		<if test="type != null and type != ''">
+	         type, <!-- type -->
+		</if>
+		<if test="compilation_message != null and compilation_message != ''">
+	         compilation_message, <!-- compilation_message -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="pid != null and pid != ''">
+	          #{pid, jdbcType=VARCHAR}, <!-- pid -->
+	    </if>
+		<if test="users != null and users != ''">
+	          #{users, jdbcType=VARCHAR}, <!-- users -->
+	    </if>
+		<if test="operate_time != null and operate_time != ''">
+	          #{operate_time, jdbcType=VARCHAR}, <!-- operate_time -->
+	    </if>
+		<if test="operate_description != null and operate_description != ''">
+	          #{operate_description, jdbcType=VARCHAR}, <!-- operate_description -->
+	    </if>
+		<if test="index_ != null">
+	          #{index_, jdbcType=INTEGER}, <!-- index_ -->
+	    </if>
+		<if test="type != null and type != ''">
+	          #{type, jdbcType=VARCHAR}, <!-- type -->
+	    </if>
+		<if test="compilation_message != null and compilation_message != ''">
+	          #{compilation_message, jdbcType=VARCHAR}, <!-- compilation_message -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_topic_userPO">
+		INSERT INTO archive_topic_user (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{pid, jdbcType=VARCHAR},  <!-- pid -->
+		    #{users, jdbcType=VARCHAR},  <!-- users -->
+		    #{operate_time, jdbcType=VARCHAR},  <!-- operate_time -->
+		    #{operate_description, jdbcType=VARCHAR},  <!-- operate_description -->
+		    #{index_, jdbcType=INTEGER},  <!-- index_ -->
+		    #{type, jdbcType=VARCHAR},  <!-- type -->
+		    #{compilation_message, jdbcType=VARCHAR}  <!-- compilation_message -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_topic_userPO">
+		UPDATE archive_topic_user
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="pid != null">
+		          pid = #{pid, jdbcType=VARCHAR},  <!-- pid -->
+			</if>
+			<if test="users != null">
+		          users = #{users, jdbcType=VARCHAR},  <!-- users -->
+			</if>
+			<if test="operate_time != null">
+		          operate_time = #{operate_time, jdbcType=VARCHAR},  <!-- operate_time -->
+			</if>
+			<if test="operate_description != null">
+		          operate_description = #{operate_description, jdbcType=VARCHAR},  <!-- operate_description -->
+			</if>
+			<if test="index_ != null">
+		          index_ = #{index_, jdbcType=INTEGER},  <!-- index_ -->
+			</if>
+			<if test="type != null">
+		          type = #{type, jdbcType=VARCHAR},  <!-- type -->
+			</if>
+			<if test="compilation_message != null">
+		          compilation_message = #{compilation_message, jdbcType=VARCHAR},  <!-- compilation_message -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_topic_user WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_topic_userPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_topic_user WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_topic_userPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_topic_user
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_topic_userPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_topic_user
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_topic_userPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_topic_user
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_topic_userPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_topic_user
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_topic_userPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_topic_user
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_topic_user
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_topic_user
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  pid,  <!-- pid -->
+		  users,  <!-- users -->
+		  operate_time,  <!-- operate_time -->
+		  operate_description,  <!-- operate_description -->
+		  index_,  <!-- index_ -->
+		  type,  <!-- type -->
+		  compilation_message  <!-- compilation_message -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_topic_user.id_,  <!-- id_ -->
+		  archive_topic_user.pid,  <!-- pid -->
+		  archive_topic_user.users,  <!-- users -->
+		  archive_topic_user.operate_time,  <!-- operate_time -->
+		  archive_topic_user.operate_description,  <!-- operate_description -->
+		  archive_topic_user.index_,  <!-- index_ -->
+		  archive_topic_user.type,  <!-- type -->
+		  archive_topic_user.compilation_message  <!-- compilation_message -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="pid != null and pid != ''">
+		      AND pid = #{pid}  <!-- pid -->
+		</if>
+	    <if test="users != null and users != ''">
+		      AND users = #{users}  <!-- users -->
+		</if>
+	    <if test="operate_time != null and operate_time != ''">
+		      AND operate_time = #{operate_time}  <!-- operate_time -->
+		</if>
+	    <if test="operate_description != null and operate_description != ''">
+		      AND operate_description = #{operate_description}  <!-- operate_description -->
+		</if>
+	   <if test="index_ != null ">
+		      AND index_ = #{index_}  <!-- index_ -->
+		</if>
+	    <if test="type != null and type != ''">
+		      AND type = #{type}  <!-- type -->
+		</if>
+	    <if test="compilation_message != null and compilation_message != ''">
+		      AND compilation_message = #{compilation_message}  <!-- compilation_message -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="pid != null and pid != ''">
+		      AND pid like '%${pid}%'  <!-- pid -->
+		</if>
+	    <if test="users != null and users != ''">
+		      AND users like '%${users}%'  <!-- users -->
+		</if>
+	    <if test="operate_time != null and operate_time != ''">
+		      AND operate_time like '%${operate_time}%'  <!-- operate_time -->
+		</if>
+	    <if test="operate_description != null and operate_description != ''">
+		      AND operate_description like '%${operate_description}%'  <!-- operate_description -->
+		</if>
+	    <if test="type != null and type != ''">
+		      AND type like '%${type}%'  <!-- type -->
+		</if>
+	    <if test="compilation_message != null and compilation_message != ''">
+		      AND compilation_message like '%${compilation_message}%'  <!-- compilation_message -->
+		</if>
+	</sql>
+	
+</mapper>

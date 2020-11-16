@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="pydnaossr:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/pydnaossr_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="pydnaossr" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="velocity-1.7" />
+          <element id="library" level="project" name="spring-jdbc-3.2.4.RELEASE" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="pydnaossr/web/Web" />
+    </root>
+  </artifact>
+</component>

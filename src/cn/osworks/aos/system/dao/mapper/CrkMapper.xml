@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- CRK[crk]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-07-25 15:57:47 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.CrkMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="CrkPO">
+		INSERT INTO crk (
+		<if test="f_recid != null">
+	         f_recid, <!-- f_recid -->
+		</if>
+		<if test="f_eventtype != null and f_eventtype != ''">
+	         f_eventtype, <!-- f_eventtype -->
+		</if>
+		<if test="f_eventdesc != null and f_eventdesc != ''">
+	         f_eventdesc, <!-- f_eventdesc -->
+		</if>
+		<if test="f_userid != null">
+	         f_userid, <!-- f_userId -->
+		</if>
+		<if test="f_username != null and f_username != ''">
+	         f_username, <!-- f_username -->
+		</if>
+		<if test="f_logdatetime != null and f_logdatetime != ''">
+	         f_logdatetime, <!-- f_logdatetime -->
+		</if>
+		<if test="lx != null and lx != ''">
+	         lx, <!-- lx -->
+		</if>
+		<if test="card != null and card != ''">
+	         card, <!-- card -->
+		</if>
+		<if test="xm != null and xm != ''">
+	         xm, <!-- xm -->
+		</if>
+		<if test="bm != null and bm != ''">
+	         bm, <!-- bm -->
+		</if>
+		<if test="dd != null and dd != ''">
+	         dd, <!-- dd -->
+		</if>
+		<if test="zt != null and zt != ''">
+	         zt, <!-- zt -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="f_recid != null">
+	          #{f_recid, jdbcType=INTEGER}, <!-- f_recid -->
+	    </if>
+		<if test="f_eventtype != null and f_eventtype != ''">
+	          #{f_eventtype, jdbcType=VARCHAR}, <!-- f_eventtype -->
+	    </if>
+		<if test="f_eventdesc != null and f_eventdesc != ''">
+	          #{f_eventdesc, jdbcType=VARCHAR}, <!-- f_eventdesc -->
+	    </if>
+		<if test="f_userid != null">
+	          #{f_userid, jdbcType=INTEGER}, <!-- f_userId -->
+	    </if>
+		<if test="f_username != null and f_username != ''">
+	          #{f_username, jdbcType=VARCHAR}, <!-- f_username -->
+	    </if>
+		<if test="f_logdatetime != null and f_logdatetime != ''">
+	          #{f_logdatetime, jdbcType=VARCHAR}, <!-- f_logdatetime -->
+	    </if>
+		<if test="lx != null and lx != ''">
+	          #{lx, jdbcType=VARCHAR}, <!-- lx -->
+	    </if>
+		<if test="card != null and card != ''">
+	          #{card, jdbcType=VARCHAR}, <!-- card -->
+	    </if>
+		<if test="xm != null and xm != ''">
+	          #{xm, jdbcType=VARCHAR}, <!-- xm -->
+	    </if>
+		<if test="bm != null and bm != ''">
+	          #{bm, jdbcType=VARCHAR}, <!-- bm -->
+	    </if>
+		<if test="dd != null and dd != ''">
+	          #{dd, jdbcType=VARCHAR}, <!-- dd -->
+	    </if>
+		<if test="zt != null and zt != ''">
+	          #{zt, jdbcType=VARCHAR}, <!-- zt -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="CrkPO">
+		INSERT INTO crk (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{f_recid, jdbcType=INTEGER},  <!-- f_recid -->
+		    #{f_eventtype, jdbcType=VARCHAR},  <!-- f_eventtype -->
+		    #{f_eventdesc, jdbcType=VARCHAR},  <!-- f_eventdesc -->
+		    #{f_userid, jdbcType=INTEGER},  <!-- f_userId -->
+		    #{f_username, jdbcType=VARCHAR},  <!-- f_username -->
+		    #{f_logdatetime, jdbcType=VARCHAR},  <!-- f_logdatetime -->
+		    #{lx, jdbcType=VARCHAR},  <!-- lx -->
+		    #{card, jdbcType=VARCHAR},  <!-- card -->
+		    #{xm, jdbcType=VARCHAR},  <!-- xm -->
+		    #{bm, jdbcType=VARCHAR},  <!-- bm -->
+		    #{dd, jdbcType=VARCHAR},  <!-- dd -->
+		    #{zt, jdbcType=VARCHAR}  <!-- zt -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="CrkPO">
+		UPDATE crk
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="f_recid != null">
+		          f_recid = #{f_recid, jdbcType=INTEGER},  <!-- f_recid -->
+			</if>
+			<if test="f_eventtype != null">
+		          f_eventtype = #{f_eventtype, jdbcType=VARCHAR},  <!-- f_eventtype -->
+			</if>
+			<if test="f_eventdesc != null">
+		          f_eventdesc = #{f_eventdesc, jdbcType=VARCHAR},  <!-- f_eventdesc -->
+			</if>
+			<if test="f_userid != null">
+		          f_userid = #{f_userid, jdbcType=INTEGER},  <!-- f_userId -->
+			</if>
+			<if test="f_username != null">
+		          f_username = #{f_username, jdbcType=VARCHAR},  <!-- f_username -->
+			</if>
+			<if test="f_logdatetime != null">
+		          f_logdatetime = #{f_logdatetime, jdbcType=VARCHAR},  <!-- f_logdatetime -->
+			</if>
+			<if test="lx != null">
+		          lx = #{lx, jdbcType=VARCHAR},  <!-- lx -->
+			</if>
+			<if test="card != null">
+		          card = #{card, jdbcType=VARCHAR},  <!-- card -->
+			</if>
+			<if test="xm != null">
+		          xm = #{xm, jdbcType=VARCHAR},  <!-- xm -->
+			</if>
+			<if test="bm != null">
+		          bm = #{bm, jdbcType=VARCHAR},  <!-- bm -->
+			</if>
+			<if test="dd != null">
+		          dd = #{dd, jdbcType=VARCHAR},  <!-- dd -->
+			</if>
+			<if test="zt != null">
+		          zt = #{zt, jdbcType=VARCHAR},  <!-- zt -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM crk WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="CrkPO">
+		SELECT
+		<include refid="column" />
+		FROM crk WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="CrkPO">
+		SELECT
+		    <include refid="column" />
+		FROM crk
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="CrkPO">
+		SELECT
+			<include refid="column" />	
+		FROM crk
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="CrkPO" useCache="false">
+	    SELECT
+			<include refid="column" />
+		FROM crk
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="CrkPO">
+		SELECT
+			<include refid="column" />	
+		FROM crk
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="CrkPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM crk
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM crk
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM crk
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  f_recid,  <!-- f_recid -->
+		  f_eventtype,  <!-- f_eventtype -->
+		  f_eventdesc,  <!-- f_eventdesc -->
+		  f_userid,  <!-- f_userId -->
+		  f_username,  <!-- f_username -->
+		  f_logdatetime,  <!-- f_logdatetime -->
+		  lx,  <!-- lx -->
+		  card,  <!-- card -->
+		  xm,  <!-- xm -->
+		  bm,  <!-- bm -->
+		  dd,  <!-- dd -->
+		  zt  <!-- zt -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  crk.id_,  <!-- id_ -->
+		  crk.f_recid,  <!-- f_recid -->
+		  crk.f_eventtype,  <!-- f_eventtype -->
+		  crk.f_eventdesc,  <!-- f_eventdesc -->
+		  crk.f_userid,  <!-- f_userId -->
+		  crk.f_username,  <!-- f_username -->
+		  crk.f_logdatetime,  <!-- f_logdatetime -->
+		  crk.lx,  <!-- lx -->
+		  crk.card,  <!-- card -->
+		  crk.xm,  <!-- xm -->
+		  crk.bm,  <!-- bm -->
+		  crk.dd,  <!-- dd -->
+		  crk.zt  <!-- zt -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	   <if test="f_recid != null ">
+		      AND f_recid = #{f_recid}  <!-- f_recid -->
+		</if>
+	    <if test="f_eventtype != null and f_eventtype != ''">
+		      AND f_eventtype = #{f_eventtype}  <!-- f_eventtype -->
+		</if>
+	    <if test="f_eventdesc != null and f_eventdesc != ''">
+		      AND f_eventdesc = #{f_eventdesc}  <!-- f_eventdesc -->
+		</if>
+	   <if test="f_userid != null ">
+		      AND f_userid = #{f_userid}  <!-- f_userId -->
+		</if>
+	    <if test="f_username != null and f_username != ''">
+		      AND f_username = #{f_username}  <!-- f_username -->
+		</if>
+	    <if test="f_logdatetime != null and f_logdatetime != ''">
+		      AND f_logdatetime = #{f_logdatetime}  <!-- f_logdatetime -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx = #{lx}  <!-- lx -->
+		</if>
+	    <if test="card != null and card != ''">
+		      AND card = #{card}  <!-- card -->
+		</if>
+	    <if test="xm != null and xm != ''">
+		      AND xm = #{xm}  <!-- xm -->
+		</if>
+	    <if test="bm != null and bm != ''">
+		      AND bm = #{bm}  <!-- bm -->
+		</if>
+	    <if test="dd != null and dd != ''">
+		      AND dd = #{dd}  <!-- dd -->
+		</if>
+	    <if test="zt != null and zt != ''">
+		      AND zt = #{zt}  <!-- zt -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="f_eventtype != null and f_eventtype != ''">
+		      AND f_eventtype like '%${f_eventtype}%'  <!-- f_eventtype -->
+		</if>
+	    <if test="f_eventdesc != null and f_eventdesc != ''">
+		      AND f_eventdesc like '%${f_eventdesc}%'  <!-- f_eventdesc -->
+		</if>
+	    <if test="f_username != null and f_username != ''">
+		      AND f_username like '%${f_username}%'  <!-- f_username -->
+		</if>
+	    <if test="f_logdatetime != null and f_logdatetime != ''">
+		      AND f_logdatetime like '%${f_logdatetime}%'  <!-- f_logdatetime -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx like '%${lx}%'  <!-- lx -->
+		</if>
+	    <if test="card != null and card != ''">
+		      AND card like '%${card}%'  <!-- card -->
+		</if>
+	    <if test="xm != null and xm != ''">
+		      AND xm like '%${xm}%'  <!-- xm -->
+		</if>
+	    <if test="bm != null and bm != ''">
+		      AND bm like '%${bm}%'  <!-- bm -->
+		</if>
+	    <if test="dd != null and dd != ''">
+		      AND dd like '%${dd}%'  <!-- dd -->
+		</if>
+	    <if test="zt != null and zt != ''">
+		      AND zt like '%${zt}%'  <!-- zt -->
+		</if>
+	</sql>
+	
+</mapper>

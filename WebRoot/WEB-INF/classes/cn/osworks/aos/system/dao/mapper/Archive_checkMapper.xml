@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_check[archive_check]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-10-12 15:02:44 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_checkMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_checkPO">
+		INSERT INTO archive_check (
+		<if test="task_number != null and task_number != ''">
+	         task_number, <!-- task_number -->
+		</if>
+		<if test="task_name != null and task_name != ''">
+	         task_name, <!-- task_name -->
+		</if>
+		<if test="datatime != null and datatime != ''">
+	         datatime, <!-- Datatime -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+	         tablename, <!-- tablename -->
+		</if>
+		<if test="tabledesc != null and tabledesc != ''">
+	         tabledesc, <!-- tabledesc -->
+		</if>
+		<if test="createperson != null and createperson != ''">
+	         createperson, <!-- createperson -->
+		</if>
+		<if test="checkup_type != null and checkup_type != ''">
+	         checkup_type, <!-- checkup_type -->
+		</if>
+		<if test="first_trialperson != null and first_trialperson != ''">
+	         first_trialperson, <!-- first_trialperson -->
+		</if>
+		<if test="first_trialperson_cn != null and first_trialperson_cn != ''">
+	         first_trialperson_cn, <!-- first_trialperson_cn -->
+		</if>
+		<if test="next_trialperson != null and next_trialperson != ''">
+	         next_trialperson, <!-- next_trialperson -->
+		</if>
+		<if test="next_trialperson_cn != null and next_trialperson_cn != ''">
+	         next_trialperson_cn, <!-- next_trialperson_cn -->
+		</if>
+		<if test="last_trialperson != null and last_trialperson != ''">
+	         last_trialperson, <!-- last_trialperson -->
+		</if>
+		<if test="last_trialperson_cn != null and last_trialperson_cn != ''">
+	         last_trialperson_cn, <!-- last_trialperson_cn -->
+		</if>
+		<if test="description != null and description != ''">
+	         description, <!-- description -->
+		</if>
+		<if test="flag != null and flag != ''">
+	         flag, <!-- flag -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="task_number != null and task_number != ''">
+	          #{task_number, jdbcType=VARCHAR}, <!-- task_number -->
+	    </if>
+		<if test="task_name != null and task_name != ''">
+	          #{task_name, jdbcType=VARCHAR}, <!-- task_name -->
+	    </if>
+		<if test="datatime != null and datatime != ''">
+	          #{datatime, jdbcType=VARCHAR}, <!-- Datatime -->
+	    </if>
+		<if test="tablename != null and tablename != ''">
+	          #{tablename, jdbcType=VARCHAR}, <!-- tablename -->
+	    </if>
+		<if test="tabledesc != null and tabledesc != ''">
+	          #{tabledesc, jdbcType=VARCHAR}, <!-- tabledesc -->
+	    </if>
+		<if test="createperson != null and createperson != ''">
+	          #{createperson, jdbcType=VARCHAR}, <!-- createperson -->
+	    </if>
+		<if test="checkup_type != null and checkup_type != ''">
+	          #{checkup_type, jdbcType=VARCHAR}, <!-- checkup_type -->
+	    </if>
+		<if test="first_trialperson != null and first_trialperson != ''">
+	          #{first_trialperson, jdbcType=VARCHAR}, <!-- first_trialperson -->
+	    </if>
+		<if test="first_trialperson_cn != null and first_trialperson_cn != ''">
+	          #{first_trialperson_cn, jdbcType=VARCHAR}, <!-- first_trialperson_cn -->
+	    </if>
+		<if test="next_trialperson != null and next_trialperson != ''">
+	          #{next_trialperson, jdbcType=VARCHAR}, <!-- next_trialperson -->
+	    </if>
+		<if test="next_trialperson_cn != null and next_trialperson_cn != ''">
+	          #{next_trialperson_cn, jdbcType=VARCHAR}, <!-- next_trialperson_cn -->
+	    </if>
+		<if test="last_trialperson != null and last_trialperson != ''">
+	          #{last_trialperson, jdbcType=VARCHAR}, <!-- last_trialperson -->
+	    </if>
+		<if test="last_trialperson_cn != null and last_trialperson_cn != ''">
+	          #{last_trialperson_cn, jdbcType=VARCHAR}, <!-- last_trialperson_cn -->
+	    </if>
+		<if test="description != null and description != ''">
+	          #{description, jdbcType=VARCHAR}, <!-- description -->
+	    </if>
+		<if test="flag != null and flag != ''">
+	          #{flag, jdbcType=VARCHAR}, <!-- flag -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_checkPO">
+		INSERT INTO archive_check (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{task_number, jdbcType=VARCHAR},  <!-- task_number -->
+		    #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+		    #{datatime, jdbcType=VARCHAR},  <!-- Datatime -->
+		    #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+		    #{tabledesc, jdbcType=VARCHAR},  <!-- tabledesc -->
+		    #{createperson, jdbcType=VARCHAR},  <!-- createperson -->
+		    #{checkup_type, jdbcType=VARCHAR},  <!-- checkup_type -->
+		    #{first_trialperson, jdbcType=VARCHAR},  <!-- first_trialperson -->
+		    #{first_trialperson_cn, jdbcType=VARCHAR},  <!-- first_trialperson_cn -->
+		    #{next_trialperson, jdbcType=VARCHAR},  <!-- next_trialperson -->
+		    #{next_trialperson_cn, jdbcType=VARCHAR},  <!-- next_trialperson_cn -->
+		    #{last_trialperson, jdbcType=VARCHAR},  <!-- last_trialperson -->
+		    #{last_trialperson_cn, jdbcType=VARCHAR},  <!-- last_trialperson_cn -->
+		    #{description, jdbcType=VARCHAR},  <!-- description -->
+		    #{flag, jdbcType=VARCHAR}  <!-- flag -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_checkPO">
+		UPDATE archive_check
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="task_number != null">
+		          task_number = #{task_number, jdbcType=VARCHAR},  <!-- task_number -->
+			</if>
+			<if test="task_name != null">
+		          task_name = #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+			</if>
+			<if test="datatime != null">
+		          datatime = #{datatime, jdbcType=VARCHAR},  <!-- Datatime -->
+			</if>
+			<if test="tablename != null">
+		          tablename = #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+			</if>
+			<if test="tabledesc != null">
+		          tabledesc = #{tabledesc, jdbcType=VARCHAR},  <!-- tabledesc -->
+			</if>
+			<if test="createperson != null">
+		          createperson = #{createperson, jdbcType=VARCHAR},  <!-- createperson -->
+			</if>
+			<if test="checkup_type != null">
+		          checkup_type = #{checkup_type, jdbcType=VARCHAR},  <!-- checkup_type -->
+			</if>
+			<if test="first_trialperson != null">
+		          first_trialperson = #{first_trialperson, jdbcType=VARCHAR},  <!-- first_trialperson -->
+			</if>
+			<if test="first_trialperson_cn != null">
+		          first_trialperson_cn = #{first_trialperson_cn, jdbcType=VARCHAR},  <!-- first_trialperson_cn -->
+			</if>
+			<if test="next_trialperson != null">
+		          next_trialperson = #{next_trialperson, jdbcType=VARCHAR},  <!-- next_trialperson -->
+			</if>
+			<if test="next_trialperson_cn != null">
+		          next_trialperson_cn = #{next_trialperson_cn, jdbcType=VARCHAR},  <!-- next_trialperson_cn -->
+			</if>
+			<if test="last_trialperson != null">
+		          last_trialperson = #{last_trialperson, jdbcType=VARCHAR},  <!-- last_trialperson -->
+			</if>
+			<if test="last_trialperson_cn != null">
+		          last_trialperson_cn = #{last_trialperson_cn, jdbcType=VARCHAR},  <!-- last_trialperson_cn -->
+			</if>
+			<if test="description != null">
+		          description = #{description, jdbcType=VARCHAR},  <!-- description -->
+			</if>
+			<if test="flag != null">
+		          flag = #{flag, jdbcType=VARCHAR},  <!-- flag -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_check WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_checkPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_check WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_checkPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_check
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_checkPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_check
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_checkPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_check
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_checkPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_check
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_checkPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_check
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_check
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_check
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  task_number,  <!-- task_number -->
+		  task_name,  <!-- task_name -->
+		  datatime,  <!-- Datatime -->
+		  tablename,  <!-- tablename -->
+		  tabledesc,  <!-- tabledesc -->
+		  createperson,  <!-- createperson -->
+		  checkup_type,  <!-- checkup_type -->
+		  first_trialperson,  <!-- first_trialperson -->
+		  first_trialperson_cn,  <!-- first_trialperson_cn -->
+		  next_trialperson,  <!-- next_trialperson -->
+		  next_trialperson_cn,  <!-- next_trialperson_cn -->
+		  last_trialperson,  <!-- last_trialperson -->
+		  last_trialperson_cn,  <!-- last_trialperson_cn -->
+		  description,  <!-- description -->
+		  flag  <!-- flag -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_check.id_,  <!-- id_ -->
+		  archive_check.task_number,  <!-- task_number -->
+		  archive_check.task_name,  <!-- task_name -->
+		  archive_check.datatime,  <!-- Datatime -->
+		  archive_check.tablename,  <!-- tablename -->
+		  archive_check.tabledesc,  <!-- tabledesc -->
+		  archive_check.createperson,  <!-- createperson -->
+		  archive_check.checkup_type,  <!-- checkup_type -->
+		  archive_check.first_trialperson,  <!-- first_trialperson -->
+		  archive_check.first_trialperson_cn,  <!-- first_trialperson_cn -->
+		  archive_check.next_trialperson,  <!-- next_trialperson -->
+		  archive_check.next_trialperson_cn,  <!-- next_trialperson_cn -->
+		  archive_check.last_trialperson,  <!-- last_trialperson -->
+		  archive_check.last_trialperson_cn,  <!-- last_trialperson_cn -->
+		  archive_check.description,  <!-- description -->
+		  archive_check.flag  <!-- flag -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="task_number != null and task_number != ''">
+		      AND task_number = #{task_number}  <!-- task_number -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name = #{task_name}  <!-- task_name -->
+		</if>
+	    <if test="datatime != null and datatime != ''">
+		      AND datatime = #{datatime}  <!-- Datatime -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename = #{tablename}  <!-- tablename -->
+		</if>
+	    <if test="tabledesc != null and tabledesc != ''">
+		      AND tabledesc = #{tabledesc}  <!-- tabledesc -->
+		</if>
+	    <if test="createperson != null and createperson != ''">
+		      AND createperson = #{createperson}  <!-- createperson -->
+		</if>
+	    <if test="checkup_type != null and checkup_type != ''">
+		      AND checkup_type = #{checkup_type}  <!-- checkup_type -->
+		</if>
+	    <if test="first_trialperson != null and first_trialperson != ''">
+		      AND first_trialperson = #{first_trialperson}  <!-- first_trialperson -->
+		</if>
+	    <if test="first_trialperson_cn != null and first_trialperson_cn != ''">
+		      AND first_trialperson_cn = #{first_trialperson_cn}  <!-- first_trialperson_cn -->
+		</if>
+	    <if test="next_trialperson != null and next_trialperson != ''">
+		      AND next_trialperson = #{next_trialperson}  <!-- next_trialperson -->
+		</if>
+	    <if test="next_trialperson_cn != null and next_trialperson_cn != ''">
+		      AND next_trialperson_cn = #{next_trialperson_cn}  <!-- next_trialperson_cn -->
+		</if>
+	    <if test="last_trialperson != null and last_trialperson != ''">
+		      AND last_trialperson = #{last_trialperson}  <!-- last_trialperson -->
+		</if>
+	    <if test="last_trialperson_cn != null and last_trialperson_cn != ''">
+		      AND last_trialperson_cn = #{last_trialperson_cn}  <!-- last_trialperson_cn -->
+		</if>
+	    <if test="description != null and description != ''">
+		      AND description = #{description}  <!-- description -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag = #{flag}  <!-- flag -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="task_number != null and task_number != ''">
+		      AND task_number like '%${task_number}%'  <!-- task_number -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name like '%${task_name}%'  <!-- task_name -->
+		</if>
+	    <if test="datatime != null and datatime != ''">
+		      AND datatime like '%${datatime}%'  <!-- Datatime -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename like '%${tablename}%'  <!-- tablename -->
+		</if>
+	    <if test="tabledesc != null and tabledesc != ''">
+		      AND tabledesc like '%${tabledesc}%'  <!-- tabledesc -->
+		</if>
+	    <if test="createperson != null and createperson != ''">
+		      AND createperson like '%${createperson}%'  <!-- createperson -->
+		</if>
+	    <if test="checkup_type != null and checkup_type != ''">
+		      AND checkup_type like '%${checkup_type}%'  <!-- checkup_type -->
+		</if>
+	    <if test="first_trialperson != null and first_trialperson != ''">
+		      AND first_trialperson like '%${first_trialperson}%'  <!-- first_trialperson -->
+		</if>
+	    <if test="first_trialperson_cn != null and first_trialperson_cn != ''">
+		      AND first_trialperson_cn like '%${first_trialperson_cn}%'  <!-- first_trialperson_cn -->
+		</if>
+	    <if test="next_trialperson != null and next_trialperson != ''">
+		      AND next_trialperson like '%${next_trialperson}%'  <!-- next_trialperson -->
+		</if>
+	    <if test="next_trialperson_cn != null and next_trialperson_cn != ''">
+		      AND next_trialperson_cn like '%${next_trialperson_cn}%'  <!-- next_trialperson_cn -->
+		</if>
+	    <if test="last_trialperson != null and last_trialperson != ''">
+		      AND last_trialperson like '%${last_trialperson}%'  <!-- last_trialperson -->
+		</if>
+	    <if test="last_trialperson_cn != null and last_trialperson_cn != ''">
+		      AND last_trialperson_cn like '%${last_trialperson_cn}%'  <!-- last_trialperson_cn -->
+		</if>
+	    <if test="description != null and description != ''">
+		      AND description like '%${description}%'  <!-- description -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag like '%${flag}%'  <!-- flag -->
+		</if>
+	</sql>
+	
+</mapper>

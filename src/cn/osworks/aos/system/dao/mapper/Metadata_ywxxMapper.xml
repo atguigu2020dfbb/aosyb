@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- metadata_ywxx[metadata_ywxx]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-05-03 12:47:39 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Metadata_ywxxMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Metadata_ywxxPO">
+		INSERT INTO metadata_ywxx (
+		<if test="tid != null and tid != ''">
+	         tid, <!-- tid -->
+		</if>
+		<if test="ywbz != null and ywbz != ''">
+	         ywbz, <!-- ywbz -->
+		</if>
+		<if test="ywzt != null and ywzt != ''">
+	         ywzt, <!-- ywzt -->
+		</if>
+		<if test="ywsj != null and ywsj != ''">
+	         ywsj, <!-- ywsj -->
+		</if>
+		<if test="ywbs != null and ywbs != ''">
+	         ywbs, <!-- ywbs -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="tid != null and tid != ''">
+	          #{tid, jdbcType=VARCHAR}, <!-- tid -->
+	    </if>
+		<if test="ywbz != null and ywbz != ''">
+	          #{ywbz, jdbcType=VARCHAR}, <!-- ywbz -->
+	    </if>
+		<if test="ywzt != null and ywzt != ''">
+	          #{ywzt, jdbcType=VARCHAR}, <!-- ywzt -->
+	    </if>
+		<if test="ywsj != null and ywsj != ''">
+	          #{ywsj, jdbcType=VARCHAR}, <!-- ywsj -->
+	    </if>
+		<if test="ywbs != null and ywbs != ''">
+	          #{ywbs, jdbcType=VARCHAR}, <!-- ywbs -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Metadata_ywxxPO">
+		INSERT INTO metadata_ywxx (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{tid, jdbcType=VARCHAR},  <!-- tid -->
+		    #{ywbz, jdbcType=VARCHAR},  <!-- ywbz -->
+		    #{ywzt, jdbcType=VARCHAR},  <!-- ywzt -->
+		    #{ywsj, jdbcType=VARCHAR},  <!-- ywsj -->
+		    #{ywbs, jdbcType=VARCHAR}  <!-- ywbs -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Metadata_ywxxPO">
+		UPDATE metadata_ywxx
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="tid != null">
+		          tid = #{tid, jdbcType=VARCHAR},  <!-- tid -->
+			</if>
+			<if test="ywbz != null">
+		          ywbz = #{ywbz, jdbcType=VARCHAR},  <!-- ywbz -->
+			</if>
+			<if test="ywzt != null">
+		          ywzt = #{ywzt, jdbcType=VARCHAR},  <!-- ywzt -->
+			</if>
+			<if test="ywsj != null">
+		          ywsj = #{ywsj, jdbcType=VARCHAR},  <!-- ywsj -->
+			</if>
+			<if test="ywbs != null">
+		          ywbs = #{ywbs, jdbcType=VARCHAR},  <!-- ywbs -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM metadata_ywxx WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Metadata_ywxxPO">
+		SELECT
+		<include refid="column" />
+		FROM metadata_ywxx WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Metadata_ywxxPO">
+		SELECT
+		    <include refid="column" />
+		FROM metadata_ywxx
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Metadata_ywxxPO">
+		SELECT
+			<include refid="column" />	
+		FROM metadata_ywxx
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Metadata_ywxxPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM metadata_ywxx
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Metadata_ywxxPO">
+		SELECT
+			<include refid="column" />	
+		FROM metadata_ywxx
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Metadata_ywxxPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM metadata_ywxx
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM metadata_ywxx
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM metadata_ywxx
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  tid,  <!-- tid -->
+		  ywbz,  <!-- ywbz -->
+		  ywzt,  <!-- ywzt -->
+		  ywsj,  <!-- ywsj -->
+		  ywbs  <!-- ywbs -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  metadata_ywxx.id_,  <!-- id_ -->
+		  metadata_ywxx.tid,  <!-- tid -->
+		  metadata_ywxx.ywbz,  <!-- ywbz -->
+		  metadata_ywxx.ywzt,  <!-- ywzt -->
+		  metadata_ywxx.ywsj,  <!-- ywsj -->
+		  metadata_ywxx.ywbs  <!-- ywbs -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid = #{tid}  <!-- tid -->
+		</if>
+	    <if test="ywbz != null and ywbz != ''">
+		      AND ywbz = #{ywbz}  <!-- ywbz -->
+		</if>
+	    <if test="ywzt != null and ywzt != ''">
+		      AND ywzt = #{ywzt}  <!-- ywzt -->
+		</if>
+	    <if test="ywsj != null and ywsj != ''">
+		      AND ywsj = #{ywsj}  <!-- ywsj -->
+		</if>
+	    <if test="ywbs != null and ywbs != ''">
+		      AND ywbs = #{ywbs}  <!-- ywbs -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid like '%${tid}%'  <!-- tid -->
+		</if>
+	    <if test="ywbz != null and ywbz != ''">
+		      AND ywbz like '%${ywbz}%'  <!-- ywbz -->
+		</if>
+	    <if test="ywzt != null and ywzt != ''">
+		      AND ywzt like '%${ywzt}%'  <!-- ywzt -->
+		</if>
+	    <if test="ywsj != null and ywsj != ''">
+		      AND ywsj like '%${ywsj}%'  <!-- ywsj -->
+		</if>
+	    <if test="ywbs != null and ywbs != ''">
+		      AND ywbs like '%${ywbs}%'  <!-- ywbs -->
+		</if>
+	</sql>
+	
+</mapper>

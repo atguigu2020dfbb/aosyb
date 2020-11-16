@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- depot_rk[depot_rk]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-07-06 15:12:26 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Depot_rkMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Depot_rkPO">
+		INSERT INTO depot_rk (
+		<if test="rkdh != null and rkdh != ''">
+	         rkdh, <!-- rkdh -->
+		</if>
+		<if test="rkr != null and rkr != ''">
+	         rkr, <!-- rkr -->
+		</if>
+		<if test="rkyy != null and rkyy != ''">
+	         rkyy, <!-- rkyy -->
+		</if>
+		<if test="yckdh != null and yckdh != ''">
+	         yckdh, <!-- yckdh -->
+		</if>
+		<if test="rksj != null and rksj != ''">
+	         rksj, <!-- rksj -->
+		</if>
+		<if test="rksl != null and rksl != ''">
+	         rksl, <!-- rksl -->
+		</if>
+		<if test="rkzt != null and rkzt != ''">
+	         rkzt, <!-- rkzt -->
+		</if>
+		<if test="bz != null and bz != ''">
+	         bz, <!-- bz -->
+		</if>
+		<if test="cz != null and cz != ''">
+	         cz, <!-- cz -->
+		</if>
+		<if test="lx != null and lx != ''">
+	         lx, <!-- lx -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="rkdh != null and rkdh != ''">
+	          #{rkdh, jdbcType=VARCHAR}, <!-- rkdh -->
+	    </if>
+		<if test="rkr != null and rkr != ''">
+	          #{rkr, jdbcType=VARCHAR}, <!-- rkr -->
+	    </if>
+		<if test="rkyy != null and rkyy != ''">
+	          #{rkyy, jdbcType=VARCHAR}, <!-- rkyy -->
+	    </if>
+		<if test="yckdh != null and yckdh != ''">
+	          #{yckdh, jdbcType=VARCHAR}, <!-- yckdh -->
+	    </if>
+		<if test="rksj != null and rksj != ''">
+	          #{rksj, jdbcType=VARCHAR}, <!-- rksj -->
+	    </if>
+		<if test="rksl != null and rksl != ''">
+	          #{rksl, jdbcType=VARCHAR}, <!-- rksl -->
+	    </if>
+		<if test="rkzt != null and rkzt != ''">
+	          #{rkzt, jdbcType=VARCHAR}, <!-- rkzt -->
+	    </if>
+		<if test="bz != null and bz != ''">
+	          #{bz, jdbcType=VARCHAR}, <!-- bz -->
+	    </if>
+		<if test="cz != null and cz != ''">
+	          #{cz, jdbcType=VARCHAR}, <!-- cz -->
+	    </if>
+		<if test="lx != null and lx != ''">
+	          #{lx, jdbcType=VARCHAR}, <!-- lx -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Depot_rkPO">
+		INSERT INTO depot_rk (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{rkdh, jdbcType=VARCHAR},  <!-- rkdh -->
+		    #{rkr, jdbcType=VARCHAR},  <!-- rkr -->
+		    #{rkyy, jdbcType=VARCHAR},  <!-- rkyy -->
+		    #{yckdh, jdbcType=VARCHAR},  <!-- yckdh -->
+		    #{rksj, jdbcType=VARCHAR},  <!-- rksj -->
+		    #{rksl, jdbcType=VARCHAR},  <!-- rksl -->
+		    #{rkzt, jdbcType=VARCHAR},  <!-- rkzt -->
+		    #{bz, jdbcType=VARCHAR},  <!-- bz -->
+		    #{cz, jdbcType=VARCHAR},  <!-- cz -->
+		    #{lx, jdbcType=VARCHAR}  <!-- lx -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Depot_rkPO">
+		UPDATE depot_rk
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="rkdh != null">
+		          rkdh = #{rkdh, jdbcType=VARCHAR},  <!-- rkdh -->
+			</if>
+			<if test="rkr != null">
+		          rkr = #{rkr, jdbcType=VARCHAR},  <!-- rkr -->
+			</if>
+			<if test="rkyy != null">
+		          rkyy = #{rkyy, jdbcType=VARCHAR},  <!-- rkyy -->
+			</if>
+			<if test="yckdh != null">
+		          yckdh = #{yckdh, jdbcType=VARCHAR},  <!-- yckdh -->
+			</if>
+			<if test="rksj != null">
+		          rksj = #{rksj, jdbcType=VARCHAR},  <!-- rksj -->
+			</if>
+			<if test="rksl != null">
+		          rksl = #{rksl, jdbcType=VARCHAR},  <!-- rksl -->
+			</if>
+			<if test="rkzt != null">
+		          rkzt = #{rkzt, jdbcType=VARCHAR},  <!-- rkzt -->
+			</if>
+			<if test="bz != null">
+		          bz = #{bz, jdbcType=VARCHAR},  <!-- bz -->
+			</if>
+			<if test="cz != null">
+		          cz = #{cz, jdbcType=VARCHAR},  <!-- cz -->
+			</if>
+			<if test="lx != null">
+		          lx = #{lx, jdbcType=VARCHAR},  <!-- lx -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM depot_rk WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Depot_rkPO">
+		SELECT
+		<include refid="column" />
+		FROM depot_rk WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Depot_rkPO">
+		SELECT
+		    <include refid="column" />
+		FROM depot_rk
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Depot_rkPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_rk
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Depot_rkPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_rk
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Depot_rkPO">
+		SELECT
+			<include refid="column" />	
+		FROM depot_rk
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Depot_rkPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM depot_rk
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM depot_rk
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM depot_rk
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  rkdh,  <!-- rkdh -->
+		  rkr,  <!-- rkr -->
+		  rkyy,  <!-- rkyy -->
+		  yckdh,  <!-- yckdh -->
+		  rksj,  <!-- rksj -->
+		  rksl,  <!-- rksl -->
+		  rkzt,  <!-- rkzt -->
+		  bz,  <!-- bz -->
+		  cz,  <!-- cz -->
+		  lx  <!-- lx -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  depot_rk.id_,  <!-- id_ -->
+		  depot_rk.rkdh,  <!-- rkdh -->
+		  depot_rk.rkr,  <!-- rkr -->
+		  depot_rk.rkyy,  <!-- rkyy -->
+		  depot_rk.yckdh,  <!-- yckdh -->
+		  depot_rk.rksj,  <!-- rksj -->
+		  depot_rk.rksl,  <!-- rksl -->
+		  depot_rk.rkzt,  <!-- rkzt -->
+		  depot_rk.bz,  <!-- bz -->
+		  depot_rk.cz,  <!-- cz -->
+		  depot_rk.lx  <!-- lx -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="rkdh != null and rkdh != ''">
+		      AND rkdh = #{rkdh}  <!-- rkdh -->
+		</if>
+	    <if test="rkr != null and rkr != ''">
+		      AND rkr = #{rkr}  <!-- rkr -->
+		</if>
+	    <if test="rkyy != null and rkyy != ''">
+		      AND rkyy = #{rkyy}  <!-- rkyy -->
+		</if>
+	    <if test="yckdh != null and yckdh != ''">
+		      AND yckdh = #{yckdh}  <!-- yckdh -->
+		</if>
+	    <if test="rksj != null and rksj != ''">
+		      AND rksj = #{rksj}  <!-- rksj -->
+		</if>
+	    <if test="rksl != null and rksl != ''">
+		      AND rksl = #{rksl}  <!-- rksl -->
+		</if>
+	    <if test="rkzt != null and rkzt != ''">
+		      AND rkzt = #{rkzt}  <!-- rkzt -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz = #{bz}  <!-- bz -->
+		</if>
+	    <if test="cz != null and cz != ''">
+		      AND cz = #{cz}  <!-- cz -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx = #{lx}  <!-- lx -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="rkdh != null and rkdh != ''">
+		      AND rkdh like '%${rkdh}%'  <!-- rkdh -->
+		</if>
+	    <if test="rkr != null and rkr != ''">
+		      AND rkr like '%${rkr}%'  <!-- rkr -->
+		</if>
+	    <if test="rkyy != null and rkyy != ''">
+		      AND rkyy like '%${rkyy}%'  <!-- rkyy -->
+		</if>
+	    <if test="yckdh != null and yckdh != ''">
+		      AND yckdh like '%${yckdh}%'  <!-- yckdh -->
+		</if>
+	    <if test="rksj != null and rksj != ''">
+		      AND rksj like '%${rksj}%'  <!-- rksj -->
+		</if>
+	    <if test="rksl != null and rksl != ''">
+		      AND rksl like '%${rksl}%'  <!-- rksl -->
+		</if>
+	    <if test="rkzt != null and rkzt != ''">
+		      AND rkzt like '%${rkzt}%'  <!-- rkzt -->
+		</if>
+	    <if test="bz != null and bz != ''">
+		      AND bz like '%${bz}%'  <!-- bz -->
+		</if>
+	    <if test="cz != null and cz != ''">
+		      AND cz like '%${cz}%'  <!-- cz -->
+		</if>
+	    <if test="lx != null and lx != ''">
+		      AND lx like '%${lx}%'  <!-- lx -->
+		</if>
+	</sql>
+	<select id="getDepotInIndex" parameterType="String" resultType="String">
+		select top 1 rkdh
+		from [dbo].[depot_rk]
+ 		where 1=1
+ 		and rkdh like '${value}%'
+ 		order by rkdh desc
+	</select>
+
+</mapper>

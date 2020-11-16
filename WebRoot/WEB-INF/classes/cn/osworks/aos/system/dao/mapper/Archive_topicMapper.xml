@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_topic[archive_topic]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-10-14 17:09:07 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_topicMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_topicPO">
+		INSERT INTO archive_topic (
+		<if test="task_number != null and task_number != ''">
+	         task_number, <!-- task_number -->
+		</if>
+		<if test="task_name != null and task_name != ''">
+	         task_name, <!-- task_name -->
+		</if>
+		<if test="datatime != null and datatime != ''">
+	         datatime, <!-- Datatime -->
+		</if>
+		<if test="tablename != null and tablename != ''">
+	         tablename, <!-- tablename -->
+		</if>
+		<if test="tabledesc != null and tabledesc != ''">
+	         tabledesc, <!-- tabledesc -->
+		</if>
+		<if test="createperson != null and createperson != ''">
+	         createperson, <!-- createperson -->
+		</if>
+		<if test="first_compilationperson != null and first_compilationperson != ''">
+	         first_compilationperson, <!-- first_compilationperson -->
+		</if>
+		<if test="first_compilationperson_cn != null and first_compilationperson_cn != ''">
+	         first_compilationperson_cn, <!-- first_compilationperson_cn -->
+		</if>
+		<if test="next_compilationperson != null and next_compilationperson != ''">
+	         next_compilationperson, <!-- next_compilationperson -->
+		</if>
+		<if test="next_compilationperson_cn != null and next_compilationperson_cn != ''">
+	         next_compilationperson_cn, <!-- next_compilationperson_cn -->
+		</if>
+		<if test="last_compilationperson != null and last_compilationperson != ''">
+	         last_compilationperson, <!-- last_compilationperson -->
+		</if>
+		<if test="last_compilationperson_cn != null and last_compilationperson_cn != ''">
+	         last_compilationperson_cn, <!-- last_compilationperson_cn -->
+		</if>
+		<if test="description != null and description != ''">
+	         description, <!-- description -->
+		</if>
+		<if test="flag != null and flag != ''">
+	         flag, <!-- flag -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="task_number != null and task_number != ''">
+	          #{task_number, jdbcType=VARCHAR}, <!-- task_number -->
+	    </if>
+		<if test="task_name != null and task_name != ''">
+	          #{task_name, jdbcType=VARCHAR}, <!-- task_name -->
+	    </if>
+		<if test="datatime != null and datatime != ''">
+	          #{datatime, jdbcType=VARCHAR}, <!-- Datatime -->
+	    </if>
+		<if test="tablename != null and tablename != ''">
+	          #{tablename, jdbcType=VARCHAR}, <!-- tablename -->
+	    </if>
+		<if test="tabledesc != null and tabledesc != ''">
+	          #{tabledesc, jdbcType=VARCHAR}, <!-- tabledesc -->
+	    </if>
+		<if test="createperson != null and createperson != ''">
+	          #{createperson, jdbcType=VARCHAR}, <!-- createperson -->
+	    </if>
+		<if test="first_compilationperson != null and first_compilationperson != ''">
+	          #{first_compilationperson, jdbcType=VARCHAR}, <!-- first_compilationperson -->
+	    </if>
+		<if test="first_compilationperson_cn != null and first_compilationperson_cn != ''">
+	          #{first_compilationperson_cn, jdbcType=VARCHAR}, <!-- first_compilationperson_cn -->
+	    </if>
+		<if test="next_compilationperson != null and next_compilationperson != ''">
+	          #{next_compilationperson, jdbcType=VARCHAR}, <!-- next_compilationperson -->
+	    </if>
+		<if test="next_compilationperson_cn != null and next_compilationperson_cn != ''">
+	          #{next_compilationperson_cn, jdbcType=VARCHAR}, <!-- next_compilationperson_cn -->
+	    </if>
+		<if test="last_compilationperson != null and last_compilationperson != ''">
+	          #{last_compilationperson, jdbcType=VARCHAR}, <!-- last_compilationperson -->
+	    </if>
+		<if test="last_compilationperson_cn != null and last_compilationperson_cn != ''">
+	          #{last_compilationperson_cn, jdbcType=VARCHAR}, <!-- last_compilationperson_cn -->
+	    </if>
+		<if test="description != null and description != ''">
+	          #{description, jdbcType=VARCHAR}, <!-- description -->
+	    </if>
+		<if test="flag != null and flag != ''">
+	          #{flag, jdbcType=VARCHAR}, <!-- flag -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_topicPO">
+		INSERT INTO archive_topic (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{task_number, jdbcType=VARCHAR},  <!-- task_number -->
+		    #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+		    #{datatime, jdbcType=VARCHAR},  <!-- Datatime -->
+		    #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+		    #{tabledesc, jdbcType=VARCHAR},  <!-- tabledesc -->
+		    #{createperson, jdbcType=VARCHAR},  <!-- createperson -->
+		    #{first_compilationperson, jdbcType=VARCHAR},  <!-- first_compilationperson -->
+		    #{first_compilationperson_cn, jdbcType=VARCHAR},  <!-- first_compilationperson_cn -->
+		    #{next_compilationperson, jdbcType=VARCHAR},  <!-- next_compilationperson -->
+		    #{next_compilationperson_cn, jdbcType=VARCHAR},  <!-- next_compilationperson_cn -->
+		    #{last_compilationperson, jdbcType=VARCHAR},  <!-- last_compilationperson -->
+		    #{last_compilationperson_cn, jdbcType=VARCHAR},  <!-- last_compilationperson_cn -->
+		    #{description, jdbcType=VARCHAR},  <!-- description -->
+		    #{flag, jdbcType=VARCHAR}  <!-- flag -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_topicPO">
+		UPDATE archive_topic
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="task_number != null">
+		          task_number = #{task_number, jdbcType=VARCHAR},  <!-- task_number -->
+			</if>
+			<if test="task_name != null">
+		          task_name = #{task_name, jdbcType=VARCHAR},  <!-- task_name -->
+			</if>
+			<if test="datatime != null">
+		          datatime = #{datatime, jdbcType=VARCHAR},  <!-- Datatime -->
+			</if>
+			<if test="tablename != null">
+		          tablename = #{tablename, jdbcType=VARCHAR},  <!-- tablename -->
+			</if>
+			<if test="tabledesc != null">
+		          tabledesc = #{tabledesc, jdbcType=VARCHAR},  <!-- tabledesc -->
+			</if>
+			<if test="createperson != null">
+		          createperson = #{createperson, jdbcType=VARCHAR},  <!-- createperson -->
+			</if>
+			<if test="first_compilationperson != null">
+		          first_compilationperson = #{first_compilationperson, jdbcType=VARCHAR},  <!-- first_compilationperson -->
+			</if>
+			<if test="first_compilationperson_cn != null">
+		          first_compilationperson_cn = #{first_compilationperson_cn, jdbcType=VARCHAR},  <!-- first_compilationperson_cn -->
+			</if>
+			<if test="next_compilationperson != null">
+		          next_compilationperson = #{next_compilationperson, jdbcType=VARCHAR},  <!-- next_compilationperson -->
+			</if>
+			<if test="next_compilationperson_cn != null">
+		          next_compilationperson_cn = #{next_compilationperson_cn, jdbcType=VARCHAR},  <!-- next_compilationperson_cn -->
+			</if>
+			<if test="last_compilationperson != null">
+		          last_compilationperson = #{last_compilationperson, jdbcType=VARCHAR},  <!-- last_compilationperson -->
+			</if>
+			<if test="last_compilationperson_cn != null">
+		          last_compilationperson_cn = #{last_compilationperson_cn, jdbcType=VARCHAR},  <!-- last_compilationperson_cn -->
+			</if>
+			<if test="description != null">
+		          description = #{description, jdbcType=VARCHAR},  <!-- description -->
+			</if>
+			<if test="flag != null">
+		          flag = #{flag, jdbcType=VARCHAR},  <!-- flag -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_topic WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_topicPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_topic WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_topicPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_topic
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_topicPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_topic
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_topicPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_topic
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_topicPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_topic
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_topicPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_topic
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_topic
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_topic
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  task_number,  <!-- task_number -->
+		  task_name,  <!-- task_name -->
+		  datatime,  <!-- Datatime -->
+		  tablename,  <!-- tablename -->
+		  tabledesc,  <!-- tabledesc -->
+		  createperson,  <!-- createperson -->
+		  first_compilationperson,  <!-- first_compilationperson -->
+		  first_compilationperson_cn,  <!-- first_compilationperson_cn -->
+		  next_compilationperson,  <!-- next_compilationperson -->
+		  next_compilationperson_cn,  <!-- next_compilationperson_cn -->
+		  last_compilationperson,  <!-- last_compilationperson -->
+		  last_compilationperson_cn,  <!-- last_compilationperson_cn -->
+		  description,  <!-- description -->
+		  flag  <!-- flag -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_topic.id_,  <!-- id_ -->
+		  archive_topic.task_number,  <!-- task_number -->
+		  archive_topic.task_name,  <!-- task_name -->
+		  archive_topic.datatime,  <!-- Datatime -->
+		  archive_topic.tablename,  <!-- tablename -->
+		  archive_topic.tabledesc,  <!-- tabledesc -->
+		  archive_topic.createperson,  <!-- createperson -->
+		  archive_topic.first_compilationperson,  <!-- first_compilationperson -->
+		  archive_topic.first_compilationperson_cn,  <!-- first_compilationperson_cn -->
+		  archive_topic.next_compilationperson,  <!-- next_compilationperson -->
+		  archive_topic.next_compilationperson_cn,  <!-- next_compilationperson_cn -->
+		  archive_topic.last_compilationperson,  <!-- last_compilationperson -->
+		  archive_topic.last_compilationperson_cn,  <!-- last_compilationperson_cn -->
+		  archive_topic.description,  <!-- description -->
+		  archive_topic.flag  <!-- flag -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="task_number != null and task_number != ''">
+		      AND task_number = #{task_number}  <!-- task_number -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name = #{task_name}  <!-- task_name -->
+		</if>
+	    <if test="datatime != null and datatime != ''">
+		      AND datatime = #{datatime}  <!-- Datatime -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename = #{tablename}  <!-- tablename -->
+		</if>
+	    <if test="tabledesc != null and tabledesc != ''">
+		      AND tabledesc = #{tabledesc}  <!-- tabledesc -->
+		</if>
+	    <if test="createperson != null and createperson != ''">
+		      AND createperson = #{createperson}  <!-- createperson -->
+		</if>
+	    <if test="first_compilationperson != null and first_compilationperson != ''">
+		      AND first_compilationperson = #{first_compilationperson}  <!-- first_compilationperson -->
+		</if>
+	    <if test="first_compilationperson_cn != null and first_compilationperson_cn != ''">
+		      AND first_compilationperson_cn = #{first_compilationperson_cn}  <!-- first_compilationperson_cn -->
+		</if>
+	    <if test="next_compilationperson != null and next_compilationperson != ''">
+		      AND next_compilationperson = #{next_compilationperson}  <!-- next_compilationperson -->
+		</if>
+	    <if test="next_compilationperson_cn != null and next_compilationperson_cn != ''">
+		      AND next_compilationperson_cn = #{next_compilationperson_cn}  <!-- next_compilationperson_cn -->
+		</if>
+	    <if test="last_compilationperson != null and last_compilationperson != ''">
+		      AND last_compilationperson = #{last_compilationperson}  <!-- last_compilationperson -->
+		</if>
+	    <if test="last_compilationperson_cn != null and last_compilationperson_cn != ''">
+		      AND last_compilationperson_cn = #{last_compilationperson_cn}  <!-- last_compilationperson_cn -->
+		</if>
+	    <if test="description != null and description != ''">
+		      AND description = #{description}  <!-- description -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag = #{flag}  <!-- flag -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="task_number != null and task_number != ''">
+		      AND task_number like '%${task_number}%'  <!-- task_number -->
+		</if>
+	    <if test="task_name != null and task_name != ''">
+		      AND task_name like '%${task_name}%'  <!-- task_name -->
+		</if>
+	    <if test="datatime != null and datatime != ''">
+		      AND datatime like '%${datatime}%'  <!-- Datatime -->
+		</if>
+	    <if test="tablename != null and tablename != ''">
+		      AND tablename like '%${tablename}%'  <!-- tablename -->
+		</if>
+	    <if test="tabledesc != null and tabledesc != ''">
+		      AND tabledesc like '%${tabledesc}%'  <!-- tabledesc -->
+		</if>
+	    <if test="createperson != null and createperson != ''">
+		      AND createperson like '%${createperson}%'  <!-- createperson -->
+		</if>
+	    <if test="first_compilationperson != null and first_compilationperson != ''">
+		      AND first_compilationperson like '%${first_compilationperson}%'  <!-- first_compilationperson -->
+		</if>
+	    <if test="first_compilationperson_cn != null and first_compilationperson_cn != ''">
+		      AND first_compilationperson_cn like '%${first_compilationperson_cn}%'  <!-- first_compilationperson_cn -->
+		</if>
+	    <if test="next_compilationperson != null and next_compilationperson != ''">
+		      AND next_compilationperson like '%${next_compilationperson}%'  <!-- next_compilationperson -->
+		</if>
+	    <if test="next_compilationperson_cn != null and next_compilationperson_cn != ''">
+		      AND next_compilationperson_cn like '%${next_compilationperson_cn}%'  <!-- next_compilationperson_cn -->
+		</if>
+	    <if test="last_compilationperson != null and last_compilationperson != ''">
+		      AND last_compilationperson like '%${last_compilationperson}%'  <!-- last_compilationperson -->
+		</if>
+	    <if test="last_compilationperson_cn != null and last_compilationperson_cn != ''">
+		      AND last_compilationperson_cn like '%${last_compilationperson_cn}%'  <!-- last_compilationperson_cn -->
+		</if>
+	    <if test="description != null and description != ''">
+		      AND description like '%${description}%'  <!-- description -->
+		</if>
+	    <if test="flag != null and flag != ''">
+		      AND flag like '%${flag}%'  <!-- flag -->
+		</if>
+	</sql>
+	
+</mapper>

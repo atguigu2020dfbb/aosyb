@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_TableFieldList_children[archive_tablefieldlist_children]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-09-19 10:42:42 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_tablefieldlist_childrenMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_tablefieldlist_childrenPO">
+		INSERT INTO archive_tablefieldlist_children (
+		<if test="id_ != null and id_ != ''">
+	         id_, <!-- id_ -->
+		</if>
+		<if test="tid != null and tid != ''">
+	         tid, <!-- tid -->
+		</if>
+		<if test="fieldenname != null and fieldenname != ''">
+	         fieldenname, <!-- FieldEnName -->
+		</if>
+		<if test="fieldcnname != null and fieldcnname != ''">
+	         fieldcnname, <!-- FieldCnName -->
+		</if>
+		<if test="fieldclass != null and fieldclass != ''">
+	         fieldclass, <!-- FieldClass -->
+		</if>
+		<if test="fieldsize != null">
+	         fieldsize, <!-- FieldSize -->
+		</if>
+		<if test="fieldview != null">
+	         fieldview, <!-- FieldView -->
+		</if>
+		<if test="fieldmetch != null">
+	         fieldmetch, <!-- FieldMetch -->
+		</if>
+		<if test="fieldtype != null">
+	         fieldtype, <!-- FieldType -->
+		</if>
+		<if test="fieldnull != null">
+	         fieldnull, <!-- FieldNull -->
+		</if>
+		<if test="fieldft != null">
+	         fieldft, <!-- FieldFt -->
+		</if>
+		<if test="indx != null">
+	         indx, <!-- indx -->
+		</if>
+		<if test="searchview != null">
+	         searchview, <!-- SearchView -->
+		</if>
+		<if test="fieldsetview != null">
+	         fieldsetview, <!-- FieldSetView -->
+		</if>
+		<if test="zjdisplay != null and zjdisplay != ''">
+	         zjdisplay, <!-- zjdisplay -->
+		</if>
+		<if test="dislen != null">
+	         dislen, <!-- dislen -->
+		</if>
+		)VALUES(
+		<if test="id_ != null and id_ != ''">
+	          #{id_, jdbcType=VARCHAR}, <!-- id_ -->
+	    </if>
+		<if test="tid != null and tid != ''">
+	          #{tid, jdbcType=VARCHAR}, <!-- tid -->
+	    </if>
+		<if test="fieldenname != null and fieldenname != ''">
+	          #{fieldenname, jdbcType=VARCHAR}, <!-- FieldEnName -->
+	    </if>
+		<if test="fieldcnname != null and fieldcnname != ''">
+	          #{fieldcnname, jdbcType=VARCHAR}, <!-- FieldCnName -->
+	    </if>
+		<if test="fieldclass != null and fieldclass != ''">
+	          #{fieldclass, jdbcType=VARCHAR}, <!-- FieldClass -->
+	    </if>
+		<if test="fieldsize != null">
+	          #{fieldsize, jdbcType=INTEGER}, <!-- FieldSize -->
+	    </if>
+		<if test="fieldview != null">
+	          #{fieldview, jdbcType=INTEGER}, <!-- FieldView -->
+	    </if>
+		<if test="fieldmetch != null">
+	          #{fieldmetch, jdbcType=INTEGER}, <!-- FieldMetch -->
+	    </if>
+		<if test="fieldtype != null">
+	          #{fieldtype, jdbcType=INTEGER}, <!-- FieldType -->
+	    </if>
+		<if test="fieldnull != null">
+	          #{fieldnull, jdbcType=INTEGER}, <!-- FieldNull -->
+	    </if>
+		<if test="fieldft != null">
+	          #{fieldft, jdbcType=INTEGER}, <!-- FieldFt -->
+	    </if>
+		<if test="indx != null">
+	          #{indx, jdbcType=INTEGER}, <!-- indx -->
+	    </if>
+		<if test="searchview != null">
+	          #{searchview, jdbcType=INTEGER}, <!-- SearchView -->
+	    </if>
+		<if test="fieldsetview != null">
+	          #{fieldsetview, jdbcType=INTEGER}, <!-- FieldSetView -->
+	    </if>
+		<if test="zjdisplay != null and zjdisplay != ''">
+	          #{zjdisplay, jdbcType=VARCHAR}, <!-- zjdisplay -->
+	    </if>
+		<if test="dislen != null">
+	          #{dislen, jdbcType=INTEGER}, <!-- dislen -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_tablefieldlist_childrenPO">
+		INSERT INTO archive_tablefieldlist_children (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{tid, jdbcType=VARCHAR},  <!-- tid -->
+		    #{fieldenname, jdbcType=VARCHAR},  <!-- FieldEnName -->
+		    #{fieldcnname, jdbcType=VARCHAR},  <!-- FieldCnName -->
+		    #{fieldclass, jdbcType=VARCHAR},  <!-- FieldClass -->
+		    #{fieldsize, jdbcType=INTEGER},  <!-- FieldSize -->
+		    #{fieldview, jdbcType=INTEGER},  <!-- FieldView -->
+		    #{fieldmetch, jdbcType=INTEGER},  <!-- FieldMetch -->
+		    #{fieldtype, jdbcType=INTEGER},  <!-- FieldType -->
+		    #{fieldnull, jdbcType=INTEGER},  <!-- FieldNull -->
+		    #{fieldft, jdbcType=INTEGER},  <!-- FieldFt -->
+		    #{indx, jdbcType=INTEGER},  <!-- indx -->
+		    #{searchview, jdbcType=INTEGER},  <!-- SearchView -->
+		    #{fieldsetview, jdbcType=INTEGER},  <!-- FieldSetView -->
+		    #{zjdisplay, jdbcType=VARCHAR},  <!-- zjdisplay -->
+		    #{dislen, jdbcType=INTEGER}  <!-- dislen -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_tablefieldlist_childrenPO">
+		UPDATE archive_tablefieldlist_children
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="tid != null">
+		          tid = #{tid, jdbcType=VARCHAR},  <!-- tid -->
+			</if>
+			<if test="fieldenname != null">
+		          fieldenname = #{fieldenname, jdbcType=VARCHAR},  <!-- FieldEnName -->
+			</if>
+			<if test="fieldcnname != null">
+		          fieldcnname = #{fieldcnname, jdbcType=VARCHAR},  <!-- FieldCnName -->
+			</if>
+			<if test="fieldclass != null">
+		          fieldclass = #{fieldclass, jdbcType=VARCHAR},  <!-- FieldClass -->
+			</if>
+			<if test="fieldsize != null">
+		          fieldsize = #{fieldsize, jdbcType=INTEGER},  <!-- FieldSize -->
+			</if>
+			<if test="fieldview != null">
+		          fieldview = #{fieldview, jdbcType=INTEGER},  <!-- FieldView -->
+			</if>
+			<if test="fieldmetch != null">
+		          fieldmetch = #{fieldmetch, jdbcType=INTEGER},  <!-- FieldMetch -->
+			</if>
+			<if test="fieldtype != null">
+		          fieldtype = #{fieldtype, jdbcType=INTEGER},  <!-- FieldType -->
+			</if>
+			<if test="fieldnull != null">
+		          fieldnull = #{fieldnull, jdbcType=INTEGER},  <!-- FieldNull -->
+			</if>
+			<if test="fieldft != null">
+		          fieldft = #{fieldft, jdbcType=INTEGER},  <!-- FieldFt -->
+			</if>
+			<if test="indx != null">
+		          indx = #{indx, jdbcType=INTEGER},  <!-- indx -->
+			</if>
+			<if test="searchview != null">
+		          searchview = #{searchview, jdbcType=INTEGER},  <!-- SearchView -->
+			</if>
+			<if test="fieldsetview != null">
+		          fieldsetview = #{fieldsetview, jdbcType=INTEGER},  <!-- FieldSetView -->
+			</if>
+			<if test="zjdisplay != null">
+		          zjdisplay = #{zjdisplay, jdbcType=VARCHAR},  <!-- zjdisplay -->
+			</if>
+			<if test="dislen != null">
+		          dislen = #{dislen, jdbcType=INTEGER},  <!-- dislen -->
+			</if>
+		</set>
+		WHERE 
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_tablefieldlist_children WHERE 
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_tablefieldlist_childrenPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_tablefieldlist_children WHERE 
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_tablefieldlist_childrenPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_tablefieldlist_children
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_tablefieldlist_childrenPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_tablefieldlist_children
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_tablefieldlist_childrenPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_tablefieldlist_children
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_tablefieldlist_childrenPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_tablefieldlist_children
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_tablefieldlist_childrenPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_tablefieldlist_children
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_tablefieldlist_children
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_tablefieldlist_children
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  tid,  <!-- tid -->
+		  fieldenname,  <!-- FieldEnName -->
+		  fieldcnname,  <!-- FieldCnName -->
+		  fieldclass,  <!-- FieldClass -->
+		  fieldsize,  <!-- FieldSize -->
+		  fieldview,  <!-- FieldView -->
+		  fieldmetch,  <!-- FieldMetch -->
+		  fieldtype,  <!-- FieldType -->
+		  fieldnull,  <!-- FieldNull -->
+		  fieldft,  <!-- FieldFt -->
+		  indx,  <!-- indx -->
+		  searchview,  <!-- SearchView -->
+		  fieldsetview,  <!-- FieldSetView -->
+		  zjdisplay,  <!-- zjdisplay -->
+		  dislen  <!-- dislen -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_tablefieldlist_children.id_,  <!-- id_ -->
+		  archive_tablefieldlist_children.tid,  <!-- tid -->
+		  archive_tablefieldlist_children.fieldenname,  <!-- FieldEnName -->
+		  archive_tablefieldlist_children.fieldcnname,  <!-- FieldCnName -->
+		  archive_tablefieldlist_children.fieldclass,  <!-- FieldClass -->
+		  archive_tablefieldlist_children.fieldsize,  <!-- FieldSize -->
+		  archive_tablefieldlist_children.fieldview,  <!-- FieldView -->
+		  archive_tablefieldlist_children.fieldmetch,  <!-- FieldMetch -->
+		  archive_tablefieldlist_children.fieldtype,  <!-- FieldType -->
+		  archive_tablefieldlist_children.fieldnull,  <!-- FieldNull -->
+		  archive_tablefieldlist_children.fieldft,  <!-- FieldFt -->
+		  archive_tablefieldlist_children.indx,  <!-- indx -->
+		  archive_tablefieldlist_children.searchview,  <!-- SearchView -->
+		  archive_tablefieldlist_children.fieldsetview,  <!-- FieldSetView -->
+		  archive_tablefieldlist_children.zjdisplay,  <!-- zjdisplay -->
+		  archive_tablefieldlist_children.dislen  <!-- dislen -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid = #{tid}  <!-- tid -->
+		</if>
+	    <if test="fieldenname != null and fieldenname != ''">
+		      AND fieldenname = #{fieldenname}  <!-- FieldEnName -->
+		</if>
+	    <if test="fieldcnname != null and fieldcnname != ''">
+		      AND fieldcnname = #{fieldcnname}  <!-- FieldCnName -->
+		</if>
+	    <if test="fieldclass != null and fieldclass != ''">
+		      AND fieldclass = #{fieldclass}  <!-- FieldClass -->
+		</if>
+	   <if test="fieldsize != null ">
+		      AND fieldsize = #{fieldsize}  <!-- FieldSize -->
+		</if>
+	   <if test="fieldview != null ">
+		      AND fieldview = #{fieldview}  <!-- FieldView -->
+		</if>
+	   <if test="fieldmetch != null ">
+		      AND fieldmetch = #{fieldmetch}  <!-- FieldMetch -->
+		</if>
+	   <if test="fieldtype != null ">
+		      AND fieldtype = #{fieldtype}  <!-- FieldType -->
+		</if>
+	   <if test="fieldnull != null ">
+		      AND fieldnull = #{fieldnull}  <!-- FieldNull -->
+		</if>
+	   <if test="fieldft != null ">
+		      AND fieldft = #{fieldft}  <!-- FieldFt -->
+		</if>
+	   <if test="indx != null ">
+		      AND indx = #{indx}  <!-- indx -->
+		</if>
+	   <if test="searchview != null ">
+		      AND searchview = #{searchview}  <!-- SearchView -->
+		</if>
+	   <if test="fieldsetview != null ">
+		      AND fieldsetview = #{fieldsetview}  <!-- FieldSetView -->
+		</if>
+	    <if test="zjdisplay != null and zjdisplay != ''">
+		      AND zjdisplay = #{zjdisplay}  <!-- zjdisplay -->
+		</if>
+	   <if test="dislen != null ">
+		      AND dislen = #{dislen}  <!-- dislen -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid like '%${tid}%'  <!-- tid -->
+		</if>
+	    <if test="fieldenname != null and fieldenname != ''">
+		      AND fieldenname like '%${fieldenname}%'  <!-- FieldEnName -->
+		</if>
+	    <if test="fieldcnname != null and fieldcnname != ''">
+		      AND fieldcnname like '%${fieldcnname}%'  <!-- FieldCnName -->
+		</if>
+	    <if test="fieldclass != null and fieldclass != ''">
+		      AND fieldclass like '%${fieldclass}%'  <!-- FieldClass -->
+		</if>
+	    <if test="zjdisplay != null and zjdisplay != ''">
+		      AND zjdisplay like '%${zjdisplay}%'  <!-- zjdisplay -->
+		</if>
+	</sql>
+	<!-- 显示表所有英文字段 -->
+	<select id="getDataFieldDisplayAllAll" parameterType="String" resultType="Archive_tablefieldlistPO">
+	 select FieldEnName, FieldCnName,fieldSize, case  when dislen is null then 100 else dislen end dislen  from ARCHIVE_TABLEFIELDLIST_CHILDREN    WHERE tid IN
+ (SELECT id_     FROM ARCHIVE_TABLENAME_CHILDREN      WHERE tablename =  #{tablename} )
+    order by indx
+ </select>
+</mapper>

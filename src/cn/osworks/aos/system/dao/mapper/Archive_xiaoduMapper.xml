@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_xiaodu[archive_xiaodu]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-11-14 11:58:32 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_xiaoduMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_xiaoduPO">
+		INSERT INTO archive_xiaodu (
+		<if test="tid != null and tid != ''">
+	         tid, <!-- tid -->
+		</if>
+		<if test="xiaodu_person != null and xiaodu_person != ''">
+	         xiaodu_person, <!-- xiaodu_person -->
+		</if>
+		<if test="xiaodu_time != null and xiaodu_time != ''">
+	         xiaodu_time, <!-- xiaodu_time -->
+		</if>
+		<if test="xiaodu_method != null and xiaodu_method != ''">
+	         xiaodu_method, <!-- xiaodu_method -->
+		</if>
+		<if test="xiaodu_cn_person != null and xiaodu_cn_person != ''">
+	         xiaodu_cn_person, <!-- xiaodu_cn_person -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="tid != null and tid != ''">
+	          #{tid, jdbcType=VARCHAR}, <!-- tid -->
+	    </if>
+		<if test="xiaodu_person != null and xiaodu_person != ''">
+	          #{xiaodu_person, jdbcType=VARCHAR}, <!-- xiaodu_person -->
+	    </if>
+		<if test="xiaodu_time != null and xiaodu_time != ''">
+	          #{xiaodu_time, jdbcType=VARCHAR}, <!-- xiaodu_time -->
+	    </if>
+		<if test="xiaodu_method != null and xiaodu_method != ''">
+	          #{xiaodu_method, jdbcType=VARCHAR}, <!-- xiaodu_method -->
+	    </if>
+		<if test="xiaodu_cn_person != null and xiaodu_cn_person != ''">
+	          #{xiaodu_cn_person, jdbcType=VARCHAR}, <!-- xiaodu_cn_person -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_xiaoduPO">
+		INSERT INTO archive_xiaodu (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{tid, jdbcType=VARCHAR},  <!-- tid -->
+		    #{xiaodu_person, jdbcType=VARCHAR},  <!-- xiaodu_person -->
+		    #{xiaodu_time, jdbcType=VARCHAR},  <!-- xiaodu_time -->
+		    #{xiaodu_method, jdbcType=VARCHAR},  <!-- xiaodu_method -->
+		    #{xiaodu_cn_person, jdbcType=VARCHAR}  <!-- xiaodu_cn_person -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_xiaoduPO">
+		UPDATE archive_xiaodu
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="tid != null">
+		          tid = #{tid, jdbcType=VARCHAR},  <!-- tid -->
+			</if>
+			<if test="xiaodu_person != null">
+		          xiaodu_person = #{xiaodu_person, jdbcType=VARCHAR},  <!-- xiaodu_person -->
+			</if>
+			<if test="xiaodu_time != null">
+		          xiaodu_time = #{xiaodu_time, jdbcType=VARCHAR},  <!-- xiaodu_time -->
+			</if>
+			<if test="xiaodu_method != null">
+		          xiaodu_method = #{xiaodu_method, jdbcType=VARCHAR},  <!-- xiaodu_method -->
+			</if>
+			<if test="xiaodu_cn_person != null">
+		          xiaodu_cn_person = #{xiaodu_cn_person, jdbcType=VARCHAR},  <!-- xiaodu_cn_person -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_xiaodu WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_xiaoduPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_xiaodu WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_xiaoduPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_xiaodu
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_xiaoduPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_xiaodu
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_xiaoduPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_xiaodu
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_xiaoduPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_xiaodu
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_xiaoduPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_xiaodu
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_xiaodu
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_xiaodu
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  tid,  <!-- tid -->
+		  xiaodu_person,  <!-- xiaodu_person -->
+		  xiaodu_time,  <!-- xiaodu_time -->
+		  xiaodu_method,  <!-- xiaodu_method -->
+		  xiaodu_cn_person  <!-- xiaodu_cn_person -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_xiaodu.id_,  <!-- id_ -->
+		  archive_xiaodu.tid,  <!-- tid -->
+		  archive_xiaodu.xiaodu_person,  <!-- xiaodu_person -->
+		  archive_xiaodu.xiaodu_time,  <!-- xiaodu_time -->
+		  archive_xiaodu.xiaodu_method,  <!-- xiaodu_method -->
+		  archive_xiaodu.xiaodu_cn_person  <!-- xiaodu_cn_person -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid = #{tid}  <!-- tid -->
+		</if>
+	    <if test="xiaodu_person != null and xiaodu_person != ''">
+		      AND xiaodu_person = #{xiaodu_person}  <!-- xiaodu_person -->
+		</if>
+	    <if test="xiaodu_time != null and xiaodu_time != ''">
+		      AND xiaodu_time = #{xiaodu_time}  <!-- xiaodu_time -->
+		</if>
+	    <if test="xiaodu_method != null and xiaodu_method != ''">
+		      AND xiaodu_method = #{xiaodu_method}  <!-- xiaodu_method -->
+		</if>
+	    <if test="xiaodu_cn_person != null and xiaodu_cn_person != ''">
+		      AND xiaodu_cn_person = #{xiaodu_cn_person}  <!-- xiaodu_cn_person -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid like '%${tid}%'  <!-- tid -->
+		</if>
+	    <if test="xiaodu_person != null and xiaodu_person != ''">
+		      AND xiaodu_person like '%${xiaodu_person}%'  <!-- xiaodu_person -->
+		</if>
+	    <if test="xiaodu_time != null and xiaodu_time != ''">
+		      AND xiaodu_time like '%${xiaodu_time}%'  <!-- xiaodu_time -->
+		</if>
+	    <if test="xiaodu_method != null and xiaodu_method != ''">
+		      AND xiaodu_method like '%${xiaodu_method}%'  <!-- xiaodu_method -->
+		</if>
+	    <if test="xiaodu_cn_person != null and xiaodu_cn_person != ''">
+		      AND xiaodu_cn_person like '%${xiaodu_cn_person}%'  <!-- xiaodu_cn_person -->
+		</if>
+	</sql>
+	
+</mapper>

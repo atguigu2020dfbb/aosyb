@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_sxjc[archive_sxjc]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-04-18 14:40:46 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_sxjcMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_sxjcPO">
+		INSERT INTO archive_sxjc (
+		<if test="dh_equals != null and dh_equals != ''">
+	         dh_equals, <!-- dh_equals -->
+		</if>
+		<if test="file_boolean != null and file_boolean != ''">
+	         file_boolean, <!-- file_boolean -->
+		</if>
+		<if test="file_open != null and file_open != ''">
+	         file_open, <!-- file_open -->
+		</if>
+		<if test="nd != null and nd != ''">
+	         nd, <!-- nd -->
+		</if>
+		<if test="jh != null and jh != ''">
+	         jh, <!-- jh -->
+		</if>
+		<if test="qzh != null and qzh != ''">
+	         qzh, <!-- qzh -->
+		</if>
+		<if test="users != null and users != ''">
+	         users, <!-- users -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="dh_equals != null and dh_equals != ''">
+	          #{dh_equals, jdbcType=VARCHAR}, <!-- dh_equals -->
+	    </if>
+		<if test="file_boolean != null and file_boolean != ''">
+	          #{file_boolean, jdbcType=VARCHAR}, <!-- file_boolean -->
+	    </if>
+		<if test="file_open != null and file_open != ''">
+	          #{file_open, jdbcType=VARCHAR}, <!-- file_open -->
+	    </if>
+		<if test="nd != null and nd != ''">
+	          #{nd, jdbcType=VARCHAR}, <!-- nd -->
+	    </if>
+		<if test="jh != null and jh != ''">
+	          #{jh, jdbcType=VARCHAR}, <!-- jh -->
+	    </if>
+		<if test="qzh != null and qzh != ''">
+	          #{qzh, jdbcType=VARCHAR}, <!-- qzh -->
+	    </if>
+		<if test="users != null and users != ''">
+	          #{users, jdbcType=VARCHAR}, <!-- users -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_sxjcPO">
+		INSERT INTO archive_sxjc (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{dh_equals, jdbcType=VARCHAR},  <!-- dh_equals -->
+		    #{file_boolean, jdbcType=VARCHAR},  <!-- file_boolean -->
+		    #{file_open, jdbcType=VARCHAR},  <!-- file_open -->
+		    #{nd, jdbcType=VARCHAR},  <!-- nd -->
+		    #{jh, jdbcType=VARCHAR},  <!-- jh -->
+		    #{qzh, jdbcType=VARCHAR},  <!-- qzh -->
+		    #{users, jdbcType=VARCHAR}  <!-- users -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_sxjcPO">
+		UPDATE archive_sxjc
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="dh_equals != null">
+		          dh_equals = #{dh_equals, jdbcType=VARCHAR},  <!-- dh_equals -->
+			</if>
+			<if test="file_boolean != null">
+		          file_boolean = #{file_boolean, jdbcType=VARCHAR},  <!-- file_boolean -->
+			</if>
+			<if test="file_open != null">
+		          file_open = #{file_open, jdbcType=VARCHAR},  <!-- file_open -->
+			</if>
+			<if test="nd != null">
+		          nd = #{nd, jdbcType=VARCHAR},  <!-- nd -->
+			</if>
+			<if test="jh != null">
+		          jh = #{jh, jdbcType=VARCHAR},  <!-- jh -->
+			</if>
+			<if test="qzh != null">
+		          qzh = #{qzh, jdbcType=VARCHAR},  <!-- qzh -->
+			</if>
+			<if test="users != null">
+		          users = #{users, jdbcType=VARCHAR},  <!-- users -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_sxjc WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_sxjcPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_sxjc WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_sxjcPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_sxjc
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_sxjcPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_sxjc
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_sxjcPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_sxjc
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_sxjcPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_sxjc
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_sxjcPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_sxjc
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_sxjc
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_sxjc
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  dh_equals,  <!-- dh_equals -->
+		  file_boolean,  <!-- file_boolean -->
+		  file_open,  <!-- file_open -->
+		  nd,  <!-- nd -->
+		  jh,  <!-- jh -->
+		  qzh,  <!-- qzh -->
+		  users  <!-- users -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_sxjc.id_,  <!-- id_ -->
+		  archive_sxjc.dh_equals,  <!-- dh_equals -->
+		  archive_sxjc.file_boolean,  <!-- file_boolean -->
+		  archive_sxjc.file_open,  <!-- file_open -->
+		  archive_sxjc.nd,  <!-- nd -->
+		  archive_sxjc.jh,  <!-- jh -->
+		  archive_sxjc.qzh,  <!-- qzh -->
+		  archive_sxjc.users  <!-- users -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="dh_equals != null and dh_equals != ''">
+		      AND dh_equals = #{dh_equals}  <!-- dh_equals -->
+		</if>
+	    <if test="file_boolean != null and file_boolean != ''">
+		      AND file_boolean = #{file_boolean}  <!-- file_boolean -->
+		</if>
+	    <if test="file_open != null and file_open != ''">
+		      AND file_open = #{file_open}  <!-- file_open -->
+		</if>
+	    <if test="nd != null and nd != ''">
+		      AND nd = #{nd}  <!-- nd -->
+		</if>
+	    <if test="jh != null and jh != ''">
+		      AND jh = #{jh}  <!-- jh -->
+		</if>
+	    <if test="qzh != null and qzh != ''">
+		      AND qzh = #{qzh}  <!-- qzh -->
+		</if>
+	    <if test="users != null and users != ''">
+		      AND users = #{users}  <!-- users -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="dh_equals != null and dh_equals != ''">
+		      AND dh_equals like '%${dh_equals}%'  <!-- dh_equals -->
+		</if>
+	    <if test="file_boolean != null and file_boolean != ''">
+		      AND file_boolean like '%${file_boolean}%'  <!-- file_boolean -->
+		</if>
+	    <if test="file_open != null and file_open != ''">
+		      AND file_open like '%${file_open}%'  <!-- file_open -->
+		</if>
+	    <if test="nd != null and nd != ''">
+		      AND nd like '%${nd}%'  <!-- nd -->
+		</if>
+	    <if test="jh != null and jh != ''">
+		      AND jh like '%${jh}%'  <!-- jh -->
+		</if>
+	    <if test="qzh != null and qzh != ''">
+		      AND qzh like '%${qzh}%'  <!-- qzh -->
+		</if>
+	    <if test="users != null and users != ''">
+		      AND users like '%${users}%'  <!-- users -->
+		</if>
+	</sql>
+	
+</mapper>

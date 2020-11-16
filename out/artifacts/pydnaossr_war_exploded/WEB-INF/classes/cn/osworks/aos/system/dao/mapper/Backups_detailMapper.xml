@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- backups_detail[backups_detail]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-12-28 15:13:25 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Backups_detailMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Backups_detailPO">
+		INSERT INTO backups_detail (
+		<if test="tid != null and tid != ''">
+	         tid, <!-- tid -->
+		</if>
+		<if test="bfbm != null and bfbm != ''">
+	         bfbm, <!-- bfbm -->
+		</if>
+		<if test="bfmc != null and bfmc != ''">
+	         bfmc, <!-- bfmc -->
+		</if>
+		<if test="bfsj != null and bfsj != ''">
+	         bfsj, <!-- bfsj -->
+		</if>
+		<if test="bfr != null and bfr != ''">
+	         bfr, <!-- bfr -->
+		</if>
+		<if test="bflx != null and bflx != ''">
+	         bflx, <!-- bflx -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="tid != null and tid != ''">
+	          #{tid, jdbcType=VARCHAR}, <!-- tid -->
+	    </if>
+		<if test="bfbm != null and bfbm != ''">
+	          #{bfbm, jdbcType=VARCHAR}, <!-- bfbm -->
+	    </if>
+		<if test="bfmc != null and bfmc != ''">
+	          #{bfmc, jdbcType=VARCHAR}, <!-- bfmc -->
+	    </if>
+		<if test="bfsj != null and bfsj != ''">
+	          #{bfsj, jdbcType=VARCHAR}, <!-- bfsj -->
+	    </if>
+		<if test="bfr != null and bfr != ''">
+	          #{bfr, jdbcType=VARCHAR}, <!-- bfr -->
+	    </if>
+		<if test="bflx != null and bflx != ''">
+	          #{bflx, jdbcType=VARCHAR}, <!-- bflx -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Backups_detailPO">
+		INSERT INTO backups_detail (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{tid, jdbcType=VARCHAR},  <!-- tid -->
+		    #{bfbm, jdbcType=VARCHAR},  <!-- bfbm -->
+		    #{bfmc, jdbcType=VARCHAR},  <!-- bfmc -->
+		    #{bfsj, jdbcType=VARCHAR},  <!-- bfsj -->
+		    #{bfr, jdbcType=VARCHAR},  <!-- bfr -->
+		    #{bflx, jdbcType=VARCHAR}  <!-- bflx -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Backups_detailPO">
+		UPDATE backups_detail
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="tid != null">
+		          tid = #{tid, jdbcType=VARCHAR},  <!-- tid -->
+			</if>
+			<if test="bfbm != null">
+		          bfbm = #{bfbm, jdbcType=VARCHAR},  <!-- bfbm -->
+			</if>
+			<if test="bfmc != null">
+		          bfmc = #{bfmc, jdbcType=VARCHAR},  <!-- bfmc -->
+			</if>
+			<if test="bfsj != null">
+		          bfsj = #{bfsj, jdbcType=VARCHAR},  <!-- bfsj -->
+			</if>
+			<if test="bfr != null">
+		          bfr = #{bfr, jdbcType=VARCHAR},  <!-- bfr -->
+			</if>
+			<if test="bflx != null">
+		          bflx = #{bflx, jdbcType=VARCHAR},  <!-- bflx -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM backups_detail WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Backups_detailPO">
+		SELECT
+		<include refid="column" />
+		FROM backups_detail WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Backups_detailPO">
+		SELECT
+		    <include refid="column" />
+		FROM backups_detail
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Backups_detailPO">
+		SELECT
+			<include refid="column" />	
+		FROM backups_detail
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Backups_detailPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM backups_detail
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Backups_detailPO">
+		SELECT
+			<include refid="column" />	
+		FROM backups_detail
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Backups_detailPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM backups_detail
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM backups_detail
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM backups_detail
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  tid,  <!-- tid -->
+		  bfbm,  <!-- bfbm -->
+		  bfmc,  <!-- bfmc -->
+		  bfsj,  <!-- bfsj -->
+		  bfr,  <!-- bfr -->
+		  bflx  <!-- bflx -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  backups_detail.id_,  <!-- id_ -->
+		  backups_detail.tid,  <!-- tid -->
+		  backups_detail.bfbm,  <!-- bfbm -->
+		  backups_detail.bfmc,  <!-- bfmc -->
+		  backups_detail.bfsj,  <!-- bfsj -->
+		  backups_detail.bfr,  <!-- bfr -->
+		  backups_detail.bflx  <!-- bflx -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid = #{tid}  <!-- tid -->
+		</if>
+	    <if test="bfbm != null and bfbm != ''">
+		      AND bfbm = #{bfbm}  <!-- bfbm -->
+		</if>
+	    <if test="bfmc != null and bfmc != ''">
+		      AND bfmc = #{bfmc}  <!-- bfmc -->
+		</if>
+	    <if test="bfsj != null and bfsj != ''">
+		      AND bfsj = #{bfsj}  <!-- bfsj -->
+		</if>
+	    <if test="bfr != null and bfr != ''">
+		      AND bfr = #{bfr}  <!-- bfr -->
+		</if>
+	    <if test="bflx != null and bflx != ''">
+		      AND bflx = #{bflx}  <!-- bflx -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid like '%${tid}%'  <!-- tid -->
+		</if>
+	    <if test="bfbm != null and bfbm != ''">
+		      AND bfbm like '%${bfbm}%'  <!-- bfbm -->
+		</if>
+	    <if test="bfmc != null and bfmc != ''">
+		      AND bfmc like '%${bfmc}%'  <!-- bfmc -->
+		</if>
+	    <if test="bfsj != null and bfsj != ''">
+		      AND bfsj like '%${bfsj}%'  <!-- bfsj -->
+		</if>
+	    <if test="bfr != null and bfr != ''">
+		      AND bfr like '%${bfr}%'  <!-- bfr -->
+		</if>
+	    <if test="bflx != null and bflx != ''">
+		      AND bflx like '%${bflx}%'  <!-- bflx -->
+		</if>
+	</sql>
+
+	<!-- 备份单表 -->
+	<select id="selectinto" parameterType="Dto"  >
+		SELECT
+		*
+
+		into ${bfmc}
+		FROM ${bfbm}
+
+	</select>
+
+	<!-- 还原单表 -->
+	<select id="returntable" parameterType="Dto"  >
+		SELECT *
+		into ${bfbm}
+		FROM ${bfmc}
+
+	</select>
+
+
+	<delete id="deleteTable" parameterType="String">
+		DROP TABLE ${tablename}
+
+	</delete>
+</mapper>

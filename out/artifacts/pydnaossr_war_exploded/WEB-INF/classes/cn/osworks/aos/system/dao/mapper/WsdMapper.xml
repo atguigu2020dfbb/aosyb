@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- wsd[wsd]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2020-07-23 17:31:50 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.WsdMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="WsdPO">
+		INSERT INTO wsd (
+		<if test="timexp != null and timexp != ''">
+	         timexp, <!-- timexp -->
+		</if>
+		<if test="depotid != null and depotid != ''">
+	         depotid, <!-- depotid -->
+		</if>
+		<if test="depotname != null and depotname != ''">
+	         depotname, <!-- depotname -->
+		</if>
+		<if test="wd != null and wd != ''">
+	         wd, <!-- wd -->
+		</if>
+		<if test="sd != null and sd != ''">
+	         sd, <!-- sd -->
+		</if>
+		<if test="fzbm != null and fzbm != ''">
+	         fzbm, <!-- fzbm -->
+		</if>
+		<if test="djr != null and djr != ''">
+	         djr, <!-- djr -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="timexp != null and timexp != ''">
+	          #{timexp, jdbcType=VARCHAR}, <!-- timexp -->
+	    </if>
+		<if test="depotid != null and depotid != ''">
+	          #{depotid, jdbcType=VARCHAR}, <!-- depotid -->
+	    </if>
+		<if test="depotname != null and depotname != ''">
+	          #{depotname, jdbcType=VARCHAR}, <!-- depotname -->
+	    </if>
+		<if test="wd != null and wd != ''">
+	          #{wd, jdbcType=VARCHAR}, <!-- wd -->
+	    </if>
+		<if test="sd != null and sd != ''">
+	          #{sd, jdbcType=VARCHAR}, <!-- sd -->
+	    </if>
+		<if test="fzbm != null and fzbm != ''">
+	          #{fzbm, jdbcType=VARCHAR}, <!-- fzbm -->
+	    </if>
+		<if test="djr != null and djr != ''">
+	          #{djr, jdbcType=VARCHAR}, <!-- djr -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="WsdPO">
+		INSERT INTO wsd (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{timexp, jdbcType=VARCHAR},  <!-- timexp -->
+		    #{depotid, jdbcType=VARCHAR},  <!-- depotid -->
+		    #{depotname, jdbcType=VARCHAR},  <!-- depotname -->
+		    #{wd, jdbcType=VARCHAR},  <!-- wd -->
+		    #{sd, jdbcType=VARCHAR},  <!-- sd -->
+		    #{fzbm, jdbcType=VARCHAR},  <!-- fzbm -->
+		    #{djr, jdbcType=VARCHAR}  <!-- djr -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="WsdPO">
+		UPDATE wsd
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="timexp != null">
+		          timexp = #{timexp, jdbcType=VARCHAR},  <!-- timexp -->
+			</if>
+			<if test="depotid != null">
+		          depotid = #{depotid, jdbcType=VARCHAR},  <!-- depotid -->
+			</if>
+			<if test="depotname != null">
+		          depotname = #{depotname, jdbcType=VARCHAR},  <!-- depotname -->
+			</if>
+			<if test="wd != null">
+		          wd = #{wd, jdbcType=VARCHAR},  <!-- wd -->
+			</if>
+			<if test="sd != null">
+		          sd = #{sd, jdbcType=VARCHAR},  <!-- sd -->
+			</if>
+			<if test="fzbm != null">
+		          fzbm = #{fzbm, jdbcType=VARCHAR},  <!-- fzbm -->
+			</if>
+			<if test="djr != null">
+		          djr = #{djr, jdbcType=VARCHAR},  <!-- djr -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM wsd WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="WsdPO">
+		SELECT
+		<include refid="column" />
+		FROM wsd WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="WsdPO">
+		SELECT
+		    <include refid="column" />
+		FROM wsd
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="WsdPO">
+		SELECT
+			<include refid="column" />	
+		FROM wsd
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="WsdPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM wsd
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="WsdPO">
+		SELECT
+			<include refid="column" />	
+		FROM wsd
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="WsdPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM wsd
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM wsd
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM wsd
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  timexp,  <!-- timexp -->
+		  depotid,  <!-- depotid -->
+		  depotname,  <!-- depotname -->
+		  wd,  <!-- wd -->
+		  sd,  <!-- sd -->
+		  fzbm,  <!-- fzbm -->
+		  djr  <!-- djr -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  wsd.id_,  <!-- id_ -->
+		  wsd.timexp,  <!-- timexp -->
+		  wsd.depotid,  <!-- depotid -->
+		  wsd.depotname,  <!-- depotname -->
+		  wsd.wd,  <!-- wd -->
+		  wsd.sd,  <!-- sd -->
+		  wsd.fzbm,  <!-- fzbm -->
+		  wsd.djr  <!-- djr -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="timexp != null and timexp != ''">
+		      AND timexp = #{timexp}  <!-- timexp -->
+		</if>
+	    <if test="depotid != null and depotid != ''">
+		      AND depotid = #{depotid}  <!-- depotid -->
+		</if>
+	    <if test="depotname != null and depotname != ''">
+		      AND depotname = #{depotname}  <!-- depotname -->
+		</if>
+	    <if test="wd != null and wd != ''">
+		      AND wd = #{wd}  <!-- wd -->
+		</if>
+	    <if test="sd != null and sd != ''">
+		      AND sd = #{sd}  <!-- sd -->
+		</if>
+	    <if test="fzbm != null and fzbm != ''">
+		      AND fzbm = #{fzbm}  <!-- fzbm -->
+		</if>
+	    <if test="djr != null and djr != ''">
+		      AND djr = #{djr}  <!-- djr -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="timexp != null and timexp != ''">
+		      AND timexp like '%${timexp}%'  <!-- timexp -->
+		</if>
+	    <if test="depotid != null and depotid != ''">
+		      AND depotid like '%${depotid}%'  <!-- depotid -->
+		</if>
+	    <if test="depotname != null and depotname != ''">
+		      AND depotname like '%${depotname}%'  <!-- depotname -->
+		</if>
+	    <if test="wd != null and wd != ''">
+		      AND wd like '%${wd}%'  <!-- wd -->
+		</if>
+	    <if test="sd != null and sd != ''">
+		      AND sd like '%${sd}%'  <!-- sd -->
+		</if>
+	    <if test="fzbm != null and fzbm != ''">
+		      AND fzbm like '%${fzbm}%'  <!-- fzbm -->
+		</if>
+	    <if test="djr != null and djr != ''">
+		      AND djr like '%${djr}%'  <!-- djr -->
+		</if>
+	</sql>
+	
+</mapper>

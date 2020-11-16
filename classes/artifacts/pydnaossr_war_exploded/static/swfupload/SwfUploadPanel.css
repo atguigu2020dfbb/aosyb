@@ -1,0 +1,25 @@
+.add {
+	background-image:url(add.png) !important;
+}
+
+.up {
+	background-image:url(arrow_up.png) !important;
+}
+.down{
+	background-image:url(down.png) !important;
+}
+.cancel {
+	background-image:url(cancel.png) !important;
+}
+.status {
+	background-image:url(status.png) !important;
+}
+.remove {
+	background-image:url(remove.png) !important;
+}
+.SwfUploadPanel_iconClear {
+    background-image:url(upload_clear.png) !important;
+}
+.del{
+	background-image:url(del.png) !important;
+}

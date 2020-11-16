@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- archive_LOG_Register[archive_log_register]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-11-02 10:25:57 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Archive_log_registerMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Archive_log_registerPO">
+		INSERT INTO archive_log_register (
+		<if test="_log != null and _log != ''">
+	         _log, <!-- _Log -->
+		</if>
+		<if test="_bh != null and _bh != ''">
+	         _bh, <!-- _bh -->
+		</if>
+		<if test="_user != null and _user != ''">
+	         _user, <!-- _USER -->
+		</if>
+		<if test="_date != null and _date != ''">
+	         _date, <!-- _Date -->
+		</if>
+		<if test="_modename != null and _modename != ''">
+	         _modename, <!-- _ModeName -->
+		</if>
+		<if test="id != null and id != ''">
+	          id  <!-- id -->
+	   </if>
+		)VALUES(
+		<if test="_log != null and _log != ''">
+	          #{_log, jdbcType=VARCHAR}, <!-- _Log -->
+	    </if>
+		<if test="_bh != null and _bh != ''">
+	          #{_bh, jdbcType=VARCHAR}, <!-- _bh -->
+	    </if>
+		<if test="_user != null and _user != ''">
+	          #{_user, jdbcType=VARCHAR}, <!-- _USER -->
+	    </if>
+		<if test="_date != null and _date != ''">
+	          #{_date, jdbcType=VARCHAR}, <!-- _Date -->
+	    </if>
+		<if test="_modename != null and _modename != ''">
+	          #{_modename, jdbcType=VARCHAR}, <!-- _ModeName -->
+	    </if>
+		<if test="id != null and id != ''">
+		     #{id, jdbcType=VARCHAR}  <!-- id -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Archive_log_registerPO">
+		INSERT INTO archive_log_register (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id, jdbcType=VARCHAR},  <!-- id -->
+		    #{_log, jdbcType=VARCHAR},  <!-- _Log -->
+		    #{_bh, jdbcType=VARCHAR},  <!-- _bh -->
+		    #{_user, jdbcType=VARCHAR},  <!-- _USER -->
+		    #{_date, jdbcType=VARCHAR},  <!-- _Date -->
+		    #{_modename, jdbcType=VARCHAR}  <!-- _ModeName -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Archive_log_registerPO">
+		UPDATE archive_log_register
+		<set>
+			<if test="id != null">
+		          id = #{id, jdbcType=VARCHAR},  <!-- id -->
+			</if>
+			<if test="_log != null">
+		          _log = #{_log, jdbcType=VARCHAR},  <!-- _Log -->
+			</if>
+			<if test="_bh != null">
+		          _bh = #{_bh, jdbcType=VARCHAR},  <!-- _bh -->
+			</if>
+			<if test="_user != null">
+		          _user = #{_user, jdbcType=VARCHAR},  <!-- _USER -->
+			</if>
+			<if test="_date != null">
+		          _date = #{_date, jdbcType=VARCHAR},  <!-- _Date -->
+			</if>
+			<if test="_modename != null">
+		          _modename = #{_modename, jdbcType=VARCHAR},  <!-- _ModeName -->
+			</if>
+		</set>
+		WHERE  id = #{id}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM archive_log_register WHERE  id = #{id}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Archive_log_registerPO">
+		SELECT
+		<include refid="column" />
+		FROM archive_log_register WHERE  id = #{id}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Archive_log_registerPO">
+		SELECT
+		    <include refid="column" />
+		FROM archive_log_register
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Archive_log_registerPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_log_register
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Archive_log_registerPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_log_register
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Archive_log_registerPO">
+		SELECT
+			<include refid="column" />	
+		FROM archive_log_register
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Archive_log_registerPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM archive_log_register
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM archive_log_register
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM archive_log_register
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id,  <!-- id -->
+		  _log,  <!-- _Log -->
+		  _bh,  <!-- _bh -->
+		  _user,  <!-- _USER -->
+		  _date,  <!-- _Date -->
+		  _modename  <!-- _ModeName -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  archive_log_register.id,  <!-- id -->
+		  archive_log_register._log,  <!-- _Log -->
+		  archive_log_register._bh,  <!-- _bh -->
+		  archive_log_register._user,  <!-- _USER -->
+		  archive_log_register._date,  <!-- _Date -->
+		  archive_log_register._modename  <!-- _ModeName -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id != null and id != ''">
+		      AND id = #{id}  <!-- id -->
+		</if>
+	    <if test="_log != null and _log != ''">
+		      AND _log = #{_log}  <!-- _Log -->
+		</if>
+	    <if test="_bh != null and _bh != ''">
+		      AND _bh = #{_bh}  <!-- _bh -->
+		</if>
+	    <if test="_user != null and _user != ''">
+		      AND _user = #{_user}  <!-- _USER -->
+		</if>
+	    <if test="_date != null and _date != ''">
+		      AND _date = #{_date}  <!-- _Date -->
+		</if>
+	    <if test="_modename != null and _modename != ''">
+		      AND _modename = #{_modename}  <!-- _ModeName -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id != null and id != ''">
+		      AND id like '%${id}%'  <!-- id -->
+		</if>
+	    <if test="_log != null and _log != ''">
+		      AND _log like '%${_log}%'  <!-- _Log -->
+		</if>
+	    <if test="_bh != null and _bh != ''">
+		      AND _bh like '%${_bh}%'  <!-- _bh -->
+		</if>
+	    <if test="_user != null and _user != ''">
+		      AND _user like '%${_user}%'  <!-- _USER -->
+		</if>
+	    <if test="_date != null and _date != ''">
+		      AND _date like '%${_date}%'  <!-- _Date -->
+		</if>
+	    <if test="_modename != null and _modename != ''">
+		      AND _modename like '%${_modename}%'  <!-- _ModeName -->
+		</if>
+	</sql>
+	
+</mapper>

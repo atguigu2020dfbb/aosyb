@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- metadata_jgry[metadata_jgry]SQLMapper自动映射 -->
+<!--  注意:此文件由AOS平台自动生成-禁止手工修改 2019-05-03 12:47:39 -->
+<mapper namespace="cn.osworks.aos.system.dao.mapper.Metadata_jgryMapper">
+	
+	<!-- 插入一个数据持久化对象(插入字段为传入PO实体的非空属性) -->
+	<insert id="insert"  parameterType="Metadata_jgryPO">
+		INSERT INTO metadata_jgry (
+		<if test="tid != null and tid != ''">
+	         tid, <!-- tid -->
+		</if>
+		<if test="jgbz != null and jgbz != ''">
+	         jgbz, <!-- jgbz -->
+		</if>
+		<if test="jgmc != null and jgmc != ''">
+	         jgmc, <!-- jgmc -->
+		</if>
+		<if test="jgdm != null and jgdm != ''">
+	         jgdm, <!-- jgdm -->
+		</if>
+		<if test="jgryxx != null and jgryxx != ''">
+	         jgryxx, <!-- jgryxx -->
+		</if>
+		<if test="grwz != null and grwz != ''">
+	         grwz, <!-- grwz -->
+		</if>
+		<if test="id_ != null and id_ != ''">
+	          id_  <!-- id_ -->
+	   </if>
+		)VALUES(
+		<if test="tid != null and tid != ''">
+	          #{tid, jdbcType=VARCHAR}, <!-- tid -->
+	    </if>
+		<if test="jgbz != null and jgbz != ''">
+	          #{jgbz, jdbcType=VARCHAR}, <!-- jgbz -->
+	    </if>
+		<if test="jgmc != null and jgmc != ''">
+	          #{jgmc, jdbcType=VARCHAR}, <!-- jgmc -->
+	    </if>
+		<if test="jgdm != null and jgdm != ''">
+	          #{jgdm, jdbcType=VARCHAR}, <!-- jgdm -->
+	    </if>
+		<if test="jgryxx != null and jgryxx != ''">
+	          #{jgryxx, jdbcType=VARCHAR}, <!-- jgryxx -->
+	    </if>
+		<if test="grwz != null and grwz != ''">
+	          #{grwz, jdbcType=VARCHAR}, <!-- grwz -->
+	    </if>
+		<if test="id_ != null and id_ != ''">
+		     #{id_, jdbcType=VARCHAR}  <!-- id_ -->
+	    </if>
+		)
+	</insert>
+	
+	<!-- 插入一个数据持久化对象(含所有字段) -->
+	<insert id="insertAll"  parameterType="Metadata_jgryPO">
+		INSERT INTO metadata_jgry (
+		    <include refid="column" />
+		)
+		VALUES (
+		    #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+		    #{tid, jdbcType=VARCHAR},  <!-- tid -->
+		    #{jgbz, jdbcType=VARCHAR},  <!-- jgbz -->
+		    #{jgmc, jdbcType=VARCHAR},  <!-- jgmc -->
+		    #{jgdm, jdbcType=VARCHAR},  <!-- jgdm -->
+		    #{jgryxx, jdbcType=VARCHAR},  <!-- jgryxx -->
+		    #{grwz, jdbcType=VARCHAR}  <!-- grwz -->
+		)
+	</insert>
+
+	<!-- 根据主键修改数据持久化对象 -->
+	<update id="updateByKey" parameterType="Metadata_jgryPO">
+		UPDATE metadata_jgry
+		<set>
+			<if test="id_ != null">
+		          id_ = #{id_, jdbcType=VARCHAR},  <!-- id_ -->
+			</if>
+			<if test="tid != null">
+		          tid = #{tid, jdbcType=VARCHAR},  <!-- tid -->
+			</if>
+			<if test="jgbz != null">
+		          jgbz = #{jgbz, jdbcType=VARCHAR},  <!-- jgbz -->
+			</if>
+			<if test="jgmc != null">
+		          jgmc = #{jgmc, jdbcType=VARCHAR},  <!-- jgmc -->
+			</if>
+			<if test="jgdm != null">
+		          jgdm = #{jgdm, jdbcType=VARCHAR},  <!-- jgdm -->
+			</if>
+			<if test="jgryxx != null">
+		          jgryxx = #{jgryxx, jdbcType=VARCHAR},  <!-- jgryxx -->
+			</if>
+			<if test="grwz != null">
+		          grwz = #{grwz, jdbcType=VARCHAR},  <!-- grwz -->
+			</if>
+		</set>
+		WHERE  id_ = #{id_}
+	</update>
+	
+	<!-- 根据主键删除数据持久化对象 -->
+	<delete id="deleteByKey">
+		DELETE FROM metadata_jgry WHERE  id_ = #{id_}
+	</delete>
+
+	<!-- 根据主键查询并返回数据持久化对象 -->
+	<select id="selectByKey" resultType="Metadata_jgryPO">
+		SELECT
+		<include refid="column" />
+		FROM metadata_jgry WHERE  id_ = #{id_}
+	</select>
+
+	<!-- 根据唯一组合条件查询并返回数据持久化对象 -->
+	<select id="selectOne" parameterType="Dto" resultType="Metadata_jgryPO">
+		SELECT
+		    <include refid="column" />
+		FROM metadata_jgry
+		<where>
+		    <include refid="equal" />
+		</where>		
+	</select>
+
+	<!-- 根据Dto查询并返回数据持久化对象集合 -->
+	<select id="list" parameterType="Dto" resultType="Metadata_jgryPO">
+		SELECT
+			<include refid="column" />	
+		FROM metadata_jgry
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto查询并返回分页数据持久化对象集合 -->
+	<select id="listPage" parameterType="Dto" resultType="Metadata_jgryPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM metadata_jgry
+		<where>
+		    <include refid="equal" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto模糊查询并返回数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="like" parameterType="Dto" resultType="Metadata_jgryPO">
+		SELECT
+			<include refid="column" />	
+		FROM metadata_jgry
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+
+	<!-- 根据Dto模糊查询并返回分页数据持久化对象集合(字符型字段模糊匹配，其余字段精确匹配) -->
+	<select id="likePage" parameterType="Dto" resultType="Metadata_jgryPO" useCache="false">
+	    SELECT
+			<include refid="column" />	
+		FROM metadata_jgry
+		<where>
+		    <include refid="like" />
+		</where>	
+	</select>
+	
+	<!-- 根据Dto统计行数 -->
+	<select id="rows" resultType="Integer" parameterType="Dto">
+		SELECT COUNT(1) AS aos_rows_ FROM metadata_jgry
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 根据数学表达式进行数学运算 -->
+	<select id="calc" parameterType="Dto" resultType="String">
+		SELECT
+			${_expr}
+		FROM metadata_jgry
+		<where>
+		    <include refid="equal" />
+		</where>
+	</select>
+	
+	<!-- 表字段 -->
+	<sql id="column">
+		  id_,  <!-- id_ -->
+		  tid,  <!-- tid -->
+		  jgbz,  <!-- jgbz -->
+		  jgmc,  <!-- jgmc -->
+		  jgdm,  <!-- jgdm -->
+		  jgryxx,  <!-- jgryxx -->
+		  grwz  <!-- grwz -->
+	</sql>
+	
+	<!-- 表字段(用于外表的关联时引用) -->
+	<sql id="column2">
+		  metadata_jgry.id_,  <!-- id_ -->
+		  metadata_jgry.tid,  <!-- tid -->
+		  metadata_jgry.jgbz,  <!-- jgbz -->
+		  metadata_jgry.jgmc,  <!-- jgmc -->
+		  metadata_jgry.jgdm,  <!-- jgdm -->
+		  metadata_jgry.jgryxx,  <!-- jgryxx -->
+		  metadata_jgry.grwz  <!-- grwz -->
+	</sql>
+
+	<!-- Where精确匹配字段 -->
+	<sql id="equal">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ = #{id_}  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid = #{tid}  <!-- tid -->
+		</if>
+	    <if test="jgbz != null and jgbz != ''">
+		      AND jgbz = #{jgbz}  <!-- jgbz -->
+		</if>
+	    <if test="jgmc != null and jgmc != ''">
+		      AND jgmc = #{jgmc}  <!-- jgmc -->
+		</if>
+	    <if test="jgdm != null and jgdm != ''">
+		      AND jgdm = #{jgdm}  <!-- jgdm -->
+		</if>
+	    <if test="jgryxx != null and jgryxx != ''">
+		      AND jgryxx = #{jgryxx}  <!-- jgryxx -->
+		</if>
+	    <if test="grwz != null and grwz != ''">
+		      AND grwz = #{grwz}  <!-- grwz -->
+		</if>
+	</sql>
+	
+	<!-- Where模糊匹配字段 -->
+	<sql id="like">
+	    <if test="id_ != null and id_ != ''">
+		      AND id_ like '%${id_}%'  <!-- id_ -->
+		</if>
+	    <if test="tid != null and tid != ''">
+		      AND tid like '%${tid}%'  <!-- tid -->
+		</if>
+	    <if test="jgbz != null and jgbz != ''">
+		      AND jgbz like '%${jgbz}%'  <!-- jgbz -->
+		</if>
+	    <if test="jgmc != null and jgmc != ''">
+		      AND jgmc like '%${jgmc}%'  <!-- jgmc -->
+		</if>
+	    <if test="jgdm != null and jgdm != ''">
+		      AND jgdm like '%${jgdm}%'  <!-- jgdm -->
+		</if>
+	    <if test="jgryxx != null and jgryxx != ''">
+		      AND jgryxx like '%${jgryxx}%'  <!-- jgryxx -->
+		</if>
+	    <if test="grwz != null and grwz != ''">
+		      AND grwz like '%${grwz}%'  <!-- grwz -->
+		</if>
+	</sql>
+	
+</mapper>
